@@ -1221,6 +1221,55 @@ body.exp-modal-open {
     color: var(--primary-blue);
 }
 
+/* Botones finales (inicio): colores sólidos, tamaño moderado y hover sutil */
+.action-buttons .btn {
+    padding: 0.8rem 1.75rem;
+    font-size: 1rem;
+    border: 2px solid transparent;
+}
+
+.action-buttons .btn::before {
+    display: none;
+}
+
+.action-buttons .btn.primary {
+    background: #0057a6;
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+.action-buttons .btn.secondary {
+    background: #f97316;
+    border-color: #f97316;
+    color: #ffffff;
+}
+
+.action-buttons .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.action-buttons .btn.primary:hover {
+    background: #003a70;
+}
+
+.action-buttons .btn.secondary:hover {
+    background: #ea580c;
+    border-color: #ea580c;
+}
+
+.action-buttons .btn:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 480px) {
+    .action-buttons .btn {
+        padding: 0.7rem 1.5rem;
+        font-size: 0.95rem;
+    }
+}
+
 /* Scroll Indicator */
 .scroll-indicator {
     position: absolute;
