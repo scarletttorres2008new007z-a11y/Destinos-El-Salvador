@@ -127,9 +127,15 @@ body {
 }
 
 .logo {
-    font-size: 1.75rem;
-    font-weight: 700;
-    color: white;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.logo-img {
+    display: block;
+    height: 30px;
+    width: auto;
 }
 
 .highlight {
@@ -1021,6 +1027,10 @@ body {
     
     .nav-container {
         padding: 1rem;
+    }
+
+    .logo-img {
+        height: 26px;
     }
     
     .action-buttons {
