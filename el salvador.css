@@ -614,6 +614,268 @@ body {
     box-shadow: var(--shadow-md);
 }
 
+/* Experiencias Imperdibles: tarjetas compactas y modal de detalles */
+.highlighted-places .exp-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.highlighted-places .exp-card {
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    backdrop-filter: none;
+    border: none;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    text-align: left;
+    transition: opacity 0.6s ease, transform 0.6s ease, translate 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.highlighted-places .exp-card:hover {
+    translate: 0 -6px;
+    box-shadow: var(--shadow-md);
+}
+
+.exp-img-wrap {
+    overflow: hidden;
+    background: #00a3da;
+}
+
+.highlighted-places .exp-card .exp-img {
+    display: block;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.highlighted-places .exp-card:hover .exp-img {
+    transform: scale(1.06);
+}
+
+.exp-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 1rem;
+}
+
+.exp-body h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #0057a6;
+    margin-bottom: 0.35rem;
+}
+
+.highlighted-places .exp-desc {
+    flex: 1;
+    max-width: none;
+    opacity: 1;
+    animation: none;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #444444;
+    margin-bottom: 0.9rem;
+}
+
+.exp-btn {
+    align-self: flex-start;
+    background: #f97316;
+    color: #ffffff;
+    border: none;
+    padding: 0.5rem 1.25rem;
+    border-radius: 2rem;
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.exp-btn:hover {
+    background: #0057a6;
+    transform: translateY(-2px);
+}
+
+.exp-btn:focus-visible,
+.exp-modal-close:focus-visible,
+.exp-modal-btn:focus-visible {
+    outline: 3px solid #00a3da;
+    outline-offset: 2px;
+}
+
+/* Modal */
+.exp-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.exp-modal.is-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.exp-modal-dialog {
+    position: relative;
+    width: 100%;
+    max-width: 620px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: #ffffff;
+    color: #333333;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-lg);
+    text-align: left;
+    transform: translateY(24px) scale(0.97);
+    transition: transform 0.3s ease;
+}
+
+.exp-modal.is-open .exp-modal-dialog {
+    transform: translateY(0) scale(1);
+}
+
+.exp-modal-img {
+    display: block;
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    background: #00a3da;
+}
+
+.exp-modal-close {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: #ffffff;
+    color: #0057a6;
+    font-size: 1.1rem;
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.exp-modal-close:hover {
+    background: #f97316;
+    color: #ffffff;
+}
+
+.exp-modal-body {
+    padding: 1.5rem;
+}
+
+.exp-modal-title {
+    font-size: 1.6rem;
+    color: #0057a6;
+    margin-bottom: 0.25rem;
+}
+
+.exp-modal-location {
+    color: #00a3da;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.exp-modal-desc {
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+}
+
+.exp-modal-body h4 {
+    font-size: 1rem;
+    color: #0057a6;
+    margin-bottom: 0.5rem;
+}
+
+.exp-modal-body ul {
+    padding-left: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.exp-modal-body li {
+    margin-bottom: 0.35rem;
+}
+
+.exp-modal-body li::marker {
+    color: #f97316;
+}
+
+.exp-modal-btn {
+    background: #0057a6;
+    color: #ffffff;
+    border: none;
+    padding: 0.7rem 1.75rem;
+    border-radius: 2rem;
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.exp-modal-btn:hover {
+    background: #f97316;
+}
+
+body.exp-modal-open {
+    overflow: hidden;
+}
+
+@media (max-width: 900px) {
+    .highlighted-places .exp-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .highlighted-places .exp-grid {
+        gap: 0.75rem;
+    }
+
+    .highlighted-places .exp-card {
+        margin-bottom: 0;
+    }
+
+    .highlighted-places .exp-card .exp-img {
+        height: 110px;
+    }
+
+    .exp-body {
+        padding: 0.75rem;
+    }
+
+    .exp-body h4 {
+        font-size: 0.95rem;
+    }
+
+    .highlighted-places .exp-desc {
+        font-size: 0.8rem;
+    }
+
+    .exp-btn {
+        padding: 0.4rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    .exp-modal-img {
+        height: 200px;
+    }
+}
+
 /* Travel Packages */
 .travel-packages {
     margin-bottom: 4rem;
