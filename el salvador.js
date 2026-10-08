@@ -446,9 +446,9 @@ function initializeScrollEffects() {
     window.addEventListener('scroll', () => {
         const navbar = document.querySelector('.navbar');
         if (window.scrollY > 100) {
-            navbar.style.background = 'linear-gradient(135deg, rgba(30, 58, 138, 0.98), rgba(20, 184, 166, 0.98))';
+            navbar.style.background = 'var(--secondary-blue)';
         } else {
-            navbar.style.background = 'linear-gradient(135deg, rgba(30, 58, 138, 0.95), rgba(20, 184, 166, 0.95))';
+            navbar.style.background = 'var(--secondary-blue)';
         }
     });
 
@@ -463,7 +463,7 @@ function initializeScrollEffects() {
         width: 50px;
         height: 50px;
         border-radius: 50%;
-        background: linear-gradient(135deg, #f97316, #ec4899);
+        background: #f97316;
         color: white;
         border: none;
         font-size: 1.5rem;
@@ -517,15 +517,15 @@ function showNotification(message, type = 'info') {
         }
         
         .notification.success {
-            background: linear-gradient(135deg, #10b981, #059669);
+            background: #059669;
         }
         
         .notification.error {
-            background: linear-gradient(135deg, #ef4444, #dc2626);
+            background: #dc2626;
         }
         
         .notification.info {
-            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            background: #0057a6;
         }
         
         @keyframes slideInRight {

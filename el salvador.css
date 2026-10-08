@@ -14,17 +14,12 @@ body {
 
 /* CSS Variables */
 :root {
-    --primary-blue: #1e3a8a;
-    --secondary-blue: #1e40af;
-    --accent-orange: #f97316;
-    --teal: #14b8a6;
-    --purple: #9333ea;
-    --pink: #ec4899;
-    --cyan: #06b6d4;
-    
-    --gradient-primary: linear-gradient(135deg, var(--primary-blue), var(--teal));
-    --gradient-accent: linear-gradient(135deg, var(--accent-orange), var(--pink));
-    --gradient-hero: linear-gradient(135deg, #1e3a8a, #1e40af, var(--teal));
+    /* Colores sólidos de la identidad de El Salvador (sin gradientes) */
+    --primary-blue: #0057a6;   /* Azul: fondos principales */
+    --secondary-blue: #003a70; /* Azul oscuro: navegación */
+    --celeste: #00a3da;        /* Celeste/azul agua: naturaleza y agua */
+    --accent-orange: #f97316;  /* Naranja: botones y destacados */
+    --white: #ffffff;          /* Blanco: contraste */
     
     --shadow-sm: 0 2px 10px rgba(0,0,0,0.1);
     --shadow-md: 0 10px 30px rgba(0,0,0,0.15);
@@ -111,7 +106,7 @@ body {
     left: 0;
     right: 0;
     z-index: 1000;
-    background: linear-gradient(135deg, rgba(30, 58, 138, 0.95), rgba(20, 184, 166, 0.95));
+    background: var(--secondary-blue);
     backdrop-filter: blur(20px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     transition: var(--transition);
@@ -159,7 +154,7 @@ body {
     left: 50%;
     width: 0;
     height: 2px;
-    background: var(--gradient-accent);
+    background: var(--accent-orange);
     transition: var(--transition);
     transform: translateX(-50%);
 }
@@ -186,7 +181,7 @@ body {
 
 .mobile-menu {
     display: none;
-    background: rgba(30, 58, 138, 0.95);
+    background: var(--secondary-blue);
     backdrop-filter: blur(20px);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -206,7 +201,7 @@ body {
 /* Hero Section */
 .hero {
     min-height: 100vh;
-    background: var(--gradient-hero);
+    background: var(--primary-blue);
     position: relative;
     display: flex;
     align-items: center;
@@ -222,10 +217,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: 
-        radial-gradient(circle at 20% 80%, rgba(249, 115, 22, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(236, 72, 153, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 40% 40%, rgba(14, 165, 233, 0.1) 0%, transparent 50%);
+    background: none;
     animation: float 8s ease-in-out infinite;
 }
 
@@ -242,10 +234,7 @@ body {
 .hero h1 {
     font-size: clamp(2.5rem, 6vw, 4rem);
     margin-bottom: 1.5rem;
-    background: linear-gradient(135deg, white, rgba(255, 255, 255, 0.8));
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--white);
     animation: fade-in 1s ease-out;
 }
 
@@ -395,7 +384,7 @@ body {
 }
 
 .rating.unesco {
-    background: var(--purple);
+    background: var(--celeste);
 }
 
 .location {
@@ -423,15 +412,15 @@ body {
     font-weight: 500;
 }
 
-.tag.surf { background: rgba(59, 130, 246, 0.3); color: #93c5fd; }
-.tag.beach { background: rgba(249, 115, 22, 0.3); color: #fdba74; }
-.tag.nightlife { background: rgba(236, 72, 153, 0.3); color: #f9a8d4; }
-.tag.volcano { background: rgba(239, 68, 68, 0.3); color: #fca5a5; }
-.tag.hiking { background: rgba(34, 197, 94, 0.3); color: #86efac; }
-.tag.adventure { background: rgba(168, 85, 247, 0.3); color: #c4b5fd; }
-.tag.history { background: rgba(251, 191, 36, 0.3); color: #fde68a; }
-.tag.unesco { background: rgba(147, 51, 234, 0.3); color: #c4b5fd; }
-.tag.archaeology { background: rgba(99, 102, 241, 0.3); color: #a5b4fc; }
+.tag.surf { background: var(--celeste); color: var(--white); }
+.tag.beach { background: var(--celeste); color: var(--white); }
+.tag.nightlife { background: var(--accent-orange); color: var(--white); }
+.tag.volcano { background: var(--accent-orange); color: var(--white); }
+.tag.hiking { background: var(--celeste); color: var(--white); }
+.tag.adventure { background: var(--accent-orange); color: var(--white); }
+.tag.history { background: var(--white); color: var(--primary-blue); }
+.tag.unesco { background: var(--white); color: var(--primary-blue); }
+.tag.archaeology { background: var(--white); color: var(--primary-blue); }
 
 .price {
     font-size: 1.1rem;
@@ -442,7 +431,7 @@ body {
 
 .details-btn {
     width: 100%;
-    background: var(--gradient-primary);
+    background: var(--accent-orange);
     color: white;
     border: none;
     padding: 0.75rem;
@@ -495,15 +484,15 @@ body {
 }
 
 .package-card.adventure::before {
-    background: linear-gradient(90deg, var(--accent-orange), var(--pink));
+    background: var(--accent-orange);
 }
 
 .package-card.culture::before {
-    background: linear-gradient(90deg, var(--purple), var(--cyan));
+    background: var(--white);
 }
 
 .package-card.surf::before {
-    background: linear-gradient(90deg, var(--primary-blue), var(--teal));
+    background: var(--celeste);
 }
 
 .package-card:hover {
@@ -541,7 +530,7 @@ body {
 
 .reserve-btn {
     width: 100%;
-    background: var(--gradient-accent);
+    background: var(--accent-orange);
     color: white;
     border: none;
     padding: 1rem;
@@ -598,7 +587,7 @@ body {
 .stars {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: #fbbf24;
+    color: var(--accent-orange);
 }
 
 .testimonial p {
@@ -693,7 +682,7 @@ body {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    background: rgba(255, 255, 255, 0.2);
     transition: left 0.5s;
 }
 
@@ -707,13 +696,13 @@ body {
 }
 
 .btn.primary {
-    background: var(--gradient-primary);
+    background: var(--accent-orange);
     color: white;
 }
 
 .btn.secondary {
-    background: var(--gradient-accent);
-    color: white;
+    background: var(--white);
+    color: var(--primary-blue);
 }
 
 /* Scroll Indicator */
@@ -739,7 +728,7 @@ body {
 
 /* Footer */
 .footer {
-    background: rgba(0, 0, 0, 0.4);
+    background: var(--secondary-blue);
     backdrop-filter: blur(20px);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding: 3rem 0;
@@ -817,7 +806,7 @@ body {
 .page-section {
     min-height: 100vh;
     padding: 6rem 2rem 4rem;
-    background: var(--gradient-hero);
+    background: var(--primary-blue);
     color: white;
 }
 
@@ -825,10 +814,7 @@ body {
     font-size: clamp(2.5rem, 5vw, 4rem);
     text-align: center;
     margin-bottom: 2rem;
-    background: linear-gradient(135deg, white, rgba(255, 255, 255, 0.8));
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: var(--white);
 }
 
 .container {
@@ -858,7 +844,7 @@ body {
 }
 
 .filter-btn.active {
-    background: var(--gradient-accent);
+    background: var(--accent-orange);
     border-color: transparent;
     box-shadow: var(--shadow-md);
 }
@@ -918,7 +904,7 @@ body {
 }
 
 .submit-btn {
-    background: var(--gradient-accent);
+    background: var(--accent-orange);
     color: white;
     padding: 1rem 2rem;
     border: none;
