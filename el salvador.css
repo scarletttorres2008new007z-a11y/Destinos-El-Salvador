@@ -127,9 +127,32 @@ body {
 }
 
 .logo {
-    font-size: 1.75rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
     font-weight: 700;
+    letter-spacing: 0.06em;
+    line-height: 1;
     color: white;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.logo-mark {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    transition: var(--transition);
+}
+
+.logo:hover .logo-mark,
+.logo:focus-visible .logo-mark {
+    transform: rotate(-6deg) scale(1.05);
+}
+
+.logo:hover {
+    color: var(--accent-orange);
 }
 
 .highlight {
