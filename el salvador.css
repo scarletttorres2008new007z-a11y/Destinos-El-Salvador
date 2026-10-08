@@ -339,6 +339,168 @@ body {
     font-weight: 600;
 }
 
+/* Main Cards (photo cards) */
+.main-cards {
+    position: relative;
+    isolation: isolate;
+    padding: 3rem 0 1rem;
+    margin-bottom: 3rem;
+}
+
+.main-cards::before {
+    content: '';
+    position: absolute;
+    inset: -2rem -6rem;
+    z-index: -1;
+    background: url('https://images.unsplash.com/photo-1680374635234-ba4bc7e44641?auto=format&fit=crop&w=1920&q=70') center / cover no-repeat;
+    opacity: 0.18;
+    mix-blend-mode: luminosity;
+    -webkit-mask-image: radial-gradient(ellipse at center, #000 35%, transparent 75%);
+    mask-image: radial-gradient(ellipse at center, #000 35%, transparent 75%);
+    pointer-events: none;
+}
+
+.stats-container .photo-card,
+.quick-actions .photo-card {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+    padding: 0;
+    text-align: left;
+    font: inherit;
+    color: white;
+    background: #0f1f4d;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: var(--shadow-lg);
+    backdrop-filter: none;
+    cursor: pointer;
+}
+
+.stats-container .photo-card {
+    min-height: 240px;
+}
+
+.quick-actions .photo-card {
+    min-height: 200px;
+}
+
+.photo-card-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.photo-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(10, 20, 50, 0.92) 0%, rgba(10, 20, 50, 0.55) 45%, rgba(10, 20, 50, 0.15) 100%);
+    transition: var(--transition);
+}
+
+.photo-card-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    width: 100%;
+    padding: 1.5rem;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.photo-card .stat-number {
+    font-size: 2.25rem;
+    line-height: 1;
+    margin-bottom: 0.25rem;
+}
+
+.photo-card .stat-label,
+.photo-card .action-label {
+    color: white;
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.photo-card .stat-label::after,
+.photo-card .action-label::after {
+    content: '';
+    display: block;
+    width: 28px;
+    height: 2px;
+    margin-top: 0.5rem;
+    background: var(--accent-orange);
+    border-radius: 2px;
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.photo-card-text,
+.hero .photo-card-text {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.85);
+    max-width: none;
+    margin: 0.25rem 0 0;
+    opacity: 1;
+    animation: none;
+}
+
+.photo-card-arrow {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(6px);
+    transition: var(--transition);
+}
+
+.photo-card-arrow::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+    transform: translate(-65%, -50%) rotate(45deg);
+}
+
+.photo-card:hover .photo-card-bg {
+    transform: scale(1.08);
+}
+
+.photo-card:hover::after {
+    background: linear-gradient(to top, rgba(10, 20, 50, 0.95) 0%, rgba(10, 20, 50, 0.6) 50%, rgba(10, 20, 50, 0.25) 100%);
+}
+
+.photo-card:hover .photo-card-content {
+    transform: translateY(-4px);
+}
+
+.photo-card:hover .stat-label::after,
+.photo-card:hover .action-label::after {
+    width: 56px;
+}
+
+.photo-card:hover .photo-card-arrow {
+    background: var(--accent-orange);
+    border-color: var(--accent-orange);
+}
+
+.photo-card:focus-visible {
+    outline: 2px solid var(--accent-orange);
+    outline-offset: 3px;
+}
+
 /* Places Grid */
 .highlighted-places {
     margin-bottom: 4rem;
