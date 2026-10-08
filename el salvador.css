@@ -274,7 +274,7 @@ body {
 }
 
 .stat-item:hover {
-    transform: translateY(-10px) scale(1.05);
+    transform: translateY(-4px);
     background: rgba(255, 255, 255, 0.15);
 }
 
@@ -315,7 +315,7 @@ body {
 }
 
 .action-btn:hover {
-    transform: translateY(-5px) scale(1.05);
+    transform: translateY(-4px);
     background: rgba(255, 255, 255, 0.2);
 }
 
@@ -517,7 +517,7 @@ body {
 }
 
 .place-card:hover {
-    transform: translateY(-10px) scale(1.02);
+    transform: translateY(-6px);
 }
 
 .place-card img {
@@ -926,7 +926,7 @@ body.exp-modal-open {
 }
 
 .package-card:hover {
-    transform: translateY(-10px) scale(1.02);
+    transform: translateY(-6px);
     background: rgba(255, 255, 255, 0.15);
 }
 
@@ -1207,7 +1207,7 @@ body.exp-modal-open {
 }
 
 .btn:hover {
-    transform: translateY(-3px) scale(1.05);
+    transform: translateY(-2px);
     box-shadow: var(--shadow-lg);
 }
 
@@ -1469,7 +1469,7 @@ body.exp-modal-open {
 }
 
 .submit-btn:hover {
-    transform: translateY(-3px) scale(1.05);
+    transform: translateY(-2px);
     box-shadow: var(--shadow-lg);
 }
 
@@ -1497,7 +1497,7 @@ body.exp-modal-open {
 .destination-card:hover,
 .gallery-item:hover,
 .info-card:hover {
-    transform: translateY(-10px) scale(1.02);
+    transform: translateY(-6px);
     background: rgba(255, 255, 255, 0.15);
 }
 

@@ -161,7 +161,7 @@
         }
 
         .about-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-6px);
             box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
         }
 
@@ -598,11 +598,11 @@
         const teamCards = document.querySelectorAll('.team-card');
         teamCards.forEach(card => {
             card.addEventListener('mouseenter', () => {
-                card.style.transform = 'translateY(-10px) scale(1.02)';
+                card.style.transform = 'translateY(-5px)';
             });
             
             card.addEventListener('mouseleave', () => {
-                card.style.transform = 'translateY(0) scale(1)';
+                card.style.transform = 'translateY(0)';
             });
         });
 
