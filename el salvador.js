@@ -193,8 +193,8 @@ function initializeAnimations() {
 const experiencias = {
     tunco: {
         nombre: 'Playa El Tunco',
-        imagen: 'https://images.unsplash.com/photo-1721726672239-2d0e6940cb07?auto=format&fit=crop&w=1200&q=80',
-        alt: 'Surfistas en Playa El Tunco',
+        imagen: 'https://images.unsplash.com/photo-1502680390469-be75c86b636f?q=80&w=1200&auto=format&fit=crop',
+        alt: 'Playa El Tunco',
         ubicacion: '📍 La Libertad',
         descripcion: 'Pequeño pueblo de playa famoso por la gran roca que le da nombre y por sus olas constantes durante todo el año. De día reúne a surfistas de todo el mundo y, al caer la tarde, se llena de vida con restaurantes, música y uno de los atardeceres más bonitos del Pacífico.',
         actividades: [
@@ -211,8 +211,8 @@ const experiencias = {
     },
     santaana: {
         nombre: 'Volcán de Santa Ana',
-        imagen: 'https://images.unsplash.com/photo-1743386252123-0944ff2c8d29?auto=format&fit=crop&w=1200&q=80',
-        alt: 'Cráter del Volcán de Santa Ana con su laguna turquesa',
+        imagen: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1200&auto=format&fit=crop',
+        alt: 'Volcán de Santa Ana',
         ubicacion: '📍 Parque Nacional Los Volcanes, Santa Ana',
         descripcion: 'También llamado Ilamatepec, es el volcán más alto de El Salvador. Su cráter guarda una laguna color turquesa con fumarolas, y desde la cima se ven el Lago de Coatepeque, el volcán de Izalco y, en días despejados, el océano Pacífico.',
         actividades: [
@@ -226,21 +226,21 @@ const experiencias = {
             'Presupuesto aproximado: $15-25 por día.'
         ]
     },
-    tazumal: {
-        nombre: 'Tazumal',
-        imagen: 'https://images.unsplash.com/photo-1721297990863-d93adf19fa7d?auto=format&fit=crop&w=1200&q=80',
-        alt: 'Pirámide del sitio arqueológico Tazumal',
-        ubicacion: '📍 Chalchuapa, Santa Ana',
-        descripcion: 'Uno de los sitios arqueológicos mayas más importantes del país. Su pirámide escalonada fue un centro ceremonial habitado durante siglos y hoy se puede recorrer junto a un pequeño museo con piezas encontradas en la zona.',
+    ceren: {
+        nombre: 'Joya de Cerén',
+        imagen: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=1200&auto=format&fit=crop',
+        alt: 'Joya de Cerén',
+        ubicacion: '📍 San Juan Opico, La Libertad',
+        descripcion: 'Conocida como la Pompeya de América, es una aldea maya que quedó sepultada por la ceniza de una erupción volcánica hace unos 1,400 años. Gracias a eso se conservaron casas, objetos y cultivos de la vida cotidiana, y por eso fue declarada Patrimonio de la Humanidad por la UNESCO.',
         actividades: [
-            'Recorrer la pirámide principal y sus plazas.',
-            'Visitar el museo del sitio.',
-            'Conocer Casa Blanca, otro sitio maya en Chalchuapa.'
+            'Recorrer las estructuras de la antigua aldea maya.',
+            'Visitar el museo del sitio y sus piezas originales.',
+            'Conocer cómo vivían las familias mayas del lugar.'
         ],
         info: [
-            'Ideal para combinar con Santa Ana y la Ruta de las Flores.',
+            'A unos 40 minutos de San Salvador.',
             'Presupuesto aproximado: $5-15 por día.',
-            'Lleva sombrero y agua: gran parte del recorrido es al sol.'
+            'Lleva sombrero y agua: parte del recorrido es al sol.'
         ]
     },
     coatepeque: {
