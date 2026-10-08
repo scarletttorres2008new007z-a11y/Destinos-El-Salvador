@@ -136,9 +136,6 @@ body {
     display: block;
     height: 30px;
     width: auto;
-    padding: 3px 8px;
-    background: white;
-    border-radius: 8px;
 }
 
 .highlight {
