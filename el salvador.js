@@ -462,29 +462,43 @@ function initializeFloatingActionButton() {
 
 function showContactOptions() {
     const options = [
-        { icon: '📱', text: 'WhatsApp', action: () => window.open('https://wa.me/50312345678', '_blank') },
-        { icon: '✉️', text: 'Email', action: () => window.location.href = 'mailto:info@svelsalvador.com' },
-        { icon: '📞', text: 'Llamar', action: () => window.location.href = 'tel:+50312345678' }
+        { icon: 'whatsapp', text: 'WhatsApp', detail: 'Escríbenos al +503 1234-5678', action: () => window.open('https://wa.me/50312345678', '_blank') },
+        { icon: 'email', text: 'Email', detail: 'info@svelsalvador.com', action: () => window.location.href = 'mailto:info@svelsalvador.com' },
+        { icon: 'phone', text: 'Llamar', detail: '+503 1234-5678', action: () => window.location.href = 'tel:+50312345678' }
     ];
 
     const modal = createModal('Contáctanos', options);
     document.body.appendChild(modal);
 }
 
+const modalIcons = {
+    whatsapp: '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>',
+    email: '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>',
+    phone: '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>'
+};
+
 function createModal(title, options) {
     const modal = document.createElement('div');
     modal.className = 'modal-overlay';
     modal.innerHTML = `
-        <div class="modal-content">
+        <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title">
             <div class="modal-header">
-                <h3>${title}</h3>
-                <button class="modal-close">✕</button>
+                <div>
+                    <h3 id="contact-modal-title">${title}</h3>
+                    <p class="modal-subtitle">Elige cómo prefieres comunicarte con nosotros</p>
+                </div>
+                <button class="modal-close" aria-label="Cerrar">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+                </button>
             </div>
             <div class="modal-body">
                 ${options.map(option => `
                     <button class="contact-option" data-action="${option.text}">
-                        <span class="option-icon">${option.icon}</span>
-                        <span class="option-text">${option.text}</span>
+                        <span class="option-icon">${modalIcons[option.icon]}</span>
+                        <span class="option-label">
+                            <span class="option-text">${option.text}</span>
+                            <span class="option-detail">${option.detail}</span>
+                        </span>
                     </button>
                 `).join('')}
             </div>
@@ -499,87 +513,155 @@ function createModal(title, options) {
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
-            backdrop-filter: blur(10px);
+            background: rgba(0, 0, 0, 0.55);
             display: flex;
             align-items: center;
             justify-content: center;
+            padding: 1rem;
             z-index: 2000;
             animation: fadeIn 0.3s ease;
         }
-        
-        .modal-content {
-            background: rgba(30, 58, 138, 0.95);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+
+        .modal-overlay.closing {
+            animation: fadeOut 0.25s ease forwards;
+        }
+
+        .modal-overlay .modal-content {
+            background: #ffffff;
             border-radius: 1rem;
-            padding: 2rem;
-            max-width: 400px;
-            width: 90%;
+            max-width: 420px;
+            width: 100%;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
             animation: scaleIn 0.3s ease;
         }
-        
-        .modal-header {
+
+        .modal-overlay.closing .modal-content {
+            animation: scaleOut 0.25s ease forwards;
+        }
+
+        .modal-overlay .modal-header {
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1.5rem;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: #0057a6;
+            color: #ffffff;
         }
-        
-        .modal-header h3 {
-            color: white;
-            font-size: 1.5rem;
+
+        .modal-overlay .modal-header h3 {
+            color: #ffffff;
+            font-size: 1.4rem;
+            margin: 0 0 0.25rem;
+        }
+
+        .modal-overlay .modal-subtitle {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 0.95rem;
             margin: 0;
         }
-        
-        .modal-close {
-            background: none;
+
+        .modal-overlay .modal-close {
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.15);
             border: none;
-            color: white;
-            font-size: 1.5rem;
+            color: #ffffff;
             cursor: pointer;
-            padding: 0.5rem;
             border-radius: 50%;
-            transition: background 0.3s ease;
+            transition: background 0.3s ease, transform 0.3s ease;
         }
-        
-        .modal-close:hover {
-            background: rgba(255, 255, 255, 0.1);
+
+        .modal-overlay .modal-close:hover,
+        .modal-overlay .modal-close:focus-visible {
+            background: rgba(255, 255, 255, 0.3);
+            transform: rotate(90deg);
+            outline: none;
         }
-        
+
+        .modal-overlay .modal-body {
+            padding: 1.5rem;
+        }
+
         .contact-option {
             display: flex;
             align-items: center;
             gap: 1rem;
             width: 100%;
             padding: 1rem;
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: #ffffff;
+            border: 1px solid #dbe3ec;
             border-radius: 0.75rem;
-            color: white;
+            color: #1f2937;
             font-size: 1rem;
+            text-align: left;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: border-color 0.3s ease, background 0.3s ease, transform 0.3s ease;
             margin-bottom: 0.75rem;
         }
-        
-        .contact-option:hover {
-            background: rgba(255, 255, 255, 0.2);
+
+        .contact-option:last-child {
+            margin-bottom: 0;
+        }
+
+        .contact-option:hover,
+        .contact-option:focus-visible {
+            border-color: #00a3da;
+            background: #f0f9fd;
             transform: translateY(-2px);
+            outline: none;
         }
-        
+
         .option-icon {
-            font-size: 1.5rem;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: #00a3da;
+            color: #ffffff;
         }
-        
+
+        .option-label {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .option-text {
+            font-weight: 600;
+            color: #0057a6;
+        }
+
+        .option-detail {
+            font-size: 0.875rem;
+            color: #6b7280;
+        }
+
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
         }
-        
+
+        @keyframes fadeOut {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+
         @keyframes scaleIn {
             from { transform: scale(0.9); opacity: 0; }
             to { transform: scale(1); opacity: 1; }
+        }
+
+        @keyframes scaleOut {
+            from { transform: scale(1); opacity: 1; }
+            to { transform: scale(0.9); opacity: 0; }
         }
     `;
 
@@ -590,23 +672,39 @@ function createModal(title, options) {
         document.head.appendChild(styleSheet);
     }
 
+    // Close with a short fade-out
+    const closeModal = () => {
+        if (modal.classList.contains('closing')) return;
+        document.removeEventListener('keydown', onKeydown);
+        modal.classList.add('closing');
+        setTimeout(() => modal.remove(), 250);
+    };
+
+    const onKeydown = (e) => {
+        if (e.key === 'Escape') {
+            closeModal();
+        }
+    };
+
     // Event listeners
-    modal.querySelector('.modal-close').addEventListener('click', () => {
-        modal.remove();
-    });
+    modal.querySelector('.modal-close').addEventListener('click', closeModal);
 
     modal.addEventListener('click', (e) => {
         if (e.target === modal) {
-            modal.remove();
+            closeModal();
         }
     });
+
+    document.addEventListener('keydown', onKeydown);
 
     modal.querySelectorAll('.contact-option').forEach((option, index) => {
         option.addEventListener('click', () => {
             options[index].action();
-            modal.remove();
+            closeModal();
         });
     });
+
+    setTimeout(() => modal.querySelector('.modal-close').focus(), 0);
 
     return modal;
 }
@@ -625,7 +723,8 @@ function initializeScrollEffects() {
 
     // Scroll to top functionality
     const scrollToTopBtn = document.createElement('button');
-    scrollToTopBtn.innerHTML = '↑';
+    scrollToTopBtn.innerHTML = '<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>';
+    scrollToTopBtn.setAttribute('aria-label', 'Subir');
     scrollToTopBtn.className = 'scroll-to-top';
     scrollToTopBtn.style.cssText = `
         position: fixed;
@@ -637,7 +736,9 @@ function initializeScrollEffects() {
         background: #f97316;
         color: white;
         border: none;
-        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         cursor: pointer;
         opacity: 0;
         visibility: hidden;
