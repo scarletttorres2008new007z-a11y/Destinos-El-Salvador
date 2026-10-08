@@ -180,10 +180,10 @@ function initializeAnimations() {
     actionBtns.forEach((btn, index) => {
         btn.style.animationDelay = `${index * 0.1}s`;
         btn.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-10px) scale(1.05)';
+            this.style.transform = 'translateY(-4px)';
         });
         btn.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0) scale(1)';
+            this.style.transform = 'translateY(0)';
         });
     });
 }
