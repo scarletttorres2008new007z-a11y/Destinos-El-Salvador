@@ -344,8 +344,6 @@ body {
     background: url('https://images.unsplash.com/photo-1680374635234-ba4bc7e44641?auto=format&fit=crop&w=1920&q=70') center / cover no-repeat;
     opacity: 0.18;
     mix-blend-mode: luminosity;
-    -webkit-mask-image: radial-gradient(ellipse at center, #000 35%, transparent 75%);
-    mask-image: radial-gradient(ellipse at center, #000 35%, transparent 75%);
     pointer-events: none;
 }
 
@@ -386,7 +384,7 @@ body {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(10, 20, 50, 0.92) 0%, rgba(10, 20, 50, 0.55) 45%, rgba(10, 20, 50, 0.15) 100%);
+    background: rgba(10, 20, 50, 0.6);
     transition: var(--transition);
 }
 
@@ -468,7 +466,7 @@ body {
 }
 
 .photo-card:hover::after {
-    background: linear-gradient(to top, rgba(10, 20, 50, 0.95) 0%, rgba(10, 20, 50, 0.6) 50%, rgba(10, 20, 50, 0.25) 100%);
+    background: rgba(10, 20, 50, 0.7);
 }
 
 .photo-card:hover .photo-card-content {
