@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinos - SV El Salvador</title>
+    <link rel="stylesheet" href="el salvador.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+   <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">sv <span class="highlight">El Salvador</span></div>
+            <ul class="nav-menu">
+                <li><a href="inicio el salvador.html" class="nav-link active">Inicio</a></li>
+                <li><a href="destino el salvador.html" class="nav-link">Destinos</a></li>
+                <li><a href="cultura el salvador.html" class="nav-link">Cultura</a></li>
+                <li><a href="galeria el salvador.html" class="nav-link">Galería</a></li>
+                <li><a href="contacto el salvador.html" class="nav-link">Contacto</a></li>
+                <li><a href="Sobre nosotros.html" class="nav-link">Nosotros</a></li>
+            </ul>
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+        <div class="mobile-menu">
+            <a href="inicio el salvador.html">Inicio</a>
+            <a href="destino el salvador.html">Destinos</a>
+            <a href="cultura el salvador.html">Cultura</a>
+            <a href="galeria el salvador.html">Galería</a>
+            <a href="contacto el salvador.html">Contacto</a>
+            <a href="Sobre nosotros.html">Nosotros</a>
+        </div>
+    </nav>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="page-section">
+        <div class="container">
+            <h1 class="section-title">Destinos Increíbles</h1>
+            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 3rem; opacity: 0.9;">
+                Descubre los lugares más espectaculares de El Salvador, desde playas paradisíacas hasta volcanes majestuosos
+            </p>
+
+            <!-- Search and Filters -->
+            <div class="search-section" style="margin-bottom: 3rem;">
+                <div class="search-bar" style="max-width: 600px; margin: 0 auto 2rem;">
+                    <input type="text" class="search-input" placeholder="Buscar destinos..." style="width: 100%; padding: 1rem; border-radius: 50px; border: 1px solid rgba(255,255,255,0.3); background: rgba(255,255,255,0.1); color: white; font-size: 1rem;">
+                </div>
+                
+                <div class="filter-tabs">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="beach">🏖️ Playas</button>
+                    <button class="filter-btn" data-filter="volcano">🌋 Volcanes</button>
+                    <button class="filter-btn" data-filter="history">🏛️ Historia</button>
+                    <button class="filter-btn" data-filter="nature">🌿 Naturaleza</button>
+                    <button class="filter-btn" data-filter="adventure">⛰️ Aventura</button>
+                </div>
+            </div>
+
+            <!-- Destinations Grid -->
+            <div class="destinations-grid">
+                <!-- Beach Destinations -->
+                <div class="destination-card" data-category="beach">
+                    <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Playa El Tunco">
+                    <div class="card-content">
+                        <div class="rating" style="float: right;">⭐ 4.8</div>
+                        <h3>Playa El Tunco</h3>
+                        <p class="location">📍 La Libertad</p>
+                        <p class="description">El epicentro del surf en El Salvador. Olas consistentes, ambiente relajado y una vibrante vida nocturna hacen de El Tunco el destino perfecto para surfistas y viajeros que buscan aventura.</p>
+                        
+                        <div class="details-section">
+                            <h4>🏄‍♂️ Actividades</h4>
+                            <ul>
+                                <li>Surf para todos los niveles</li>
+                                <li>Clases de surf con instructores certificados</li>
+                                <li>Vida nocturna y restaurantes</li>
+                                <li>Caminatas por la costa rocosa</li>
+                            </ul>
+                            
+                            <h4>🏨 Hospedaje</h4>
+                            <ul>
+                                <li>Hostels desde $15/noche</li>
+                                <li>Hoteles boutique $50-80/noche</li>
+                                <li>Casas de huéspedes familiares</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tags" style="margin: 1rem 0;">
+                            <span class="tag surf">Surf</span>
+                            <span class="tag beach">Playa</span>
+                            <span class="tag nightlife">Vida Nocturna</span>
+                        </div>
+                        
+                        <div class="price" style="font-size: 1.2rem; color: var(--accent-orange); margin-bottom: 1rem;">$25-40/día</div>
+                        <button class="details-btn">Ver Más Detalles</button>
+                    </div>
+                </div>
+
+                <div class="destination-card" data-category="beach">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Playa Las Flores">
+                    <div class="card-content">
+                        <div class="rating" style="float: right;">⭐ 4.7</div>
+                        <h3>Playa Las Flores</h3>
+                        <p class="location">📍 San Miguel</p>
+                        <p class="description">Una joya escondida conocida por sus olas de clase mundial y ambiente más tranquilo. Perfecta para surfistas experimentados y aquellos que buscan escapar de las multitudes.</p>
+                        
+                        <div class="details-section">
+                            <h4>🌊 Características</h4>
+                            <ul>
+                                <li>Olas de derecha e izquierda</li>
+                                <li>Surf break de calidad internacional</li>
+                                <li>Ambiente más relajado y natural</li>
+                                <li>Excelente para fotografía</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tags" style="margin: 1rem 0;">
+                            <span class="tag surf">Surf Avanzado</span>
+                            <span class="tag beach">Playa Virgen</span>
+                            <span class="tag nature">Naturaleza</span>
+                        </div>
+                        
+                        <div class="price" style="font-size: 1.2rem; color: var(--accent-orange); margin-bottom: 1rem;">$20-35/día</div>
+                        <button class="details-btn">Ver Más Detalles</button>
+                    </div>
+                </div>
+
+                <!-- Volcano Destinations -->
+                <div class="destination-card" data-category="volcano">
+                    <img src="https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Volcán de Santa Ana">
+                    <div class="card-content">
+                        <div class="rating" style="float: right;">⭐ 4.9</div>
+                        <h3>Volcán de Santa Ana (Ilamatepec)</h3>
+                        <p class="location">📍 Santa Ana</p>
+                        <p class="description">El volcán más alto de El Salvador con 2,381 metros. Su cráter alberga una impresionante laguna de azufre de color turquesa que cambia de tonalidad según las condiciones atmosféricas.</p>
+                        
+                        <div class="details-section">
+                            <h4>🥾 Información de Senderismo</h4>
+                            <ul>
+                                <li>Duración: 4-6 horas (ida y vuelta)</li>
+                                <li>Dificultad: Moderada a difícil</li>
+                                <li>Mejor época: Noviembre a Abril</li>
+                                <li>Guía obligatorio por seguridad</li>
+                            </ul>
+                            
+                            <h4>🎒 Qué llevar</h4>
+                            <ul>
+                                <li>Zapatos de senderismo</li>
+                                <li>Agua abundante (3+ litros)</li>
+                                <li>Protector solar y sombrero</li>
+                                <li>Cámara para la laguna del cráter</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tags" style="margin: 1rem 0;">
+                            <span class="tag volcano">Volcán Activo</span>
+                            <span class="tag hiking">Senderismo</span>
+                            <span class="tag adventure">Aventura</span>
+                        </div>
+                        
+                        <div class="price" style="font-size: 1.2rem; color: var(--accent-orange); margin-bottom: 1rem;">$15-25/día</div>
+                        <button class="details-btn">Ver Más Detalles</button>
+                    </div>
+                </div>
+
+                <div class="destination-card" data-category="volcano">
+                    <img src="https://images.unsplash.com/photo-1464822759844-d150baec0494?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Volcán de Izalco">
+                    <div class="card-content">
+                        <div class="rating" style="float: right;">⭐ 4.6</div>
+                        <h3>Volcán de Izalco</h3>
+                        <p class="location">📍 Sonsonate</p>
+                        <p class="description">Conocido como el "Faro del Pacífico" por su actividad pasada. Su forma cónica perfecta y el desafío de su ascenso lo convierten en una experiencia única para aventureros.</p>
+                        
+                        <div class="details-section">
+                            <h4>🏔️ Datos Importantes</h4>
+                            <ul>
+                                <li>Altura: 1,950 metros</li>
+                                <li>Última erupción: 1966</li>
+                                <li>Superficie de ceniza volcánica</li>
+                                <li>Vistas panorámicas espectaculares</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tags" style="margin: 1rem 0;">
+                            <span class="tag volcano">Volcán Joven</span>
+                            <span class="tag hiking">Senderismo Extremo</span>
+                            <span class="tag adventure">Desafío</span>
+                        </div>
+                        
+                        <div class="price" style="font-size: 1.2rem; color: var(--accent-orange); margin-bottom: 1rem;">$12-20/día</div>
+                        <button class="details-btn">Ver Más Detalles</button>
+                    </div>
+                </div>
+
+                <!-- Historical Destinations -->
+                <div class="destination-card" data-category="history">
+                    <img src="https://images.unsplash.com/photo-1426604966848-d7adac402bff?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Joya de Cerén">
+                    <div class="card-content">
+                        <div class="rating unesco" style="float: right;">UNESCO</div>
+                        <h3>Joya de Cerén</h3>
+                        <p class="location">📍 San Juan Opico</p>
+                        <p class="description">Conocida como la "Pompeya de América", este sitio arqueológico preserva una aldea maya precolombina sepultada por ceniza volcánica hace 1,400 años.</p>
+                        
+                        <div class="details-section">
+                            <h4>🏛️ Lo que verás</h4>
+                            <ul>
+                                <li>Estructuras domésticas preservadas</li>
+                                <li>Artefactos de uso diario</li>
+                                <li>Sistemas agrícolas antiguos</li>
+                                <li>Museo con exhibiciones interactivas</li>
+                            </ul>
+                            
+                            <h4>ℹ️ Información práctica</h4>
+                            <ul>
+                                <li>Tours guiados en español e inglés</li>
+                                <li>Duración: 2-3 horas</li>
+                                <li>Abierto martes a domingo</li>
+                                <li>Centro de visitantes con café</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tags" style="margin: 1rem 0;">
+                            <span class="tag history">Patrimonio UNESCO</span>
+                            <span class="tag archaeology">Arqueología</span>
+                            <span class="tag culture">Cultura Maya</span>
+                        </div>
+                        
+                        <div class="price" style="font-size: 1.2rem; color: var(--accent-orange); margin-bottom: 1rem;">$5-15/día</div>
+                        <button class="details-btn">Ver Más Detalles</button>
+                    </div>
+                </div>
+
+                <div class="destination-card" data-category="history">
+                    <img src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Suchitoto">
+                    <div class="card-content">
+                        <div class="rating" style="float: right;">⭐ 4.8</div>
+                        <h3>Suchitoto</h3>
+                        <p class="location">📍 Cuscatlán</p>
+                        <p class="description">Pueblo colonial de adoquines y casas coloridas, considerado la capital cultural de El Salvador. Rica en arte, historia y tradiciones culinarias.</p>
+                        
+                        <div class="details-section">
+                            <h4>🎨 Atracciones culturales</h4>
+                            <ul>
+                                <li>Centro histórico colonial</li>
+                                <li>Iglesia Santa Lucía (siglo XVIII)</li>
+                                <li>Galerías de arte local</li>
+                                <li>Festival de Arte y Cultura (febrero)</li>
+                            </ul>
+                            
+                            <h4>🍽️ Gastronomía típica</h4>
+                            <ul>
+                                <li>Pupusas de arroz únicas</li>
+                                <li>Yuca frita con chicharrón</li>
+                                <li>Quesadilla salvadoreña</li>
+                                <li>Café de altura local</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tags" style="margin: 1rem 0;">
+                            <span class="tag history">Colonial</span>
+                            <span class="tag culture">Arte</span>
+                            <span class="tag food">Gastronomía</span>
+                        </div>
+                        
+                        <div class="price" style="font-size: 1.2rem; color: var(--accent-orange); margin-bottom: 1rem;">$25-45/día</div>
+                        <button class="details-btn">Ver Más Detalles</button>
+                    </div>
+                </div>
+
+                <!-- Nature Destinations -->
+                <div class="destination-card" data-category="nature">
+                    <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Parque Nacional El Imposible">
+                    <div class="card-content">
+                        <div class="rating" style="float: right;">⭐ 4.7</div>
+                        <h3>Parque Nacional El Imposible</h3>
+                        <p class="location">📍 Ahuachapán</p>
+                        <p class="description">El parque nacional más grande de El Salvador, hogar de la mayor diversidad biológica del país con bosques tropicales y especies endémicas.</p>
+                        
+                        <div class="details-section">
+                            <h4>🦋 Biodiversidad</h4>
+                            <ul>
+                                <li>Más de 400 especies de aves</li>
+                                <li>Jaguares, pumas y ocelotes</li>
+                                <li>Orquídeas y plantas medicinales</li>
+                                <li>Bosque seco tropical único</li>
+                            </ul>
+                            
+                            <h4>🥾 Senderos principales</h4>
+                            <ul>
+                                <li>Sendero El Imposible (8 km)</li>
+                                <li>Sendero Cerro León (4 km)</li>
+                                <li>Sendero Los Enganches (6 km)</li>
+                                <li>Tours nocturnos para ver fauna</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tags" style="margin: 1rem 0;">
+                            <span class="tag nature">Bosque Tropical</span>
+                            <span class="tag wildlife">Vida Silvestre</span>
+                            <span class="tag hiking">Ecoturismo</span>
+                        </div>
+                        
+                        <div class="price" style="font-size: 1.2rem; color: var(--accent-orange); margin-bottom: 1rem;">$20-35/día</div>
+                        <button class="details-btn">Ver Más Detalles</button>
+                    </div>
+                </div>
+
+                <!-- Adventure Destinations -->
+                <div class="destination-card" data-category="adventure">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Ruta de Las Flores">
+                    <div class="card-content">
+                        <div class="rating" style="float: right;">⭐ 4.8</div>
+                        <h3>Ruta de Las Flores</h3>
+                        <p class="location">📍 Sonsonate - Ahuachapán</p>
+                        <p class="description">Una ruta escénica de 36 km que conecta pueblos pintorescos conocidos por su cultura cafetera, artesanías y arquitectura colonial.</p>
+                        
+                        <div class="details-section">
+                            <h4>🏘️ Pueblos destacados</h4>
+                            <ul>
+                                <li>Nahuizalco - Artesanías de tule</li>
+                                <li>Salcoatitán - Gastronomía típica</li>
+                                <li>Juayúa - Festival gastronómico</li>
+                                <li>Apaneca - Café de altura</li>
+                                <li>Ataco (Concepción) - Arte urbano</li>
+                            </ul>
+                            
+                            <h4>🚗 Modalidades de viaje</h4>
+                            <ul>
+                                <li>Auto rentado (recomendado)</li>
+                                <li>Tours en bus organizados</li>
+                                <li>Ciclismo de montaña</li>
+                                <li>Caminatas entre pueblos</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tags" style="margin: 1rem 0;">
+                            <span class="tag adventure">Ruta Escénica</span>
+                            <span class="tag culture">Pueblos Coloniales</span>
+                            <span class="tag food">Café Premium</span>
+                        </div>
+                        
+                        <div class="price" style="font-size: 1.2rem; color: var(--accent-orange); margin-bottom: 1rem;">$35-60/día</div>
+                        <button class="details-btn">Ver Más Detalles</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hidden Gems Section -->
+            <div class="hidden-gems" style="margin-top: 4rem; padding: 3rem; background: rgba(255,255,255,0.05); border-radius: 2rem;">
+                <h2 style="text-align: center; margin-bottom: 2rem; font-size: 2.5rem;">Joyas Escondidas</h2>
+                <p style="text-align: center; margin-bottom: 3rem; opacity: 0.9;">Destinos menos conocidos pero igualmente espectaculares</p>
+                
+                <div class="gems-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                    <div class="gem-card" style="background: rgba(255,255,255,0.1); border-radius: 1rem; overflow: hidden;">
+                        <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Laguna Verde">
+                        <div style="padding: 1.5rem;">
+                            <h4>Laguna Verde</h4>
+                            <p style="opacity: 0.8;">Lago cratérico de aguas termales rodeado de vegetación exuberante</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gem-card" style="background: rgba(255,255,255,0.1); border-radius: 1rem; overflow: hidden;">
+                        <img src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Puente Colgante">
+                        <div style="padding: 1.5rem;">
+                            <h4>Puentes Colgantes</h4>
+                            <p style="opacity: 0.8;">Aventura entre las copas de los árboles con vistas panorámicas</p>
+                        </div>
+                    </div>
+                    
+                    <div class="gem-card" style="background: rgba(255,255,255,0.1); border-radius: 1rem; overflow: hidden;">
+                        <img src="https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Cascadas">
+                        <div style="padding: 1.5rem;">
+                            <h4>Cascadas Escondidas</h4>
+                            <p style="opacity: 0.8;">Piscinas naturales perfectas para un refrescante chapuzón</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">sv <span class="highlight">El Salvador</span></div>
+            <p>Descubre la magia de El Salvador con nosotros</p>
+            <div class="social-links">
+                <a href="#" class="social-link">Facebook</a>
+                <a href="#" class="social-link">Instagram</a>
+                <a href="#" class="social-link">Twitter</a>
+                <a href="#" class="social-link">YouTube</a>
+            </div>
+            <p class="copyright">© 2024 SV El Salvador. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Floating Action Button -->
+    <div class="floating-fab">
+        <button class="fab-btn">💬</button>
+    </div>
+
+    <script src="el salvador.js"></script>
+</body>
+</html>

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultura - SV El Salvador</title>
+    <link rel="stylesheet" href="el salvador.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+   <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">sv <span class="highlight">El Salvador</span></div>
+            <ul class="nav-menu">
+                <li><a href="inicio el salvador.html" class="nav-link active">Inicio</a></li>
+                <li><a href="destino el salvador.html" class="nav-link">Destinos</a></li>
+                <li><a href="cultura el salvador.html" class="nav-link">Cultura</a></li>
+                <li><a href="galeria el salvador.html" class="nav-link">Galería</a></li>
+                <li><a href="contacto el salvador.html" class="nav-link">Contacto</a></li>
+                <li><a href="Sobre nosotros.html" class="nav-link">Nosotros</a></li>
+            </ul>
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+        <div class="mobile-menu">
+            <a href="inicio el salvador.html">Inicio</a>
+            <a href="destino el salvador.html">Destinos</a>
+            <a href="cultura el salvador.html">Cultura</a>
+            <a href="galeria el salvador.html">Galería</a>
+            <a href="contacto el salvador.html">Contacto</a>
+            <a href="Sobre nosotros.html">Nosotros</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="page-section">
+        <div class="container">
+            <h1 class="section-title">Cultura Salvadoreña</h1>
+            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 3rem; opacity: 0.9;">
+                Sumérgete en la rica tradición cultural de El Salvador, donde las raíces indígenas se fusionan con la herencia española
+            </p>
+
+            <!-- Culture Tabs -->
+            <div class="filter-tabs culture-tabs">
+                <button class="filter-btn culture-tab active" data-tab="tradiciones">🎭 Tradiciones</button>
+                <button class="filter-btn culture-tab" data-tab="gastronomia">🍽️ Gastronomía</button>
+                <button class="filter-btn culture-tab" data-tab="historia">📚 Historia</button>
+                <button class="filter-btn culture-tab" data-tab="arte">🎨 Arte</button>
+                <button class="filter-btn culture-tab" data-tab="musica">🎵 Música</button>
+            </div>
+
+            <!-- Tradiciones Content -->
+            <div id="tradiciones" class="culture-content active">
+                <div class="culture-content-grid">
+                    <div class="culture-text">
+                        <h3>Tradiciones Ancestrales</h3>
+                        <p>El Salvador conserva tradiciones que datan de civilizaciones precolombinas, fusionadas con costumbres españolas. Nuestras celebraciones reflejan esta rica mezcla cultural que ha perdurado por siglos.</p>
+                        
+                        <p>Las festividades patronales son el corazón de cada pueblo, donde la música, danza y gastronomía tradicional cobran vida. Los desfiles de gigantes y cabezudos, las alfombras de aserrín y las procesiones religiosas son manifestaciones únicas de nuestra identidad.</p>
+                        
+                        <div class="traditions-list" style="margin-top: 2rem;">
+                            <h4 style="color: var(--accent-orange); margin-bottom: 1rem;">🎉 Festividades Principales</h4>
+                            <ul style="list-style: none; padding: 0;">
+                                <li style="margin-bottom: 0.5rem;">🕊️ <strong>Semana Santa:</strong> Procesiones y alfombras de aserrín</li>
+                                <li style="margin-bottom: 0.5rem;">🎭 <strong>Festival de Agosto:</strong> Celebración del Divino Salvador del Mundo</li>
+                                <li style="margin-bottom: 0.5rem;">🌺 <strong>Día de los Difuntos:</strong> Tradición de visitar cementerios con flores</li>
+                                <li style="margin-bottom: 0.5rem;">🎄 <strong>Las Posadas:</strong> Representaciones navideñas tradicionales</li>
+                                <li style="margin-bottom: 0.5rem;">🌽 <strong>Fiestas Patronales:</strong> Celebraciones únicas en cada municipio</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="culture-image">
+                        <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Tradiciones salvadoreñas">
+                    </div>
+                </div>
+
+                <!-- Traditional Dances -->
+                <div class="traditions-showcase" style="margin-top: 3rem; background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 1.5rem;">
+                    <h3 style="text-align: center; margin-bottom: 2rem;">Danzas Folklóricas</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                        <div style="text-align: center;">
+                            <div style="font-size: 3rem; margin-bottom: 1rem;">💃</div>
+                            <h4>Los Historiantes</h4>
+                            <p style="opacity: 0.8;">Danza que representa la lucha entre moros y cristianos</p>
+                        </div>
+                        <div style="text-align: center;">
+                            <div style="font-size: 3rem; margin-bottom: 1rem;">🎭</div>
+                            <h4>El Torito Pinto</h4>
+                            <p style="opacity: 0.8;">Tradicional danza con mácaras de toro</p>
+                        </div>
+                        <div style="text-align: center;">
+                            <div style="font-size: 3rem; margin-bottom: 1rem;">🌽</div>
+                            <h4>La Danza del Maíz</h4>
+                            <p style="opacity: 0.8;">Celebración de la cosecha ancestral</p>
+                        </div>
+                        <div style="text-align: center;">
+                            <div style="font-size: 3rem; margin-bottom: 1rem;">🦅</div>
+                            <h4>Los Chapetones</h4>
+                            <p style="opacity: 0.8;">Danza ceremonial indígena preservada</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gastronomía Content -->
+            <div id="gastronomia" class="culture-content">
+                <div class="culture-content-grid">
+                    <div class="culture-image">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Gastronomía salvadoreña">
+                    </div>
+                    <div class="culture-text">
+                        <h3>Sabores Únicos de El Salvador</h3>
+                        <p>La gastronomía salvadoreña es una explosión de sabores que combina ingredientes prehispánicos con técnicas culinarias españolas. Cada plato cuenta una historia de mestizaje cultural y tradición familiar.</p>
+                        
+                        <p>Las pupusas, nuestro plato nacional, son mucho más que comida: son un símbolo de identidad que une a las familias y comunidades. Cada región tiene sus propias variantes y secretos culinarios transmitidos de generación en generación.</p>
+                        
+                        <div class="food-specialties" style="margin-top: 2rem;">
+                            <h4 style="color: var(--accent-orange); margin-bottom: 1rem;">🍽️ Especialidades Imperdibles</h4>
+                            <ul style="list-style: none; padding: 0;">
+                                <li style="margin-bottom: 0.5rem;">🫓 <strong>Pupusas:</strong> Tortillas rellenas de queso, chicharrón o loroco</li>
+                                <li style="margin-bottom: 0.5rem;">🍛 <strong>Casamiento:</strong> Arroz con frijoles, desayuno típico</li>
+                                <li style="margin-bottom: 0.5rem;">🐟 <strong>Sopa de Gallina India:</strong> Caldo tradicional festivo</li>
+                                <li style="margin-bottom: 0.5rem;">🥖 <strong>Pan Francés:</strong> Pan dulce tradicional</li>
+                                <li style="margin-bottom: 0.5rem;">🍮 <strong>Quesadilla Salvadoreña:</strong> Postre de queso y arroz</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Regional Dishes -->
+                <div class="regional-food" style="margin-top: 3rem;">
+                    <h3 style="text-align: center; margin-bottom: 2rem;">Especialidades Regionales</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                        <div class="food-card" style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 1rem;">
+                            <h4 style="color: var(--accent-orange);">🌊 Costa del Pacífico</h4>
+                            <ul style="margin-top: 1rem;">
+                                <li>Ceviches de camarón y pescado</li>
+                                <li>Sopa de cangrejo</li>
+                                <li>Pescado a la plancha</li>
+                                <li>Mariscos en diversas preparaciones</li>
+                            </ul>
+                        </div>
+                        <div class="food-card" style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 1rem;">
+                            <h4 style="color: var(--accent-orange);">🏔️ Zona Montañosa</h4>
+                            <ul style="margin-top: 1rem;">
+                                <li>Café de altura premium</li>
+                                <li>Quesos artesanales</li>
+                                <li>Miel de abeja orgánica</li>
+                                <li>Frutas tropicales frescas</li>
+                            </ul>
+                        </div>
+                        <div class="food-card" style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 1rem;">
+                            <h4 style="color: var(--accent-orange);">🌾 Zona Central</h4>
+                            <ul style="margin-top: 1rem;">
+                                <li>Pupusas tradicionales</li>
+                                <li>Tamales de elote</li>
+                                <li>Atol de elote</li>
+                                <li>Curtido fermentado</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Historia Content -->
+            <div id="historia" class="culture-content">
+                <div class="culture-content-grid">
+                    <div class="culture-text">
+                        <h3>Historia Milenaria</h3>
+                        <p>El Salvador tiene una historia que se remonta a más de 3,000 años, cuando las primeras civilizaciones mesoamericanas se establecieron en nuestro territorio. Los pipiles, lencas y otros pueblos indígenas desarrollaron sociedades complejas y avanzadas.</p>
+                        
+                        <p>La llegada de los españoles en el siglo XVI marcó el inicio del período colonial, seguido por la independencia en 1821 y la formación de la república moderna. Cada período ha dejado su huella en nuestra identidad nacional.</p>
+                    </div>
+                    <div class="culture-image">
+                        <img src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Historia de El Salvador">
+                    </div>
+                </div>
+
+                <!-- Timeline -->
+                <div class="history-timeline" style="margin-top: 3rem; background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 1.5rem;">
+                    <h3 style="text-align: center; margin-bottom: 2rem;">Línea de Tiempo Histórica</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>1200 a.C. - Primeros Pobladores</h4>
+                                <p>Los olmecas y posteriormente los mayas establecen las primeras civilizaciones en el territorio salvadoreño.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>1000 d.C. - Reino Pipil</h4>
+                                <p>Los pipiles, descendientes de los toltecas, fundan Cuzcatlán y otras importantes ciudades.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>1524 - Conquista Española</h4>
+                                <p>Pedro de Alvarado llega al territorio y se inicia el período colonial español.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>1821 - Independencia</h4>
+                                <p>El Salvador declara su independencia de España junto con el resto de Centroamérica.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>1841 - República</h4>
+                                <p>Se establece la República de El Salvador como estado independiente y soberano.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>1992 - Acuerdos de Paz</h4>
+                                <p>Fin del conflicto armado y inicio de una nueva era democrática y de reconstrucción nacional.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Arte Content -->
+            <div id="arte" class="culture-content">
+                <div class="culture-content-grid">
+                    <div class="culture-image">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Arte salvadoreño">
+                    </div>
+                    <div class="culture-text">
+                        <h3>Expresiones Artísticas</h3>
+                        <p>El arte salvadoreño es un reflejo vibrante de nuestra historia, luchas y aspiraciones. Desde las antiguas cerámicas precolombinas hasta el arte urbano contemporáneo, cada expresión artística cuenta parte de nuestra identidad.</p>
+                        
+                        <p>Nuestros artistas han ganado reconocimiento internacional por su técnica y temática social. El arte no solo decora, sino que también educa, protesta y preserva nuestra memoria colectiva.</p>
+                        
+                        <div class="art-forms" style="margin-top: 2rem;">
+                            <h4 style="color: var(--accent-orange); margin-bottom: 1rem;">🎨 Manifestaciones Artísticas</h4>
+                            <ul style="list-style: none; padding: 0;">
+                                <li style="margin-bottom: 0.5rem;">🏺 <strong>Cerámica:</strong> Tradición precolombina continuada</li>
+                                <li style="margin-bottom: 0.5rem;">🖼️ <strong>Pintura:</strong> Desde realismo hasta arte contemporáneo</li>
+                                <li style="margin-bottom: 0.5rem;">🗿 <strong>Escultura:</strong> Obras monumentales y arte público</li>
+                                <li style="margin-bottom: 0.5rem;">🧵 <strong>Textiles:</strong> Bordados y tejidos tradicionales</li>
+                                <li style="margin-bottom: 0.5rem;">🎭 <strong>Arte Urbano:</strong> Murales y grafitis con mensaje social</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Famous Artists -->
+                <div class="artists-section" style="margin-top: 3rem;">
+                    <h3 style="text-align: center; margin-bottom: 2rem;">Artistas Destacados</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                        <div class="artist-card" style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 1rem; text-align: center;">
+                            <div style="font-size: 3rem; margin-bottom: 1rem;">🎨</div>
+                            <h4>Fernando Llort</h4>
+                            <p style="opacity: 0.8;">Padre del arte naíf salvadoreño, creador del estilo "La Palma"</p>
+                        </div>
+                        <div class="artist-card" style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 1rem; text-align: center;">
+                            <div style="font-size: 3rem; margin-bottom: 1rem;">🖼️</div>
+                            <h4>Carlos Cañas</h4>
+                            <p style="opacity: 0.8;">Maestro del expresionismo salvadoreño contemporáneo</p>
+                        </div>
+                        <div class="artist-card" style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 1rem; text-align: center;">
+                            <div style="font-size: 3rem; margin-bottom: 1rem;">✏️</div>
+                            <h4>Toño Salazar</h4>
+                            <p style="opacity: 0.8;">Caricaturista e ilustrador reconocido internacionalmente</p>
+                        </div>
+                        <div class="artist-card" style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 1rem; text-align: center;">
+                            <div style="font-size: 3rem; margin-bottom: 1rem;">🗿</div>
+                            <h4>Rubén Martínez</h4>
+                            <p style="opacity: 0.8;">Escultor de monumentos emblemáticos nacionales</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Música Content -->
+            <div id="musica" class="culture-content">
+                <div class="culture-content-grid">
+                    <div class="culture-text">
+                        <h3>Ritmos Salvadoreños</h3>
+                        <p>La música salvadoreña es una mezcla fascinante de ritmos indígenas, españoles y africanos. Desde las antiguas melodías precolombinas hasta el rock contemporáneo, nuestra música refleja la evolución cultural del país.</p>
+                        
+                        <p>Los instrumentos tradicionales como la marimba, el tambor y la flauta de carrizo continúan siendo utilizados en festivales y celebraciones, mientras que nuevos géneros como el reggaetón y el rock han encontrado su lugar en la escena musical nacional.</p>
+                        
+                        <div class="music-genres" style="margin-top: 2rem;">
+                            <h4 style="color: var(--accent-orange); margin-bottom: 1rem;">🎵 Géneros Musicales</h4>
+                            <ul style="list-style: none; padding: 0;">
+                                <li style="margin-bottom: 0.5rem;">🪘 <strong>Música Folklórica:</strong> Ritmos ancestrales y tradicionales</li>
+                                <li style="margin-bottom: 0.5rem;">🎺 <strong>Música de Viento:</strong> Bandas municipales y procesiones</li>
+                                <li style="margin-bottom: 0.5rem;">🎸 <strong>Trova:</strong> Canciones de protesta y amor</li>
+                                <li style="margin-bottom: 0.5rem;">🎤 <strong>Rock Salvadoreño:</strong> Bandas con identidad nacional</li>
+                                <li style="margin-bottom: 0.5rem;">💃 <strong>Música Popular:</strong> Cumbia, salsa y reggaetón</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="culture-image">
+                        <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Música tradicional">
+                    </div>
+                </div>
+
+                <!-- Musical Instruments -->
+                <div class="instruments-section" style="margin-top: 3rem; background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 1.5rem;">
+                    <h3 style="text-align: center; margin-bottom: 2rem;">Instrumentos Tradicionales</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;">
+                        <div style="text-align: center;">
+                            <div style="font-size: 3rem; margin-bottom: 1rem;">🎹</div>
+                            <h4>Marimba</h4>
+                            <p style="opacity: 0.8;">Instrumento nacional por excelencia</p>
+                        </div>
+                        <div style="text-align: center;">
+                            <div style="font-size: 3rem; margin-bottom: 1rem;">🪘</div>
+                            <h4>Tambor Indígena</h4>
+                            <p style="opacity: 0.8;">Ritmos ceremoniales ancestrales</p>
+                        </div>
+                        <div style="text-align: center;">
+                            <div style="font-size: 3rem; margin-bottom: 1rem;">🪈</div>
+                            <h4>Flauta de Carrizo</h4>
+                            <p style="opacity: 0.8;">Melodías melancólicas tradicionales</p>
+                        </div>
+                        <div style="text-align: center;">
+                            <div style="font-size: 3rem; margin-bottom: 1rem;">🎺</div>
+                            <h4>Instrumentos de Viento</h4>
+                            <p style="opacity: 0.8;">Bandas y celebraciones populares</p>
+                        </div>
+                        <div style="text-align: center;">
+                            <div style="font-size: 3rem; margin-bottom: 1rem;">🪇</div>
+                            <h4>Chinchín</h4>
+                            <p style="opacity: 0.8;">Sonajero tradicional festivo</p>
+                        </div>
+                        <div style="text-align: center;">
+                            <div style="font-size: 3rem; margin-bottom: 1rem;">🎸</div>
+                            <h4>Guitarra Criolla</h4>
+                            <p style="opacity: 0.8;">Serenatas y música romántica</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">sv <span class="highlight">El Salvador</span></div>
+            <p>Descubre la magia de El Salvador con nosotros</p>
+            <div class="social-links">
+                <a href="#" class="social-link">Facebook</a>
+                <a href="#" class="social-link">Instagram</a>
+                <a href="#" class="social-link">Twitter</a>
+                <a href="#" class="social-link">YouTube</a>
+            </div>
+            <p class="copyright">© 2024 SV El Salvador. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Floating Action Button -->
+    <div class="floating-fab">
+        <button class="fab-btn">💬</button>
+    </div>
+
+    <script src="el salvador.js"></script>
+    <script>
+        // Culture tabs functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const cultureTabs = document.querySelectorAll('.culture-tab');
+            const cultureContents = document.querySelectorAll('.culture-content');
+
+            cultureTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const targetTab = this.dataset.tab;
+                    
+                    // Remove active class from all tabs and contents
+                    cultureTabs.forEach(t => t.classList.remove('active'));
+                    cultureContents.forEach(c => c.classList.remove('active'));
+                    
+                    // Add active class to clicked tab and corresponding content
+                    this.classList.add('active');
+                    document.getElementById(targetTab).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - SV El Salvador</title>
+    <link rel="stylesheet" href="el salvador.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+   <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">sv <span class="highlight">El Salvador</span></div>
+            <ul class="nav-menu">
+                <li><a href="inicio el salvador.html" class="nav-link active">Inicio</a></li>
+                <li><a href="destino el salvador.html" class="nav-link">Destinos</a></li>
+                <li><a href="cultura el salvador.html" class="nav-link">Cultura</a></li>
+                <li><a href="galeria el salvador.html" class="nav-link">Galería</a></li>
+                <li><a href="contacto el salvador.html" class="nav-link">Contacto</a></li>
+                <li><a href="Sobre nosotros.html" class="nav-link">Nosotros</a></li>
+            </ul>
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+        <div class="mobile-menu">
+            <a href="inicio el salvador.html">Inicio</a>
+            <a href="destino el salvador.html">Destinos</a>
+            <a href="cultura el salvador.html">Cultura</a>
+            <a href="galeria el salvador.html">Galería</a>
+            <a href="contacto el salvador.html">Contacto</a>
+            <a href="Sobre nosotros.html">Nosotros</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="page-section">
+        <div class="container">
+            <h1 class="section-title">Planifica Tu Viaje</h1>
+            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 3rem; opacity: 0.9;">
+                Estamos aquí para ayudarte a crear la experiencia perfecta en El Salvador
+            </p>
+
+            <!-- Contact Tabs -->
+            <div class="filter-tabs contact-tabs">
+                <button class="filter-btn contact-tab active" data-tab="informacion">📞 Información</button>
+                <button class="filter-btn contact-tab" data-tab="reservas">🎫 Reservas</button>
+                <button class="filter-btn contact-tab" data-tab="colaboracion">🤝 Colaboración</button>
+                <button class="filter-btn contact-tab" data-tab="faq">❓ FAQ</button>
+            </div>
+
+            <!-- Information Content -->
+            <div id="informacion" class="contact-content active">
+                <!-- Contact Information Cards -->
+                <div class="info-cards" style="margin-bottom: 3rem;">
+                    <div class="info-card">
+                        <div class="info-icon">📞</div>
+                        <h4>Llámanos</h4>
+                        <p>+503 2222-3333</p>
+                        <p>+503 7777-8888</p>
+                        <div class="info-hours">Lun-Vie 8AM-6PM</div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">✉️</div>
+                        <h4>Escríbenos</h4>
+                        <p>info@svelsalvador.com</p>
+                        <p>reservas@svelsalvador.com</p>
+                        <div class="info-hours">Respuesta en 24hrs</div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">📍</div>
+                        <h4>Visítanos</h4>
+                        <p>Centro Histórico</p>
+                        <p>San Salvador, El Salvador</p>
+                        <div class="info-hours">Lun-Sab 9AM-5PM</div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">📱</div>
+                        <h4>WhatsApp</h4>
+                        <p>+503 6666-7777</p>
+                        <p>Chat disponible 24/7</p>
+                        <div class="info-hours">Respuesta inmediata</div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <h3 style="text-align: center; margin-bottom: 2rem; color: white;">Contáctanos</h3>
+                    <form id="contactForm">
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                            <div class="form-group">
+                                <label for="nombre">Nombre Completo *</label>
+                                <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre completo">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                            </div>
+                        </div>
+                        
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                            <div class="form-group">
+                                <label for="telefono">Teléfono</label>
+                                <input type="tel" id="telefono" name="telefono" placeholder="+503 0000-0000">
+                            </div>
+                            <div class="form-group">
+                                <label for="pais">País de Origen</label>
+                                <select id="pais" name="pais">
+                                    <option value="">Selecciona tu país</option>
+                                    <option value="ES">España</option>
+                                    <option value="US">Estados Unidos</option>
+                                    <option value="CA">Canadá</option>
+                                    <option value="MX">México</option>
+                                    <option value="GT">Guatemala</option>
+                                    <option value="HN">Honduras</option>
+                                    <option value="NI">Nicaragua</option>
+                                    <option value="CR">Costa Rica</option>
+                                    <option value="PA">Panamá</option>
+                                    <option value="CO">Colombia</option>
+                                    <option value="AR">Argentina</option>
+                                    <option value="BR">Brasil</option>
+                                    <option value="FR">Francia</option>
+                                    <option value="DE">Alemania</option>
+                                    <option value="IT">Italia</option>
+                                    <option value="UK">Reino Unido</option>
+                                    <option value="AU">Australia</option>
+                                    <option value="JP">Japón</option>
+                                    <option value="OTHER">Otro</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="interes">¿Qué te interesa? *</label>
+                            <select id="interes" name="interes" required>
+                                <option value="">Selecciona tu interés principal</option>
+                                <option value="surf">Surf y deportes acuáticos</option>
+                                <option value="volcanismo">Turismo volcánico</option>
+                                <option value="historia">Historia y arqueología</option>
+                                <option value="cultura">Cultura y tradiciones</option>
+                                <option value="gastronomia">Gastronomía local</option>
+                                <option value="naturaleza">Naturaleza y ecoturismo</option>
+                                <option value="aventura">Deportes extremos</option>
+                                <option value="relax">Descanso y relajación</option>
+                                <option value="todo">Un poco de todo</option>
+                            </select>
+                        </div>
+                        
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                            <div class="form-group">
+                                <label for="fechaViaje">Fecha Tentativa de Viaje</label>
+                                <input type="date" id="fechaViaje" name="fechaViaje">
+                            </div>
+                            <div class="form-group">
+                                <label for="duracion">Duración del Viaje</label>
+                                <select id="duracion" name="duracion">
+                                    <option value="">Selecciona duración</option>
+                                    <option value="1-3">1-3 días (Fin de semana)</option>
+                                    <option value="4-7">4-7 días (Una semana)</option>
+                                    <option value="8-14">8-14 días (Dos semanas)</option>
+                                    <option value="15+">15+ días (Viaje largo)</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="presupuesto">Presupuesto Aproximado</label>
+                            <select id="presupuesto" name="presupuesto">
+                                <option value="">Selecciona tu presupuesto</option>
+                                <option value="economico">Económico ($20-50/día por persona)</option>
+                                <option value="moderado">Moderado ($50-100/día por persona)</option>
+                                <option value="premium">Premium ($100-200/día por persona)</option>
+                                <option value="lujo">Lujo ($200+/día por persona)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="mensaje">Cuéntanos sobre tu viaje ideal *</label>
+                            <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Describe qué tipo de experiencias buscas, si viajas solo, en pareja, familia, etc. Cualquier información que nos ayude a personalizar tu viaje..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">✈️ Enviar Solicitud</button>
+                    </form>
+                </div>
+
+                <!-- Interactive Map -->
+                <div class="map-section" style="margin-top: 3rem; background: rgba(255,255,255,0.05); padding: 2rem; border-radius: 1.5rem;">
+                    <h3 style="text-align: center; margin-bottom: 2rem;">Encuéntranos</h3>
+                    <div class="map-placeholder" style="height: 300px; background: linear-gradient(45deg, var(--primary-blue), var(--teal)); border-radius: 1rem; display: flex; align-items: center; justify-content: center; color: white;">
+                        <div style="text-align: center;">
+                            <div style="font-size: 4rem; margin-bottom: 1rem;">🗺️</div>
+                            <h4>Mapa Interactivo</h4>
+                            <p>San Salvador, El Salvador</p>
+                            <button class="btn secondary" style="margin-top: 1rem;">📍 Ver en Google Maps</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Reservas Content -->
+            <div id="reservas" class="contact-content">
+                <div class="reservations-section">
+                    <h3 style="text-align: center; margin-bottom: 2rem;">Reserva tu Experiencia</h3>
+                    
+                    <!-- Package Selection -->
+                    <div class="package-selection" style="margin-bottom: 3rem;">
+                        <h4 style="margin-bottom: 1.5rem; color: var(--accent-orange);">Selecciona tu Paquete</h4>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                            <div class="package-option" style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 1rem; cursor: pointer; border: 2px solid transparent; transition: all 0.3s ease;">
+                                <input type="radio" name="package" value="aventura" id="pkg-aventura" style="margin-bottom: 1rem;">
+                                <label for="pkg-aventura" style="cursor: pointer;">
+                                    <h4>Aventura Completa</h4>
+                                    <p style="opacity: 0.8;">5 días / 4 noches</p>
+                                    <p style="color: var(--accent-orange); font-weight: bold;">$299</p>
+                                </label>
+                            </div>
+                            
+                            <div class="package-option" style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 1rem; cursor: pointer; border: 2px solid transparent; transition: all 0.3s ease;">
+                                <input type="radio" name="package" value="cultura" id="pkg-cultura" style="margin-bottom: 1rem;">
+                                <label for="pkg-cultura" style="cursor: pointer;">
+                                    <h4>Cultura & Historia</h4>
+                                    <p style="opacity: 0.8;">3 días / 2 noches</p>
+                                    <p style="color: var(--accent-orange); font-weight: bold;">$199</p>
+                                </label>
+                            </div>
+                            
+                            <div class="package-option" style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 1rem; cursor: pointer; border: 2px solid transparent; transition: all 0.3s ease;">
+                                <input type="radio" name="package" value="surf" id="pkg-surf" style="margin-bottom: 1rem;">
+                                <label for="pkg-surf" style="cursor: pointer;">
+                                    <h4>Surf Paradise</h4>
+                                    <p style="opacity: 0.8;">7 días / 6 noches</p>
+                                    <p style="color: var(--accent-orange); font-weight: bold;">$399</p>
+                                </label>
+                            </div>
+                            
+                            <div class="package-option" style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 1rem; cursor: pointer; border: 2px solid transparent; transition: all 0.3s ease;">
+                                <input type="radio" name="package" value="personalizado" id="pkg-personalizado" style="margin-bottom: 1rem;">
+                                <label for="pkg-personalizado" style="cursor: pointer;">
+                                    <h4>Personalizado</h4>
+                                    <p style="opacity: 0.8;">A tu medida</p>
+                                    <p style="color: var(--accent-orange); font-weight: bold;">Cotizar</p>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Reservation Form -->
+                    <div class="contact-form">
+                        <form id="reservationForm">
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                                <div class="form-group">
+                                    <label for="res-nombre">Nombre Completo *</label>
+                                    <input type="text" id="res-nombre" name="nombre" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="res-email">Email *</label>
+                                    <input type="email" id="res-email" name="email" required>
+                                </div>
+                            </div>
+                            
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                                <div class="form-group">
+                                    <label for="res-telefono">Teléfono *</label>
+                                    <input type="tel" id="res-telefono" name="telefono" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="res-personas">Número de Personas</label>
+                                    <select id="res-personas" name="personas">
+                                        <option value="1">1 persona</option>
+                                        <option value="2">2 personas</option>
+                                        <option value="3">3 personas</option>
+                                        <option value="4">4 personas</option>
+                                        <option value="5">5 personas</option>
+                                        <option value="6+">6+ personas</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                                <div class="form-group">
+                                    <label for="res-fecha-inicio">Fecha de Inicio *</label>
+                                    <input type="date" id="res-fecha-inicio" name="fechaInicio" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="res-fecha-fin">Fecha de Fin *</label>
+                                    <input type="date" id="res-fecha-fin" name="fechaFin" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="res-hospedaje">Preferencia de Hospedaje</label>
+                                <select id="res-hospedaje" name="hospedaje">
+                                    <option value="">Selecciona tu preferencia</option>
+                                    <option value="economico">Hostels y alojamientos económicos</option>
+                                    <option value="estandar">Hoteles 3 estrellas</option>
+                                    <option value="superior">Hoteles 4 estrellas</option>
+                                    <option value="lujo">Hoteles 5 estrellas y resorts</option>
+                                    <option value="boutique">Hoteles boutique únicos</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="res-comentarios">Comentarios Especiales</label>
+                                <textarea id="res-comentarios" name="comentarios" rows="4" placeholder="Menciona cualquier requerimiento especial, alergias alimentarias, necesidades de accesibilidad, etc."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="submit-btn">🎫 Solicitar Reserva</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Colaboración Content -->
+            <div id="colaboracion" class="contact-content">
+                <div class="collaboration-section">
+                    <h3 style="text-align: center; margin-bottom: 2rem;">Colabora con Nosotros</h3>
+                    <p style="text-align: center; margin-bottom: 3rem; opacity: 0.9;">¿Eres un profesional del turismo, fotógrafo, blogger o tienes un negocio relacionado? ¡Trabajemos juntos!</p>
+                    
+                    <!-- Collaboration Types -->
+                    <div class="collaboration-types" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+                        <div class="collab-card" style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 1rem; text-align: center;">
+                            <div style="font-size: 3rem; margin-bottom: 1rem;">📸</div>
+                            <h4>Fotógrafos</h4>
+                            <p style="opacity: 0.8;">Colabora con contenido visual de alta calidad</p>
+                        </div>
+                        
+                        <div class="collab-card" style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 1rem; text-align: center;">
+                            <div style="font-size: 3rem; margin-bottom: 1rem;">✍️</div>
+                            <h4>Bloggers de Viaje</h4>
+                            <p style="opacity: 0.8;">Comparte experiencias auténticas</p>
+                        </div>
+                        
+                        <div class="collab-card" style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 1rem; text-align: center;">
+                            <div style="font-size: 3rem; margin-bottom: 1rem;">🏨</div>
+                            <h4>Hoteleros</h4>
+                            <p style="opacity: 0.8;">Forma parte de nuestra red de hospedaje</p>
+                        </div>
+                        
+                        <div class="collab-card" style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 1rem; text-align: center;">
+                            <div style="font-size: 3rem; margin-bottom: 1rem;">🚌</div>
+                            <h4>Operadores Turísticos</h4>
+                            <p style="opacity: 0.8;">Amplía tu alcance y clientela</p>
+                        </div>
+                        
+                        <div class="collab-card" style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 1rem; text-align: center;">
+                            <div style="font-size: 3rem; margin-bottom: 1rem;">🍽️</div>
+                            <h4>Restaurantes</h4>
+                            <p style="opacity: 0.8;">Promociona tu gastronomía local</p>
+                        </div>
+                        
+                        <div class="collab-card" style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 1rem; text-align: center;">
+                            <div style="font-size: 3rem; margin-bottom: 1rem;">🎯</div>
+                            <h4>Influencers</h4>
+                            <p style="opacity: 0.8;">Colaboraciones de marketing digital</p>
+                        </div>
+                    </div>
+
+                    <!-- Collaboration Form -->
+                    <div class="contact-form">
+                        <form id="collaborationForm">
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                                <div class="form-group">
+                                    <label for="collab-nombre">Nombre/Empresa *</label>
+                                    <input type="text" id="collab-nombre" name="nombre" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="collab-email">Email *</label>
+                                    <input type="email" id="collab-email" name="email" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="collab-tipo">Tipo de Colaboración *</label>
+                                <select id="collab-tipo" name="tipo" required>
+                                    <option value="">Selecciona el tipo</option>
+                                    <option value="fotografia">Fotografía y contenido visual</option>
+                                    <option value="blog">Blog y artículos de viaje</option>
+                                    <option value="hospedaje">Servicios de hospedaje</option>
+                                    <option value="tours">Operador turístico</option>
+                                    <option value="gastronomia">Restaurante/Gastronomía</option>
+                                    <option value="influencer">Marketing de influencers</option>
+                                    <option value="transporte">Servicios de transporte</option>
+                                    <option value="otros">Otros servicios</option>
+                                </select>
+                            </div>
+                            
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                                <div class="form-group">
+                                    <label for="collab-web">Sitio Web/Portfolio</label>
+                                    <input type="url" id="collab-web" name="web" placeholder="https://">
+                                </div>
+                                <div class="form-group">
+                                    <label for="collab-redes">Redes Sociales</label>
+                                    <input type="text" id="collab-redes" name="redes" placeholder="@usuario o enlaces">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="collab-propuesta">Propuesta de Colaboración *</label>
+                                <textarea id="collab-propuesta" name="propuesta" rows="5" required placeholder="Describe tu propuesta de colaboración, servicios que ofreces, experiencia previa, etc."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="submit-btn">🤝 Enviar Propuesta</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Content -->
+            <div id="faq" class="contact-content">
+                <div class="faq-section">
+                    <h3 style="text-align: center; margin-bottom: 2rem;">Preguntas Frecuentes</h3>
+                    
+                    <div class="faq-container">
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>¿Cuál es la mejor época para visitar El Salvador?</h4>
+                                <span class="faq-toggle">+</span>
+                            </div>
+                            <div class="faq-answer" style="display: none;">
+                                La mejor época es durante la temporada seca (noviembre a abril) para actividades al aire libre. Sin embargo, El Salvador es un destino de clima tropical que se puede visitar todo el año. La temporada de lluvias (mayo a octubre) ofrece paisajes más verdes y menos turistas.
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>¿Es seguro viajar a El Salvador?</h4>
+                                <span class="faq-toggle">+</span>
+                            </div>
+                            <div class="faq-answer" style="display: none;">
+                                Sí, las zonas turísticas de El Salvador son seguras. Trabajamos con guías locales certificados y seguimos todas las medidas de seguridad. Recomendamos seguir las indicaciones de nuestros guías y mantenerse en las rutas turísticas establecidas.
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>¿Qué documentos necesito para ingresar al país?</h4>
+                                <span class="faq-toggle">+</span>
+                            </div>
+                            <div class="faq-answer" style="display: none;">
+                                Para ciudadanos de la mayoría de países de América y Europa, solo necesitas pasaporte vigente con al menos 6 meses de validez. Algunos países requieren visa, consulta con tu embajada. Se recomienda tener certificado de vacuna contra fiebre amarilla si vienes de áreas endémicas.
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>¿Qué moneda se usa y dónde puedo cambiar dinero?</h4>
+                                <span class="faq-toggle">+</span>
+                            </div>
+                            <div class="faq-answer" style="display: none;">
+                                El Salvador usa el dólar estadounidense como moneda oficial desde 2001. Puedes cambiar dinero en bancos, casas de cambio o usar cajeros automáticos. También se acepta Bitcoin como moneda legal desde 2021.
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>¿Incluyen los tours transporte y alimentación?</h4>
+                                <span class="faq-toggle">+</span>
+                            </div>
+                            <div class="faq-answer" style="display: none;">
+                                Depende del paquete seleccionado. Nuestros paquetes "todo incluido" cubren transporte, hospedaje, algunas comidas y actividades. Los paquetes básicos incluyen guía y transporte, pero hospedaje y comidas son por separado. Todo está detallado en cada paquete.
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>¿Puedo personalizar mi itinerario?</h4>
+                                <span class="faq-toggle">+</span>
+                            </div>
+                            <div class="faq-answer" style="display: none;">
+                                ¡Absolutamente! Ofrecemos tours personalizados según tus intereses, presupuesto y tiempo disponible. Contacta con nosotros para diseñar el viaje perfecto adaptado a tus preferencias específicas.
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>¿Qué nivel de condición física se requiere?</h4>
+                                <span class="faq-toggle">+</span>
+                            </div>
+                            <div class="faq-answer" style="display: none;">
+                                Varía según la actividad. Las visitas culturales y de playa son accesibles para todos. Los tours volcánicos requieren condición física moderada a buena. Siempre indicamos el nivel de dificultad y ofrecemos alternativas para diferentes capacidades.
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>¿Ofrecen seguro de viaje?</h4>
+                                <span class="faq-toggle">+</span>
+                            </div>
+                            <div class="faq-answer" style="display: none;">
+                                Recomendamos encarecidamente contratar seguro de viaje por tu cuenta. Podemos asesorarte sobre las mejores opciones según tu país de origen. Algunos de nuestros paquetes premium incluyen seguro básico de actividades.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Media Contact -->
+                <div class="social-media" style="margin-top: 3rem;">
+                    <h3 style="text-align: center; margin-bottom: 2rem;">Síguenos en Redes Sociales</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon" style="background: #1877f2; color: white; text-decoration: none; padding: 1rem 2rem; border-radius: 50px;">📘 Facebook</a>
+                        <a href="#" class="social-icon" style="background: #E4405F; color: white; text-decoration: none; padding: 1rem 2rem; border-radius: 50px;">📷 Instagram</a>
+                        <a href="#" class="social-icon" style="background: #1DA1F2; color: white; text-decoration: none; padding: 1rem 2rem; border-radius: 50px;">🐦 Twitter</a>
+                        <a href="#" class="social-icon" style="background: #FF0000; color: white; text-decoration: none; padding: 1rem 2rem; border-radius: 50px;">📺 YouTube</a>
+                        <a href="#" class="social-icon" style="background: #25D366; color: white; text-decoration: none; padding: 1rem 2rem; border-radius: 50px;">📱 WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">sv <span class="highlight">El Salvador</span></div>
+            <p>Descubre la magia de El Salvador con nosotros</p>
+            <div class="social-links">
+                <a href="#" class="social-link">Facebook</a>
+                <a href="#" class="social-link">Instagram</a>
+                <a href="#" class="social-link">Twitter</a>
+                <a href="#" class="social-link">YouTube</a>
+            </div>
+            <p class="copyright">© 2024 SV El Salvador. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Floating Action Button -->
+    <div class="floating-fab">
+        <button class="fab-btn">💬</button>
+    </div>
+
+    <script src="el salvador.js"></script>
+    
+    <script src="envia gmail es.js"></script>
+    <script>
+        // Contact tabs functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactTabs = document.querySelectorAll('.contact-tab');
+            const contactContents = document.querySelectorAll('.contact-content');
+
+            contactTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    const targetTab = this.dataset.tab;
+                    
+                    // Remove active class from all tabs and contents
+                    contactTabs.forEach(t => t.classList.remove('active'));
+                    contactContents.forEach(c => c.classList.remove('active'));
+                    
+                    // Add active class to clicked tab and corresponding content
+                    this.classList.add('active');
+                    document.getElementById(targetTab).classList.add('active');
+                });
+            });
+
+            // FAQ functionality
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    const answer = this.nextElementSibling;
+                    const toggle = this.querySelector('.faq-toggle');
+                    
+                    if (answer.style.display === 'none' || answer.style.display === '') {
+                        answer.style.display = 'block';
+                        toggle.textContent = '−';
+                        toggle.classList.add('rotate');
+                    } else {
+                        answer.style.display = 'none';
+                        toggle.textContent = '+';
+                        toggle.classList.remove('rotate');
+                    }
+                });
+            });
+
+            // Package selection styling
+            const packageOptions = document.querySelectorAll('.package-option');
+            packageOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    packageOptions.forEach(opt => {
+                        opt.style.borderColor = 'transparent';
+                        opt.style.background = 'rgba(255,255,255,0.1)';
+                    });
+                    this.style.borderColor = 'var(--accent-orange)';
+                    this.style.background = 'rgba(249, 115, 22, 0.2)';
+                    
+                    const radio = this.querySelector('input[type="radio"]');
+                    radio.checked = true;
+                });
+            });
+        });
+    </script>
+</body>
+</html>

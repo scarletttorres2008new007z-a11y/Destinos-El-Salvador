@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros</title>
+    <link rel="stylesheet" href="el salvador.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">sv <span class="highlight">El Salvador</span></div>
+            <ul class="nav-menu">
+                <li><a href="inicio el salvador.html" class="nav-link active">Inicio</a></li>
+                <li><a href="destino el salvador.html" class="nav-link">Destinos</a></li>
+                <li><a href="cultura el salvador.html" class="nav-link">Cultura</a></li>
+                <li><a href="galeria el salvador.html" class="nav-link">Galería</a></li>
+                <li><a href="contacto el salvador.html" class="nav-link">Contacto</a></li>
+                <li><a href="Sobre nosotros.html" class="nav-link">Nosotros</a></li>
+            </ul>
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+        <div class="mobile-menu">
+            <a href="inicio el salvador.html">Inicio</a>
+            <a href="destino el salvador.html">Destinos</a>
+            <a href="cultura el salvador.html">Cultura</a>
+            <a href="galeria el salvador.html">Galería</a>
+            <a href="contacto el salvador.html">Contacto</a>
+            <a href="Sobre nosotros.html">Nosotros</a>
+        </div>
+    </nav>
+    <style>
+        /* General Styles */
+        :root {
+            --primary-blue: #007bff;
+            --teal: #20c997;
+            --accent-orange: #ff9800;
+            --pink: #e91e63;
+            --purple: #9c27b0;
+            --cyan: #00bcd4;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        .navbar {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .highlight {
+            color: var(--accent-orange);
+        }
+
+        .nav-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .nav-link {
+            color: #fff;
+            padding: 0.5rem 1rem;
+            transition: color 0.3s ease;
+            text-decoration: none;
+        }
+
+        .nav-link:hover {
+            color: var(--accent-orange);
+        }
+
+        .mobile-menu-btn {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: none;
+        }
+
+        .mobile-menu {
+            display: none;
+            background-color: #333;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .mobile-menu a {
+            color: #fff;
+            display: block;
+            padding: 0.5rem;
+            text-decoration: none;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #044781, #042b59);
+            color: #fff;
+            text-align: center;
+            padding: 6rem 0 4rem 0;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            color: #fff;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, #044781, #042b59);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .about-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 1rem;
+            padding: 2rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .about-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        .about-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--accent-orange);
+        }
+
+        .about-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #fff;
+        }
+
+        .about-card p {
+            color: #ddd;
+            line-height: 1.6;
+        }
+
+        /* Team Section */
+        .team-section {
+            padding: 5rem 0;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .team-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 1rem;
+            padding: 2rem;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .team-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .team-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: var(--accent-orange);
+            margin: 0 auto 1rem auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: #fff;
+        }
+
+        .team-card h4 {
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+
+        .team-role {
+            color: var(--accent-orange);
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .team-card p {
+            color: #ddd;
+            font-size: 0.9rem;
+        }
+
+        /* Values Section */
+        .values-section {
+            padding: 5rem 0;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .value-item {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 1rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .value-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .value-item h3 {
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+
+        /* Statistics */
+        .stats-section {
+            padding: 4rem 0;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+        }
+
+        .stat-item {
+            padding: 2rem;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--accent-orange);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #222;
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .footer p {
+            color: #aaa;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-links {
+            margin-bottom: 1.5rem;
+        }
+
+        .social-link {
+            color: #fff;
+            margin: 0 0.8rem;
+            font-size: 1.2rem;
+            text-decoration: none;
+        }
+
+        .social-link:hover {
+            color: var(--accent-orange);
+        }
+
+        .copyright {
+            font-size: 0.8rem;
+            color: #888;
+        }
+
+        /* Section Titles */
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #fff;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .mobile-menu.active {
+                display: block;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-grid,
+            .team-grid,
+            .values-grid,
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        /* Animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Sobre <span class="highlight">Nosotros</span></h1>
+            <p>Somos una empresa salvadoreña dedicada a mostrar la belleza y riqueza cultural de nuestro país. Con más de 10 años de experiencia, hemos ayudado a miles de viajeros a descubrir los secretos mejor guardados de El Salvador.</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="container">
+            <h2 class="section-title fade-in">¿Quiénes Somos?</h2>
+            <div class="about-grid">
+                <div class="about-card fade-in">
+                    <div class="about-icon">🌟</div>
+                    <h3>Nuestra Misión</h3>
+                    <p>Promover el turismo sostenible en El Salvador, destacando nuestras bellezas naturales, patrimonio cultural y la calidez de nuestra gente, creando experiencias únicas e inolvidables para cada visitante.</p>
+                </div>
+                <div class="about-card fade-in">
+                    <div class="about-icon">👁️</div>
+                    <h3>Nuestra Visión</h3>
+                    <p>Ser la empresa líder en turismo de El Salvador, reconocida por la calidad de nuestros servicios y nuestro compromiso con el desarrollo sostenible del sector turístico nacional.</p>
+                </div>
+                <div class="about-card fade-in">
+                    <div class="about-icon">❤️</div>
+                    <h3>Nuestros Valores</h3>
+                    <p>Compromiso, respeto por el medio ambiente, autenticidad, excelencia en el servicio y pasión por mostrar lo mejor de El Salvador al mundo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <h2 class="section-title fade-in">Nuestro Equipo</h2>
+            <div class="team-grid">
+                <div class="team-card fade-in">
+                    <div class="team-avatar">👨‍💼</div>
+                    <h4>Carlos Mendoza</h4>
+                    <div class="team-role">Director General</div>
+                    <p>Con 15 años de experiencia en turismo, Carlos lidera nuestro equipo con pasión y dedicación para ofrecer las mejores experiencias turísticas.</p>
+                </div>
+                <div class="team-card fade-in">
+                    <div class="team-avatar">👩‍🎓</div>
+                    <h4>Ana García</h4>
+                    <div class="team-role">Directora de Operaciones</div>
+                    <p>Especialista en gestión turística, Ana coordina todos nuestros tours y garantiza que cada detalle de tu viaje sea perfecto.</p>
+                </div>
+                <div class="team-card fade-in">
+                    <div class="team-avatar">👨‍🏫</div>
+                    <h4>Roberto Silva</h4>
+                    <div class="team-role">Guía Especializado</div>
+                    <p>Historiador y guía certificado, Roberto conoce cada rincón de El Salvador y comparte su conocimiento con entusiasmo.</p>
+                </div>
+                <div class="team-card fade-in">
+                    <div class="team-avatar">👩‍💻</div>
+                    <h4>María López</h4>
+                    <div class="team-role">Coordinadora de Marketing</div>
+                    <p>Encargada de promocionar las maravillas de El Salvador y mantener a nuestros clientes informados sobre las mejores ofertas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section">
+        <div class="container">
+            <h2 class="section-title fade-in">Lo Que Nos Hace Únicos</h2>
+            <div class="values-grid">
+                <div class="value-item fade-in">
+                    <div class="value-icon">🌱</div>
+                    <h3>Turismo Sostenible</h3>
+                    <p>Promovemos prácticas responsables que protegen nuestro medio ambiente y benefician a las comunidades locales.</p>
+                </div>
+                <div class="value-item fade-in">
+                    <div class="value-icon">🎯</div>
+                    <h3>Experiencias Auténticas</h3>
+                    <p>Ofrecemos tours únicos que muestran la verdadera esencia de El Salvador, lejos del turismo masivo.</p>
+                </div>
+                <div class="value-item fade-in">
+                    <div class="value-icon">👥</div>
+                    <h3>Atención Personalizada</h3>
+                    <p>Cada cliente es único, por eso adaptamos nuestros servicios a sus necesidades y preferencias específicas.</p>
+                </div>
+                <div class="value-item fade-in">
+                    <div class="value-icon">🏆</div>
+                    <h3>Calidad Garantizada</h3>
+                    <p>Trabajamos solo con los mejores proveedores locales para asegurar la máxima calidad en todos nuestros servicios.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats-section">
+        <div class="container">
+            <h2 class="section-title fade-in">Nuestros Logros</h2>
+            <div class="stats-grid">
+                <div class="stat-item fade-in">
+                    <div class="stat-number">5000+</div>
+                    <div class="stat-label">Viajeros Satisfechos</div>
+                </div>
+                <div class="stat-item fade-in">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Destinos Explorados</div>
+                </div>
+                <div class="stat-item fade-in">
+                    <div class="stat-number">10</div>
+                    <div class="stat-label">Años de Experiencia</div>
+                </div>
+                <div class="stat-item fade-in">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">Satisfacción del Cliente</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">sv <span class="highlight">El Salvador</span></div>
+            <p>Descubre la magia de El Salvador con nosotros</p>
+            <div class="social-links">
+                <a href="#" class="social-link">Facebook</a>
+                <a href="#" class="social-link">Instagram</a>
+                <a href="#" class="social-link">Twitter</a>
+                <a href="#" class="social-link">YouTube</a>
+            </div>
+            <p class="copyright">© 2024 SV El Salvador. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Smooth scroll animation
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.fade-in');
+            
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('animate');
+                }
+            });
+        }
+
+        // Counter animation
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-number');
+            const speed = 200;
+
+            counters.forEach(counter => {
+                const updateCount = () => {
+                    const target = counter.getAttribute('data-target') || counter.innerText.replace(/\D/g, '');
+                    const count = +counter.innerText.replace(/\D/g, '');
+                    const inc = target / speed;
+
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + inc) + (counter.innerText.includes('%') ? '%' : counter.innerText.includes('+') ? '+' : '');
+                        setTimeout(updateCount, 1);
+                    } else {
+                        counter.innerText = target + (counter.innerText.includes('%') ? '%' : counter.innerText.includes('+') ? '+' : '');
+                    }
+                };
+
+                // Set data-target if not set
+                if (!counter.getAttribute('data-target')) {
+                    counter.setAttribute('data-target', counter.innerText.replace(/\D/g, ''));
+                    counter.innerText = '0';
+                }
+
+                const elementTop = counter.getBoundingClientRect().top;
+                if (elementTop < window.innerHeight - 100 && !counter.classList.contains('animated')) {
+                    counter.classList.add('animated');
+                    updateCount();
+                }
+            });
+        }
+
+        // Initialize animations
+        window.addEventListener('scroll', () => {
+            animateOnScroll();
+            animateCounters();
+        });
+
+        // Initial load animations
+        document.addEventListener('DOMContentLoaded', () => {
+            animateOnScroll();
+            animateCounters();
+        });
+
+        // Team card hover effects
+        const teamCards = document.querySelectorAll('.team-card');
+        teamCards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-10px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // About cards animation delay
+        const aboutCards = document.querySelectorAll('.about-card');
+        aboutCards.forEach((card, index) => {
+            card.style.animationDelay = `${index * 0.2}s`;
+        });
+    </script>
+</body>
+</html>
