@@ -123,30 +123,22 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 2rem;
     padding: 1rem 2rem;
 }
 
 .logo {
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    gap: 0.45rem;
     flex-shrink: 0;
-    font-size: 1.2rem;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    line-height: 1;
-    color: white;
-    text-decoration: none;
 }
 
-/* Isotipo: cuadro fijo con object-fit para que un <img> o <svg> nunca se deforme */
-.logo-mark {
+.logo-img {
     display: block;
-    width: 28px;
-    height: 28px;
-    flex-shrink: 0;
-    object-fit: contain;
+    height: 30px;
+    width: auto;
+    padding: 3px 8px;
+    background: white;
+    border-radius: 8px;
 }
 
 .highlight {
@@ -984,17 +976,6 @@ body {
 }
 
 /* Responsive Design */
-/* Tablet: compactar el menu para que quepa junto al logo sin salirse de la pantalla */
-@media (max-width: 1024px) {
-    .nav-menu {
-        gap: 0.25rem;
-    }
-
-    .nav-link {
-        padding: 0.5rem 0.75rem;
-    }
-}
-
 @media (max-width: 768px) {
     .nav-menu {
         display: none;
@@ -1051,13 +1032,8 @@ body {
         padding: 1rem;
     }
 
-    .logo {
-        font-size: 1.05rem;
-    }
-
-    .logo-mark {
-        width: 24px;
-        height: 24px;
+    .logo-img {
+        height: 26px;
     }
     
     .action-buttons {
