@@ -167,15 +167,6 @@ function initializeAnimations() {
         observer.observe(el);
     });
 
-    // Parallax effect for hero background
-    window.addEventListener('scroll', () => {
-        const scrolled = window.pageYOffset;
-        const hero = document.querySelector('.hero');
-        if (hero) {
-            hero.style.transform = `translateY(${scrolled * 0.5}px)`;
-        }
-    });
-
     // Floating animation for action buttons
     const actionBtns = document.querySelectorAll('.action-btn');
     actionBtns.forEach((btn, index) => {
