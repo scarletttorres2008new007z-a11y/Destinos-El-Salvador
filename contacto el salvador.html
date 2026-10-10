@@ -106,28 +106,34 @@
                     </article>
                 </div>
 
-                <!-- Contact Form -->
-                <div class="contact-form" id="formulario">
-                    <h3 style="text-align: center; margin-bottom: 2rem; color: white;">Contáctanos</h3>
-                    <form id="contactForm">
-                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
-                            <div class="form-group">
-                                <label for="nombre">Nombre Completo *</label>
-                                <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre completo">
+                <!-- Formulario de contacto: dos columnas en escritorio, una en móvil -->
+                <div class="contact-form contacto-form" id="formulario">
+                    <div class="contacto-form-encabezado">
+                        <h3>Contáctanos</h3>
+                        <p>Completa los datos y prepararemos una propuesta para tu viaje. Los campos con <span class="campo-obligatorio">*</span> son obligatorios.</p>
+                    </div>
+                    <div class="contacto-form-aviso" id="contactoAviso" role="alert" hidden></div>
+                    <form id="contactForm" data-validacion-propia novalidate>
+                        <fieldset class="contacto-form-grupo">
+                            <legend>Tus datos</legend>
+                            <div class="contacto-form-grid">
+                            <div class="form-group campo">
+                                <label for="nombre">Nombre completo <span class="campo-obligatorio" aria-hidden="true">*</span></label>
+                                <input type="text" id="nombre" name="nombre" required autocomplete="name" aria-describedby="nombre-error" placeholder="Tu nombre completo">
+                                <small class="campo-error" id="nombre-error">Escribe tu nombre.</small>
                             </div>
-                            <div class="form-group">
-                                <label for="email">Email *</label>
-                                <input type="email" id="email" name="email" required placeholder="tu@email.com">
+                            <div class="form-group campo">
+                                <label for="email">Correo electrónico <span class="campo-obligatorio" aria-hidden="true">*</span></label>
+                                <input type="email" id="email" name="email" required autocomplete="email" aria-describedby="email-error" placeholder="tu@email.com">
+                                <small class="campo-error" id="email-error">Escribe un correo válido, por ejemplo nombre@correo.com.</small>
                             </div>
-                        </div>
-                        
-                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
-                            <div class="form-group">
-                                <label for="telefono">Teléfono</label>
-                                <input type="tel" id="telefono" name="telefono" placeholder="+503 0000-0000">
+                            <div class="form-group campo">
+                                <label for="telefono">Teléfono <span class="campo-opcional">(opcional)</span></label>
+                                <input type="tel" id="telefono" name="telefono" autocomplete="tel" aria-describedby="telefono-error" placeholder="+503 0000-0000">
+                                <small class="campo-error" id="telefono-error">Revisa el número: usa solo dígitos, espacios, guiones o +.</small>
                             </div>
-                            <div class="form-group">
-                                <label for="pais">País de Origen</label>
+                            <div class="form-group campo">
+                                <label for="pais">País de origen <span class="campo-opcional">(opcional)</span></label>
                                 <select id="pais" name="pais">
                                     <option value="">Selecciona tu país</option>
                                     <option value="ES">España</option>
@@ -151,31 +157,45 @@
                                     <option value="OTHER">Otro</option>
                                 </select>
                             </div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="interes">¿Qué te interesa? *</label>
-                            <select id="interes" name="interes" required>
-                                <option value="">Selecciona tu interés principal</option>
-                                <option value="surf">Surf y deportes acuáticos</option>
-                                <option value="volcanismo">Turismo volcánico</option>
-                                <option value="historia">Historia y arqueología</option>
-                                <option value="cultura">Cultura y tradiciones</option>
-                                <option value="gastronomia">Gastronomía local</option>
-                                <option value="naturaleza">Naturaleza y ecoturismo</option>
-                                <option value="aventura">Deportes extremos</option>
-                                <option value="relax">Descanso y relajación</option>
-                                <option value="todo">Un poco de todo</option>
-                            </select>
-                        </div>
-                        
-                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
-                            <div class="form-group">
-                                <label for="fechaViaje">Fecha Tentativa de Viaje</label>
-                                <input type="date" id="fechaViaje" name="fechaViaje">
                             </div>
-                            <div class="form-group">
-                                <label for="duracion">Duración del Viaje</label>
+                        </fieldset>
+
+                        <fieldset class="contacto-form-grupo">
+                            <legend>Tu viaje</legend>
+                            <div class="contacto-form-grid">
+                            <div class="form-group campo">
+                                <label for="interes">¿Qué te interesa? <span class="campo-obligatorio" aria-hidden="true">*</span></label>
+                                <select id="interes" name="interes" required aria-describedby="interes-error">
+                                    <option value="">Selecciona tu interés principal</option>
+                                    <option value="surf">Surf y deportes acuáticos</option>
+                                    <option value="volcanismo">Turismo volcánico</option>
+                                    <option value="historia">Historia y arqueología</option>
+                                    <option value="cultura">Cultura y tradiciones</option>
+                                    <option value="gastronomia">Gastronomía local</option>
+                                    <option value="naturaleza">Naturaleza y ecoturismo</option>
+                                    <option value="aventura">Deportes extremos</option>
+                                    <option value="relax">Descanso y relajación</option>
+                                    <option value="todo">Un poco de todo</option>
+                                </select>
+                                <small class="campo-error" id="interes-error">Elige lo que más te interesa.</small>
+                            </div>
+                            <div class="form-group campo">
+                                <label for="presupuesto">Presupuesto aproximado <span class="campo-opcional">(opcional)</span></label>
+                                <select id="presupuesto" name="presupuesto">
+                                    <option value="">Selecciona tu presupuesto</option>
+                                    <option value="economico">Económico ($20-50/día por persona)</option>
+                                    <option value="moderado">Moderado ($50-100/día por persona)</option>
+                                    <option value="premium">Premium ($100-200/día por persona)</option>
+                                    <option value="lujo">Lujo ($200+/día por persona)</option>
+                                </select>
+                            </div>
+                            <div class="form-group campo">
+                                <label for="fechaViaje">Fecha tentativa de viaje <span class="campo-opcional">(opcional)</span></label>
+                                <input type="date" id="fechaViaje" name="fechaViaje" aria-describedby="fechaViaje-error">
+                                <small class="campo-error" id="fechaViaje-error">Elige una fecha a partir de hoy.</small>
+                            </div>
+                            <div class="form-group campo">
+                                <label for="duracion">Duración del viaje <span class="campo-opcional">(opcional)</span></label>
                                 <select id="duracion" name="duracion">
                                     <option value="">Selecciona duración</option>
                                     <option value="1-3">1-3 días (Fin de semana)</option>
@@ -184,26 +204,32 @@
                                     <option value="15+">15+ días (Viaje largo)</option>
                                 </select>
                             </div>
+                            <div class="form-group campo campo-ancho">
+                                <label for="mensaje">Cuéntanos sobre tu viaje ideal <span class="campo-obligatorio" aria-hidden="true">*</span></label>
+                                <textarea id="mensaje" name="mensaje" rows="5" required aria-describedby="mensaje-error" placeholder="Describe qué tipo de experiencias buscas, si viajas solo, en pareja, familia, etc. Cualquier información que nos ayude a personalizar tu viaje..."></textarea>
+                                <small class="campo-error" id="mensaje-error">Cuéntanos un poco sobre tu viaje (mínimo 10 caracteres).</small>
+                            </div>
+                            </div>
+                        </fieldset>
+
+                        <div class="contacto-form-acciones">
+                            <button type="submit" class="submit-btn contacto-enviar">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 2 11 13"/><path d="M22 2 15 22l-4-9-9-4 20-7z"/></svg>
+                                <span>Enviar solicitud</span>
+                            </button>
                         </div>
-                        
-                        <div class="form-group">
-                            <label for="presupuesto">Presupuesto Aproximado</label>
-                            <select id="presupuesto" name="presupuesto">
-                                <option value="">Selecciona tu presupuesto</option>
-                                <option value="economico">Económico ($20-50/día por persona)</option>
-                                <option value="moderado">Moderado ($50-100/día por persona)</option>
-                                <option value="premium">Premium ($100-200/día por persona)</option>
-                                <option value="lujo">Lujo ($200+/día por persona)</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="mensaje">Cuéntanos sobre tu viaje ideal *</label>
-                            <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Describe qué tipo de experiencias buscas, si viajas solo, en pareja, familia, etc. Cualquier información que nos ayude a personalizar tu viaje..."></textarea>
-                        </div>
-                        
-                        <button type="submit" class="submit-btn">✈️ Enviar Solicitud</button>
                     </form>
+                
+                    <!-- Mensaje al completar el formulario -->
+                    <div class="contacto-form-exito" id="contactoExito" role="status" tabindex="-1" hidden>
+                        <div class="contacto-exito-icono"><svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div>
+                        <h3 id="contactoExitoTitulo">¡Formulario completo!</h3>
+                        <p>Todos tus datos están listos. Pulsa «Enviar por correo» para mandarnos la solicitud desde tu correo; ya va escrita con lo que completaste.</p>
+                        <div class="contacto-exito-acciones">
+                            <a href="mailto:info@svelsalvador.com" class="btn primary" id="contactoMailto">Enviar por correo</a>
+                            <button type="button" class="contacto-exito-volver" id="contactoVolver">Editar mis datos</button>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Interactive Map -->
@@ -583,6 +609,105 @@
                     const infoTab = document.querySelector('.contact-tab[data-tab="informacion"]');
                     if (infoTab && !infoTab.classList.contains('active')) infoTab.click();
                     document.getElementById('formulario').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                });
+            }
+
+            // Formulario de contacto: validación con mensajes visuales
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                const aviso = document.getElementById('contactoAviso');
+                const exito = document.getElementById('contactoExito');
+                const mailto = document.getElementById('contactoMailto');
+                const fecha = document.getElementById('fechaViaje');
+                const hoy = new Date();
+                const hoyTexto = new Date(hoy.getTime() - hoy.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
+                fecha.min = hoyTexto;
+
+                const reglas = {
+                    nombre: v => v.length >= 2,
+                    email: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v),
+                    telefono: v => v === '' || (/^\+?[0-9\s\-()]+$/.test(v) && v.replace(/\D/g, '').length >= 8),
+                    interes: v => v !== '',
+                    fechaViaje: v => v === '' || v >= hoyTexto,
+                    mensaje: v => v.length >= 10
+                };
+                const nombresCampos = {
+                    nombre: 'nombre', email: 'correo', telefono: 'teléfono',
+                    interes: 'interés', fechaViaje: 'fecha', mensaje: 'mensaje'
+                };
+
+                function revisarCampo(campo) {
+                    const regla = reglas[campo.name];
+                    if (!regla) return true;
+                    const valido = regla(campo.value.trim());
+                    const grupo = campo.closest('.campo');
+                    grupo.classList.toggle('invalido', !valido);
+                    grupo.classList.toggle('correcto', valido && campo.value.trim() !== '');
+                    campo.setAttribute('aria-invalid', valido ? 'false' : 'true');
+                    return valido;
+                }
+
+                Object.keys(reglas).forEach(nombre => {
+                    const campo = contactForm.elements[nombre];
+                    // Revisa al salir del campo y corrige en vivo si ya estaba marcado
+                    campo.addEventListener('blur', () => { if (campo.value.trim() !== '') revisarCampo(campo); });
+                    campo.addEventListener('input', () => {
+                        if (campo.closest('.campo').classList.contains('invalido')) revisarCampo(campo);
+                    });
+                    campo.addEventListener('change', () => {
+                        if (campo.tagName === 'SELECT' || campo.type === 'date') revisarCampo(campo);
+                    });
+                });
+
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const errores = Object.keys(reglas)
+                        .map(nombre => contactForm.elements[nombre])
+                        .filter(campo => !revisarCampo(campo));
+
+                    if (errores.length) {
+                        const lista = errores.map(c => nombresCampos[c.name]).join(', ');
+                        aviso.textContent = errores.length === 1
+                            ? 'Falta revisar un dato: ' + lista + '.'
+                            : 'Faltan ' + errores.length + ' datos por revisar: ' + lista + '.';
+                        aviso.hidden = false;
+                        errores[0].focus();
+                        return;
+                    }
+
+                    aviso.hidden = true;
+                    const datos = new FormData(contactForm);
+                    const textoDe = nombre => {
+                        const campo = contactForm.elements[nombre];
+                        return campo.tagName === 'SELECT' && campo.value ? campo.options[campo.selectedIndex].text : (datos.get(nombre) || '').trim();
+                    };
+                    const cuerpo = [
+                        'Nombre: ' + textoDe('nombre'),
+                        'Correo: ' + textoDe('email'),
+                        'Teléfono: ' + (textoDe('telefono') || '-'),
+                        'País: ' + (textoDe('pais') || '-'),
+                        'Interés: ' + textoDe('interes'),
+                        'Presupuesto: ' + (textoDe('presupuesto') || '-'),
+                        'Fecha tentativa: ' + (textoDe('fechaViaje') || '-'),
+                        'Duración: ' + (textoDe('duracion') || '-'),
+                        '',
+                        textoDe('mensaje')
+                    ].join('\n');
+                    mailto.href = 'mailto:info@svelsalvador.com?subject=' +
+                        encodeURIComponent('Solicitud de viaje - ' + textoDe('nombre')) +
+                        '&body=' + encodeURIComponent(cuerpo);
+
+                    const primerNombre = textoDe('nombre').split(' ')[0];
+                    document.getElementById('contactoExitoTitulo').textContent = '¡Formulario completo, ' + primerNombre + '!';
+                    contactForm.hidden = true;
+                    exito.hidden = false;
+                    exito.focus();
+                });
+
+                document.getElementById('contactoVolver').addEventListener('click', function() {
+                    exito.hidden = true;
+                    contactForm.hidden = false;
+                    contactForm.elements.nombre.focus();
                 });
             }
 

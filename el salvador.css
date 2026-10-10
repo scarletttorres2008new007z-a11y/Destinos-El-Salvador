@@ -1581,6 +1581,294 @@ body.exp-modal-open {
     }
 }
 
+/* Formulario de Contacto: dos columnas, etiquetas claras y mensajes visuales */
+.contacto-form {
+    max-width: 880px;
+    padding: 2.5rem;
+    border-radius: var(--border-radius-lg);
+}
+
+.contacto-form-encabezado {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.contacto-form-encabezado h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+    color: var(--white);
+}
+
+.contacto-form-encabezado p {
+    font-size: 0.95rem;
+    opacity: 0.85;
+    max-width: 560px;
+    margin: 0 auto;
+}
+
+.campo-obligatorio {
+    color: var(--accent-orange);
+    font-weight: 700;
+}
+
+.campo-opcional {
+    font-size: 0.8rem;
+    font-weight: 400;
+    opacity: 0.7;
+}
+
+.contacto-form-grupo {
+    border: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+    min-width: 0;
+}
+
+.contacto-form-grupo legend {
+    width: 100%;
+    padding-bottom: 0.6rem;
+    margin-bottom: 1.25rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--white);
+    opacity: 0.85;
+}
+
+.contacto-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 1.25rem;
+}
+
+.contacto-form .campo-ancho {
+    grid-column: 1 / -1;
+}
+
+.contacto-form .campo {
+    margin-bottom: 1.25rem;
+}
+
+.contacto-form .campo label {
+    font-size: 0.92rem;
+    margin-bottom: 0.45rem;
+}
+
+.contacto-form .campo input,
+.contacto-form .campo select,
+.contacto-form .campo textarea {
+    min-height: 50px;
+    padding: 0.8rem 1rem;
+    border-radius: 12px;
+    border: 1.5px solid rgba(255, 255, 255, 0.3);
+    background-color: rgba(0, 58, 112, 0.35);
+    font-family: inherit;
+    font-size: 0.97rem;
+}
+
+.contacto-form .campo textarea {
+    min-height: 130px;
+    resize: vertical;
+    line-height: 1.5;
+}
+
+.contacto-form .campo select {
+    appearance: none;
+    -webkit-appearance: none;
+    padding-right: 2.75rem;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 18px;
+}
+
+.contacto-form .campo select option {
+    color: var(--secondary-blue);
+    background: var(--white);
+}
+
+.contacto-form .campo input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    cursor: pointer;
+}
+
+.contacto-form .campo:hover input,
+.contacto-form .campo:hover select,
+.contacto-form .campo:hover textarea {
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Estados de validación */
+.campo-error {
+    display: none;
+    margin-top: 0.45rem;
+    padding-left: 1.4rem;
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: #ffffff;
+    position: relative;
+}
+
+.campo-error::before {
+    content: '!';
+    position: absolute;
+    left: 0;
+    top: 0.05rem;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background: #ef4444;
+    color: var(--white);
+    font-size: 0.7rem;
+    font-weight: 700;
+    line-height: 1rem;
+    text-align: center;
+}
+
+.contacto-form .campo.invalido input,
+.contacto-form .campo.invalido select,
+.contacto-form .campo.invalido textarea {
+    border-color: #f87171;
+    background-color: rgba(239, 68, 68, 0.12);
+}
+
+.contacto-form .campo.invalido .campo-error {
+    display: block;
+}
+
+.contacto-form .campo.correcto input,
+.contacto-form .campo.correcto select,
+.contacto-form .campo.correcto textarea {
+    border-color: #4ade80;
+}
+
+.contacto-form-aviso {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.75rem;
+    padding: 0.9rem 1.1rem;
+    border-radius: 12px;
+    border: 1.5px solid #f87171;
+    background: rgba(239, 68, 68, 0.18);
+    font-size: 0.95rem;
+    font-weight: 500;
+    animation: fade-in 0.4s ease-out;
+}
+
+.contacto-form-aviso[hidden],
+.contacto-form-exito[hidden],
+#contactForm[hidden] {
+    display: none;
+}
+
+/* Botón de envío destacado */
+.contacto-form-acciones {
+    display: flex;
+    justify-content: center;
+    padding-top: 0.5rem;
+}
+
+.contacto-enviar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    min-width: 280px;
+    padding: 1.05rem 2.5rem;
+    font-family: inherit;
+    font-size: 1.1rem;
+    box-shadow: 0 8px 20px rgba(249, 115, 22, 0.35);
+}
+
+.contacto-enviar:hover {
+    background: #ea580c;
+}
+
+.contacto-enviar:focus-visible {
+    outline: 3px solid var(--white);
+    outline-offset: 3px;
+}
+
+/* Mensaje al completar */
+.contacto-form-exito {
+    text-align: center;
+    padding: 1rem 0 0.5rem;
+    animation: fade-in 0.5s ease-out;
+}
+
+.contacto-form-exito:focus {
+    outline: none;
+}
+
+.contacto-exito-icono {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 72px;
+    height: 72px;
+    margin-bottom: 1.25rem;
+    border-radius: 50%;
+    background: #22c55e;
+    color: var(--white);
+}
+
+.contacto-form-exito h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.75rem;
+    color: var(--white);
+}
+
+.contacto-form-exito p {
+    max-width: 520px;
+    margin: 0 auto 1.75rem;
+    line-height: 1.6;
+    opacity: 0.92;
+}
+
+.contacto-exito-acciones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.contacto-exito-volver {
+    padding: 1rem 1.75rem;
+    border: 1.5px solid rgba(255, 255, 255, 0.6);
+    border-radius: 50px;
+    background: transparent;
+    color: var(--white);
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.contacto-exito-volver:hover {
+    background: var(--white);
+    color: var(--primary-blue);
+}
+
+@media (max-width: 640px) {
+    .contacto-form {
+        padding: 1.75rem 1.25rem;
+    }
+
+    .contacto-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contacto-enviar {
+        width: 100%;
+        min-width: 0;
+    }
+}
+
 /* Filter Tabs */
 .filter-tabs {
     display: flex;
