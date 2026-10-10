@@ -2408,6 +2408,222 @@ body.exp-modal-open {
     }
 }
 
+/* Mapa de Contacto: datos y mapa en una misma tarjeta */
+.mapa-seccion {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+    margin-top: 3.5rem;
+    overflow: hidden;
+    border-radius: var(--border-radius-lg);
+    border: 1.5px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.mapa-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2.25rem 2rem;
+}
+
+.mapa-info h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+    color: var(--white);
+}
+
+.mapa-info > p {
+    font-size: 0.97rem;
+    line-height: 1.6;
+    opacity: 0.88;
+    margin-bottom: 1.5rem;
+}
+
+.mapa-datos {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.mapa-datos li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.85rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.mapa-dato-icono {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    background: var(--white);
+    color: var(--primary-blue);
+}
+
+.mapa-boton {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: auto;
+    padding: 0.85rem 1.6rem;
+    font-size: 1rem;
+}
+
+.mapa-marco {
+    position: relative;
+    min-height: 340px;
+    background: var(--secondary-blue);
+}
+
+.mapa-marco iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
+/* Redes sociales de Contacto: iconos uniformes */
+.redes {
+    margin-top: 3.5rem;
+    text-align: center;
+}
+
+.redes h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    color: var(--white);
+}
+
+.redes-lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem 2rem;
+}
+
+.red {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--white);
+    text-decoration: none;
+}
+
+.red-icono {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--white);
+    transition: var(--transition);
+}
+
+.red:hover .red-icono,
+.red:focus-visible .red-icono {
+    background: var(--white);
+    border-color: var(--white);
+    color: var(--primary-blue);
+    transform: translateY(-3px);
+}
+
+.red:focus-visible {
+    outline: none;
+}
+
+.red:focus-visible .red-icono {
+    outline: 3px solid var(--accent-orange);
+    outline-offset: 3px;
+}
+
+.red-nombre {
+    font-size: 0.85rem;
+    font-weight: 500;
+    opacity: 0.88;
+}
+
+/* Botón flotante de contacto en la página Contacto: mismo tamaño que la flecha y visible sobre el fondo azul */
+.pagina-contacto .page-section {
+    padding-bottom: 7rem;
+}
+
+.pagina-contacto .fab-btn {
+    width: 50px;
+    height: 50px;
+    background: var(--white);
+    color: var(--primary-blue);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.pagina-contacto .fab-btn svg {
+    width: 22px;
+    height: 22px;
+}
+
+.pagina-contacto .fab-btn:hover {
+    transform: translateY(-3px);
+    background: var(--accent-orange);
+    color: var(--white);
+}
+
+.pagina-contacto .floating-fab {
+    bottom: 2rem;
+    right: 2rem;
+    transition: opacity 0.3s ease;
+}
+
+@media (max-width: 900px) {
+    .mapa-seccion {
+        grid-template-columns: 1fr;
+    }
+
+    .mapa-marco {
+        min-height: 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    .pagina-contacto .floating-fab {
+        bottom: 1rem;
+        right: 1rem;
+    }
+
+    .pagina-contacto .scroll-to-top {
+        right: 1rem !important;
+        bottom: 76px !important;
+    }
+
+    /* Mientras se escribe en un formulario, los botones flotantes no tapan los campos */
+    .pagina-contacto.escribiendo .floating-fab,
+    .pagina-contacto.escribiendo .scroll-to-top {
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none;
+    }
+
+    .mapa-info {
+        padding: 1.75rem 1.5rem;
+    }
+
+    .redes-lista {
+        gap: 1.25rem 1.5rem;
+    }
+}
+
 /* Filter Tabs */
 .filter-tabs {
     display: flex;
