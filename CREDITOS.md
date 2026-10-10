@@ -86,3 +86,19 @@ Copias reducidas en `img/contacto/paquetes/`, las mismas fotos de la página Des
 | Cultura & Historia | `suchitoto.jpg` | Koky2013 | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.es) | [Belleza histórica Iglesia Santa Lucía de Suchitoto.JPG](https://commons.wikimedia.org/wiki/File:Belleza_hist%C3%B3rica_Iglesia_Santa_Luc%C3%ADa_de_Suchitoto.JPG) |
 | Surf Paradise | `playa-el-tunco.jpg` | William Adach | [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/deed.es) | [Playa el tuco rocoso.jpg](https://commons.wikimedia.org/wiki/File:Playa_el_tuco_rocoso.jpg) |
 | Personalizado | `laguna-verde.jpg` | ElmerGuevara | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.es) | [Laguna Verde de Apaneca.JPG](https://commons.wikimedia.org/wiki/File:Laguna_Verde_de_Apaneca.JPG) |
+
+## Sobre nosotros
+
+La página **Sobre nosotros** reutiliza fotos que ya están en el sitio (mismos archivos, sin copias nuevas). Sus créditos completos están en las secciones de Galería y Destinos de este archivo.
+
+| Uso | Archivo | Autor | Licencia |
+|---|---|---|---|
+| Encabezado | `img/galeria/01.jpg` | Pipil El Salvador | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.es) |
+| Quiénes somos | `img/galeria/18.jpg` | The Cockroach | [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/deed.es) |
+| Quiénes somos | `img/galeria/mini/13.jpg` | ElmerGuevara | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.es) |
+| Trayectoria 2014 | `img/galeria/mini/14.jpg` | Arne Müseler | [CC BY-SA 3.0 de](https://creativecommons.org/licenses/by-sa/3.0/de/deed.es) |
+| Trayectoria 2016 | `img/destinos/ruta-de-las-flores-card.jpg` | Erickssonr | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.es) |
+| Trayectoria 2018 | `img/destinos/volcan-santa-ana-card.jpg` | Erneestoo | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.es) |
+| Trayectoria 2020 | `img/destinos/el-imposible-card.jpg` | ElmerGuevara | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.es) |
+| Trayectoria 2022 | `img/destinos/suchitoto-card.jpg` | Koky2013 | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.es) |
+| Trayectoria 2024 | `img/galeria/mini/04.jpg` | Rafael Colindres | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.es) |
