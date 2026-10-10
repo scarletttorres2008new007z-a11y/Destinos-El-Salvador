@@ -18,3 +18,27 @@ Las fotografías de la página **Destinos** provienen de Wikimedia Commons. Se d
 Las versiones `*-card.jpg` son copias más pequeñas de las mismas fotos para las tarjetas. Las fotos modificadas (recortadas por tamaño) se comparten bajo la misma licencia que la original.
 
 **Playa Las Flores:** no se encontró en Wikimedia Commons ninguna foto con licencia libre que muestre exactamente esta playa, por eso su tarjeta queda sin fotografía.
+
+## Sección «El Salvador oculto: expedientes secretos»
+
+Las imágenes de los expedientes de la página de **Inicio** también provienen de Wikimedia Commons. Se redimensionaron y comprimieron y se guardan en `img/expedientes/`. El crédito de cada una aparece en la pestaña «Evidencias» de su expediente.
+
+| Expediente | Archivo | Autor | Licencia | Fuente |
+|---|---|---|---|---|
+| 001 Joya de Cerén | `ceren-portada.jpg` | Mario Roberto Durán Ortiz (Mariordo) | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.es) | [ES Estructura 12 y 10 Area 1 Joya Ceren 05 2012 1516.jpg](https://commons.wikimedia.org/wiki/File:ES_Estructura_12_y_10_Area_1_Joya_Ceren_05_2012_1516.jpg) |
+| 001 Joya de Cerén | `ceren-estructura-11.jpg` | Mario Roberto Durán Ortiz (Mariordo) | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.es) | [ES Joya Ceren 05 2012 Estructura 11 Area 1 1505.jpg](https://commons.wikimedia.org/wiki/File:ES_Joya_Ceren_05_2012_Estructura_11_Area_1_1505.jpg) |
+| 001 Joya de Cerén | `ceren-temazcal.jpg` | Mario Roberto Durán Ortiz (Mariordo) | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.es) | [ES Joya Ceren 05 2012 Estructura 9 Area 2 Tamazcal 1478.JPG](https://commons.wikimedia.org/wiki/File:ES_Joya_Ceren_05_2012_Estructura_9_Area_2_Tamazcal_1478.JPG) |
+| 001 Joya de Cerén | `ceren-estructura-12.jpg` | Mario Roberto Durán Ortiz (Mariordo) | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.es) | [ES Estructura 12 Area 1 Joya Ceren 05 2012 1515.jpg](https://commons.wikimedia.org/wiki/File:ES_Estructura_12_Area_1_Joya_Ceren_05_2012_1515.jpg) |
+| 001 Joya de Cerén | `ceren-estructura-3.jpg` | Mario Roberto Durán Ortiz (Mariordo) | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.es) | [ES Joya Ceren 05 2012 Estructura 3 Area 3 1469.jpg](https://commons.wikimedia.org/wiki/File:ES_Joya_Ceren_05_2012_Estructura_3_Area_3_1469.jpg) |
+| 002 Lago de Ilopango | `ilopango-portada.jpg` | JMRAFFi | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.es) | [Lago de Ilopango.jpg](https://commons.wikimedia.org/wiki/File:Lago_de_Ilopango.jpg) |
+| 002 Lago de Ilopango | `ilopango-caldera-aerea.jpg` | Lee Siebert, Smithsonian Institution | Dominio público | [Ilopango caldera.jpg](https://commons.wikimedia.org/wiki/File:Ilopango_caldera.jpg) |
+| 002 Lago de Ilopango | `ilopango-islas-quemadas.jpg` | JMRAFFi | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.es) | [Ilopango Isla quemada.jpg](https://commons.wikimedia.org/wiki/File:Ilopango_Isla_quemada.jpg) |
+| 002 Lago de Ilopango | `ilopango-san-vicente.jpg` | Arne Müseler | [CC BY-SA 3.0 DE](https://creativecommons.org/licenses/by-sa/3.0/de/deed.es) | [El-salvador san-salvador Lago de Ilopango volcán de San Vicente Chichontepec.JPG](https://commons.wikimedia.org/wiki/File:El-salvador_san-salvador_Lago_de_Ilopango_volc%C3%A1n_de_San_Vicente_Chichontepec.JPG) |
+| 003 Tazumal | `tazumal-portada.jpg` | Mario Roberto Durán Ortiz (Mariordo) | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.es) | [ES Tazumal 06 2011 2216.jpg](https://commons.wikimedia.org/wiki/File:ES_Tazumal_06_2011_2216.jpg) |
+| 003 Tazumal | `tazumal-estructura-1.jpg` | Cam Ventoza | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.es) | [Ruinas del Tazumal.JPG](https://commons.wikimedia.org/wiki/File:Ruinas_del_Tazumal.JPG) |
+| 003 Tazumal | `tazumal-reconstruccion-b1-2.jpg` (ilustración) | Juan Miguel | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.es) | [Tazumal estructura B1-2-3B.png](https://commons.wikimedia.org/wiki/File:Tazumal_estructura_B1-2-3B.png) |
+| 003 Tazumal | `tazumal-restauracion.jpg` | Jose Huwaidi | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.es) | [Archeologists on a piramid-Tazumal restaurando.jpg](https://commons.wikimedia.org/wiki/File:Archeologists_on_a_piramid-Tazumal_restaurando.jpg) |
+| 003 Tazumal | `tazumal-museo.jpg` | Orlando Salvador Flores Castaneda | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.es) | [Interior del Museo del Tazumal.jpg](https://commons.wikimedia.org/wiki/File:Interior_del_Museo_del_Tazumal.jpg) |
+| Ubicación (los tres) | `mapa-relieve-el-salvador.jpg` | Carport, con datos de NordNordWest | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.es) | [El Salvador relief location map.jpg](https://commons.wikimedia.org/wiki/File:El_Salvador_relief_location_map.jpg) |
+
+El mapa interactivo de la pestaña «Ubicación» se carga desde OpenStreetMap (© colaboradores de OpenStreetMap, licencia ODbL).
