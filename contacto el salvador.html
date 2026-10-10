@@ -251,44 +251,81 @@
                 <div class="reservations-section">
                     <h3 style="text-align: center; margin-bottom: 2rem;">Reserva tu Experiencia</h3>
                     
-                    <!-- Package Selection -->
-                    <div class="package-selection" style="margin-bottom: 3rem;">
-                        <h4 style="margin-bottom: 1.5rem; color: var(--accent-orange);">Selecciona tu Paquete</h4>
-                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
-                            <div class="package-option" style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 1rem; cursor: pointer; border: 2px solid transparent; transition: all 0.3s ease;">
-                                <input type="radio" name="package" value="aventura" id="pkg-aventura" style="margin-bottom: 1rem;">
-                                <label for="pkg-aventura" style="cursor: pointer;">
+                    <!-- Selección de paquete: una tarjeta con foto por paquete -->
+                    <div class="package-selection paquetes">
+                        <h4 class="paquetes-titulo">Selecciona tu Paquete</h4>
+                        <div class="paquetes-grid" role="radiogroup" aria-label="Paquetes turísticos">
+                            <div class="package-option paquete paquete-aventura">
+                                <input type="radio" name="package" value="aventura" id="pkg-aventura" class="paquete-radio">
+                                <div class="paquete-foto">
+                                    <img src="img/contacto/paquetes/volcan-santa-ana.jpg" alt="Laguna del volcán de Santa Ana" loading="lazy">
+                                    <span class="paquete-etiqueta">Naturaleza</span>
+                                    <span class="paquete-marca"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Elegido</span>
+                                    <small class="paquete-credito">Foto: Erneestoo, CC BY-SA 4.0</small>
+                                </div>
+                                <div class="paquete-cuerpo">
                                     <h4>Aventura Completa</h4>
-                                    <p style="opacity: 0.8;">5 días / 4 noches</p>
-                                    <p style="color: var(--accent-orange); font-weight: bold;">$299</p>
-                                </label>
+                                    <p class="paquete-duracion"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 5 días / 4 noches</p>
+                                    <p class="paquete-descripcion">Volcanes, senderos y miradores para quienes buscan acción al aire libre.</p>
+                                    <div class="paquete-pie">
+                                        <span class="paquete-precio">$299</span>
+                                        <label for="pkg-aventura" class="paquete-boton">Seleccionar</label>
+                                    </div>
+                                </div>
                             </div>
-                            
-                            <div class="package-option" style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 1rem; cursor: pointer; border: 2px solid transparent; transition: all 0.3s ease;">
-                                <input type="radio" name="package" value="cultura" id="pkg-cultura" style="margin-bottom: 1rem;">
-                                <label for="pkg-cultura" style="cursor: pointer;">
-                                    <h4>Cultura & Historia</h4>
-                                    <p style="opacity: 0.8;">3 días / 2 noches</p>
-                                    <p style="color: var(--accent-orange); font-weight: bold;">$199</p>
-                                </label>
+                            <div class="package-option paquete paquete-cultura">
+                                <input type="radio" name="package" value="cultura" id="pkg-cultura" class="paquete-radio">
+                                <div class="paquete-foto">
+                                    <img src="img/contacto/paquetes/suchitoto.jpg" alt="Iglesia Santa Lucía de Suchitoto" loading="lazy">
+                                    <span class="paquete-etiqueta">Cultura</span>
+                                    <span class="paquete-marca"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Elegido</span>
+                                    <small class="paquete-credito">Foto: Koky2013, CC BY-SA 3.0</small>
+                                </div>
+                                <div class="paquete-cuerpo">
+                                    <h4>Cultura &amp; Historia</h4>
+                                    <p class="paquete-duracion"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 3 días / 2 noches</p>
+                                    <p class="paquete-descripcion">Pueblos coloniales, sitios arqueológicos y tradiciones salvadoreñas.</p>
+                                    <div class="paquete-pie">
+                                        <span class="paquete-precio">$199</span>
+                                        <label for="pkg-cultura" class="paquete-boton">Seleccionar</label>
+                                    </div>
+                                </div>
                             </div>
-                            
-                            <div class="package-option" style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 1rem; cursor: pointer; border: 2px solid transparent; transition: all 0.3s ease;">
-                                <input type="radio" name="package" value="surf" id="pkg-surf" style="margin-bottom: 1rem;">
-                                <label for="pkg-surf" style="cursor: pointer;">
+                            <div class="package-option paquete paquete-surf">
+                                <input type="radio" name="package" value="surf" id="pkg-surf" class="paquete-radio">
+                                <div class="paquete-foto">
+                                    <img src="img/contacto/paquetes/playa-el-tunco.jpg" alt="Playa El Tunco al atardecer" loading="lazy">
+                                    <span class="paquete-etiqueta">Playa</span>
+                                    <span class="paquete-marca"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Elegido</span>
+                                    <small class="paquete-credito">Foto: William Adach, CC BY-SA 2.0</small>
+                                </div>
+                                <div class="paquete-cuerpo">
                                     <h4>Surf Paradise</h4>
-                                    <p style="opacity: 0.8;">7 días / 6 noches</p>
-                                    <p style="color: var(--accent-orange); font-weight: bold;">$399</p>
-                                </label>
+                                    <p class="paquete-duracion"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 7 días / 6 noches</p>
+                                    <p class="paquete-descripcion">Una semana entre las mejores olas del Pacífico y atardeceres en la costa.</p>
+                                    <div class="paquete-pie">
+                                        <span class="paquete-precio">$399</span>
+                                        <label for="pkg-surf" class="paquete-boton">Seleccionar</label>
+                                    </div>
+                                </div>
                             </div>
-                            
-                            <div class="package-option" style="background: rgba(255,255,255,0.1); padding: 1.5rem; border-radius: 1rem; cursor: pointer; border: 2px solid transparent; transition: all 0.3s ease;">
-                                <input type="radio" name="package" value="personalizado" id="pkg-personalizado" style="margin-bottom: 1rem;">
-                                <label for="pkg-personalizado" style="cursor: pointer;">
+                            <div class="package-option paquete paquete-personalizado">
+                                <input type="radio" name="package" value="personalizado" id="pkg-personalizado" class="paquete-radio">
+                                <div class="paquete-foto">
+                                    <img src="img/contacto/paquetes/laguna-verde.jpg" alt="Laguna Verde de Apaneca" loading="lazy">
+                                    <span class="paquete-etiqueta">A tu medida</span>
+                                    <span class="paquete-marca"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Elegido</span>
+                                    <small class="paquete-credito">Foto: ElmerGuevara, CC BY-SA 4.0</small>
+                                </div>
+                                <div class="paquete-cuerpo">
                                     <h4>Personalizado</h4>
-                                    <p style="opacity: 0.8;">A tu medida</p>
-                                    <p style="color: var(--accent-orange); font-weight: bold;">Cotizar</p>
-                                </label>
+                                    <p class="paquete-duracion"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> A tu medida</p>
+                                    <p class="paquete-descripcion">Armamos el recorrido según tus fechas, intereses y presupuesto.</p>
+                                    <div class="paquete-pie">
+                                        <span class="paquete-precio">Cotizar</span>
+                                        <label for="pkg-personalizado" class="paquete-boton">Seleccionar</label>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -730,19 +767,16 @@
                 });
             });
 
-            // Package selection styling
-            const packageOptions = document.querySelectorAll('.package-option');
-            packageOptions.forEach(option => {
-                option.addEventListener('click', function() {
-                    packageOptions.forEach(opt => {
-                        opt.style.borderColor = 'transparent';
-                        opt.style.background = 'rgba(255,255,255,0.1)';
+            // Selección de paquete: marca la tarjeta elegida
+            const paqueteRadios = document.querySelectorAll('.paquete-radio');
+            paqueteRadios.forEach(radio => {
+                radio.addEventListener('change', function() {
+                    paqueteRadios.forEach(r => {
+                        const tarjeta = r.closest('.paquete');
+                        const elegido = r.checked;
+                        tarjeta.classList.toggle('seleccionado', elegido);
+                        tarjeta.querySelector('.paquete-boton').textContent = elegido ? 'Seleccionado' : 'Seleccionar';
                     });
-                    this.style.borderColor = 'var(--accent-orange)';
-                    this.style.background = 'rgba(249, 115, 22, 0.2)';
-                    
-                    const radio = this.querySelector('input[type="radio"]');
-                    radio.checked = true;
                 });
             });
         });
