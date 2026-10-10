@@ -32,14 +32,21 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="page-section">
-        <div class="container">
-            <h1 class="section-title">Planifica Tu Viaje</h1>
-            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 3rem; opacity: 0.9;">
-                Estamos aquí para ayudarte a crear la experiencia perfecta en El Salvador
-            </p>
+    <!-- Encabezado de Contacto: foto de El Salvador con capa sólida -->
+    <header class="contacto-hero">
+        <img src="img/contacto/encabezado.jpg" alt="Atardecer en Playa El Tunco, La Libertad, El Salvador" class="contacto-hero-img">
+        <div class="contacto-hero-capa"></div>
+        <div class="contacto-hero-contenido">
+            <span class="contacto-hero-etiqueta">Contacto</span>
+            <h1>Conectemos con tu próxima aventura</h1>
+            <p>Cuéntanos qué te gustaría vivir en El Salvador y te ayudamos a planificar un viaje a tu medida, desde playas y volcanes hasta pueblos coloniales.</p>
+            <a href="#formulario" class="btn primary contacto-hero-btn">Ir al formulario</a>
+        </div>
+        <p class="contacto-hero-credito">Foto: William Adach, CC BY-SA 2.0</p>
+    </header>
 
+    <section class="page-section contacto-seccion">
+        <div class="container">
             <!-- Contact Tabs -->
             <div class="filter-tabs contact-tabs">
                 <button class="filter-btn contact-tab active" data-tab="informacion">📞 Información</button>
@@ -86,7 +93,7 @@
                 </div>
 
                 <!-- Contact Form -->
-                <div class="contact-form">
+                <div class="contact-form" id="formulario">
                     <h3 style="text-align: center; margin-bottom: 2rem; color: white;">Contáctanos</h3>
                     <form id="contactForm">
                         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
@@ -553,6 +560,17 @@
                     document.getElementById(targetTab).classList.add('active');
                 });
             });
+
+            // Botón del encabezado: muestra la pestaña Información y baja al formulario
+            const heroBtn = document.querySelector('.contacto-hero-btn');
+            if (heroBtn) {
+                heroBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const infoTab = document.querySelector('.contact-tab[data-tab="informacion"]');
+                    if (infoTab && !infoTab.classList.contains('active')) infoTab.click();
+                    document.getElementById('formulario').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                });
+            }
 
             // FAQ functionality
             const faqQuestions = document.querySelectorAll('.faq-question');

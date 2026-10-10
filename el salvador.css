@@ -1373,6 +1373,94 @@ body.exp-modal-open {
     margin: 0 auto;
 }
 
+/* Encabezado de Contacto: foto de fondo con capa sólida semitransparente */
+.contacto-hero {
+    position: relative;
+    min-height: 78vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8rem 2rem 5rem;
+    overflow: hidden;
+    background: var(--secondary-blue);
+    color: var(--white);
+    text-align: center;
+}
+
+.contacto-hero-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 60%;
+}
+
+.contacto-hero-capa {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 58, 112, 0.6);
+}
+
+.contacto-hero-contenido {
+    position: relative;
+    z-index: 1;
+    max-width: 760px;
+    animation: fade-in 1s ease-out;
+}
+
+.contacto-hero-etiqueta {
+    display: inline-block;
+    padding: 0.35rem 1rem;
+    margin-bottom: 1.25rem;
+    border-radius: 50px;
+    background: var(--accent-orange);
+    color: var(--white);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.contacto-hero h1 {
+    font-size: clamp(2.2rem, 5.5vw, 3.8rem);
+    line-height: 1.15;
+    margin-bottom: 1.25rem;
+    color: var(--white);
+}
+
+.contacto-hero-contenido p {
+    font-size: clamp(1.05rem, 2.2vw, 1.25rem);
+    line-height: 1.6;
+    margin: 0 auto 2.25rem;
+    max-width: 620px;
+    opacity: 0.95;
+}
+
+.contacto-hero-credito {
+    position: absolute;
+    right: 1rem;
+    bottom: 0.75rem;
+    z-index: 1;
+    font-size: 0.75rem;
+    opacity: 0.75;
+}
+
+.contacto-seccion {
+    padding-top: 4rem;
+}
+
+#formulario {
+    scroll-margin-top: 100px;
+}
+
+@media (max-width: 768px) {
+    .contacto-hero {
+        min-height: 70vh;
+        padding: 7rem 1.25rem 4rem;
+    }
+}
+
 /* Filter Tabs */
 .filter-tabs {
     display: flex;
