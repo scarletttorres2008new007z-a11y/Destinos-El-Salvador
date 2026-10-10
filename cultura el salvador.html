@@ -32,13 +32,105 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="page-section">
+    <!-- Portada de Cultura -->
+    <section class="cultura-hero" aria-labelledby="cultura-hero-titulo">
+        <div class="cultura-hero-grid">
+            <div class="cultura-hero-texto">
+                <p class="cultura-hero-etiqueta">Tradición, arte y memoria</p>
+                <h1 id="cultura-hero-titulo">Cultura Salvadoreña: <span>una identidad que cobra vida</span></h1>
+                <p class="cultura-hero-intro">Máscaras que bailan, barro que guarda memoria, marimbas que llenan las plazas y sabores que reúnen a las familias. Recorre nuestro museo virtual y descubre, pieza por pieza, el alma de El Salvador.</p>
+                <a href="#museo-3d" class="btn primary cultura-hero-btn">Comenzar la exploración</a>
+            </div>
+            <div class="cultura-hero-visual">
+                <span class="cultura-forma forma-disco" aria-hidden="true"></span>
+                <span class="cultura-forma forma-aro" aria-hidden="true"></span>
+                <span class="cultura-forma forma-cuadro" aria-hidden="true"></span>
+                <span class="cultura-forma forma-barra" aria-hidden="true"></span>
+                <span class="cultura-forma forma-punto" aria-hidden="true"></span>
+                <div class="cultura-hero-escena">
+                    <div class="hero-obras">
+                        <img class="hero-obra activa" src="img/cultura/torito.jpg" alt="Figura de toro en barro pintado, inspirada en el Torito Pinto" data-nombre="Figura del Torito Pinto">
+                        <img class="hero-obra" src="img/cultura/ceramica.jpg" alt="Cántaro de barro decorado con puntos y flores" data-nombre="Cántaro de barro decorado">
+                        <img class="hero-obra" src="img/cultura/marimba.jpg" alt="Marimba de madera con resonadores" data-nombre="Marimba">
+                        <img class="hero-obra" src="img/cultura/pupusa.jpg" alt="Pupusa recién salida del comal, con queso derretido" data-nombre="Pupusa">
+                        <img class="hero-obra" src="img/cultura/palma.jpg" alt="Cajitas de madera pintadas al estilo de La Palma" data-nombre="Artesanía de La Palma">
+                    </div>
+                </div>
+                <p class="cultura-hero-pie"><strong>Pieza destacada:</strong> <span id="hero-obra-nombre">Figura del Torito Pinto</span></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Museo cultural 3D -->
+    <section id="museo-3d" class="museo-3d" aria-labelledby="museo-titulo">
         <div class="container">
-            <h1 class="section-title">Cultura Salvadoreña</h1>
-            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 3rem; opacity: 0.9;">
-                Sumérgete en la rica tradición cultural de El Salvador, donde las raíces indígenas se fusionan con la herencia española
-            </p>
+            <p class="museo-etiqueta">Museo virtual</p>
+            <h2 id="museo-titulo" class="museo-titulo">Museo cultural de El Salvador</h2>
+            <p class="museo-intro">Cinco piezas que cuentan quiénes somos. Gira la sala, acércate a cada pieza y descubre su historia.</p>
+
+            <div class="museo-sala">
+                <div class="museo-escenario">
+                    <div class="museo-lienzo">
+                        <div class="museo-carrusel" role="group" aria-label="Sala del museo con cinco piezas">
+                            <button type="button" class="museo-obra" aria-label="Ver Figura del Torito Pinto">
+                                <span class="museo-obra-marco"><img src="img/cultura/torito.jpg" alt="Figura de toro en barro pintado, inspirada en el Torito Pinto"></span>
+                                <span class="museo-obra-placa"><span class="museo-obra-num">01</span>Figura del Torito Pinto</span>
+                                <span class="museo-obra-sombra" aria-hidden="true"></span>
+                            </button>
+                            <button type="button" class="museo-obra" aria-label="Ver Cántaro de barro decorado">
+                                <span class="museo-obra-marco"><img src="img/cultura/ceramica.jpg" alt="Cántaro de barro decorado con puntos y flores"></span>
+                                <span class="museo-obra-placa"><span class="museo-obra-num">02</span>Cántaro de barro decorado</span>
+                                <span class="museo-obra-sombra" aria-hidden="true"></span>
+                            </button>
+                            <button type="button" class="museo-obra" aria-label="Ver Marimba">
+                                <span class="museo-obra-marco"><img src="img/cultura/marimba.jpg" alt="Marimba de madera con resonadores"></span>
+                                <span class="museo-obra-placa"><span class="museo-obra-num">03</span>Marimba</span>
+                                <span class="museo-obra-sombra" aria-hidden="true"></span>
+                            </button>
+                            <button type="button" class="museo-obra" aria-label="Ver Pupusa">
+                                <span class="museo-obra-marco"><img src="img/cultura/pupusa.jpg" alt="Pupusa recién salida del comal, con queso derretido"></span>
+                                <span class="museo-obra-placa"><span class="museo-obra-num">04</span>Pupusa</span>
+                                <span class="museo-obra-sombra" aria-hidden="true"></span>
+                            </button>
+                            <button type="button" class="museo-obra" aria-label="Ver Artesanía de La Palma">
+                                <span class="museo-obra-marco"><img src="img/cultura/palma.jpg" alt="Cajitas de madera pintadas al estilo de La Palma"></span>
+                                <span class="museo-obra-placa"><span class="museo-obra-num">05</span>Artesanía de La Palma</span>
+                                <span class="museo-obra-sombra" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                        <div class="museo-controles">
+                            <button type="button" class="museo-control museo-girar" data-dir="-1" aria-label="Pieza anterior"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
+                            <button type="button" class="museo-control museo-vista-general">Ver toda la sala</button>
+                            <button type="button" class="museo-control museo-girar" data-dir="1" aria-label="Pieza siguiente"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg></button>
+                        </div>
+                        <p id="museo-ayuda" class="museo-ayuda">Arrastra para girar la sala y toca una pieza</p>
+                    </div>
+
+                    <aside id="museo-panel" class="museo-panel" aria-live="polite" hidden>
+                        <button type="button" class="museo-panel-cerrar" aria-label="Cerrar y volver a la sala"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+                        <p class="museo-panel-numero"></p>
+                        <h3 class="museo-panel-nombre"></h3>
+                        <p class="museo-panel-lugar"></p>
+                        <h4>Historia</h4>
+                        <p class="museo-panel-historia"></p>
+                        <h4>Significado cultural</h4>
+                        <p class="museo-panel-significado"></p>
+                        <h4>Datos relevantes</h4>
+                        <ul class="museo-panel-datos"></ul>
+                        <div class="museo-panel-nav">
+                            <button type="button" class="museo-anterior">Anterior</button>
+                            <button type="button" class="museo-siguiente">Siguiente</button>
+                        </div>
+                    </aside>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Tradiciones, gastronomía, historia, arte y música -->
+    <section class="page-section cultura-explora">
+        <div class="container">
 
             <!-- Culture Tabs -->
             <div class="filter-tabs culture-tabs">
@@ -365,6 +457,7 @@
     </div>
 
     <script src="el salvador.js"></script>
+    <script src="cultura-3d.js"></script>
     <script>
         // Culture tabs functionality
         document.addEventListener('DOMContentLoaded', function() {
