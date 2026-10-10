@@ -41,230 +41,215 @@
             </p>
 
             <!-- Gallery Filters -->
-            <div class="filter-tabs gallery-filters">
-                <button class="filter-btn active" data-filter="all">🖼️ Todas</button>
-                <button class="filter-btn" data-filter="nature">🌿 Naturaleza</button>
-                <button class="filter-btn" data-filter="beaches">🏖️ Playas</button>
-                <button class="filter-btn" data-filter="volcanoes">🌋 Volcanes</button>
-                <button class="filter-btn" data-filter="culture">🎭 Cultura</button>
-                <button class="filter-btn" data-filter="cities">🏙️ Ciudades</button>
-                <button class="filter-btn" data-filter="food">🍽️ Gastronomía</button>
+            <div class="filter-tabs gallery-filters" role="group" aria-label="Filtrar fotos por categoría">
+                <button type="button" class="filter-btn active" data-filter="all" aria-pressed="true">Todas</button>
+                <button type="button" class="filter-btn" data-filter="nature" aria-pressed="false">Naturaleza</button>
+                <button type="button" class="filter-btn" data-filter="beaches" aria-pressed="false">Playas</button>
+                <button type="button" class="filter-btn" data-filter="volcanoes" aria-pressed="false">Volcanes</button>
+                <button type="button" class="filter-btn" data-filter="culture" aria-pressed="false">Cultura</button>
+                <button type="button" class="filter-btn" data-filter="cities" aria-pressed="false">Ciudades</button>
+                <button type="button" class="filter-btn" data-filter="food" aria-pressed="false">Gastronomía</button>
             </div>
 
             <!-- Main Gallery Grid -->
-            <div class="gallery-grid">
+            <div class="gallery-grid galeria-compacta">
                 <!-- Nature Photos -->
-                <div class="gallery-item" data-category="nature">
-                    <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Bosque tropical">
-                    <div class="gallery-overlay">
-                        <div>
-                            <h3>Bosque Tropical</h3>
-                            <p>Parque Nacional El Imposible - Biodiversidad única</p>
-                        </div>
-                    </div>
-                </div>
+                <figure class="gallery-item" data-category="nature" tabindex="0" role="button" aria-label="Ampliar foto: Bosque Tropical" data-full="img/galeria/01.jpg" data-autor="Pipil El Salvador" data-licencia="CC BY 4.0" data-fuente="https://commons.wikimedia.org/wiki/File:Vista_del_Bosque_Nacional_El_Imposible_desde_Tacuba_El_Salvador.jpg">
+                    <img src="img/galeria/mini/01.jpg" alt="Bosque del Parque Nacional El Imposible visto desde Tacuba" loading="lazy">
+                    <figcaption class="gallery-overlay">
+                        <h3>Bosque Tropical</h3>
+                        <p>Parque Nacional El Imposible</p>
+                    </figcaption>
+                </figure>
 
-                <div class="gallery-item" data-category="nature">
-                    <img src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cascadas">
-                    <div class="gallery-overlay">
-                        <div>
-                            <h3>Cascadas Escondidas</h3>
-                            <p>Aguas cristalinas en medio de la selva</p>
-                        </div>
-                    </div>
-                </div>
+                <figure class="gallery-item" data-category="nature" tabindex="0" role="button" aria-label="Ampliar foto: Cascadas Escondidas" data-full="img/galeria/02.jpg" data-autor="ElmerGuevara" data-licencia="CC BY-SA 3.0" data-fuente="https://commons.wikimedia.org/wiki/File:Cascada_los_Tercios_en_el_mes_de_Agosto.JPG">
+                    <img src="img/galeria/mini/02.jpg" alt="Cascada Los Tercios en Suchitoto" loading="lazy">
+                    <figcaption class="gallery-overlay">
+                        <h3>Cascadas Escondidas</h3>
+                        <p>Cascada Los Tercios, Suchitoto</p>
+                    </figcaption>
+                </figure>
 
-                <div class="gallery-item" data-category="nature">
-                    <img src="https://images.unsplash.com/photo-1523712999610-f77fbcfc3843?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Flora tropical">
-                    <div class="gallery-overlay">
-                        <div>
-                            <h3>Flora Tropical</h3>
-                            <p>Diversidad botánica extraordinaria</p>
-                        </div>
-                    </div>
-                </div>
+                <figure class="gallery-item" data-category="nature" tabindex="0" role="button" aria-label="Ampliar foto: Flora Tropical" data-full="img/galeria/03.jpg" data-autor="ElmerGuevara" data-licencia="CC BY-SA 3.0" data-fuente="https://commons.wikimedia.org/wiki/File:Flor_de_la_Reserva_Ecologica_El_Imposible..JPG">
+                    <img src="img/galeria/mini/03.jpg" alt="Flor de la Reserva Ecológica El Imposible" loading="lazy">
+                    <figcaption class="gallery-overlay">
+                        <h3>Flora Tropical</h3>
+                        <p>Flora de El Imposible</p>
+                    </figcaption>
+                </figure>
 
                 <!-- Beach Photos -->
-                <div class="gallery-item" data-category="beaches">
-                    <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Playa El Tunco">
-                    <div class="gallery-overlay">
-                        <div>
-                            <h3>Playa El Tunco</h3>
-                            <p>Paraíso del surf con olas perfectas</p>
-                        </div>
-                    </div>
-                </div>
+                <figure class="gallery-item" data-category="beaches" tabindex="0" role="button" aria-label="Ampliar foto: Playa El Tunco" data-full="img/galeria/04.jpg" data-autor="Rafael Colindres" data-licencia="CC BY-SA 3.0" data-fuente="https://commons.wikimedia.org/wiki/File:Tunco.jpg">
+                    <img src="img/galeria/mini/04.jpg" alt="Playa El Tunco" loading="lazy">
+                    <figcaption class="gallery-overlay">
+                        <h3>Playa El Tunco</h3>
+                        <p>Paraíso del surf con olas perfectas</p>
+                    </figcaption>
+                </figure>
 
-                <div class="gallery-item" data-category="beaches">
-                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Costa del Pacífico">
-                    <div class="gallery-overlay">
-                        <div>
-                            <h3>Costa del Pacífico</h3>
-                            <p>Kilómetros de costas doradas</p>
-                        </div>
-                    </div>
-                </div>
+                <figure class="gallery-item" data-category="beaches" tabindex="0" role="button" aria-label="Ampliar foto: Costa del Pacífico" data-full="img/galeria/05.jpg" data-autor="Presidencia El Salvador" data-licencia="CC0" data-fuente="https://commons.wikimedia.org/wiki/File:Inauguraci%C3%B3n_estadio_F%C3%BAtbol_Playa_Costa_del_Sol_(6)_(14608233049).jpg">
+                    <img src="img/galeria/mini/05.jpg" alt="Playa de la Costa del Sol" loading="lazy">
+                    <figcaption class="gallery-overlay">
+                        <h3>Costa del Pacífico</h3>
+                        <p>Costa del Sol</p>
+                    </figcaption>
+                </figure>
 
-                <div class="gallery-item" data-category="beaches">
-                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Atardecer en la playa">
-                    <div class="gallery-overlay">
-                        <div>
-                            <h3>Atardeceres Mágicos</h3>
-                            <p>Cielos de fuego sobre el océano</p>
-                        </div>
-                    </div>
-                </div>
+                <figure class="gallery-item" data-category="beaches" tabindex="0" role="button" aria-label="Ampliar foto: Atardeceres Mágicos" data-full="img/galeria/06.jpg" data-autor="Silvia Villalta, Esmeralda Manzur, Natalia Valenzuela" data-licencia="CC BY-SA 4.0" data-fuente="https://commons.wikimedia.org/wiki/File:ATARDECER_EN_EL_TUNCO.jpg">
+                    <img src="img/galeria/mini/06.jpg" alt="Atardecer en la playa El Tunco" loading="lazy">
+                    <figcaption class="gallery-overlay">
+                        <h3>Atardeceres Mágicos</h3>
+                        <p>El Tunco</p>
+                    </figcaption>
+                </figure>
 
                 <!-- Volcano Photos -->
-                <div class="gallery-item" data-category="volcanoes">
-                    <img src="https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Volcán Santa Ana">
-                    <div class="gallery-overlay">
-                        <div>
-                            <h3>Volcán de Santa Ana</h3>
-                            <p>Laguna turquesa en el cráter activo</p>
-                        </div>
-                    </div>
-                </div>
+                <figure class="gallery-item" data-category="volcanoes" tabindex="0" role="button" aria-label="Ampliar foto: Volcán de Santa Ana" data-full="img/galeria/07.jpg" data-autor="Erneestoo" data-licencia="CC BY-SA 4.0" data-fuente="https://commons.wikimedia.org/wiki/File:Laguna_crat%C3%A9rica_del_Volc%C3%A1n_de_Santa_Ana_-_El_Salvador.jpg">
+                    <img src="img/galeria/mini/07.jpg" alt="Laguna del cráter del volcán de Santa Ana" loading="lazy">
+                    <figcaption class="gallery-overlay">
+                        <h3>Volcán de Santa Ana</h3>
+                        <p>Laguna del cráter</p>
+                    </figcaption>
+                </figure>
 
-                <div class="gallery-item" data-category="volcanoes">
-                    <img src="https://images.unsplash.com/photo-1464822759844-d150baec0494?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Volcán Izalco">
-                    <div class="gallery-overlay">
-                        <div>
-                            <h3>Volcán de Izalco</h3>
-                            <p>El joven gigante de forma perfecta</p>
-                        </div>
-                    </div>
-                </div>
+                <figure class="gallery-item" data-category="volcanoes" tabindex="0" role="button" aria-label="Ampliar foto: Volcán de Izalco" data-full="img/galeria/08.jpg" data-autor="Rafael Montes E" data-licencia="CC BY-SA 4.0" data-fuente="https://commons.wikimedia.org/wiki/File:Volc%C3%A1n_de_Izalco,_Departamento_de_Sonsonate,_El_Salvador.jpg">
+                    <img src="img/galeria/mini/08.jpg" alt="Volcán de Izalco" loading="lazy">
+                    <figcaption class="gallery-overlay">
+                        <h3>Volcán de Izalco</h3>
+                        <p>El joven gigante de forma perfecta</p>
+                    </figcaption>
+                </figure>
 
-                <div class="gallery-item" data-category="volcanoes">
-                    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Paisaje volcánico">
-                    <div class="gallery-overlay">
-                        <div>
-                            <h3>Paisajes Volcánicos</h3>
-                            <p>Formaciones geológicas únicas</p>
-                        </div>
-                    </div>
-                </div>
+                <figure class="gallery-item" data-category="volcanoes" tabindex="0" role="button" aria-label="Ampliar foto: Paisajes Volcánicos" data-full="img/galeria/09.jpg" data-autor="Jpyle490" data-licencia="CC BY-SA 3.0" data-fuente="https://commons.wikimedia.org/wiki/File:Boquer%C3%B3n_crater.jpg">
+                    <img src="img/galeria/mini/09.jpg" alt="Cráter de El Boquerón" loading="lazy">
+                    <figcaption class="gallery-overlay">
+                        <h3>Paisajes Volcánicos</h3>
+                        <p>El Boquerón</p>
+                    </figcaption>
+                </figure>
 
                 <!-- Culture Photos -->
-                <div class="gallery-item" data-category="culture">
-                    <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Danzas tradicionales">
-                    <div class="gallery-overlay">
-                        <div>
-                            <h3>Danzas Folklóricas</h3>
-                            <p>Tradiciones que perduran en el tiempo</p>
-                        </div>
-                    </div>
-                </div>
+                <figure class="gallery-item" data-category="culture" tabindex="0" role="button" aria-label="Ampliar foto: Danzas Folklóricas" data-full="img/galeria/10.jpg" data-autor="Jose Huwaidi" data-licencia="CC BY-SA 4.0" data-fuente="https://commons.wikimedia.org/wiki/File:Danza_folcl%C3%B3rica_en_Perqu%C3%ADn_-_2005.jpg">
+                    <img src="img/galeria/mini/10.jpg" alt="Danza folclórica en Perquín" loading="lazy">
+                    <figcaption class="gallery-overlay">
+                        <h3>Danzas Folklóricas</h3>
+                        <p>Tradiciones que perduran en el tiempo</p>
+                    </figcaption>
+                </figure>
 
-                <div class="gallery-item" data-category="culture">
-                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Arte local">
-                    <div class="gallery-overlay">
-                        <div>
-                            <h3>Arte Tradicional</h3>
-                            <p>Expresiones artísticas ancestrales</p>
-                        </div>
-                    </div>
-                </div>
+                <figure class="gallery-item" data-category="culture" tabindex="0" role="button" aria-label="Ampliar foto: Arte Tradicional" data-full="img/galeria/11.jpg" data-autor="Netito777" data-licencia="Dominio público" data-fuente="https://commons.wikimedia.org/wiki/File:Artesaniaslapalma2.JPG">
+                    <img src="img/galeria/mini/11.jpg" alt="Artesanías de La Palma" loading="lazy">
+                    <figcaption class="gallery-overlay">
+                        <h3>Arte Tradicional</h3>
+                        <p>La Palma, Chalatenango</p>
+                    </figcaption>
+                </figure>
 
-                <div class="gallery-item" data-category="culture">
-                    <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Música tradicional">
-                    <div class="gallery-overlay">
-                        <div>
-                            <h3>Música Folklórica</h3>
-                            <p>Ritmos que conmueven el alma</p>
-                        </div>
-                    </div>
-                </div>
+                <figure class="gallery-item" data-category="culture" tabindex="0" role="button" aria-label="Ampliar foto: Música Folklórica" data-full="img/galeria/12.jpg" data-autor="Presidencia El Salvador" data-licencia="CC0" data-fuente="https://commons.wikimedia.org/wiki/File:Festival_Para_el_Buen_Vivir_(24489077811).jpg">
+                    <img src="img/galeria/mini/12.jpg" alt="Música tradicional salvadoreña" loading="lazy">
+                    <figcaption class="gallery-overlay">
+                        <h3>Música Folklórica</h3>
+                        <p>Ritmos que conmueven el alma</p>
+                    </figcaption>
+                </figure>
 
                 <!-- Cities Photos -->
-                <div class="gallery-item" data-category="cities">
-                    <img src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Suchitoto">
-                    <div class="gallery-overlay">
-                        <div>
-                            <h3>Suchitoto Colonial</h3>
-                            <p>Arquitectura preservada del siglo XVIII</p>
-                        </div>
-                    </div>
-                </div>
+                <figure class="gallery-item" data-category="cities" tabindex="0" role="button" aria-label="Ampliar foto: Suchitoto Colonial" data-full="img/galeria/13.jpg" data-autor="ElmerGuevara" data-licencia="CC BY-SA 3.0" data-fuente="https://commons.wikimedia.org/wiki/File:Calles_de_Suchitoto.jpg">
+                    <img src="img/galeria/mini/13.jpg" alt="Calles coloniales de Suchitoto" loading="lazy">
+                    <figcaption class="gallery-overlay">
+                        <h3>Suchitoto Colonial</h3>
+                        <p>Arquitectura preservada del siglo XVIII</p>
+                    </figcaption>
+                </figure>
 
-                <div class="gallery-item" data-category="cities">
-                    <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="San Salvador">
-                    <div class="gallery-overlay">
-                        <div>
-                            <h3>San Salvador Moderno</h3>
-                            <p>Capital vibrante y cosmopolita</p>
-                        </div>
-                    </div>
-                </div>
+                <figure class="gallery-item" data-category="cities" tabindex="0" role="button" aria-label="Ampliar foto: San Salvador Moderno" data-full="img/galeria/14.jpg" data-autor="Arne Müseler" data-licencia="CC BY-SA 3.0 de" data-fuente="https://commons.wikimedia.org/wiki/File:El-salvador_san-salvador_aerial-view_1.JPG">
+                    <img src="img/galeria/mini/14.jpg" alt="Vista aérea de San Salvador" loading="lazy">
+                    <figcaption class="gallery-overlay">
+                        <h3>San Salvador Moderno</h3>
+                        <p>Capital vibrante y cosmopolita</p>
+                    </figcaption>
+                </figure>
 
-                <div class="gallery-item" data-category="cities">
-                    <img src="https://images.unsplash.com/photo-1426604966848-d7adac402bff?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Arquitectura colonial">
-                    <div class="gallery-overlay">
-                        <div>
-                            <h3>Herencia Colonial</h3>
-                            <p>Iglesias y edificios históricos</p>
-                        </div>
-                    </div>
-                </div>
+                <figure class="gallery-item" data-category="cities" tabindex="0" role="button" aria-label="Ampliar foto: Herencia Colonial" data-full="img/galeria/15.jpg" data-autor="Sergio.solar" data-licencia="Dominio público" data-fuente="https://commons.wikimedia.org/wiki/File:Iglesia_suchitoto.jpeg">
+                    <img src="img/galeria/mini/15.jpg" alt="Iglesia de Santa Lucía en Suchitoto" loading="lazy">
+                    <figcaption class="gallery-overlay">
+                        <h3>Herencia Colonial</h3>
+                        <p>Catedral de Suchitoto</p>
+                    </figcaption>
+                </figure>
 
                 <!-- Food Photos -->
-                <div class="gallery-item" data-category="food">
-                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Pupusas">
-                    <div class="gallery-overlay">
-                        <div>
-                            <h3>Pupusas Tradicionales</h3>
-                            <p>El plato nacional por excelencia</p>
-                        </div>
-                    </div>
-                </div>
+                <figure class="gallery-item" data-category="food" tabindex="0" role="button" aria-label="Ampliar foto: Pupusas Tradicionales" data-full="img/galeria/16.jpg" data-autor="Ll1324" data-licencia="CC0" data-fuente="https://commons.wikimedia.org/wiki/File:Typical_serving_of_Pupusas_in_El_Salvador.jpg">
+                    <img src="img/galeria/mini/16.jpg" alt="Plato de pupusas salvadoreñas" loading="lazy">
+                    <figcaption class="gallery-overlay">
+                        <h3>Pupusas Tradicionales</h3>
+                        <p>El plato nacional por excelencia</p>
+                    </figcaption>
+                </figure>
 
-                <div class="gallery-item" data-category="food">
-                    <img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Gastronomía local">
-                    <div class="gallery-overlay">
-                        <div>
-                            <h3>Cocina Criolla</h3>
-                            <p>Sabores auténticos salvadoreños</p>
-                        </div>
-                    </div>
-                </div>
+                <figure class="gallery-item" data-category="food" tabindex="0" role="button" aria-label="Ampliar foto: Cocina Criolla" data-full="img/galeria/17.jpg" data-autor="Ll1324" data-licencia="CC0" data-fuente="https://commons.wikimedia.org/wiki/File:Typical_Pupuseria_setup_in_El_Salvador.jpg">
+                    <img src="img/galeria/mini/17.jpg" alt="Pupusería tradicional salvadoreña" loading="lazy">
+                    <figcaption class="gallery-overlay">
+                        <h3>Cocina Criolla</h3>
+                        <p>Sabores auténticos salvadoreños</p>
+                    </figcaption>
+                </figure>
 
-                <div class="gallery-item" data-category="food">
-                    <img src="https://images.unsplash.com/photo-1497515114629-f71d768fd07c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Café salvadoreño">
-                    <div class="gallery-overlay">
-                        <div>
-                            <h3>Café de Altura</h3>
-                            <p>Granos de calidad mundial</p>
-                        </div>
-                    </div>
-                </div>
+                <figure class="gallery-item" data-category="food" tabindex="0" role="button" aria-label="Ampliar foto: Café de Altura" data-full="img/galeria/18.jpg" data-autor="The Cockroach" data-licencia="CC BY 2.0" data-fuente="https://commons.wikimedia.org/wiki/File:Coffee_Processing_in_Ahuachapan,_El_Salvador.jpg">
+                    <img src="img/galeria/mini/18.jpg" alt="Procesamiento de café en Ahuachapán" loading="lazy">
+                    <figcaption class="gallery-overlay">
+                        <h3>Café de Altura</h3>
+                        <p>Granos de calidad mundial</p>
+                    </figcaption>
+                </figure>
             </div>
 
             <!-- Photo Sharing Section -->
-            <div class="photo-sharing" style="margin-top: 4rem; background: rgba(255,255,255,0.05); padding: 3rem; border-radius: 2rem; text-align: center;">
-                <h2 style="margin-bottom: 2rem; font-size: 2.5rem;">Comparte tus Fotos</h2>
-                <p style="margin-bottom: 2rem; opacity: 0.9; font-size: 1.1rem;">¿Visitaste El Salvador? ¡Comparte tus mejores momentos con nosotros!</p>
-                
-                <div class="sharing-options" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
-                    <div class="sharing-option" style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 1rem;">
-                        <div style="font-size: 3rem; margin-bottom: 1rem;">📸</div>
-                        <h4>Instagram</h4>
-                        <p style="opacity: 0.8;">#ElSalvadorTravel #VisitElSalvador</p>
+            <section class="photo-sharing" aria-labelledby="comparteTitulo">
+                <h2 id="comparteTitulo" class="comparte-titulo">Comparte tus Fotos</h2>
+                <p class="comparte-intro">¿Visitaste El Salvador? ¡Comparte tus mejores momentos con nosotros!</p>
+
+                <div class="sharing-options">
+                    <div class="sharing-option">
+                        <span class="sharing-icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg></span>
+                        <div>
+                            <h4>Instagram</h4>
+                            <p>#ElSalvadorTravel #VisitElSalvador</p>
+                        </div>
                     </div>
-                    <div class="sharing-option" style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 1rem;">
-                        <div style="font-size: 3rem; margin-bottom: 1rem;">📱</div>
-                        <h4>Facebook</h4>
-                        <p style="opacity: 0.8;">Etiquétanos en tus publicaciones</p>
+                    <div class="sharing-option">
+                        <span class="sharing-icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></span>
+                        <div>
+                            <h4>Facebook</h4>
+                            <p>Etiquétanos en tus publicaciones</p>
+                        </div>
                     </div>
-                    <div class="sharing-option" style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 1rem;">
-                        <div style="font-size: 3rem; margin-bottom: 1rem;">✉️</div>
-                        <h4>Email</h4>
-                        <p style="opacity: 0.8;">Envíanos tus mejores fotos</p>
+                    <div class="sharing-option">
+                        <span class="sharing-icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
+                        <div>
+                            <h4>Email</h4>
+                            <p>Envíanos tus mejores fotos</p>
+                        </div>
                     </div>
                 </div>
-                
-                <button class="btn primary" style="margin-top: 1rem;">📤 Subir mis Fotos</button>
-            </div>
+
+                <div class="subir-fotos">
+                    <h3 class="subir-titulo">Agrega tus fotos a esta galería</h3>
+                    <p class="subir-ayuda">Formatos JPG, JPEG, PNG o WEBP, hasta 5 MB por foto y 12 fotos a la vez.</p>
+                    <input type="file" id="fotosUsuario" class="subir-input" accept=".jpg,.jpeg,.png,.webp,image/jpeg,image/png,image/webp" multiple>
+                    <label for="fotosUsuario" class="btn primary subir-seleccionar">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m17 8-5-5-5 5"/><path d="M12 3v12"/></svg>
+                        Seleccionar fotos
+                    </label>
+                    <div class="subir-mensajes" role="status" aria-live="polite"></div>
+                    <ul class="subir-previa" aria-label="Fotos seleccionadas"></ul>
+                    <div class="subir-acciones" hidden>
+                        <button type="button" class="btn primary subir-agregar">Agregar a la galería</button>
+                        <button type="button" class="btn secondary subir-cancelar">Cancelar</button>
+                    </div>
+                    <p class="subir-nota">Las fotos se agregan solo en tu navegador durante esta visita: no se suben a ningún servidor, no las ven otros visitantes y desaparecen al recargar o cerrar la página.</p>
+                </div>
+            </section>
 
             <!-- Virtual Tour Section -->
             <div class="virtual-tours" style="margin-top: 4rem;">
@@ -380,112 +365,25 @@
         <button class="fab-btn" aria-label="Comentarios"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></button>
     </div>
 
-    <!-- Image Modal -->
-    <div id="imageModal" class="image-modal" style="display: none;">
-        <div class="modal-content">
-            <span class="modal-close">&times;</span>
-            <img id="modalImage" src="" alt="">
-            <div class="modal-caption"></div>
+    <!-- Vista ampliada de la galería -->
+    <div id="galeriaLightbox" class="galeria-lightbox" role="dialog" aria-modal="true" aria-label="Vista ampliada de la foto" hidden>
+        <span class="lightbox-contador" aria-live="polite"></span>
+        <button type="button" class="lightbox-btn lightbox-cerrar" aria-label="Cerrar"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+        <button type="button" class="lightbox-btn lightbox-anterior" aria-label="Foto anterior"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
+        <button type="button" class="lightbox-btn lightbox-siguiente" aria-label="Foto siguiente"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
+        <div class="lightbox-escenario">
+            <figure class="lightbox-figura">
+                <img class="lightbox-img" src="" alt="">
+                <figcaption class="lightbox-pie">
+                    <h3 class="lightbox-titulo"></h3>
+                    <p class="lightbox-descripcion"></p>
+                    <p class="lightbox-credito"></p>
+                </figcaption>
+            </figure>
         </div>
     </div>
 
     <script src="el salvador.js"></script>
-    <script>
-        // Gallery functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            // Image modal functionality
-            const galleryItems = document.querySelectorAll('.gallery-item img');
-            const modal = document.getElementById('imageModal');
-            const modalImg = document.getElementById('modalImage');
-            const modalCaption = document.querySelector('.modal-caption');
-            const closeModal = document.querySelector('.modal-close');
-
-            galleryItems.forEach(img => {
-                img.addEventListener('click', function() {
-                    modal.style.display = 'block';
-                    modalImg.src = this.src;
-                    const overlay = this.parentElement.querySelector('.gallery-overlay');
-                    if (overlay) {
-                        const title = overlay.querySelector('h3').textContent;
-                        const description = overlay.querySelector('p').textContent;
-                        modalCaption.innerHTML = `<h3>${title}</h3><p>${description}</p>`;
-                    }
-                });
-            });
-
-            closeModal.addEventListener('click', function() {
-                modal.style.display = 'none';
-            });
-
-            modal.addEventListener('click', function(e) {
-                if (e.target === modal) {
-                    modal.style.display = 'none';
-                }
-            });
-
-            // Add modal styles
-            const modalStyles = `
-                .image-modal {
-                    position: fixed;
-                    z-index: 2000;
-                    left: 0;
-                    top: 0;
-                    width: 100%;
-                    height: 100%;
-                    background-color: rgba(0,0,0,0.9);
-                    backdrop-filter: blur(10px);
-                }
-
-                .image-modal .modal-content {
-                    position: relative;
-                    margin: auto;
-                    display: block;
-                    width: 90%;
-                    max-width: 900px;
-                    top: 50%;
-                    transform: translateY(-50%);
-                }
-
-                .image-modal img {
-                    width: 100%;
-                    height: auto;
-                    border-radius: 1rem;
-                }
-
-                .modal-close {
-                    position: absolute;
-                    top: 15px;
-                    right: 35px;
-                    color: white;
-                    font-size: 40px;
-                    font-weight: bold;
-                    cursor: pointer;
-                    z-index: 2001;
-                }
-
-                .modal-close:hover {
-                    opacity: 0.7;
-                }
-
-                .modal-caption {
-                    text-align: center;
-                    padding: 1rem;
-                    color: white;
-                }
-
-                .modal-caption h3 {
-                    margin: 0 0 0.5rem 0;
-                    color: var(--accent-orange);
-                }
-            `;
-
-            if (!document.querySelector('#gallery-modal-styles')) {
-                const styleSheet = document.createElement('style');
-                styleSheet.id = 'gallery-modal-styles';
-                styleSheet.textContent = modalStyles;
-                document.head.appendChild(styleSheet);
-            }
-        });
-    </script>
+    <script src="galeria.js"></script>
 </body>
 </html>

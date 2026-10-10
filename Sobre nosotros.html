@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Nosotros</title>
+    <title>Sobre Nosotros - SV El Salvador</title>
     <link rel="stylesheet" href="el salvador.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="pagina-nosotros">
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -31,485 +31,307 @@
             <a href="Sobre nosotros.html">Nosotros</a>
         </div>
     </nav>
-    <style>
-        /* General Styles */
-        :root {
-            --primary-blue: #0057a6;
-            --celeste: #00a3da;
-            --accent-orange: #f97316;
-        }
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            line-height: 1.6;
-        }
-
-        /* Navigation */
-        .navbar {
-            background-color: #003a70;
-            color: #fff;
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .highlight {
-            color: var(--accent-orange);
-        }
-
-        .nav-menu {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-        }
-
-        .nav-link {
-            color: #fff;
-            padding: 0.5rem 1rem;
-            transition: color 0.3s ease;
-            text-decoration: none;
-        }
-
-        .nav-link:hover {
-            color: var(--accent-orange);
-        }
-
-        .mobile-menu-btn {
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            display: none;
-        }
-
-        .mobile-menu {
-            display: none;
-            background-color: #003a70;
-            padding: 1rem;
-            text-align: center;
-        }
-
-        .mobile-menu a {
-            color: #fff;
-            display: block;
-            padding: 0.5rem;
-            text-decoration: none;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: #0057a6;
-            color: #fff;
-            text-align: center;
-            padding: 6rem 0 4rem 0;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-            color: #fff;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* About Section */
-        .about-section {
-            padding: 5rem 0;
-            background: #0057a6;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
-            margin-bottom: 4rem;
-        }
-
-        .about-card {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 1rem;
-            padding: 2rem;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .about-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
-        }
-
-        .about-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            color: var(--accent-orange);
-        }
-
-        .about-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #fff;
-        }
-
-        .about-card p {
-            color: #ddd;
-            line-height: 1.6;
-        }
-
-        /* Team Section */
-        .team-section {
-            padding: 5rem 0;
-            background: rgba(255, 255, 255, 0.05);
-        }
-
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-
-        .team-card {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 1rem;
-            padding: 2rem;
-            text-align: center;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            transition: transform 0.3s ease;
-        }
-
-        .team-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .team-avatar {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            background: var(--accent-orange);
-            margin: 0 auto 1rem auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            color: #fff;
-        }
-
-        .team-card h4 {
-            color: #fff;
-            margin-bottom: 0.5rem;
-        }
-
-        .team-role {
-            color: var(--accent-orange);
-            font-weight: 500;
-            margin-bottom: 1rem;
-        }
-
-        .team-card p {
-            color: #ddd;
-            font-size: 0.9rem;
-        }
-
-        /* Values Section */
-        .values-section {
-            padding: 5rem 0;
-        }
-
-        .values-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .value-item {
-            text-align: center;
-            padding: 2rem;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 1rem;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .value-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .value-item h3 {
-            color: #fff;
-            margin-bottom: 1rem;
-        }
-
-        /* Statistics */
-        .stats-section {
-            padding: 4rem 0;
-            background: rgba(255, 255, 255, 0.05);
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            text-align: center;
-        }
-
-        .stat-item {
-            padding: 2rem;
-        }
-
-        .stat-number {
-            font-size: 3rem;
-            font-weight: bold;
-            color: var(--accent-orange);
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-label {
-            font-size: 1.1rem;
-        }
-
-        /* Footer */
-        .footer {
-            background-color: #222;
-            color: #fff;
-            padding: 2rem 0;
-            text-align: center;
-        }
-
-        .footer-content {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .footer-logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin-bottom: 1rem;
-        }
-
-        .footer p {
-            color: #aaa;
-            margin-bottom: 1.5rem;
-        }
-
-        .social-links {
-            margin-bottom: 1.5rem;
-        }
-
-        .social-link {
-            color: #fff;
-            margin: 0 0.8rem;
-            font-size: 1.2rem;
-            text-decoration: none;
-        }
-
-        .social-link:hover {
-            color: var(--accent-orange);
-        }
-
-        .copyright {
-            font-size: 0.8rem;
-            color: #888;
-        }
-
-        /* Section Titles */
-        .section-title {
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 3rem;
-            color: #fff;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .nav-menu {
-                display: none;
-            }
-
-            .mobile-menu-btn {
-                display: block;
-            }
-
-            .mobile-menu.active {
-                display: block;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .about-grid,
-            .team-grid,
-            .values-grid,
-            .stats-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .section-title {
-                font-size: 2rem;
-            }
-        }
-
-        /* Animation */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease;
-        }
-
-        .fade-in.animate {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    </style>
-</head>
-<body>
-    
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <h1>Sobre <span class="highlight">Nosotros</span></h1>
-            <p>Somos una empresa salvadoreña dedicada a mostrar la belleza y riqueza cultural de nuestro país. Con más de 10 años de experiencia, hemos ayudado a miles de viajeros a descubrir los secretos mejor guardados de El Salvador.</p>
+    <!-- Encabezado: foto de El Salvador con capa sólida semitransparente -->
+    <header class="nos-hero">
+        <img src="img/galeria/01.jpg" alt="Volcanes y bosque tropical vistos desde Tacuba, Ahuachapán" class="nos-hero-img">
+        <div class="nos-hero-capa"></div>
+        <div class="nos-hero-contenido">
+            <span class="nos-etiqueta">Sobre nosotros</span>
+            <h1>Salvadoreños mostrando <span class="highlight">El Salvador</span> al mundo</h1>
+            <p>Somos una empresa salvadoreña dedicada a mostrar la belleza y la riqueza cultural de nuestro país. Con más de 10 años de experiencia, hemos ayudado a miles de viajeros a descubrir los secretos mejor guardados de El Salvador.</p>
+            <div class="nos-hero-botones">
+                <a href="#historia" class="nos-btn nos-btn-naranja">Conoce nuestra historia</a>
+                <a href="contacto el salvador.html" class="nos-btn nos-btn-borde">Planifica tu viaje</a>
+            </div>
         </div>
-    </section>
+        <p class="nos-credito">Foto: Pipil El Salvador, CC BY 4.0</p>
+    </header>
 
-    <!-- About Section -->
-    <section class="about-section">
-        <div class="container">
-            <h2 class="section-title fade-in">¿Quiénes Somos?</h2>
-            <div class="about-grid">
-                <div class="about-card fade-in">
-                    <div class="about-icon">🌟</div>
-                    <h3>Nuestra Misión</h3>
-                    <p>Promover el turismo sostenible en El Salvador, destacando nuestras bellezas naturales, patrimonio cultural y la calidez de nuestra gente, creando experiencias únicas e inolvidables para cada visitante.</p>
+    <!-- Quiénes somos -->
+    <section id="historia" class="nos-seccion">
+        <div class="nos-contenedor nos-historia">
+            <div class="nos-historia-texto" data-revelar>
+                <span class="nos-etiqueta">Quiénes somos</span>
+                <h2 class="nos-titulo">Viajes con raíces salvadoreñas</h2>
+                <p>Empezamos como un pequeño grupo de guías que querían enseñar su país con orgullo. Hoy diseñamos recorridos por playas, volcanes, pueblos coloniales y sitios arqueológicos, siempre de la mano de las comunidades que los cuidan.</p>
+                <p>Creemos que viajar es conocer a la gente: por eso cada ruta incluye cocina local, artesanos, productores de café y la historia que no aparece en los mapas.</p>
+
+                <!-- Misión, visión y valores en pestañas -->
+                <div class="nos-pestanas" role="tablist" aria-label="Misión, visión y valores">
+                    <button class="nos-pestana activa" role="tab" id="tab-mision" aria-controls="panel-mision" aria-selected="true">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+                        Misión
+                    </button>
+                    <button class="nos-pestana" role="tab" id="tab-vision" aria-controls="panel-vision" aria-selected="false" tabindex="-1">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                        Visión
+                    </button>
+                    <button class="nos-pestana" role="tab" id="tab-valores" aria-controls="panel-valores" aria-selected="false" tabindex="-1">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                        Valores
+                    </button>
                 </div>
-                <div class="about-card fade-in">
-                    <div class="about-icon">👁️</div>
-                    <h3>Nuestra Visión</h3>
-                    <p>Ser la empresa líder en turismo de El Salvador, reconocida por la calidad de nuestros servicios y nuestro compromiso con el desarrollo sostenible del sector turístico nacional.</p>
+                <div class="nos-paneles">
+                    <div class="nos-panel activo" role="tabpanel" id="panel-mision" aria-labelledby="tab-mision" tabindex="0">
+                        <p>Promover el turismo sostenible en El Salvador, destacando nuestras bellezas naturales, patrimonio cultural y la calidez de nuestra gente, creando experiencias únicas e inolvidables para cada visitante.</p>
+                    </div>
+                    <div class="nos-panel" role="tabpanel" id="panel-vision" aria-labelledby="tab-vision" tabindex="0" hidden>
+                        <p>Ser la empresa líder en turismo de El Salvador, reconocida por la calidad de nuestros servicios y nuestro compromiso con el desarrollo sostenible del sector turístico nacional.</p>
+                    </div>
+                    <div class="nos-panel" role="tabpanel" id="panel-valores" aria-labelledby="tab-valores" tabindex="0" hidden>
+                        <ul class="nos-lista-valores">
+                            <li>Compromiso</li>
+                            <li>Respeto por el medio ambiente</li>
+                            <li>Autenticidad</li>
+                            <li>Excelencia en el servicio</li>
+                            <li>Pasión por El Salvador</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="about-card fade-in">
-                    <div class="about-icon">❤️</div>
-                    <h3>Nuestros Valores</h3>
-                    <p>Compromiso, respeto por el medio ambiente, autenticidad, excelencia en el servicio y pasión por mostrar lo mejor de El Salvador al mundo.</p>
+            </div>
+
+            <div class="nos-historia-fotos" data-revelar>
+                <figure class="nos-foto nos-foto-principal">
+                    <img src="img/galeria/18.jpg" alt="Productoras seleccionando granos de café en Ahuachapán" loading="lazy">
+                    <figcaption>Foto: The Cockroach, CC BY 2.0</figcaption>
+                </figure>
+                <figure class="nos-foto nos-foto-secundaria">
+                    <img src="img/galeria/mini/13.jpg" alt="Calle empedrada de Suchitoto" loading="lazy">
+                    <figcaption>Foto: ElmerGuevara, CC BY-SA 3.0</figcaption>
+                </figure>
+                <div class="nos-sello">
+                    <strong>2014</strong>
+                    <span>recorriendo El Salvador</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Team Section -->
-    <section class="team-section">
-        <div class="container">
-            <h2 class="section-title fade-in">Nuestro Equipo</h2>
-            <div class="team-grid">
-                <div class="team-card fade-in">
-                    <div class="team-avatar">👨‍💼</div>
-                    <h4>Carlos Mendoza</h4>
-                    <div class="team-role">Director General</div>
-                    <p>Con 15 años de experiencia en turismo, Carlos lidera nuestro equipo con pasión y dedicación para ofrecer las mejores experiencias turísticas.</p>
+    <!-- Trayectoria: línea de tiempo que se completa al bajar -->
+    <section id="trayectoria" class="nos-seccion nos-seccion-oscura">
+        <div class="nos-contenedor">
+            <div class="nos-encabezado" data-revelar>
+                <span class="nos-etiqueta">Nuestra trayectoria</span>
+                <h2 class="nos-titulo">Diez años de caminos recorridos</h2>
+                <p>Cada etapa nos acercó a un rincón distinto del país.</p>
+            </div>
+
+            <ol class="nos-linea">
+                <li class="nos-linea-progreso" aria-hidden="true"><span></span></li>
+                <li class="nos-hito" data-revelar>
+                    <span class="nos-hito-punto" aria-hidden="true"></span>
+                    <article class="nos-hito-tarjeta">
+                        <img src="img/galeria/mini/14.jpg" alt="Vista aérea de San Salvador" loading="lazy">
+                        <div class="nos-hito-texto">
+                            <span class="nos-hito-anio">2014</span>
+                            <h3>Nace el proyecto</h3>
+                            <p>Primeros recorridos a pie por el centro de San Salvador y el volcán de San Salvador.</p>
+                        </div>
+                    </article>
+                </li>
+                <li class="nos-hito" data-revelar>
+                    <span class="nos-hito-punto" aria-hidden="true"></span>
+                    <article class="nos-hito-tarjeta">
+                        <img src="img/destinos/ruta-de-las-flores-card.jpg" alt="Mural en Concepción de Ataco" loading="lazy">
+                        <div class="nos-hito-texto">
+                            <span class="nos-hito-anio">2016</span>
+                            <h3>Ruta de las Flores</h3>
+                            <p>Sumamos tours por Juayúa, Apaneca y Ataco con artesanos y cafetaleros locales.</p>
+                        </div>
+                    </article>
+                </li>
+                <li class="nos-hito" data-revelar>
+                    <span class="nos-hito-punto" aria-hidden="true"></span>
+                    <article class="nos-hito-tarjeta">
+                        <img src="img/destinos/volcan-santa-ana-card.jpg" alt="Laguna del cráter del volcán de Santa Ana" loading="lazy">
+                        <div class="nos-hito-texto">
+                            <span class="nos-hito-anio">2018</span>
+                            <h3>Volcanes y aventura</h3>
+                            <p>Ascensos guiados al volcán de Santa Ana y al Izalco con guías certificados.</p>
+                        </div>
+                    </article>
+                </li>
+                <li class="nos-hito" data-revelar>
+                    <span class="nos-hito-punto" aria-hidden="true"></span>
+                    <article class="nos-hito-tarjeta">
+                        <img src="img/destinos/el-imposible-card.jpg" alt="Mirador del Parque Nacional El Imposible" loading="lazy">
+                        <div class="nos-hito-texto">
+                            <span class="nos-hito-anio">2020</span>
+                            <h3>Turismo sostenible</h3>
+                            <p>Alianzas con comunidades y guías locales para proteger El Imposible y sus alrededores.</p>
+                        </div>
+                    </article>
+                </li>
+                <li class="nos-hito" data-revelar>
+                    <span class="nos-hito-punto" aria-hidden="true"></span>
+                    <article class="nos-hito-tarjeta">
+                        <img src="img/destinos/suchitoto-card.jpg" alt="Iglesia Santa Lucía de Suchitoto" loading="lazy">
+                        <div class="nos-hito-texto">
+                            <span class="nos-hito-anio">2022</span>
+                            <h3>Patrimonio vivo</h3>
+                            <p>Rutas culturales por Suchitoto, Joya de Cerén y Tazumal junto a historiadores.</p>
+                        </div>
+                    </article>
+                </li>
+                <li class="nos-hito" data-revelar>
+                    <span class="nos-hito-punto" aria-hidden="true"></span>
+                    <article class="nos-hito-tarjeta">
+                        <img src="img/galeria/mini/04.jpg" alt="Atardecer en Playa El Tunco" loading="lazy">
+                        <div class="nos-hito-texto">
+                            <span class="nos-hito-anio">2024</span>
+                            <h3>Más de 5000 viajeros</h3>
+                            <p>Viajeros de todo el mundo han descubierto El Salvador con nosotros.</p>
+                        </div>
+                    </article>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- Equipo -->
+    <section id="equipo" class="nos-seccion">
+        <div class="nos-contenedor">
+            <div class="nos-encabezado" data-revelar>
+                <span class="nos-etiqueta">Nuestro equipo</span>
+                <h2 class="nos-titulo">Las personas detrás de cada viaje</h2>
+                <p>Toca una tarjeta para conocer mejor a cada integrante.</p>
+            </div>
+
+            <div class="nos-equipo" data-revelar-grupo>
+                <button class="nos-miembro" data-miembro="carlos" data-revelar>
+                    <span class="nos-avatar nos-avatar-azul" aria-hidden="true">CM</span>
+                    <span class="nos-miembro-nombre">Carlos Mendoza</span>
+                    <span class="nos-miembro-rol">Director General</span>
+                    <span class="nos-miembro-texto">Con 15 años de experiencia en turismo, lidera el equipo con pasión y dedicación.</span>
+                    <span class="nos-miembro-ver">Ver perfil
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </span>
+                </button>
+                <button class="nos-miembro" data-miembro="ana" data-revelar>
+                    <span class="nos-avatar nos-avatar-celeste" aria-hidden="true">AG</span>
+                    <span class="nos-miembro-nombre">Ana García</span>
+                    <span class="nos-miembro-rol">Directora de Operaciones</span>
+                    <span class="nos-miembro-texto">Coordina todos los tours y cuida que cada detalle del viaje sea perfecto.</span>
+                    <span class="nos-miembro-ver">Ver perfil
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </span>
+                </button>
+                <button class="nos-miembro" data-miembro="roberto" data-revelar>
+                    <span class="nos-avatar nos-avatar-naranja" aria-hidden="true">RS</span>
+                    <span class="nos-miembro-nombre">Roberto Silva</span>
+                    <span class="nos-miembro-rol">Guía Especializado</span>
+                    <span class="nos-miembro-texto">Historiador y guía certificado que conoce cada rincón de El Salvador.</span>
+                    <span class="nos-miembro-ver">Ver perfil
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </span>
+                </button>
+                <button class="nos-miembro" data-miembro="maria" data-revelar>
+                    <span class="nos-avatar nos-avatar-oscuro" aria-hidden="true">ML</span>
+                    <span class="nos-miembro-nombre">María López</span>
+                    <span class="nos-miembro-rol">Coordinadora de Marketing</span>
+                    <span class="nos-miembro-texto">Promociona las maravillas del país y mantiene informados a nuestros viajeros.</span>
+                    <span class="nos-miembro-ver">Ver perfil
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lo que nos hace únicos -->
+    <section id="unicos" class="nos-seccion nos-seccion-oscura">
+        <div class="nos-contenedor">
+            <div class="nos-encabezado" data-revelar>
+                <span class="nos-etiqueta">Nuestra forma de viajar</span>
+                <h2 class="nos-titulo">Lo que nos hace únicos</h2>
+            </div>
+
+            <div class="nos-valores" data-revelar-grupo>
+                <article class="nos-valor" data-revelar>
+                    <div class="nos-valor-icono"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></div>
+                    <h3>Turismo sostenible</h3>
+                    <p>Prácticas responsables que protegen la naturaleza y benefician a las comunidades locales.</p>
+                </article>
+                <article class="nos-valor" data-revelar>
+                    <div class="nos-valor-icono"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16.24 7.76-2.12 6.36-6.36 2.12 2.12-6.36 6.36-2.12z"/></svg></div>
+                    <h3>Experiencias auténticas</h3>
+                    <p>Tours que muestran la verdadera esencia de El Salvador, lejos del turismo masivo.</p>
+                </article>
+                <article class="nos-valor" data-revelar>
+                    <div class="nos-valor-icono"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+                    <h3>Atención personalizada</h3>
+                    <p>Adaptamos cada viaje a las necesidades y preferencias de cada viajero.</p>
+                </article>
+                <article class="nos-valor" data-revelar>
+                    <div class="nos-valor-icono"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="7"/><path d="M8.21 13.89 7 23l5-3 5 3-1.21-9.12"/></svg></div>
+                    <h3>Calidad garantizada</h3>
+                    <p>Trabajamos con los mejores proveedores locales para asegurar un servicio excelente.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Logros con contadores animados -->
+    <section id="logros" class="nos-seccion">
+        <div class="nos-contenedor">
+            <div class="nos-encabezado" data-revelar>
+                <span class="nos-etiqueta">Nuestros logros</span>
+                <h2 class="nos-titulo">Cifras que nos llenan de orgullo</h2>
+            </div>
+
+            <div class="nos-logros" data-revelar-grupo>
+                <div class="nos-logro" data-revelar>
+                    <span class="nos-logro-numero" data-contador="5000" data-sufijo="+">5000+</span>
+                    <span class="nos-logro-texto">Viajeros satisfechos</span>
                 </div>
-                <div class="team-card fade-in">
-                    <div class="team-avatar">👩‍🎓</div>
-                    <h4>Ana García</h4>
-                    <div class="team-role">Directora de Operaciones</div>
-                    <p>Especialista en gestión turística, Ana coordina todos nuestros tours y garantiza que cada detalle de tu viaje sea perfecto.</p>
+                <div class="nos-logro" data-revelar>
+                    <span class="nos-logro-numero" data-contador="50" data-sufijo="+">50+</span>
+                    <span class="nos-logro-texto">Destinos explorados</span>
                 </div>
-                <div class="team-card fade-in">
-                    <div class="team-avatar">👨‍🏫</div>
-                    <h4>Roberto Silva</h4>
-                    <div class="team-role">Guía Especializado</div>
-                    <p>Historiador y guía certificado, Roberto conoce cada rincón de El Salvador y comparte su conocimiento con entusiasmo.</p>
+                <div class="nos-logro" data-revelar>
+                    <span class="nos-logro-numero" data-contador="10">10</span>
+                    <span class="nos-logro-texto">Años de experiencia</span>
                 </div>
-                <div class="team-card fade-in">
-                    <div class="team-avatar">👩‍💻</div>
-                    <h4>María López</h4>
-                    <div class="team-role">Coordinadora de Marketing</div>
-                    <p>Encargada de promocionar las maravillas de El Salvador y mantener a nuestros clientes informados sobre las mejores ofertas.</p>
+                <div class="nos-logro" data-revelar>
+                    <span class="nos-logro-numero" data-contador="98" data-sufijo="%">98%</span>
+                    <span class="nos-logro-texto">Satisfacción del cliente</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Values Section -->
-    <section class="values-section">
-        <div class="container">
-            <h2 class="section-title fade-in">Lo Que Nos Hace Únicos</h2>
-            <div class="values-grid">
-                <div class="value-item fade-in">
-                    <div class="value-icon">🌱</div>
-                    <h3>Turismo Sostenible</h3>
-                    <p>Promovemos prácticas responsables que protegen nuestro medio ambiente y benefician a las comunidades locales.</p>
-                </div>
-                <div class="value-item fade-in">
-                    <div class="value-icon">🎯</div>
-                    <h3>Experiencias Auténticas</h3>
-                    <p>Ofrecemos tours únicos que muestran la verdadera esencia de El Salvador, lejos del turismo masivo.</p>
-                </div>
-                <div class="value-item fade-in">
-                    <div class="value-icon">👥</div>
-                    <h3>Atención Personalizada</h3>
-                    <p>Cada cliente es único, por eso adaptamos nuestros servicios a sus necesidades y preferencias específicas.</p>
-                </div>
-                <div class="value-item fade-in">
-                    <div class="value-icon">🏆</div>
-                    <h3>Calidad Garantizada</h3>
-                    <p>Trabajamos solo con los mejores proveedores locales para asegurar la máxima calidad en todos nuestros servicios.</p>
-                </div>
+    <!-- Llamado final -->
+    <section class="nos-cta">
+        <div class="nos-contenedor nos-cta-contenido" data-revelar>
+            <h2>¿Listo para descubrir El Salvador con nosotros?</h2>
+            <p>Cuéntanos qué te gustaría vivir y armamos un viaje a tu medida.</p>
+            <div class="nos-hero-botones">
+                <a href="contacto el salvador.html" class="nos-btn nos-btn-blanco">Contáctanos</a>
+                <a href="destino el salvador.html" class="nos-btn nos-btn-borde">Ver destinos</a>
             </div>
         </div>
     </section>
 
-    <!-- Statistics Section -->
-    <section class="stats-section">
-        <div class="container">
-            <h2 class="section-title fade-in">Nuestros Logros</h2>
-            <div class="stats-grid">
-                <div class="stat-item fade-in">
-                    <div class="stat-number">5000+</div>
-                    <div class="stat-label">Viajeros Satisfechos</div>
-                </div>
-                <div class="stat-item fade-in">
-                    <div class="stat-number">50+</div>
-                    <div class="stat-label">Destinos Explorados</div>
-                </div>
-                <div class="stat-item fade-in">
-                    <div class="stat-number">10</div>
-                    <div class="stat-label">Años de Experiencia</div>
-                </div>
-                <div class="stat-item fade-in">
-                    <div class="stat-number">98%</div>
-                    <div class="stat-label">Satisfacción del Cliente</div>
-                </div>
+    <!-- Ventana con el perfil de cada integrante (la llena nosotros.js) -->
+    <div class="nos-modal" id="nos-modal" hidden>
+        <div class="nos-modal-fondo" data-cerrar></div>
+        <div class="nos-modal-caja" role="dialog" aria-modal="true" aria-labelledby="nos-modal-nombre">
+            <button class="nos-modal-cerrar" data-cerrar aria-label="Cerrar">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+            </button>
+            <div class="nos-modal-cuerpo"></div>
+            <div class="nos-modal-nav">
+                <button class="nos-modal-flecha" data-paso="-1" aria-label="Integrante anterior">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+                </button>
+                <span class="nos-modal-contador"></span>
+                <button class="nos-modal-flecha" data-paso="1" aria-label="Integrante siguiente">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+                </button>
             </div>
         </div>
-    </section>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
@@ -526,91 +348,12 @@
         </div>
     </footer>
 
-    <script>
-        // Mobile menu toggle
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        const mobileMenu = document.querySelector('.mobile-menu');
+    <!-- Floating Action Button -->
+    <div class="floating-fab">
+        <button class="fab-btn" aria-label="Comentarios"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></button>
+    </div>
 
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('active');
-        });
-
-        // Smooth scroll animation
-        function animateOnScroll() {
-            const elements = document.querySelectorAll('.fade-in');
-            
-            elements.forEach(element => {
-                const elementTop = element.getBoundingClientRect().top;
-                const elementVisible = 150;
-                
-                if (elementTop < window.innerHeight - elementVisible) {
-                    element.classList.add('animate');
-                }
-            });
-        }
-
-        // Counter animation
-        function animateCounters() {
-            const counters = document.querySelectorAll('.stat-number');
-            const speed = 200;
-
-            counters.forEach(counter => {
-                const updateCount = () => {
-                    const target = counter.getAttribute('data-target') || counter.innerText.replace(/\D/g, '');
-                    const count = +counter.innerText.replace(/\D/g, '');
-                    const inc = target / speed;
-
-                    if (count < target) {
-                        counter.innerText = Math.ceil(count + inc) + (counter.innerText.includes('%') ? '%' : counter.innerText.includes('+') ? '+' : '');
-                        setTimeout(updateCount, 1);
-                    } else {
-                        counter.innerText = target + (counter.innerText.includes('%') ? '%' : counter.innerText.includes('+') ? '+' : '');
-                    }
-                };
-
-                // Set data-target if not set
-                if (!counter.getAttribute('data-target')) {
-                    counter.setAttribute('data-target', counter.innerText.replace(/\D/g, ''));
-                    counter.innerText = '0';
-                }
-
-                const elementTop = counter.getBoundingClientRect().top;
-                if (elementTop < window.innerHeight - 100 && !counter.classList.contains('animated')) {
-                    counter.classList.add('animated');
-                    updateCount();
-                }
-            });
-        }
-
-        // Initialize animations
-        window.addEventListener('scroll', () => {
-            animateOnScroll();
-            animateCounters();
-        });
-
-        // Initial load animations
-        document.addEventListener('DOMContentLoaded', () => {
-            animateOnScroll();
-            animateCounters();
-        });
-
-        // Team card hover effects
-        const teamCards = document.querySelectorAll('.team-card');
-        teamCards.forEach(card => {
-            card.addEventListener('mouseenter', () => {
-                card.style.transform = 'translateY(-5px)';
-            });
-            
-            card.addEventListener('mouseleave', () => {
-                card.style.transform = 'translateY(0)';
-            });
-        });
-
-        // About cards animation delay
-        const aboutCards = document.querySelectorAll('.about-card');
-        aboutCards.forEach((card, index) => {
-            card.style.animationDelay = `${index * 0.2}s`;
-        });
-    </script>
+    <script src="el salvador.js"></script>
+    <script src="nosotros.js"></script>
 </body>
 </html>
