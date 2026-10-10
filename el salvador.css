@@ -1772,7 +1772,9 @@ body.exp-modal-open {
     padding-top: 0.5rem;
 }
 
-.contacto-enviar {
+.contacto-form .contacto-enviar {
+    width: auto;
+    border-radius: 50px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -1784,11 +1786,11 @@ body.exp-modal-open {
     box-shadow: 0 8px 20px rgba(249, 115, 22, 0.35);
 }
 
-.contacto-enviar:hover {
+.contacto-form .contacto-enviar:hover {
     background: #ea580c;
 }
 
-.contacto-enviar:focus-visible {
+.contacto-form .contacto-enviar:focus-visible {
     outline: 3px solid var(--white);
     outline-offset: 3px;
 }
@@ -1863,9 +1865,10 @@ body.exp-modal-open {
         grid-template-columns: 1fr;
     }
 
-    .contacto-enviar {
+    .contacto-form .contacto-enviar {
         width: 100%;
         min-width: 0;
+        padding: 1rem 1.25rem;
     }
 }
 
@@ -2082,6 +2085,57 @@ body.exp-modal-open {
     .paquetes-grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* Formulario de reserva: resumen del paquete elegido */
+.reserva-paquete {
+    padding: 1rem 1.1rem;
+    border-radius: 12px;
+    border: 1.5px dashed rgba(255, 255, 255, 0.35);
+    background: rgba(0, 58, 112, 0.35);
+    transition: var(--transition);
+}
+
+.reserva-paquete-etiqueta {
+    display: block;
+    font-size: 0.92rem;
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+}
+
+.reserva-paquete-valor {
+    font-size: 0.95rem;
+    opacity: 0.92;
+}
+
+.reserva-paquete-valor a {
+    color: var(--white);
+    font-weight: 600;
+    text-underline-offset: 3px;
+}
+
+.reserva-paquete-valor a:hover {
+    color: var(--accent-orange);
+}
+
+.reserva-paquete.correcto {
+    border-style: solid;
+    border-color: #4ade80;
+}
+
+.reserva-paquete.invalido {
+    border-style: solid;
+    border-color: #f87171;
+    background: rgba(239, 68, 68, 0.12);
+}
+
+.reserva-paquete.invalido .campo-error {
+    display: block;
+}
+
+#reservas-paquetes,
+#formularioReserva {
+    scroll-margin-top: 100px;
 }
 
 /* Filter Tabs */

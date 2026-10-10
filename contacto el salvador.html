@@ -252,7 +252,7 @@
                     <h3 style="text-align: center; margin-bottom: 2rem;">Reserva tu Experiencia</h3>
                     
                     <!-- Selección de paquete: una tarjeta con foto por paquete -->
-                    <div class="package-selection paquetes">
+                    <div class="package-selection paquetes" id="reservas-paquetes">
                         <h4 class="paquetes-titulo">Selecciona tu Paquete</h4>
                         <div class="paquetes-grid" role="radiogroup" aria-label="Paquetes turísticos">
                             <div class="package-option paquete paquete-aventura">
@@ -330,68 +330,106 @@
                         </div>
                     </div>
 
-                    <!-- Reservation Form -->
-                    <div class="contact-form">
-                        <form id="reservationForm">
-                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
-                                <div class="form-group">
-                                    <label for="res-nombre">Nombre Completo *</label>
-                                    <input type="text" id="res-nombre" name="nombre" required>
+                    <!-- Formulario de reserva: mismo estilo que el formulario de contacto -->
+                    <div class="contact-form contacto-form" id="formularioReserva">
+                        <div class="contacto-form-encabezado">
+                            <h3>Datos de tu reserva</h3>
+                            <p>Elige un paquete arriba y completa tus datos. Los campos con <span class="campo-obligatorio">*</span> son obligatorios.</p>
+                        </div>
+                        <div class="contacto-form-aviso" id="reservaAviso" role="alert" hidden></div>
+                        <form id="reservationForm" data-validacion-propia novalidate>
+                            <fieldset class="contacto-form-grupo">
+                                <legend>Datos personales</legend>
+                                <div class="contacto-form-grid">
+                                    <div class="form-group campo campo-ancho">
+                                        <label for="res-nombre">Nombre completo <span class="campo-obligatorio" aria-hidden="true">*</span></label>
+                                        <input type="text" id="res-nombre" name="nombre" required aria-describedby="res-nombre-error" autocomplete="name" placeholder="Tu nombre completo">
+                                        <small class="campo-error" id="res-nombre-error">Escribe tu nombre.</small>
+                                    </div>
+                                    <div class="form-group campo">
+                                        <label for="res-email">Correo electrónico <span class="campo-obligatorio" aria-hidden="true">*</span></label>
+                                        <input type="email" id="res-email" name="email" required aria-describedby="res-email-error" autocomplete="email" placeholder="tu@email.com">
+                                        <small class="campo-error" id="res-email-error">Escribe un correo válido, por ejemplo nombre@correo.com.</small>
+                                    </div>
+                                    <div class="form-group campo">
+                                        <label for="res-telefono">Teléfono <span class="campo-obligatorio" aria-hidden="true">*</span></label>
+                                        <input type="tel" id="res-telefono" name="telefono" required aria-describedby="res-telefono-error" autocomplete="tel" placeholder="+503 0000-0000">
+                                        <small class="campo-error" id="res-telefono-error">Escribe un teléfono válido (al menos 8 dígitos).</small>
+                                    </div>
                                 </div>
-                                <div class="form-group">
-                                    <label for="res-email">Email *</label>
-                                    <input type="email" id="res-email" name="email" required>
+                            </fieldset>
+
+                            <fieldset class="contacto-form-grupo">
+                                <legend>Fechas del viaje</legend>
+                                <div class="contacto-form-grid">
+                                    <div class="form-group campo">
+                                        <label for="res-fecha-inicio">Fecha de inicio <span class="campo-obligatorio" aria-hidden="true">*</span></label>
+                                        <input type="date" id="res-fecha-inicio" name="fechaInicio" required aria-describedby="res-fecha-inicio-error">
+                                        <small class="campo-error" id="res-fecha-inicio-error">Elige una fecha a partir de hoy.</small>
+                                    </div>
+                                    <div class="form-group campo">
+                                        <label for="res-fecha-fin">Fecha de fin <span class="campo-obligatorio" aria-hidden="true">*</span></label>
+                                        <input type="date" id="res-fecha-fin" name="fechaFin" required aria-describedby="res-fecha-fin-error">
+                                        <small class="campo-error" id="res-fecha-fin-error">Elige una fecha igual o posterior al inicio.</small>
+                                    </div>
                                 </div>
+                            </fieldset>
+
+                            <fieldset class="contacto-form-grupo">
+                                <legend>Detalles del viaje</legend>
+                                <div class="contacto-form-grid">
+                                    <div class="campo campo-ancho reserva-paquete" id="reservaPaqueteCampo">
+                                        <span class="reserva-paquete-etiqueta">Paquete elegido <span class="campo-obligatorio" aria-hidden="true">*</span></span>
+                                        <p class="reserva-paquete-valor" id="reservaPaquete">Ninguno todavía. <a href="#reservas-paquetes">Elegir paquete</a></p>
+                                        <small class="campo-error" id="reservaPaquete-error">Elige uno de los paquetes de arriba.</small>
+                                    </div>
+                                    <div class="form-group campo">
+                                        <label for="res-personas">Número de viajeros <span class="campo-opcional">(opcional)</span></label>
+                                        <select id="res-personas" name="personas">
+                                            <option value="1">1 persona</option>
+                                            <option value="2">2 personas</option>
+                                            <option value="3">3 personas</option>
+                                            <option value="4">4 personas</option>
+                                            <option value="5">5 personas</option>
+                                            <option value="6+">6+ personas</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group campo">
+                                        <label for="res-hospedaje">Preferencia de hospedaje <span class="campo-opcional">(opcional)</span></label>
+                                        <select id="res-hospedaje" name="hospedaje">
+                                            <option value="">Selecciona tu preferencia</option>
+                                            <option value="economico">Hostels y alojamientos económicos</option>
+                                            <option value="estandar">Hoteles 3 estrellas</option>
+                                            <option value="superior">Hoteles 4 estrellas</option>
+                                            <option value="lujo">Hoteles 5 estrellas y resorts</option>
+                                            <option value="boutique">Hoteles boutique únicos</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group campo campo-ancho">
+                                        <label for="res-comentarios">Comentarios especiales <span class="campo-opcional">(opcional)</span></label>
+                                        <textarea id="res-comentarios" name="comentarios" rows="4" placeholder="Menciona cualquier requerimiento especial, alergias alimentarias, necesidades de accesibilidad, etc."></textarea>
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                            <div class="contacto-form-acciones">
+                                <button type="submit" class="submit-btn contacto-enviar">
+                                    <span>Continuar con la reserva</span>
+                                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                                </button>
                             </div>
-                            
-                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
-                                <div class="form-group">
-                                    <label for="res-telefono">Teléfono *</label>
-                                    <input type="tel" id="res-telefono" name="telefono" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="res-personas">Número de Personas</label>
-                                    <select id="res-personas" name="personas">
-                                        <option value="1">1 persona</option>
-                                        <option value="2">2 personas</option>
-                                        <option value="3">3 personas</option>
-                                        <option value="4">4 personas</option>
-                                        <option value="5">5 personas</option>
-                                        <option value="6+">6+ personas</option>
-                                    </select>
-                                </div>
-                            </div>
-                            
-                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
-                                <div class="form-group">
-                                    <label for="res-fecha-inicio">Fecha de Inicio *</label>
-                                    <input type="date" id="res-fecha-inicio" name="fechaInicio" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="res-fecha-fin">Fecha de Fin *</label>
-                                    <input type="date" id="res-fecha-fin" name="fechaFin" required>
-                                </div>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="res-hospedaje">Preferencia de Hospedaje</label>
-                                <select id="res-hospedaje" name="hospedaje">
-                                    <option value="">Selecciona tu preferencia</option>
-                                    <option value="economico">Hostels y alojamientos económicos</option>
-                                    <option value="estandar">Hoteles 3 estrellas</option>
-                                    <option value="superior">Hoteles 4 estrellas</option>
-                                    <option value="lujo">Hoteles 5 estrellas y resorts</option>
-                                    <option value="boutique">Hoteles boutique únicos</option>
-                                </select>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="res-comentarios">Comentarios Especiales</label>
-                                <textarea id="res-comentarios" name="comentarios" rows="4" placeholder="Menciona cualquier requerimiento especial, alergias alimentarias, necesidades de accesibilidad, etc."></textarea>
-                            </div>
-                            
-                            <button type="submit" class="submit-btn">🎫 Solicitar Reserva</button>
                         </form>
+
+                        <!-- Mensaje al completar la reserva -->
+                        <div class="contacto-form-exito" id="reservaExito" role="status" tabindex="-1" hidden>
+                            <div class="contacto-exito-icono"><svg viewBox="0 0 24 24" width="34" height="34" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div>
+                            <h3 id="reservaExitoTitulo">¡Reserva lista!</h3>
+                            <p>Todos los datos están completos. Pulsa «Enviar por correo» para mandarnos la solicitud de reserva desde tu correo; ya va escrita con el paquete y los datos que elegiste.</p>
+                            <div class="contacto-exito-acciones">
+                                <a href="mailto:reservas@svelsalvador.com" class="btn primary" id="reservaMailto">Enviar por correo</a>
+                                <button type="button" class="contacto-exito-volver" id="reservaVolver">Editar mis datos</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -649,34 +687,31 @@
                 });
             }
 
-            // Formulario de contacto: validación con mensajes visuales
-            const contactForm = document.getElementById('contactForm');
-            if (contactForm) {
-                const aviso = document.getElementById('contactoAviso');
-                const exito = document.getElementById('contactoExito');
-                const mailto = document.getElementById('contactoMailto');
-                const fecha = document.getElementById('fechaViaje');
-                const hoy = new Date();
-                const hoyTexto = new Date(hoy.getTime() - hoy.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
-                fecha.min = hoyTexto;
+            // Formularios de contacto y reserva: validación con mensajes visuales.
+            // El sitio no tiene servidor: al completar se ofrece enviar la solicitud por correo.
+            const hoy = new Date();
+            const hoyTexto = new Date(hoy.getTime() - hoy.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
+            const correoValido = v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+            const telefonoValido = v => /^\+?[0-9\s\-()]+$/.test(v) && v.replace(/\D/g, '').length >= 8;
 
-                const reglas = {
-                    nombre: v => v.length >= 2,
-                    email: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v),
-                    telefono: v => v === '' || (/^\+?[0-9\s\-()]+$/.test(v) && v.replace(/\D/g, '').length >= 8),
-                    interes: v => v !== '',
-                    fechaViaje: v => v === '' || v >= hoyTexto,
-                    mensaje: v => v.length >= 10
-                };
-                const nombresCampos = {
-                    nombre: 'nombre', email: 'correo', telefono: 'teléfono',
-                    interes: 'interés', fechaViaje: 'fecha', mensaje: 'mensaje'
-                };
+            function prepararFormulario(cfg) {
+                const form = document.getElementById(cfg.form);
+                if (!form) return;
+                const aviso = document.getElementById(cfg.aviso);
+                const exito = document.getElementById(cfg.exito);
+                const mailto = document.getElementById(cfg.mailto);
+
+                function textoDe(nombre) {
+                    const campo = form.elements[nombre];
+                    if (!campo) return '';
+                    if (campo.tagName === 'SELECT') return campo.value ? campo.options[campo.selectedIndex].text : '';
+                    return campo.value.trim();
+                }
 
                 function revisarCampo(campo) {
-                    const regla = reglas[campo.name];
+                    const regla = cfg.reglas[campo.name];
                     if (!regla) return true;
-                    const valido = regla(campo.value.trim());
+                    const valido = regla(campo.value.trim(), form);
                     const grupo = campo.closest('.campo');
                     grupo.classList.toggle('invalido', !valido);
                     grupo.classList.toggle('correcto', valido && campo.value.trim() !== '');
@@ -684,8 +719,8 @@
                     return valido;
                 }
 
-                Object.keys(reglas).forEach(nombre => {
-                    const campo = contactForm.elements[nombre];
+                Object.keys(cfg.reglas).forEach(nombre => {
+                    const campo = form.elements[nombre];
                     // Revisa al salir del campo y corrige en vivo si ya estaba marcado
                     campo.addEventListener('blur', () => { if (campo.value.trim() !== '') revisarCampo(campo); });
                     campo.addEventListener('input', () => {
@@ -696,57 +731,128 @@
                     });
                 });
 
-                contactForm.addEventListener('submit', function(e) {
+                form.addEventListener('submit', function(e) {
                     e.preventDefault();
-                    const errores = Object.keys(reglas)
-                        .map(nombre => contactForm.elements[nombre])
-                        .filter(campo => !revisarCampo(campo));
+                    const errores = Object.keys(cfg.reglas)
+                        .map(nombre => form.elements[nombre])
+                        .filter(campo => !revisarCampo(campo))
+                        .map(campo => ({ nombre: cfg.nombres[campo.name], foco: campo }));
+                    if (cfg.revisarExtra) errores.unshift(...cfg.revisarExtra());
 
                     if (errores.length) {
-                        const lista = errores.map(c => nombresCampos[c.name]).join(', ');
+                        const lista = errores.map(e => e.nombre).join(', ');
                         aviso.textContent = errores.length === 1
                             ? 'Falta revisar un dato: ' + lista + '.'
                             : 'Faltan ' + errores.length + ' datos por revisar: ' + lista + '.';
                         aviso.hidden = false;
-                        errores[0].focus();
+                        errores[0].foco.focus();
                         return;
                     }
 
                     aviso.hidden = true;
-                    const datos = new FormData(contactForm);
-                    const textoDe = nombre => {
-                        const campo = contactForm.elements[nombre];
-                        return campo.tagName === 'SELECT' && campo.value ? campo.options[campo.selectedIndex].text : (datos.get(nombre) || '').trim();
-                    };
-                    const cuerpo = [
-                        'Nombre: ' + textoDe('nombre'),
-                        'Correo: ' + textoDe('email'),
-                        'Teléfono: ' + (textoDe('telefono') || '-'),
-                        'País: ' + (textoDe('pais') || '-'),
-                        'Interés: ' + textoDe('interes'),
-                        'Presupuesto: ' + (textoDe('presupuesto') || '-'),
-                        'Fecha tentativa: ' + (textoDe('fechaViaje') || '-'),
-                        'Duración: ' + (textoDe('duracion') || '-'),
-                        '',
-                        textoDe('mensaje')
-                    ].join('\n');
-                    mailto.href = 'mailto:info@svelsalvador.com?subject=' +
-                        encodeURIComponent('Solicitud de viaje - ' + textoDe('nombre')) +
+                    const cuerpo = cfg.lineas(textoDe).join('\n');
+                    mailto.href = 'mailto:' + cfg.correo + '?subject=' +
+                        encodeURIComponent(cfg.asunto + ' - ' + textoDe('nombre')) +
                         '&body=' + encodeURIComponent(cuerpo);
 
                     const primerNombre = textoDe('nombre').split(' ')[0];
-                    document.getElementById('contactoExitoTitulo').textContent = '¡Formulario completo, ' + primerNombre + '!';
-                    contactForm.hidden = true;
+                    document.getElementById(cfg.titulo).textContent = cfg.textoTitulo + ', ' + primerNombre + '!';
+                    form.hidden = true;
                     exito.hidden = false;
                     exito.focus();
                 });
 
-                document.getElementById('contactoVolver').addEventListener('click', function() {
+                document.getElementById(cfg.volver).addEventListener('click', function() {
                     exito.hidden = true;
-                    contactForm.hidden = false;
-                    contactForm.elements.nombre.focus();
+                    form.hidden = false;
+                    form.elements.nombre.focus();
                 });
             }
+
+            const fechaViaje = document.getElementById('fechaViaje');
+            if (fechaViaje) fechaViaje.min = hoyTexto;
+
+            prepararFormulario({
+                form: 'contactForm', aviso: 'contactoAviso', exito: 'contactoExito',
+                mailto: 'contactoMailto', titulo: 'contactoExitoTitulo', volver: 'contactoVolver',
+                textoTitulo: '¡Formulario completo', correo: 'info@svelsalvador.com', asunto: 'Solicitud de viaje',
+                reglas: {
+                    nombre: v => v.length >= 2,
+                    email: correoValido,
+                    telefono: v => v === '' || telefonoValido(v),
+                    interes: v => v !== '',
+                    fechaViaje: v => v === '' || v >= hoyTexto,
+                    mensaje: v => v.length >= 10
+                },
+                nombres: {
+                    nombre: 'nombre', email: 'correo', telefono: 'teléfono',
+                    interes: 'interés', fechaViaje: 'fecha', mensaje: 'mensaje'
+                },
+                lineas: t => [
+                    'Nombre: ' + t('nombre'),
+                    'Correo: ' + t('email'),
+                    'Teléfono: ' + (t('telefono') || '-'),
+                    'País: ' + (t('pais') || '-'),
+                    'Interés: ' + t('interes'),
+                    'Presupuesto: ' + (t('presupuesto') || '-'),
+                    'Fecha tentativa: ' + (t('fechaViaje') || '-'),
+                    'Duración: ' + (t('duracion') || '-'),
+                    '',
+                    t('mensaje')
+                ]
+            });
+
+            // Reserva: el paquete se elige en las tarjetas de arriba
+            const reservaInicio = document.getElementById('res-fecha-inicio');
+            const reservaFin = document.getElementById('res-fecha-fin');
+            const reservaPaquete = document.getElementById('reservaPaquete');
+            const reservaPaqueteCampo = document.getElementById('reservaPaqueteCampo');
+            const paqueteElegido = () => document.querySelector('.paquete-radio:checked');
+            const nombrePaquete = radio => {
+                const tarjeta = radio.closest('.paquete');
+                return tarjeta.querySelector('h4').textContent + ' (' +
+                    tarjeta.querySelector('.paquete-duracion').textContent.trim() + ', ' +
+                    tarjeta.querySelector('.paquete-precio').textContent.trim() + ')';
+            };
+            if (reservaInicio) {
+                reservaInicio.min = hoyTexto;
+                reservaFin.min = hoyTexto;
+                reservaInicio.addEventListener('change', () => { reservaFin.min = reservaInicio.value || hoyTexto; });
+            }
+
+            prepararFormulario({
+                form: 'reservationForm', aviso: 'reservaAviso', exito: 'reservaExito',
+                mailto: 'reservaMailto', titulo: 'reservaExitoTitulo', volver: 'reservaVolver',
+                textoTitulo: '¡Reserva lista', correo: 'reservas@svelsalvador.com', asunto: 'Solicitud de reserva',
+                reglas: {
+                    nombre: v => v.length >= 2,
+                    email: correoValido,
+                    telefono: telefonoValido,
+                    fechaInicio: v => v !== '' && v >= hoyTexto,
+                    fechaFin: (v, f) => v !== '' && v >= (f.elements.fechaInicio.value || hoyTexto)
+                },
+                nombres: {
+                    nombre: 'nombre', email: 'correo', telefono: 'teléfono',
+                    fechaInicio: 'fecha de inicio', fechaFin: 'fecha de fin'
+                },
+                revisarExtra: () => {
+                    const elegido = paqueteElegido();
+                    reservaPaqueteCampo.classList.toggle('invalido', !elegido);
+                    return elegido ? [] : [{ nombre: 'paquete', foco: document.getElementById('pkg-aventura') }];
+                },
+                lineas: t => [
+                    'Paquete: ' + nombrePaquete(paqueteElegido()),
+                    'Nombre: ' + t('nombre'),
+                    'Correo: ' + t('email'),
+                    'Teléfono: ' + t('telefono'),
+                    'Fecha de inicio: ' + t('fechaInicio'),
+                    'Fecha de fin: ' + t('fechaFin'),
+                    'Viajeros: ' + t('personas'),
+                    'Hospedaje: ' + (t('hospedaje') || '-'),
+                    '',
+                    'Comentarios: ' + (t('comentarios') || '-')
+                ]
+            });
 
             // FAQ functionality
             const faqQuestions = document.querySelectorAll('.faq-question');
@@ -777,6 +883,18 @@
                         tarjeta.classList.toggle('seleccionado', elegido);
                         tarjeta.querySelector('.paquete-boton').textContent = elegido ? 'Seleccionado' : 'Seleccionar';
                     });
+                    if (reservaPaquete) {
+                        reservaPaquete.innerHTML = '';
+                        const fuerte = document.createElement('strong');
+                        fuerte.textContent = nombrePaquete(this);
+                        reservaPaquete.append(fuerte, ' ');
+                        const cambiar = document.createElement('a');
+                        cambiar.href = '#reservas-paquetes';
+                        cambiar.textContent = 'Cambiar';
+                        reservaPaquete.append(cambiar);
+                        reservaPaqueteCampo.classList.remove('invalido');
+                        reservaPaqueteCampo.classList.add('correcto');
+                    }
                 });
             });
         });
