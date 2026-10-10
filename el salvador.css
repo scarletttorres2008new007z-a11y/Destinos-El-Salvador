@@ -1461,6 +1461,126 @@ body.exp-modal-open {
     }
 }
 
+/* Tarjetas de información de Contacto: una tarjeta por dato, iconos SVG */
+.contacto-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1.25rem;
+    margin-bottom: 3rem;
+}
+
+/* Escritorio: tres tarjetas arriba y dos más anchas abajo */
+.contacto-tarjeta {
+    grid-column: span 2;
+}
+
+.contacto-tarjeta:nth-child(n+4) {
+    grid-column: span 3;
+}
+
+.contacto-tarjeta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.75rem 1.5rem;
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    text-align: left;
+}
+
+.contacto-tarjeta-icono {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    background: var(--white);
+    color: var(--primary-blue);
+    transition: var(--transition);
+}
+
+.contacto-tarjeta:hover .contacto-tarjeta-icono {
+    background: var(--accent-orange);
+    color: var(--white);
+}
+
+.contacto-tarjeta-texto {
+    min-width: 0;
+}
+
+.contacto-tarjeta h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.6rem;
+    color: var(--white);
+}
+
+.contacto-tarjeta p {
+    font-size: 0.95rem;
+    line-height: 1.55;
+    margin-bottom: 0.2rem;
+    opacity: 0.92;
+    overflow-wrap: break-word;
+}
+
+.contacto-tarjeta a {
+    color: var(--white);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.contacto-tarjeta a:hover {
+    color: var(--accent-orange);
+}
+
+.contacto-tarjeta-nota {
+    display: inline-block;
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: var(--celeste);
+    filter: brightness(1.35);
+}
+
+@media (max-width: 900px) {
+    .contacto-tarjetas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contacto-tarjeta,
+    .contacto-tarjeta:nth-child(n+4) {
+        grid-column: auto;
+    }
+
+    .contacto-tarjeta:last-child {
+        grid-column: 1 / -1;
+    }
+}
+
+@media (max-width: 600px) {
+    .contacto-tarjetas {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .contacto-tarjeta {
+        flex-direction: row;
+        gap: 1.1rem;
+        padding: 1.25rem;
+    }
+
+    .contacto-tarjeta-icono {
+        width: 46px;
+        height: 46px;
+    }
+}
+
 /* Filter Tabs */
 .filter-tabs {
     display: flex;
