@@ -447,7 +447,8 @@ function initializeDestinationModal() {
 
 // Form functionality
 function initializeForms() {
-    const forms = document.querySelectorAll('form');
+    // Los formularios con data-validacion-propia (Contacto) tienen su propia validación
+    const forms = document.querySelectorAll('form:not([data-validacion-propia])');
     
     forms.forEach(form => {
         form.addEventListener('submit', function(e) {
@@ -473,6 +474,7 @@ function initializeForms() {
         });
 
         input.addEventListener('input', function() {
+            if (this.closest('[data-validacion-propia]')) return;
             validateField(this);
         });
     });

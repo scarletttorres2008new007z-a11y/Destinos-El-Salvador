@@ -67,3 +67,22 @@ Las fotografías de la página **Galería** provienen de Wikimedia Commons. Se d
 | Pupusas Tradicionales | `16.jpg` | Ll1324 | [CC0](https://creativecommons.org/publicdomain/zero/1.0/deed.es) | [Typical serving of Pupusas in El Salvador.jpg](https://commons.wikimedia.org/wiki/File:Typical_serving_of_Pupusas_in_El_Salvador.jpg) |
 | Cocina Criolla | `17.jpg` | Ll1324 | [CC0](https://creativecommons.org/publicdomain/zero/1.0/deed.es) | [Typical Pupuseria setup in El Salvador.jpg](https://commons.wikimedia.org/wiki/File:Typical_Pupuseria_setup_in_El_Salvador.jpg) |
 | Café de Altura | `18.jpg` | The Cockroach | [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/deed.es) | [Coffee Processing in Ahuachapan, El Salvador.jpg](https://commons.wikimedia.org/wiki/File:Coffee_Processing_in_Ahuachapan,_El_Salvador.jpg) |
+
+## Contacto
+
+La foto del encabezado de la página **Contacto** proviene de Wikimedia Commons y se guarda en `img/contacto/encabezado.jpg` (copia redimensionada de la original). Conserva su licencia original; el crédito también aparece en la esquina del encabezado.
+
+| Lugar | Archivo | Autor | Licencia | Fuente |
+|---|---|---|---|---|
+| Playa El Tunco | `encabezado.jpg` | William Adach | [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/deed.es) | [Playa el tuco rocoso.jpg](https://commons.wikimedia.org/wiki/File:Playa_el_tuco_rocoso.jpg) |
+
+### Paquetes turísticos (pestaña Reservas)
+
+Copias reducidas en `img/contacto/paquetes/`, las mismas fotos de la página Destinos.
+
+| Paquete | Archivo | Autor | Licencia | Fuente |
+|---|---|---|---|---|
+| Aventura Completa | `volcan-santa-ana.jpg` | Erneestoo | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.es) | [Laguna cratérica del Volcán de Santa Ana - El Salvador.jpg](https://commons.wikimedia.org/wiki/File:Laguna_crat%C3%A9rica_del_Volc%C3%A1n_de_Santa_Ana_-_El_Salvador.jpg) |
+| Cultura & Historia | `suchitoto.jpg` | Koky2013 | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/deed.es) | [Belleza histórica Iglesia Santa Lucía de Suchitoto.JPG](https://commons.wikimedia.org/wiki/File:Belleza_hist%C3%B3rica_Iglesia_Santa_Luc%C3%ADa_de_Suchitoto.JPG) |
+| Surf Paradise | `playa-el-tunco.jpg` | William Adach | [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/deed.es) | [Playa el tuco rocoso.jpg](https://commons.wikimedia.org/wiki/File:Playa_el_tuco_rocoso.jpg) |
+| Personalizado | `laguna-verde.jpg` | ElmerGuevara | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.es) | [Laguna Verde de Apaneca.JPG](https://commons.wikimedia.org/wiki/File:Laguna_Verde_de_Apaneca.JPG) |
