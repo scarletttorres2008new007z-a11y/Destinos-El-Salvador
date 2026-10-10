@@ -48,9 +48,15 @@
                 <span class="cultura-forma forma-barra" aria-hidden="true"></span>
                 <span class="cultura-forma forma-punto" aria-hidden="true"></span>
                 <div class="cultura-hero-escena">
-                    <canvas id="cultura-hero-canvas" aria-label="Máscara del Torito Pinto en 3D. Arrastra para girarla." role="img"></canvas>
+                    <div class="hero-obras">
+                        <img class="hero-obra activa" src="img/cultura/torito.jpg" alt="Figura de toro en barro pintado, inspirada en el Torito Pinto" data-nombre="Figura del Torito Pinto">
+                        <img class="hero-obra" src="img/cultura/ceramica.jpg" alt="Cántaro de barro decorado con puntos y flores" data-nombre="Cántaro de barro decorado">
+                        <img class="hero-obra" src="img/cultura/marimba.jpg" alt="Marimba de madera con resonadores" data-nombre="Marimba">
+                        <img class="hero-obra" src="img/cultura/pupusa.jpg" alt="Pupusa recién salida del comal, con queso derretido" data-nombre="Pupusa">
+                        <img class="hero-obra" src="img/cultura/palma.jpg" alt="Cajitas de madera pintadas al estilo de La Palma" data-nombre="Artesanía de La Palma">
+                    </div>
                 </div>
-                <p class="cultura-hero-pie"><strong>Pieza destacada:</strong> Máscara del Torito Pinto. Arrástrala para girarla.</p>
+                <p class="cultura-hero-pie"><strong>Pieza destacada:</strong> <span id="hero-obra-nombre">Figura del Torito Pinto</span></p>
             </div>
         </div>
     </section>
@@ -60,27 +66,48 @@
         <div class="container">
             <p class="museo-etiqueta">Museo virtual</p>
             <h2 id="museo-titulo" class="museo-titulo">Museo cultural de El Salvador</h2>
-            <p class="museo-intro">Cinco piezas que cuentan quiénes somos. Recorre la sala, elige una pieza y gírala para verla desde todos los ángulos.</p>
+            <p class="museo-intro">Cinco piezas que cuentan quiénes somos. Gira la sala, acércate a cada pieza y descubre su historia.</p>
 
             <div class="museo-sala">
                 <div class="museo-escenario">
                     <div class="museo-lienzo">
-                    <canvas id="museo-canvas" aria-label="Sala del museo en 3D con cinco piezas culturales sobre pedestales" role="img"></canvas>
-                    <p class="museo-sin-webgl">Tu navegador no puede mostrar gráficos 3D. Elige una pieza para leer su historia.</p>
-                    <div class="museo-controles">
-                        <button type="button" class="museo-control museo-girar" data-dir="-1" aria-label="Girar a la izquierda"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
-                        <button type="button" class="museo-control museo-vista-general">Ver toda la sala</button>
-                        <button type="button" class="museo-control museo-girar" data-dir="1" aria-label="Girar a la derecha"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg></button>
-                    </div>
-                    <p id="museo-ayuda" class="museo-ayuda">Arrastra para recorrer la sala y toca una pieza</p>
+                        <div class="museo-carrusel" role="group" aria-label="Sala del museo con cinco piezas">
+                            <button type="button" class="museo-obra" aria-label="Ver Figura del Torito Pinto">
+                                <span class="museo-obra-marco"><img src="img/cultura/torito.jpg" alt="Figura de toro en barro pintado, inspirada en el Torito Pinto"></span>
+                                <span class="museo-obra-placa"><span class="museo-obra-num">01</span>Figura del Torito Pinto</span>
+                                <span class="museo-obra-sombra" aria-hidden="true"></span>
+                            </button>
+                            <button type="button" class="museo-obra" aria-label="Ver Cántaro de barro decorado">
+                                <span class="museo-obra-marco"><img src="img/cultura/ceramica.jpg" alt="Cántaro de barro decorado con puntos y flores"></span>
+                                <span class="museo-obra-placa"><span class="museo-obra-num">02</span>Cántaro de barro decorado</span>
+                                <span class="museo-obra-sombra" aria-hidden="true"></span>
+                            </button>
+                            <button type="button" class="museo-obra" aria-label="Ver Marimba">
+                                <span class="museo-obra-marco"><img src="img/cultura/marimba.jpg" alt="Marimba de madera con resonadores"></span>
+                                <span class="museo-obra-placa"><span class="museo-obra-num">03</span>Marimba</span>
+                                <span class="museo-obra-sombra" aria-hidden="true"></span>
+                            </button>
+                            <button type="button" class="museo-obra" aria-label="Ver Pupusa">
+                                <span class="museo-obra-marco"><img src="img/cultura/pupusa.jpg" alt="Pupusa recién salida del comal, con queso derretido"></span>
+                                <span class="museo-obra-placa"><span class="museo-obra-num">04</span>Pupusa</span>
+                                <span class="museo-obra-sombra" aria-hidden="true"></span>
+                            </button>
+                            <button type="button" class="museo-obra" aria-label="Ver Artesanía de La Palma">
+                                <span class="museo-obra-marco"><img src="img/cultura/palma.jpg" alt="Cajitas de madera pintadas al estilo de La Palma"></span>
+                                <span class="museo-obra-placa"><span class="museo-obra-num">05</span>Artesanía de La Palma</span>
+                                <span class="museo-obra-sombra" aria-hidden="true"></span>
+                            </button>
+                        </div>
+                        <div class="museo-controles">
+                            <button type="button" class="museo-control museo-girar" data-dir="-1" aria-label="Pieza anterior"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
+                            <button type="button" class="museo-control museo-vista-general">Ver toda la sala</button>
+                            <button type="button" class="museo-control museo-girar" data-dir="1" aria-label="Pieza siguiente"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg></button>
+                        </div>
+                        <p id="museo-ayuda" class="museo-ayuda">Arrastra para girar la sala y toca una pieza</p>
                     </div>
 
                     <aside id="museo-panel" class="museo-panel" aria-live="polite" hidden>
                         <button type="button" class="museo-panel-cerrar" aria-label="Cerrar y volver a la sala"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
-                        <figure class="museo-panel-foto">
-                            <img src="" alt="">
-                            <figcaption></figcaption>
-                        </figure>
                         <p class="museo-panel-numero"></p>
                         <h3 class="museo-panel-nombre"></h3>
                         <p class="museo-panel-lugar"></p>
@@ -97,13 +124,6 @@
                     </aside>
                 </div>
 
-                <div class="museo-piezas" role="group" aria-label="Piezas del museo">
-                    <button type="button" class="museo-pieza-btn" aria-pressed="false"><span class="museo-pieza-foto"><img src="img/cultura/torito-mini.jpg" alt="Figura de toro en barro pintado" loading="lazy" width="360" height="270"></span><span class="museo-pieza-texto"><span class="museo-pieza-num">01</span>Torito Pinto</span></button>
-                    <button type="button" class="museo-pieza-btn" aria-pressed="false"><span class="museo-pieza-foto"><img src="img/cultura/ceramica-mini.jpg" alt="Cántaro de barro decorado" loading="lazy" width="360" height="270"></span><span class="museo-pieza-texto"><span class="museo-pieza-num">02</span>Cerámica de barro</span></button>
-                    <button type="button" class="museo-pieza-btn" aria-pressed="false"><span class="museo-pieza-foto"><img src="img/cultura/marimba-mini.jpg" alt="Marimba de madera" loading="lazy" width="360" height="270"></span><span class="museo-pieza-texto"><span class="museo-pieza-num">03</span>Marimba</span></button>
-                    <button type="button" class="museo-pieza-btn" aria-pressed="false"><span class="museo-pieza-foto"><img src="img/cultura/pupusa-mini.jpg" alt="Pupusa con queso" loading="lazy" width="360" height="270"></span><span class="museo-pieza-texto"><span class="museo-pieza-num">04</span>Pupusa</span></button>
-                    <button type="button" class="museo-pieza-btn" aria-pressed="false"><span class="museo-pieza-foto"><img src="img/cultura/palma-mini.jpg" alt="Cajitas pintadas de La Palma" loading="lazy" width="360" height="270"></span><span class="museo-pieza-texto"><span class="museo-pieza-num">05</span>Artesanía de La Palma</span></button>
-                </div>
             </div>
         </div>
     </section>
@@ -437,7 +457,6 @@
     </div>
 
     <script src="el salvador.js"></script>
-    <script src="vendor/three.min.js"></script>
     <script src="cultura-3d.js"></script>
     <script>
         // Culture tabs functionality
