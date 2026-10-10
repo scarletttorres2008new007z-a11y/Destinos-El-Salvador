@@ -1503,6 +1503,214 @@ body.exp-modal-open {
     padding: 1.5rem;
 }
 
+/* Destinos: tarjetas con fotografía y modal de detalles */
+.destinations-grid .destination-card,
+.gems-grid .gem-card {
+    position: relative;
+    height: 340px;
+    overflow: hidden;
+    background: var(--secondary-blue);
+}
+
+.gems-grid .gem-card {
+    height: 300px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--border-radius-lg);
+    transition: var(--transition);
+}
+
+.gems-grid .gem-card:hover {
+    transform: translateY(-6px);
+}
+
+.destinations-grid .destination-card:hover {
+    background: var(--secondary-blue);
+}
+
+.destinations-grid .destination-card.dest-no-photo,
+.destinations-grid .destination-card.dest-no-photo:hover {
+    background: var(--celeste);
+}
+
+.dest-img {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease;
+}
+
+.destination-card:hover .dest-img,
+.gem-card:hover .dest-img {
+    transform: scale(1.05);
+}
+
+.destinations-grid .destination-card .card-content,
+.gems-grid .gem-card .card-content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.85rem 1.1rem 1rem;
+    background: rgba(0, 38, 77, 0.82);
+    color: var(--white);
+}
+
+.destinations-grid .destination-card h3,
+.gems-grid .gem-card h4 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 0.15rem;
+    color: var(--white);
+}
+
+.destinations-grid .destination-card .location,
+.gems-grid .gem-card .location {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin-bottom: 0.65rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.9rem;
+}
+
+.destinations-grid .destination-card .rating {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    margin-left: 0.75rem;
+}
+
+/* El resto de la información se muestra en el modal */
+.destinations-grid .destination-card .description,
+.destinations-grid .destination-card .details-section,
+.destinations-grid .destination-card .tags,
+.destinations-grid .destination-card .price,
+.gems-grid .gem-card .description {
+    display: none;
+}
+
+.destinations-grid .destination-card .details-btn,
+.gems-grid .gem-card .details-btn {
+    font-family: inherit;
+    font-size: 0.9rem;
+    padding: 0.55rem;
+}
+
+.dest-icon {
+    flex-shrink: 0;
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.125em;
+}
+
+/* Modal de destinos (usa la base de .exp-modal) */
+.dest-modal-figure {
+    margin: 0;
+}
+
+.dest-modal-figure.is-hidden {
+    display: none;
+}
+
+.dest-modal .dest-modal-img {
+    height: 340px;
+}
+
+.dest-modal-credit {
+    padding: 0.4rem 1.5rem;
+    font-size: 0.75rem;
+    color: #666666;
+    background: #f2f5f9;
+}
+
+.dest-modal-credit a {
+    color: var(--primary-blue);
+}
+
+.dest-modal-content h3,
+.dest-modal-content h4:first-child {
+    font-size: 1.6rem;
+    line-height: 1.3;
+    color: var(--primary-blue);
+    margin-bottom: 0.25rem;
+}
+
+.dest-modal-content .rating {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    margin-left: 0.75rem;
+}
+
+.dest-modal-content .location {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    color: var(--celeste);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.dest-modal-content .description {
+    color: #333333;
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+}
+
+.dest-modal-content .details-section h4 {
+    font-size: 1rem;
+    color: var(--primary-blue);
+    margin-bottom: 0.5rem;
+}
+
+.dest-modal-content .details-section ul {
+    padding-left: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.dest-modal-content .details-section li {
+    margin-bottom: 0.35rem;
+}
+
+.dest-modal-content .details-section li::marker {
+    color: var(--accent-orange);
+}
+
+.dest-modal-content .tags .tag {
+    background: var(--primary-blue);
+    color: var(--white);
+}
+
+.dest-modal-content .price {
+    margin-bottom: 1.25rem;
+}
+
+@media (max-width: 768px) {
+    .destinations-grid .destination-card {
+        height: 300px;
+    }
+
+    .gems-grid .gem-card {
+        height: 280px;
+    }
+}
+
+@media (max-width: 480px) {
+    .dest-modal .dest-modal-img {
+        height: 220px;
+    }
+
+    .dest-modal-content h3,
+    .dest-modal-content h4:first-child {
+        font-size: 1.35rem;
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav-menu {

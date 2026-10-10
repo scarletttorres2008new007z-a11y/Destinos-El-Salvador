@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeFloatingActionButton();
     initializeScrollEffects();
     initializeExperienceModal();
+    initializeDestinationModal();
 });
 
 // Navigation functionality
@@ -342,6 +343,90 @@ function initializeExperienceModal() {
 
     buttons.forEach(btn => {
         btn.addEventListener('click', () => openModal(btn.dataset.exp));
+    });
+
+    modal.querySelectorAll('.exp-modal-close, .exp-modal-btn').forEach(btn => {
+        btn.addEventListener('click', closeModal);
+    });
+
+    // Cerrar al hacer clic fuera del contenido
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+    });
+
+    // Cerrar con la tecla Escape
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeModal();
+    });
+}
+
+// Destinos: modal con fotografía y toda la información de cada tarjeta
+function initializeDestinationModal() {
+    const modal = document.getElementById('dest-modal');
+    const buttons = document.querySelectorAll('.destination-card .details-btn, .gem-card .details-btn');
+
+    if (!modal || buttons.length === 0) return;
+
+    const figure = modal.querySelector('.dest-modal-figure');
+    const img = modal.querySelector('.dest-modal-img');
+    const credit = modal.querySelector('.dest-modal-credit');
+    const content = modal.querySelector('.dest-modal-content');
+    const closeBtn = modal.querySelector('.exp-modal-close');
+    let lastFocused = null;
+
+    function link(text, href) {
+        const a = document.createElement('a');
+        a.href = href;
+        a.textContent = text;
+        a.target = '_blank';
+        a.rel = 'noopener';
+        return a;
+    }
+
+    function openModal(card) {
+        const photo = card.querySelector('.dest-img');
+
+        if (photo) {
+            img.src = photo.dataset.full || photo.src;
+            img.alt = photo.alt;
+            credit.textContent = 'Foto: ';
+            credit.append(
+                link(photo.dataset.author, photo.dataset.source), ' · ',
+                link(photo.dataset.license, photo.dataset.licenseUrl), ' · Wikimedia Commons'
+            );
+            figure.classList.remove('is-hidden');
+        } else {
+            img.removeAttribute('src');
+            img.alt = '';
+            credit.textContent = '';
+            figure.classList.add('is-hidden');
+        }
+
+        const info = card.querySelector('.card-content').cloneNode(true);
+        info.querySelectorAll('.details-btn').forEach(btn => btn.remove());
+        const heading = info.querySelector('h3, h4');
+        if (heading) heading.id = 'dest-modal-title';
+        content.replaceChildren(...info.childNodes);
+
+        lastFocused = document.activeElement;
+        modal.querySelector('.exp-modal-dialog').scrollTop = 0;
+        modal.classList.add('is-open');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('exp-modal-open');
+        closeBtn.focus();
+    }
+
+    function closeModal() {
+        if (!modal.classList.contains('is-open')) return;
+
+        modal.classList.remove('is-open');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('exp-modal-open');
+        if (lastFocused) lastFocused.focus();
+    }
+
+    buttons.forEach(btn => {
+        btn.addEventListener('click', () => openModal(btn.closest('.destination-card, .gem-card')));
     });
 
     modal.querySelectorAll('.exp-modal-close, .exp-modal-btn').forEach(btn => {
