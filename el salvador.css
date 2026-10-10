@@ -1647,3 +1647,566 @@ body.exp-modal-open {
         color: black !important;
     }
 }
+
+/* ==========================================================
+   Cultura: portada 3D
+   ========================================================== */
+.cultura-hero {
+    position: relative;
+    min-height: 100vh;
+    padding: 7rem 2rem 4rem;
+    background: var(--primary-blue);
+    color: var(--white);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.cultura-hero-grid {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.cultura-hero-etiqueta,
+.museo-etiqueta {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--white);
+    background: var(--celeste);
+    padding: 0.35rem 0.9rem;
+    border-radius: 50px;
+    margin-bottom: 1.25rem;
+    animation: fade-in 0.8s ease-out both;
+}
+
+.cultura-hero h1 {
+    font-size: clamp(2.3rem, 5vw, 3.8rem);
+    line-height: 1.12;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    animation: fade-in 0.9s ease-out 0.1s both;
+}
+
+.cultura-hero h1 span {
+    display: block;
+    color: var(--accent-orange);
+}
+
+.cultura-hero-intro {
+    font-size: clamp(1.05rem, 1.8vw, 1.2rem);
+    max-width: 34rem;
+    opacity: 0.92;
+    margin-bottom: 2.25rem;
+    animation: fade-in 0.9s ease-out 0.25s both;
+}
+
+.cultura-hero-btn {
+    animation: fade-in 0.9s ease-out 0.4s both;
+}
+
+.cultura-hero-btn:hover {
+    background: #fb8a3c;
+}
+
+.cultura-hero-visual {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    width: 100%;
+    max-width: 560px;
+    justify-self: center;
+    animation: scale-in 1s ease-out 0.2s both;
+}
+
+.cultura-forma {
+    position: absolute;
+    display: block;
+    pointer-events: none;
+}
+
+.forma-disco {
+    inset: 9%;
+    border-radius: 50%;
+    background: var(--celeste);
+}
+
+.forma-aro {
+    inset: 3%;
+    border-radius: 50%;
+    border: 3px solid var(--accent-orange);
+    clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+}
+
+.forma-cuadro {
+    width: 18%;
+    height: 18%;
+    right: 2%;
+    bottom: 12%;
+    background: var(--accent-orange);
+    border-radius: 0.75rem;
+    transform: rotate(12deg);
+}
+
+.forma-barra {
+    width: 30%;
+    height: 4%;
+    left: 0;
+    bottom: 8%;
+    background: var(--white);
+    border-radius: 50px;
+}
+
+.forma-punto {
+    width: 7%;
+    height: 7%;
+    left: 8%;
+    top: 12%;
+    border-radius: 50%;
+    background: var(--white);
+}
+
+.cultura-hero-escena {
+    position: absolute;
+    inset: 0;
+}
+
+.cultura-hero-escena canvas,
+.museo-escenario canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: grab;
+    touch-action: pan-y;
+}
+
+.cultura-hero-escena canvas:active,
+.museo-escenario canvas:active {
+    cursor: grabbing;
+}
+
+.cultura-hero-pie {
+    position: absolute;
+    left: 50%;
+    bottom: -0.5rem;
+    transform: translateX(-50%);
+    width: max-content;
+    max-width: 100%;
+    font-size: 0.85rem;
+    background: var(--secondary-blue);
+    padding: 0.45rem 1rem;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.cultura-hero-pie strong {
+    color: var(--accent-orange);
+    font-weight: 600;
+}
+
+/* ==========================================================
+   Cultura: museo 3D interactivo
+   ========================================================== */
+.museo-3d {
+    padding: 5rem 2rem;
+    background: var(--white);
+    color: #1f2937;
+    scroll-margin-top: 60px;
+}
+
+.museo-3d .container {
+    text-align: center;
+}
+
+.museo-titulo {
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--primary-blue);
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
+}
+
+.museo-intro {
+    max-width: 40rem;
+    margin: 0 auto 2.5rem;
+    color: #4b5563;
+    font-size: 1.05rem;
+}
+
+.museo-sala {
+    text-align: left;
+}
+
+.museo-escenario {
+    position: relative;
+    height: min(72vh, 640px);
+    min-height: 420px;
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    background: var(--secondary-blue);
+    box-shadow: var(--shadow-md);
+    scroll-margin-top: 80px;
+}
+
+.museo-lienzo {
+    position: absolute;
+    inset: 0;
+}
+
+.museo-sin-webgl {
+    display: none;
+}
+
+.sin-webgl .museo-escenario canvas,
+.sin-webgl .cultura-hero-escena,
+.sin-webgl .museo-controles,
+.sin-webgl .museo-ayuda,
+.sin-webgl .cultura-hero-pie {
+    display: none;
+}
+
+.sin-webgl .museo-sin-webgl {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+    color: var(--white);
+}
+
+.museo-controles {
+    position: absolute;
+    left: 1rem;
+    bottom: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    z-index: 2;
+    transition: var(--transition);
+}
+
+.museo-control {
+    min-width: 44px;
+    height: 44px;
+    padding: 0 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50px;
+    background: var(--white);
+    color: var(--primary-blue);
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 600;
+    white-space: nowrap;
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.museo-control.museo-girar {
+    padding: 0;
+}
+
+.museo-control:hover {
+    background: var(--accent-orange);
+    color: var(--white);
+}
+
+.museo-ayuda {
+    position: absolute;
+    top: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: calc(100% - 2rem);
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    background: rgba(0, 58, 112, 0.85);
+    color: var(--white);
+    font-size: 0.85rem;
+    text-align: center;
+    pointer-events: none;
+    z-index: 2;
+    transition: var(--transition);
+}
+
+.museo-panel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: min(420px, 42%);
+    padding: 2rem 1.75rem 1.5rem;
+    background: var(--white);
+    color: #1f2937;
+    overflow-y: auto;
+    z-index: 3;
+    opacity: 0;
+    transform: translateX(24px);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+    border-left: 4px solid var(--accent-orange);
+}
+
+.museo-panel.abierto {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.museo-panel-cerrar {
+    position: absolute;
+    top: 0.85rem;
+    right: 0.85rem;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    background: #eef4fb;
+    color: var(--primary-blue);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.museo-panel-cerrar:hover {
+    background: var(--primary-blue);
+    color: var(--white);
+}
+
+.museo-panel-numero {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--celeste);
+    margin-bottom: 0.4rem;
+}
+
+.museo-panel-nombre {
+    font-size: 1.5rem;
+    line-height: 1.25;
+    color: var(--primary-blue);
+    margin-bottom: 0.35rem;
+    padding-right: 2.5rem;
+}
+
+.museo-panel-lugar {
+    font-size: 0.9rem;
+    color: var(--accent-orange);
+    font-weight: 500;
+    margin-bottom: 1.25rem;
+}
+
+.museo-panel h4 {
+    font-size: 0.95rem;
+    color: var(--primary-blue);
+    margin: 1.1rem 0 0.35rem;
+}
+
+.museo-panel p {
+    font-size: 0.93rem;
+    line-height: 1.65;
+}
+
+.museo-panel-datos {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.museo-panel-datos li {
+    position: relative;
+    padding-left: 1.1rem;
+    margin-bottom: 0.45rem;
+    font-size: 0.92rem;
+    line-height: 1.55;
+}
+
+.museo-panel-datos li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.55em;
+    width: 7px;
+    height: 7px;
+    border-radius: 2px;
+    background: var(--accent-orange);
+}
+
+.museo-panel-nav {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+.museo-panel-nav button {
+    flex: 1;
+    padding: 0.7rem 1rem;
+    border-radius: 50px;
+    border: 2px solid var(--primary-blue);
+    background: var(--white);
+    color: var(--primary-blue);
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.museo-panel-nav .museo-siguiente {
+    background: var(--primary-blue);
+    color: var(--white);
+}
+
+.museo-panel-nav button:hover {
+    background: var(--celeste);
+    border-color: var(--celeste);
+    color: var(--white);
+}
+
+.museo-piezas {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+}
+
+.museo-pieza-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2rem;
+    padding: 0.9rem 1rem;
+    border: 2px solid #dbe7f3;
+    border-radius: var(--border-radius);
+    background: var(--white);
+    color: var(--primary-blue);
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.museo-pieza-num {
+    font-size: 0.8rem;
+    color: var(--accent-orange);
+}
+
+.museo-pieza-btn:hover {
+    border-color: var(--celeste);
+    transform: translateY(-2px);
+}
+
+.museo-pieza-btn.activo {
+    background: var(--primary-blue);
+    border-color: var(--primary-blue);
+    color: var(--white);
+}
+
+.museo-control:focus-visible,
+.museo-pieza-btn:focus-visible,
+.museo-panel button:focus-visible,
+.cultura-hero-escena canvas:focus-visible {
+    outline: 3px solid var(--accent-orange);
+    outline-offset: 2px;
+}
+
+.cultura-explora {
+    min-height: 0;
+    padding-top: 4rem;
+}
+
+@media (min-width: 900px) {
+    .museo-3d.con-seleccion .museo-ayuda {
+        left: calc((100% - min(420px, 42%)) / 2);
+    }
+}
+
+@media (max-width: 899px) {
+    .cultura-hero {
+        padding: 6rem 1.25rem 3.5rem;
+        min-height: 0;
+    }
+
+    .cultura-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .cultura-hero-intro {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .cultura-hero-visual {
+        max-width: 420px;
+    }
+
+    .museo-3d {
+        padding: 3.5rem 1rem;
+    }
+
+    .museo-escenario {
+        height: auto;
+        min-height: 0;
+        overflow: visible;
+        background: none;
+        box-shadow: none;
+    }
+
+    .museo-lienzo {
+        position: relative;
+        height: 62vh;
+        min-height: 360px;
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        background: var(--secondary-blue);
+        box-shadow: var(--shadow-md);
+    }
+
+    .museo-controles {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .museo-ayuda {
+        font-size: 0.78rem;
+        width: max-content;
+    }
+
+    .museo-panel {
+        position: relative;
+        width: 100%;
+        top: auto;
+        right: auto;
+        bottom: auto;
+        margin-top: 1rem;
+        border-left: none;
+        border-top: 4px solid var(--accent-orange);
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow-md);
+        transform: translateY(12px);
+        overflow: visible;
+    }
+
+    .museo-panel.abierto {
+        transform: translateY(0);
+    }
+
+    .museo-piezas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .museo-piezas .museo-pieza-btn:last-child {
+        grid-column: span 2;
+    }
+}
