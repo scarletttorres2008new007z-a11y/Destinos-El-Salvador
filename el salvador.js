@@ -827,8 +827,9 @@ function showNotification(message, type = 'info') {
 
 // Filter functionality for destination pages
 function initializeFilters() {
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const cards = document.querySelectorAll('.destination-card, .gallery-item');
+    // La Galería tiene su propio filtrado en galeria.js
+    const filterBtns = document.querySelectorAll('.filter-btn:not(.gallery-filters .filter-btn)');
+    const cards = document.querySelectorAll('.destination-card');
 
     filterBtns.forEach(btn => {
         btn.addEventListener('click', function() {

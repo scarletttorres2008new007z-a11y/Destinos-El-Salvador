@@ -1611,6 +1611,317 @@ body.exp-modal-open {
     }
 }
 
+/* Galería Visual: filtros por categoría */
+.gallery-filters {
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.gallery-filters .filter-btn {
+    font-family: inherit;
+    padding: 0.5rem 1.1rem;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    font-size: 0.9rem;
+    font-weight: 500;
+    background: transparent;
+    backdrop-filter: none;
+}
+
+.gallery-filters .filter-btn:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+.gallery-filters .filter-btn.active {
+    background: var(--accent-orange);
+    border-color: var(--accent-orange);
+    color: white;
+    font-weight: 600;
+    box-shadow: none;
+}
+
+/* Transición breve al cambiar de categoría */
+.galeria-compacta .gallery-item[hidden] {
+    display: none;
+}
+
+.galeria-compacta .gallery-item.saliendo {
+    opacity: 0;
+    transform: scale(0.96);
+}
+
+.galeria-compacta .gallery-item.entrando {
+    animation: galeria-entrar 0.3s ease both;
+}
+
+@keyframes galeria-entrar {
+    from {
+        opacity: 0;
+        transform: scale(0.96);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.galeria-vacia {
+    margin: 0 0 2rem;
+    text-align: center;
+    opacity: 0.85;
+}
+
+/* Fotos agregadas por el visitante */
+.gallery-item .gallery-etiqueta {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    padding: 0.15rem 0.55rem;
+    border-radius: 50px;
+    background: var(--accent-orange);
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+/* Comparte tus Fotos */
+.photo-sharing {
+    margin-top: 4rem;
+    padding: 2.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: var(--border-radius-lg);
+    background: rgba(255, 255, 255, 0.05);
+    text-align: center;
+}
+
+.comparte-titulo {
+    margin-bottom: 0.5rem;
+    font-size: clamp(1.75rem, 3vw, 2.25rem);
+}
+
+.comparte-intro {
+    margin-bottom: 2rem;
+    font-size: 1.05rem;
+    opacity: 0.9;
+}
+
+.sharing-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.sharing-option {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    padding: 1rem 1.25rem;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: var(--border-radius);
+    background: rgba(255, 255, 255, 0.06);
+    text-align: left;
+}
+
+.sharing-icono {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 2.6rem;
+    height: 2.6rem;
+    border-radius: 50%;
+    background: var(--celeste);
+    color: white;
+}
+
+.sharing-option h4 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.sharing-option p {
+    margin: 0;
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+.subir-fotos {
+    padding: 2rem 1.5rem;
+    border: 2px dashed rgba(255, 255, 255, 0.3);
+    border-radius: var(--border-radius);
+    background: rgba(0, 20, 40, 0.15);
+}
+
+.subir-titulo {
+    margin: 0 0 0.35rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.subir-ayuda {
+    margin: 0 0 1.25rem;
+    font-size: 0.9rem;
+    opacity: 0.85;
+}
+
+.subir-input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.subir-seleccionar {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem 1.75rem;
+    font-size: 1rem;
+}
+
+.subir-input:focus-visible + .subir-seleccionar {
+    outline: 3px solid white;
+    outline-offset: 3px;
+}
+
+.subir-mensajes:empty {
+    display: none;
+}
+
+.subir-mensajes {
+    max-width: 640px;
+    margin: 1rem auto 0;
+    text-align: left;
+}
+
+.subir-msg {
+    margin: 0.4rem 0 0;
+    padding: 0.55rem 0.85rem;
+    border-left: 4px solid var(--accent-orange);
+    border-radius: 0.4rem;
+    background: rgba(255, 255, 255, 0.1);
+    font-size: 0.88rem;
+}
+
+.subir-msg.ok {
+    border-left-color: var(--celeste);
+}
+
+.subir-previa {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 0.75rem;
+    margin: 1.25rem 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.subir-previa:empty {
+    display: none;
+}
+
+.subir-previa li {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.6rem;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.subir-previa img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.subir-previa .previa-nombre {
+    display: block;
+    padding: 0.3rem 0.5rem;
+    font-size: 0.72rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    opacity: 0.85;
+}
+
+.previa-quitar {
+    position: absolute;
+    top: 0.35rem;
+    right: 0.35rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.75rem;
+    height: 1.75rem;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: rgba(0, 20, 40, 0.75);
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.previa-quitar:hover,
+.previa-quitar:focus-visible {
+    background: var(--accent-orange);
+}
+
+.subir-acciones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+}
+
+.subir-acciones[hidden] {
+    display: none;
+}
+
+.subir-acciones .btn {
+    font-family: inherit;
+    padding: 0.7rem 1.5rem;
+    font-size: 0.95rem;
+}
+
+.subir-nota {
+    max-width: 640px;
+    margin: 1.25rem auto 0;
+    font-size: 0.8rem;
+    opacity: 0.75;
+}
+
+@media (max-width: 767px) {
+    .filter-tabs.gallery-filters {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .gallery-filters .filter-btn {
+        padding: 0.45rem 0.9rem;
+        font-size: 0.85rem;
+    }
+
+    .photo-sharing {
+        padding: 1.75rem 1rem;
+    }
+
+    .sharing-options {
+        grid-template-columns: 1fr;
+    }
+
+    .subir-fotos {
+        padding: 1.5rem 1rem;
+    }
+
+    .subir-previa {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 /* Galería Visual: vista ampliada (lightbox) */
 .galeria-lightbox {
     position: fixed;

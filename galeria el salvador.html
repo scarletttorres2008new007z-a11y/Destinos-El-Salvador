@@ -41,14 +41,14 @@
             </p>
 
             <!-- Gallery Filters -->
-            <div class="filter-tabs gallery-filters">
-                <button class="filter-btn active" data-filter="all">🖼️ Todas</button>
-                <button class="filter-btn" data-filter="nature">🌿 Naturaleza</button>
-                <button class="filter-btn" data-filter="beaches">🏖️ Playas</button>
-                <button class="filter-btn" data-filter="volcanoes">🌋 Volcanes</button>
-                <button class="filter-btn" data-filter="culture">🎭 Cultura</button>
-                <button class="filter-btn" data-filter="cities">🏙️ Ciudades</button>
-                <button class="filter-btn" data-filter="food">🍽️ Gastronomía</button>
+            <div class="filter-tabs gallery-filters" role="group" aria-label="Filtrar fotos por categoría">
+                <button type="button" class="filter-btn active" data-filter="all" aria-pressed="true">Todas</button>
+                <button type="button" class="filter-btn" data-filter="nature" aria-pressed="false">Naturaleza</button>
+                <button type="button" class="filter-btn" data-filter="beaches" aria-pressed="false">Playas</button>
+                <button type="button" class="filter-btn" data-filter="volcanoes" aria-pressed="false">Volcanes</button>
+                <button type="button" class="filter-btn" data-filter="culture" aria-pressed="false">Cultura</button>
+                <button type="button" class="filter-btn" data-filter="cities" aria-pressed="false">Ciudades</button>
+                <button type="button" class="filter-btn" data-filter="food" aria-pressed="false">Gastronomía</button>
             </div>
 
             <!-- Main Gallery Grid -->
@@ -205,30 +205,51 @@
             </div>
 
             <!-- Photo Sharing Section -->
-            <div class="photo-sharing" style="margin-top: 4rem; background: rgba(255,255,255,0.05); padding: 3rem; border-radius: 2rem; text-align: center;">
-                <h2 style="margin-bottom: 2rem; font-size: 2.5rem;">Comparte tus Fotos</h2>
-                <p style="margin-bottom: 2rem; opacity: 0.9; font-size: 1.1rem;">¿Visitaste El Salvador? ¡Comparte tus mejores momentos con nosotros!</p>
-                
-                <div class="sharing-options" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
-                    <div class="sharing-option" style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 1rem;">
-                        <div style="font-size: 3rem; margin-bottom: 1rem;">📸</div>
-                        <h4>Instagram</h4>
-                        <p style="opacity: 0.8;">#ElSalvadorTravel #VisitElSalvador</p>
+            <section class="photo-sharing" aria-labelledby="comparteTitulo">
+                <h2 id="comparteTitulo" class="comparte-titulo">Comparte tus Fotos</h2>
+                <p class="comparte-intro">¿Visitaste El Salvador? ¡Comparte tus mejores momentos con nosotros!</p>
+
+                <div class="sharing-options">
+                    <div class="sharing-option">
+                        <span class="sharing-icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg></span>
+                        <div>
+                            <h4>Instagram</h4>
+                            <p>#ElSalvadorTravel #VisitElSalvador</p>
+                        </div>
                     </div>
-                    <div class="sharing-option" style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 1rem;">
-                        <div style="font-size: 3rem; margin-bottom: 1rem;">📱</div>
-                        <h4>Facebook</h4>
-                        <p style="opacity: 0.8;">Etiquétanos en tus publicaciones</p>
+                    <div class="sharing-option">
+                        <span class="sharing-icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></span>
+                        <div>
+                            <h4>Facebook</h4>
+                            <p>Etiquétanos en tus publicaciones</p>
+                        </div>
                     </div>
-                    <div class="sharing-option" style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 1rem;">
-                        <div style="font-size: 3rem; margin-bottom: 1rem;">✉️</div>
-                        <h4>Email</h4>
-                        <p style="opacity: 0.8;">Envíanos tus mejores fotos</p>
+                    <div class="sharing-option">
+                        <span class="sharing-icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
+                        <div>
+                            <h4>Email</h4>
+                            <p>Envíanos tus mejores fotos</p>
+                        </div>
                     </div>
                 </div>
-                
-                <button class="btn primary" style="margin-top: 1rem;">📤 Subir mis Fotos</button>
-            </div>
+
+                <div class="subir-fotos">
+                    <h3 class="subir-titulo">Agrega tus fotos a esta galería</h3>
+                    <p class="subir-ayuda">Formatos JPG, JPEG, PNG o WEBP, hasta 5 MB por foto y 12 fotos a la vez.</p>
+                    <input type="file" id="fotosUsuario" class="subir-input" accept=".jpg,.jpeg,.png,.webp,image/jpeg,image/png,image/webp" multiple>
+                    <label for="fotosUsuario" class="btn primary subir-seleccionar">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m17 8-5-5-5 5"/><path d="M12 3v12"/></svg>
+                        Seleccionar fotos
+                    </label>
+                    <div class="subir-mensajes" role="status" aria-live="polite"></div>
+                    <ul class="subir-previa" aria-label="Fotos seleccionadas"></ul>
+                    <div class="subir-acciones" hidden>
+                        <button type="button" class="btn primary subir-agregar">Agregar a la galería</button>
+                        <button type="button" class="btn secondary subir-cancelar">Cancelar</button>
+                    </div>
+                    <p class="subir-nota">Las fotos se agregan solo en tu navegador durante esta visita: no se suben a ningún servidor, no las ven otros visitantes y desaparecen al recargar o cerrar la página.</p>
+                </div>
+            </section>
 
             <!-- Virtual Tour Section -->
             <div class="virtual-tours" style="margin-top: 4rem;">
