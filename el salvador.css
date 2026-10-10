@@ -1960,6 +1960,7 @@ body.exp-modal-open {
 
 .museo-panel-cerrar {
     position: absolute;
+    z-index: 2;
     top: 0.85rem;
     right: 0.85rem;
     width: 38px;
@@ -2080,9 +2081,8 @@ body.exp-modal-open {
 .museo-pieza-btn {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 0.2rem;
-    padding: 0.9rem 1rem;
+    padding: 0;
+    overflow: hidden;
     border: 2px solid #dbe7f3;
     border-radius: var(--border-radius);
     background: var(--white);
@@ -2095,6 +2095,28 @@ body.exp-modal-open {
     transition: var(--transition);
 }
 
+.museo-pieza-foto {
+    display: block;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+}
+
+.museo-pieza-foto img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.museo-pieza-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+    padding: 0.75rem 0.9rem 0.85rem;
+    line-height: 1.3;
+}
+
 .museo-pieza-num {
     font-size: 0.8rem;
     color: var(--accent-orange);
@@ -2105,10 +2127,64 @@ body.exp-modal-open {
     transform: translateY(-2px);
 }
 
+.museo-pieza-btn:hover .museo-pieza-foto img {
+    transform: scale(1.05);
+}
+
 .museo-pieza-btn.activo {
     background: var(--primary-blue);
     border-color: var(--primary-blue);
     color: var(--white);
+}
+
+/* Entrada escalonada de las tarjetas */
+.museo-piezas .museo-pieza-btn {
+    opacity: 0;
+    transform: translateY(16px);
+}
+
+.museo-piezas.visible .museo-pieza-btn {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.6s ease, transform 0.6s ease, border-color 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+
+.museo-piezas.visible .museo-pieza-btn:nth-child(2) { transition-delay: 0.08s; }
+.museo-piezas.visible .museo-pieza-btn:nth-child(3) { transition-delay: 0.16s; }
+.museo-piezas.visible .museo-pieza-btn:nth-child(4) { transition-delay: 0.24s; }
+.museo-piezas.visible .museo-pieza-btn:nth-child(5) { transition-delay: 0.32s; }
+
+.museo-piezas.visible .museo-pieza-btn:hover {
+    transform: translateY(-2px);
+    transition-delay: 0s;
+}
+
+/* Foto de referencia dentro del panel */
+.museo-panel-foto {
+    margin: 0 0 1rem;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    background: #eef1f4;
+}
+
+.museo-panel-foto img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    transition: opacity 0.35s ease, transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.museo-panel-foto figcaption {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.8rem;
+    color: #4b5563;
+    background: #f5f7fa;
+}
+
+.museo-panel-foto.cambiando img {
+    opacity: 0;
+    transform: scale(1.04);
 }
 
 .museo-control:focus-visible,
@@ -2208,5 +2284,9 @@ body.exp-modal-open {
 
     .museo-piezas .museo-pieza-btn:last-child {
         grid-column: span 2;
+    }
+
+    .museo-piezas .museo-pieza-btn:last-child .museo-pieza-foto {
+        aspect-ratio: 16 / 7;
     }
 }

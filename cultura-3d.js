@@ -12,6 +12,8 @@
             id: 'torito',
             nombre: 'Máscara del Torito Pinto',
             lugar: 'Fiestas patronales de todo el país',
+            foto: 'img/cultura/torito.jpg',
+            pie: 'Figura de toro en barro pintado, inspirada en el Torito Pinto.',
             historia: 'El Torito Pinto es una danza tradicional de origen colonial que recrea, con humor, una corrida de toros. Un danzante lleva la figura o la máscara del toro, cubierta de manchas y adornada con cintas de colores, mientras otros personajes lo provocan y lo esquivan entre risas del público.',
             significado: 'La danza nació como una burla popular a las corridas de toros que trajeron los españoles. Hoy representa la creatividad del pueblo para transformar la historia en fiesta, y une a niños, jóvenes y adultos alrededor de la música y el baile.',
             datos: [
@@ -23,21 +25,25 @@
         },
         {
             id: 'ceramica',
-            nombre: 'Cántaro de barro negro de Guatajiagua',
-            lugar: 'Guatajiagua, departamento de Morazán',
-            historia: 'Las alfareras lencas de Guatajiagua modelan el barro a mano, sin torno, tal como lo hacían sus antepasadas. Después de pulir cada pieza con una piedra lisa, la cuecen al aire libre y la bañan con un tinte natural que le da su característico color negro brillante.',
-            significado: 'Es una de las tradiciones alfareras indígenas más antiguas que siguen vivas en El Salvador. Cada cántaro, comal u olla conserva conocimientos que pasan de madres a hijas y mantiene viva la identidad del pueblo lenca.',
+            nombre: 'Cántaro de barro decorado',
+            lugar: 'Ilobasco, Santo Domingo de Guzmán y otros pueblos alfareros',
+            foto: 'img/cultura/ceramica.jpg',
+            pie: 'Cántaro de barro decorado con puntos y flores.',
+            historia: 'Desde tiempos precolombinos, los pueblos de El Salvador modelan el barro para crear cántaros, ollas y comales. Las alfareras dan forma a cada pieza a mano, la pulen, la cuecen en hornos de leña y la decoran con pigmentos de colores, puntos y flores.',
+            significado: 'El cántaro servía para acarrear y mantener fresca el agua, y todavía se usa en muchos hogares del campo. Cada pieza conserva técnicas que pasan de generación en generación y une la vida diaria con el arte popular.',
             datos: [
-                'El color negro se obtiene con nacascolo, el fruto de un árbol de la zona.',
-                'Las piezas se bruñen a mano con piedras de río para darles brillo.',
-                'Los dibujos blancos se trazan con barro claro antes de la cocción.',
-                'Se elaboran cántaros, comales, ollas y figuras decorativas.'
+                'Ilobasco, en Cabañas, es famoso por su artesanía de barro y sus diminutas «sorpresas».',
+                'En Santo Domingo de Guzmán, Sonsonate, las alfareras nahuas conservan técnicas ancestrales.',
+                'En Guatajiagua, Morazán, la cerámica lenca se tiñe de negro con nacascolo.',
+                'El barro mantiene el agua fresca de forma natural.'
             ]
         },
         {
             id: 'marimba',
             nombre: 'Marimba',
             lugar: 'Presente en plazas, iglesias y fiestas de todo el país',
+            foto: 'img/cultura/marimba.jpg',
+            pie: 'Marimba de arco con teclas de madera y resonadores.',
             historia: 'La marimba combina raíces africanas, indígenas y europeas. En El Salvador se conserva la marimba de arco, una versión portátil con resonadores de tecomate que el músico cuelga de su cuerpo, junto a marimbas de mayor tamaño con teclas de madera y cajas de resonancia.',
             significado: 'Su sonido acompaña procesiones, bailes, bodas y fiestas patronales. Para muchas comunidades la marimba es la voz de la celebración y un símbolo del encuentro entre culturas que formó la identidad salvadoreña.',
             datos: [
@@ -51,6 +57,8 @@
             id: 'pupusa',
             nombre: 'Pupusa',
             lugar: 'Plato nacional de El Salvador',
+            foto: 'img/cultura/pupusa.jpg',
+            pie: 'Pupusa recién salida del comal, con queso derretido.',
             historia: 'La pupusa es una tortilla gruesa de maíz o de arroz rellena de queso, frijoles, chicharrón o loroco, cocinada sobre un comal. Sus raíces se remontan a los pueblos pipiles, y hoy se prepara en cada rincón del país y en las comunidades salvadoreñas del mundo.',
             significado: 'Más que un alimento, la pupusa reúne a las familias y a los amigos alrededor de la mesa. Es el sabor que los salvadoreños reconocen como casa, dentro y fuera del país.',
             datos: [
@@ -62,8 +70,10 @@
         },
         {
             id: 'palma',
-            nombre: 'Cruz de artesanía de La Palma',
+            nombre: 'Artesanía de La Palma',
             lugar: 'La Palma, departamento de Chalatenango',
+            foto: 'img/cultura/palma.jpg',
+            pie: 'Cajitas de madera pintadas al estilo de La Palma.',
             historia: 'En la década de 1970 el artista Fernando Llort se estableció en La Palma y fundó el taller La Semilla de Dios. Allí enseñó a los habitantes a pintar con su estilo de figuras sencillas y colores intensos, y el pueblo se convirtió en un gran taller de artesanos.',
             significado: 'Sus cruces, cajitas y semillas pintadas muestran casitas, campesinos, animales, flores y montañas: la vida cotidiana del campo salvadoreño contada con alegría. Es una de las expresiones artísticas más reconocidas del país.',
             datos: [
@@ -231,8 +241,10 @@
 
     function crearCeramica() {
         var g = new THREE.Group();
-        var barro = mat('#2a2421', { roughness: 0.32 });
-        var blanco = mat('#ece4d6', { roughness: 0.6 });
+        var barro = mat('#b4643a', { roughness: 0.75 });
+        var blanco = mat('#f1e3c6', { roughness: 0.6 });
+        var azul = mat('#2f6fb3', { roughness: 0.5 });
+        var verde = mat('#3f9b4a', { roughness: 0.5 });
 
         var perfil = [
             [0.0, 0.0], [0.2, 0.0], [0.27, 0.06], [0.38, 0.2], [0.44, 0.34], [0.43, 0.46],
@@ -258,7 +270,7 @@
         // Líneas blancas horizontales
         [0.2, 0.52, 0.62, 0.84].forEach(function (y) {
             var r = radioEn(y);
-            var aro = malla(new THREE.TorusGeometry(r + 0.004, 0.009, 8, 96), blanco);
+            var aro = malla(new THREE.TorusGeometry(r + 0.004, 0.009, 8, 96), azul);
             aro.rotation.x = Math.PI / 2;
             aro.position.y = y;
             g.add(aro);
@@ -280,7 +292,7 @@
         for (var j = 0; j < 12; j++) {
             var a = (j / 12) * Math.PI * 2;
             var rr = radioEn(0.57) + 0.004;
-            var punto = malla(new THREE.SphereGeometry(0.016, 10, 8), blanco);
+            var punto = malla(new THREE.SphereGeometry(0.016, 10, 8), j % 2 ? verde : azul);
             punto.position.set(Math.cos(a) * rr, 0.57, Math.sin(a) * rr);
             g.add(punto);
         }
@@ -576,10 +588,43 @@
 
         // Base para que la cruz se sostenga
         var base = malla(new THREE.BoxGeometry(0.36, 0.06, 0.2), madera);
-        base.position.y = 0.03;
+        base.position.set(-0.14, 0.03, -0.05);
         g.add(base);
-        cruz.position.y = 0.05;
+        cruz.position.set(-0.14, 0.05, -0.05);
         g.add(cruz);
+
+        // Cajita pintada con tapa curva
+        var cajita = new THREE.Group();
+        var turquesa = mat('#1aa7a0', { roughness: 0.6 });
+        var amarillo = mat('#f4c430', { roughness: 0.55 });
+        var cuerpoCaja = malla(new THREE.BoxGeometry(0.3, 0.16, 0.22), turquesa);
+        cuerpoCaja.position.y = 0.08;
+        cajita.add(cuerpoCaja);
+        var tapa = malla(new THREE.CylinderGeometry(0.11, 0.11, 0.3, 32, 1, false, 0, Math.PI), turquesa);
+        tapa.rotation.z = Math.PI / 2;
+        tapa.rotation.x = Math.PI / 2;
+        tapa.scale.set(1, 1, 0.55);
+        tapa.position.y = 0.165;
+        cajita.add(tapa);
+        var filo = malla(new THREE.BoxGeometry(0.305, 0.012, 0.225), azul);
+        filo.position.y = 0.165;
+        cajita.add(filo);
+        function adorno(geo, material, x, y) {
+            var m = malla(geo, material);
+            m.position.set(x, y, 0.111);
+            m.castShadow = false;
+            cajita.add(m);
+        }
+        adorno(new THREE.CircleGeometry(0.03, 24), amarillo, -0.07, 0.08);
+        adorno(new THREE.CircleGeometry(0.012, 16), naranja, -0.07, 0.08);
+        adorno(new THREE.CircleGeometry(0.025, 20), rojo, 0.03, 0.09);
+        adorno(new THREE.CircleGeometry(0.018, 20), fondo, 0.09, 0.06);
+        var hoja = new THREE.Shape();
+        hoja.moveTo(0, 0); hoja.quadraticCurveTo(0.03, 0.03, 0, 0.07); hoja.quadraticCurveTo(-0.03, 0.03, 0, 0);
+        adorno(new THREE.ShapeGeometry(hoja), verde, 0.0, 0.035);
+        cajita.position.set(0.24, 0, 0.12);
+        cajita.rotation.y = -0.45;
+        g.add(cajita);
         g.scale.setScalar(0.9);
         return g;
     }
@@ -878,11 +923,31 @@
             lugar: panel.querySelector('.museo-panel-lugar'),
             historia: panel.querySelector('.museo-panel-historia'),
             significado: panel.querySelector('.museo-panel-significado'),
-            datos: panel.querySelector('.museo-panel-datos')
+            datos: panel.querySelector('.museo-panel-datos'),
+            figura: panel.querySelector('.museo-panel-foto'),
+            foto: panel.querySelector('.museo-panel-foto img'),
+            pie: panel.querySelector('.museo-panel-foto figcaption')
         };
+        var cambioFoto = null;
+
+        // Cambia la foto de referencia con un fundido suave
+        function mostrarFoto(p, conTransicion) {
+            clearTimeout(cambioFoto);
+            function poner() {
+                el.foto.onload = function () { el.figura.classList.remove('cambiando'); };
+                el.foto.src = p.foto;
+                el.foto.alt = p.pie;
+                el.pie.textContent = p.pie;
+                if (el.foto.complete) { el.figura.classList.remove('cambiando'); }
+            }
+            if (!conTransicion || reduceMotion) { poner(); return; }
+            el.figura.classList.add('cambiando');
+            cambioFoto = setTimeout(poner, 250);
+        }
 
         function rellenarPanel(i) {
             var p = PIEZAS[i];
+            mostrarFoto(p, panel.classList.contains('abierto'));
             el.numero.textContent = 'Pieza ' + (i + 1) + ' de ' + PIEZAS.length;
             el.nombre.textContent = p.nombre;
             el.lugar.textContent = p.lugar;
@@ -1080,7 +1145,19 @@
         requestAnimationFrame(cuadro);
     }
 
+    // Entrada escalonada de las tarjetas de piezas al aparecer en pantalla
+    function animarTarjetas() {
+        var grupo = document.querySelector('.museo-piezas');
+        if (!grupo) { return; }
+        if (!('IntersectionObserver' in window) || reduceMotion) { grupo.classList.add('visible'); return; }
+        var obs = new IntersectionObserver(function (entradas) {
+            if (entradas[0].isIntersecting) { grupo.classList.add('visible'); obs.disconnect(); }
+        }, { threshold: 0.2 });
+        obs.observe(grupo);
+    }
+
     document.addEventListener('DOMContentLoaded', function () {
+        animarTarjetas();
         if (typeof THREE === 'undefined' || !soportaWebGL()) {
             document.documentElement.classList.add('sin-webgl');
             return;
