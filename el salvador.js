@@ -58,28 +58,18 @@ function initializeNavigation() {
         });
     });
 
-    // Active nav link based on scroll position
-    window.addEventListener('scroll', updateActiveNavLink);
+    // Enlace activo según la página actual
+    updateActiveNavLink();
 }
 
+// Marca en el menú solo el enlace de la página actual.
+// (Antes se calculaba con el desplazamiento y, en páginas sin secciones
+// con id, terminaba subrayando todos los enlaces a la vez.)
 function updateActiveNavLink() {
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-link');
-    let current = '';
-
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (scrollY >= (sectionTop - 200)) {
-            current = section.getAttribute('id');
-        }
-    });
-
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href').includes(current)) {
-            link.classList.add('active');
-        }
+    const actual = decodeURIComponent(location.pathname.split('/').pop() || 'inicio el salvador.html');
+    document.querySelectorAll('.nav-link, .mobile-menu a').forEach(link => {
+        const destino = decodeURIComponent(link.getAttribute('href') || '');
+        link.classList.toggle('active', destino === actual);
     });
 }
 
