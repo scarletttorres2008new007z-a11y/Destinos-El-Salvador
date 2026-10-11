@@ -18,7 +18,7 @@
     <description>API REST y servidor del sitio Destinos El Salvador</description>
 
     <properties>
-        <java.version>21</java.version>
+        <java.version>17</java.version>
     </properties>
 
     <dependencies>

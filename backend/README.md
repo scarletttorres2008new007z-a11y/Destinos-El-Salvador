@@ -1,10 +1,10 @@
 # Backend de Destinos El Salvador
 
-Java 21 + Spring Boot 3 + MySQL 8. Sirve las páginas del sitio (las de la raíz del repositorio, sin cambios) y una API REST en `/api`.
+Java 17 o más nuevo + Spring Boot 3 + MySQL 8. Sirve las páginas del sitio (las de la raíz del repositorio, sin cambios) y una API REST en `/api`.
 
 ## Arrancarlo en tu computadora (lo más fácil)
 
-Solo necesitas **Java 21** ([descargar](https://adoptium.net/es/temurin/releases/?version=21)). No hace falta instalar MySQL, Docker ni Maven.
+Solo necesitas **Java 17 o más nuevo**, recomendado Java 21 ([descargar](https://adoptium.net/es/temurin/releases/?version=21)). No hace falta instalar MySQL, Docker ni Maven.
 
 1. Haz doble clic en `iniciar-servidor.bat` (en la raíz del proyecto).
 2. Espera a que aparezca «Started DestinosApplication». La primera vez tarda unos minutos.
@@ -16,7 +16,7 @@ En Mac o Linux: `cd backend` y luego `./mvnw spring-boot:run -Dspring-boot.run.p
 
 ## Arrancarlo con MySQL de verdad (para publicarlo)
 
-Necesitas Java 21 y Docker Desktop (o un MySQL 8 instalado).
+Necesitas Java 17 o más nuevo y Docker Desktop (o un MySQL 8 instalado).
 
 1. En la raíz del repositorio, levanta MySQL: `docker compose up -d`
 2. En la carpeta `backend/`: `mvnw.cmd spring-boot:run` (en Mac o Linux, `./mvnw spring-boot:run`)
