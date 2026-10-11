@@ -177,7 +177,7 @@ class ApiTest {
                 .andExpect(header().string("Location", "/inicio%20el%20salvador.html"));
         mvc.perform(get("/inicio el salvador.html")).andExpect(status().isOk())
                 .andExpect(content().string(org.hamcrest.Matchers.containsString("<html")));
-        mvc.perform(get("/el salvador.css")).andExpect(status().isOk());
+        mvc.perform(get("/css/base.css")).andExpect(status().isOk());
         mvc.perform(get("/backend/pom.xml")).andExpect(status().isNotFound());
         mvc.perform(get("/backend/src/main/resources/application.properties")).andExpect(status().isNotFound());
         mvc.perform(get("/.git/config")).andExpect(status().isNotFound());
