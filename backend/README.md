@@ -14,6 +14,15 @@ Así usa una base de datos compatible con MySQL guardada en `backend/datos/`. Pa
 
 En Mac o Linux: `cd backend` y luego `./mvnw spring-boot:run -Dspring-boot.run.profiles=local`.
 
+### Ver los datos guardados
+
+Con el servidor encendido, abre http://localhost:8080/h2-console y entra con:
+
+- JDBC URL: `jdbc:h2:file:./datos/destinos;MODE=MySQL;DATABASE_TO_LOWER=TRUE;AUTO_SERVER=TRUE`
+- User Name: `sa`, Password: vacío
+
+Luego escribe por ejemplo `SELECT * FROM reservas` y presiona Run. Esta consola solo existe en el modo local.
+
 ## Arrancarlo con MySQL de verdad (para publicarlo)
 
 Necesitas Java 17 o más nuevo y Docker Desktop (o un MySQL 8 instalado).
