@@ -324,3 +324,50 @@ document.addEventListener('DOMContentLoaded', function() {
         window.scrollTo({ top: filtros.getBoundingClientRect().top + window.scrollY - 90, behavior: 'smooth' });
     });
 });
+
+// Videos destacados: videos reales de YouTube.
+// Al tocar la portada se carga el reproductor en la misma tarjeta (solo uno a la vez).
+// Abriendo la página como archivo local (file://) YouTube no permite reproducir
+// videos insertados, así que en ese caso el video se abre en YouTube en otra pestaña.
+document.addEventListener('DOMContentLoaded', function() {
+    const tarjetas = document.querySelectorAll('.video-tarjeta');
+    if (!tarjetas.length) return;
+    const puedeInsertar = location.protocol === 'http:' || location.protocol === 'https:';
+    let activa = null;
+
+    function detener(tarjeta) {
+        const marco = tarjeta.querySelector('.video-marco');
+        if (marco) marco.remove();
+        tarjeta.classList.remove('reproduciendo');
+        tarjeta.querySelector('.video-portada').hidden = false;
+    }
+
+    tarjetas.forEach(tarjeta => {
+        const id = tarjeta.dataset.video;
+        const portada = tarjeta.querySelector('.video-portada');
+        const titulo = tarjeta.querySelector('h4').textContent;
+
+        portada.addEventListener('click', function() {
+            if (!puedeInsertar) {
+                window.open('https://www.youtube.com/watch?v=' + id, '_blank', 'noopener');
+                return;
+            }
+            if (activa && activa !== tarjeta) detener(activa);
+
+            const marco = document.createElement('div');
+            marco.className = 'video-marco';
+            const iframe = document.createElement('iframe');
+            iframe.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0';
+            iframe.title = titulo;
+            iframe.allow = 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen';
+            iframe.allowFullscreen = true;
+            iframe.referrerPolicy = 'strict-origin-when-cross-origin';
+            marco.appendChild(iframe);
+
+            portada.hidden = true;
+            portada.after(marco);
+            tarjeta.classList.add('reproduciendo');
+            activa = tarjeta;
+        });
+    });
+});

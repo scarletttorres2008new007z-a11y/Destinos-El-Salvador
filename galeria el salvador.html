@@ -251,95 +251,83 @@
                 </div>
             </section>
 
-            <!-- Virtual Tour Section -->
-            <div class="virtual-tours" style="margin-top: 4rem;">
-                <h2 style="text-align: center; margin-bottom: 2rem; font-size: 2.5rem;">Tours Virtuales</h2>
-                <p style="text-align: center; margin-bottom: 3rem; opacity: 0.9;">Explora El Salvador desde casa con nuestros tours interactivos</p>
-                
-                <div class="tours-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-                    <div class="tour-card" style="background: rgba(255,255,255,0.1); border-radius: 1rem; overflow: hidden;">
-                        <div class="tour-preview" style="height: 200px; background: var(--celeste); display: flex; align-items: center; justify-content: center;">
-                            <div style="text-align: center; color: white;">
-                                <div style="font-size: 4rem; margin-bottom: 1rem;">🌋</div>
-                                <h4>Tour Virtual Volcanes</h4>
-                            </div>
+            <!-- Videos destacados: videos reales de El Salvador publicados en YouTube por sus autores -->
+            <div class="videos-destacados">
+                <h2>Videos Destacados</h2>
+                <p class="videos-intro">Videos reales de El Salvador, tal como los publicaron sus autores. Toca uno para verlo.</p>
+                <div class="videos-grid">
+                    <article class="video-tarjeta" data-video="YqIft_I27RI">
+                        <button type="button" class="video-portada" aria-label="Reproducir: Descubre El Salvador">
+                            <img src="img/galeria/videos/YqIft_I27RI.jpg" alt="" loading="lazy">
+                            <span class="video-play"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg></span>
+                            <span class="video-duracion">1:08</span>
+                        </button>
+                        <div class="video-info">
+                            <h4>Descubre El Salvador</h4>
+                            <p>Playas, volcanes y pueblos en el video oficial de turismo del país.</p>
+                            <a class="video-fuente" href="https://www.youtube.com/watch?v=YqIft_I27RI" target="_blank" rel="noopener">El Salvador Marca País · YouTube <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg></a>
                         </div>
-                        <div style="padding: 1.5rem;">
-                            <p style="margin-bottom: 1rem; opacity: 0.8;">Experimenta la majestuosidad de nuestros volcanes en 360°</p>
-                            <button class="btn secondary">🎮 Iniciar Tour</button>
+                    </article>
+                    <article class="video-tarjeta" data-video="2dAN5pnZC6w">
+                        <button type="button" class="video-portada" aria-label="Reproducir: Lago de Coatepeque desde el aire">
+                            <img src="img/galeria/videos/2dAN5pnZC6w.jpg" alt="" loading="lazy">
+                            <span class="video-play"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg></span>
+                            <span class="video-duracion">2:47</span>
+                        </button>
+                        <div class="video-info">
+                            <h4>Lago de Coatepeque desde el aire</h4>
+                            <p>Vuelo en dron sobre el lago de cráter que cambia de color una vez al año.</p>
+                            <a class="video-fuente" href="https://www.youtube.com/watch?v=2dAN5pnZC6w" target="_blank" rel="noopener">Alvaro Mayorga: Salvadorean Traveler · YouTube <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg></a>
                         </div>
-                    </div>
-                    
-                    <div class="tour-card" style="background: rgba(255,255,255,0.1); border-radius: 1rem; overflow: hidden;">
-                        <div class="tour-preview" style="height: 200px; background: var(--accent-orange); display: flex; align-items: center; justify-content: center;">
-                            <div style="text-align: center; color: white;">
-                                <div style="font-size: 4rem; margin-bottom: 1rem;">🏛️</div>
-                                <h4>Tour Histórico Suchitoto</h4>
-                            </div>
+                    </article>
+                    <article class="video-tarjeta" data-video="7E97fRk45Ms">
+                        <button type="button" class="video-portada" aria-label="Reproducir: Ruta de las Flores">
+                            <img src="img/galeria/videos/7E97fRk45Ms.jpg" alt="" loading="lazy">
+                            <span class="video-play"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg></span>
+                            <span class="video-duracion">3:36</span>
+                        </button>
+                        <div class="video-info">
+                            <h4>Ruta de las Flores</h4>
+                            <p>Los seis pueblos de la ruta: murales, café, artesanías y miradores.</p>
+                            <a class="video-fuente" href="https://www.youtube.com/watch?v=7E97fRk45Ms" target="_blank" rel="noopener">La Prensa Gráfica · YouTube <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg></a>
                         </div>
-                        <div style="padding: 1.5rem;">
-                            <p style="margin-bottom: 1rem; opacity: 0.8;">Recorre las calles coloniales de nuestro pueblo cultural</p>
-                            <button class="btn secondary">🎮 Iniciar Tour</button>
+                    </article>
+                    <article class="video-tarjeta" data-video="m8Yu0GxESeM">
+                        <button type="button" class="video-portada" aria-label="Reproducir: Joya de Cerén">
+                            <img src="img/galeria/videos/m8Yu0GxESeM.jpg" alt="" loading="lazy">
+                            <span class="video-play"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg></span>
+                            <span class="video-duracion">3:16</span>
+                        </button>
+                        <div class="video-info">
+                            <h4>Joya de Cerén</h4>
+                            <p>Recorrido por la aldea maya sepultada por cenizas, Patrimonio de la Humanidad.</p>
+                            <a class="video-fuente" href="https://www.youtube.com/watch?v=m8Yu0GxESeM" target="_blank" rel="noopener">Telemadrid · YouTube <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg></a>
                         </div>
-                    </div>
-                    
-                    <div class="tour-card" style="background: rgba(255,255,255,0.1); border-radius: 1rem; overflow: hidden;">
-                        <div class="tour-preview" style="height: 200px; background: var(--secondary-blue); display: flex; align-items: center; justify-content: center;">
-                            <div style="text-align: center; color: white;">
-                                <div style="font-size: 4rem; margin-bottom: 1rem;">🏖️</div>
-                                <h4>Tour Playas del Pacífico</h4>
-                            </div>
+                    </article>
+                    <article class="video-tarjeta" data-video="va8-rUjCnYc">
+                        <button type="button" class="video-portada" aria-label="Reproducir: Surf en Playa El Tunco">
+                            <img src="img/galeria/videos/va8-rUjCnYc.jpg" alt="" loading="lazy">
+                            <span class="video-play"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg></span>
+                            <span class="video-duracion">8:54</span>
+                        </button>
+                        <div class="video-info">
+                            <h4>Surf en Playa El Tunco</h4>
+                            <p>Olas, roca y comunidad surfista en la costa de La Libertad.</p>
+                            <a class="video-fuente" href="https://www.youtube.com/watch?v=va8-rUjCnYc" target="_blank" rel="noopener">Surfing Republica · YouTube <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg></a>
                         </div>
-                        <div style="padding: 1.5rem;">
-                            <p style="margin-bottom: 1rem; opacity: 0.8;">Siente la brisa marina y las olas del surf</p>
-                            <button class="btn secondary">🎮 Iniciar Tour</button>
+                    </article>
+                    <article class="video-tarjeta" data-video="3-4_4Y-dJTw">
+                        <button type="button" class="video-portada" aria-label="Reproducir: El origen de las pupusas">
+                            <img src="img/galeria/videos/3-4_4Y-dJTw.jpg" alt="" loading="lazy">
+                            <span class="video-play"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg></span>
+                            <span class="video-duracion">2:44</span>
+                        </button>
+                        <div class="video-info">
+                            <h4>El origen de las pupusas</h4>
+                            <p>La historia del plato nacional, del comal a la mesa.</p>
+                            <a class="video-fuente" href="https://www.youtube.com/watch?v=3-4_4Y-dJTw" target="_blank" rel="noopener">Canal 12 El Salvador · YouTube <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg></a>
                         </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Video Gallery -->
-            <div class="video-gallery" style="margin-top: 4rem;">
-                <h2 style="text-align: center; margin-bottom: 2rem; font-size: 2.5rem;">Videos Destacados</h2>
-                <div class="videos-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
-                    <div class="video-item" style="background: rgba(255,255,255,0.1); border-radius: 1rem; overflow: hidden;">
-                        <div class="video-placeholder" style="height: 180px; background: var(--secondary-blue); display: flex; align-items: center; justify-content: center; color: white;">
-                            <div style="text-align: center;">
-                                <div style="font-size: 3rem; margin-bottom: 0.5rem;">▶️</div>
-                                <p>Video: El Salvador Aéreo</p>
-                            </div>
-                        </div>
-                        <div style="padding: 1.5rem;">
-                            <h4>Paisajes desde el Cielo</h4>
-                            <p style="opacity: 0.8;">Vistas aéreas espectaculares de nuestros destinos más hermosos</p>
-                        </div>
-                    </div>
-                    
-                    <div class="video-item" style="background: rgba(255,255,255,0.1); border-radius: 1rem; overflow: hidden;">
-                        <div class="video-placeholder" style="height: 180px; background: var(--secondary-blue); display: flex; align-items: center; justify-content: center; color: white;">
-                            <div style="text-align: center;">
-                                <div style="font-size: 3rem; margin-bottom: 0.5rem;">▶️</div>
-                                <p>Video: Cultura Viva</p>
-                            </div>
-                        </div>
-                        <div style="padding: 1.5rem;">
-                            <h4>Tradiciones Salvadoreñas</h4>
-                            <p style="opacity: 0.8;">Inmersión en nuestras festividades y costumbres ancestrales</p>
-                        </div>
-                    </div>
-                    
-                    <div class="video-item" style="background: rgba(255,255,255,0.1); border-radius: 1rem; overflow: hidden;">
-                        <div class="video-placeholder" style="height: 180px; background: var(--secondary-blue); display: flex; align-items: center; justify-content: center; color: white;">
-                            <div style="text-align: center;">
-                                <div style="font-size: 3rem; margin-bottom: 0.5rem;">▶️</div>
-                                <p>Video: Aventuras Extremas</p>
-                            </div>
-                        </div>
-                        <div style="padding: 1.5rem;">
-                            <h4>Deportes de Aventura</h4>
-                            <p style="opacity: 0.8;">Surf, senderismo y escalada en los mejores spots del país</p>
-                        </div>
-                    </div>
+                    </article>
                 </div>
             </div>
         </div>

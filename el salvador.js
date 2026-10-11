@@ -932,8 +932,7 @@ function aplicarFiltrosDestinos() {
         if (!card.dataset.busqueda) {
             card.dataset.busqueda = normalizarTexto(card.textContent.replace(/\s+/g, ' '));
         }
-        const esPrincipal = card.classList.contains('destination-card');
-        const pasaFiltro = !esPrincipal || estadoDestinos.filtro === 'all' || card.dataset.category === estadoDestinos.filtro;
+        const pasaFiltro = estadoDestinos.filtro === 'all' || card.dataset.category === estadoDestinos.filtro;
         const pasaTexto = palabras.every(p => card.dataset.busqueda.includes(p));
         const mostrar = pasaFiltro && pasaTexto;
         card.classList.toggle('dest-oculta', !mostrar);

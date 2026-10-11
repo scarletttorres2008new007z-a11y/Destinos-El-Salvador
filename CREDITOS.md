@@ -68,6 +68,19 @@ Las fotografías de la página **Galería** provienen de Wikimedia Commons. Se d
 | Cocina Criolla | `17.jpg` | Ll1324 | [CC0](https://creativecommons.org/publicdomain/zero/1.0/deed.es) | [Typical Pupuseria setup in El Salvador.jpg](https://commons.wikimedia.org/wiki/File:Typical_Pupuseria_setup_in_El_Salvador.jpg) |
 | Café de Altura | `18.jpg` | The Cockroach | [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/deed.es) | [Coffee Processing in Ahuachapan, El Salvador.jpg](https://commons.wikimedia.org/wiki/File:Coffee_Processing_in_Ahuachapan,_El_Salvador.jpg) |
 
+### Videos destacados
+
+Los videos se reproducen directamente desde YouTube (no se copian al sitio) y pertenecen a sus autores. Las portadas en `img/galeria/videos/` son las miniaturas que YouTube publica para cada video.
+
+| Video | Autor (canal de YouTube) | Enlace |
+|---|---|---|
+| Descubre El Salvador: Turismo | El Salvador Marca País | https://www.youtube.com/watch?v=YqIft_I27RI |
+| El Salvador 4k by Drone / Coatepeque | Alvaro Mayorga: Salvadorean Traveler | https://www.youtube.com/watch?v=2dAN5pnZC6w |
+| ¡Conoce los seis destinos turísticos de la Ruta de las Flores! | La Prensa Gráfica | https://www.youtube.com/watch?v=7E97fRk45Ms |
+| Joya de Cerén, la Pompeya de Centroamérica | Telemadrid | https://www.youtube.com/watch?v=m8Yu0GxESeM |
+| Episodio 2: Playa El Tunco, El Salvador | Surfing Republica | https://www.youtube.com/watch?v=va8-rUjCnYc |
+| Origen de las pupusas en El Salvador | Canal 12 El Salvador | https://www.youtube.com/watch?v=3-4_4Y-dJTw |
+
 ## Contacto
 
 La foto del encabezado de la página **Contacto** proviene de Wikimedia Commons y se guarda en `img/contacto/encabezado.jpg` (copia redimensionada de la original). Conserva su licencia original; el crédito también aparece en la esquina del encabezado.
