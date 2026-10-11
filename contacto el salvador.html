@@ -751,7 +751,7 @@
 
     <script src="el salvador.js"></script>
     
-    <script src="envia gmail es.js"></script>
+    <script src="api.js"></script>
     <script>
         // Contact tabs functionality
         document.addEventListener('DOMContentLoaded', function() {
@@ -783,8 +783,9 @@
                 });
             }
 
-            // Formularios de contacto y reserva: validación con mensajes visuales.
-            // El sitio no tiene servidor: al completar se ofrece enviar la solicitud por correo.
+            // Formularios de contacto, reserva y colaboración: validación con mensajes visuales.
+            // Con el servidor (backend) encendido, la solicitud se guarda y se avisa a la agencia;
+            // sin servidor (por ejemplo, abriendo el archivo directo), se ofrece enviarla por correo.
             const hoy = new Date();
             const hoyTexto = new Date(hoy.getTime() - hoy.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
             const correoValido = v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
@@ -796,6 +797,11 @@
                 const aviso = document.getElementById(cfg.aviso);
                 const exito = document.getElementById(cfg.exito);
                 const mailto = document.getElementById(cfg.mailto);
+                const exitoTexto = exito.querySelector('p');
+                const textoCorreo = exitoTexto.textContent;
+                const botonEnviar = form.querySelector('[type="submit"]');
+                const botonVolver = document.getElementById(cfg.volver);
+                const textoVolver = botonVolver.textContent;
 
                 function textoDe(nombre) {
                     const campo = form.elements[nombre];
@@ -846,16 +852,64 @@
                     }
 
                     aviso.hidden = true;
-                    const cuerpo = cfg.lineas(textoDe).join('\n');
-                    mailto.href = 'mailto:' + cfg.correo + '?subject=' +
-                        encodeURIComponent(cfg.asunto + ' - ' + textoDe('nombre')) +
-                        '&body=' + encodeURIComponent(cuerpo);
-
                     const primerNombre = textoDe('nombre').split(' ')[0];
-                    document.getElementById(cfg.titulo).textContent = cfg.textoTitulo + ', ' + primerNombre + '!';
-                    form.hidden = true;
-                    exito.hidden = false;
-                    exito.focus();
+
+                    function mostrarExito(titulo, texto, conCorreo) {
+                        document.getElementById(cfg.titulo).textContent = titulo + ', ' + primerNombre + '!';
+                        exitoTexto.textContent = texto;
+                        mailto.style.display = conCorreo ? '' : 'none';
+                        // Ya guardada en el servidor: volver abre el formulario limpio para otra solicitud
+                        botonVolver.textContent = conCorreo ? textoVolver : 'Enviar otra solicitud';
+                        if (!conCorreo) {
+                            form.reset();
+                            form.querySelectorAll('.campo').forEach(grupo => grupo.classList.remove('correcto', 'invalido'));
+                        }
+                        form.hidden = true;
+                        exito.hidden = false;
+                        exito.focus();
+                    }
+
+                    function ofrecerCorreo() {
+                        const cuerpo = cfg.lineas(textoDe).join('\n');
+                        mailto.href = 'mailto:' + cfg.correo + '?subject=' +
+                            encodeURIComponent(cfg.asunto + ' - ' + textoDe('nombre')) +
+                            '&body=' + encodeURIComponent(cuerpo);
+                        mostrarExito(cfg.textoTitulo, textoCorreo, true);
+                    }
+
+                    if (!DestinosAPI.disponible) {
+                        ofrecerCorreo();
+                        return;
+                    }
+
+                    botonEnviar.disabled = true;
+                    DestinosAPI.enviar(cfg.ruta, cfg.datos())
+                        .then(respuesta => mostrarExito(cfg.textoEnviado, cfg.textoRespuesta(respuesta), false))
+                        .catch(error => {
+                            if (error.tipo !== 'datos') {
+                                ofrecerCorreo();
+                                return;
+                            }
+                            // El servidor no aceptó algún dato: se marca igual que la validación de la página
+                            const campos = Object.keys(error.errores);
+                            campos.forEach(nombre => {
+                                const campo = form.elements[nombre];
+                                const grupo = campo && campo.closest ? campo.closest('.campo') : null;
+                                if (grupo) {
+                                    grupo.classList.add('invalido');
+                                    grupo.classList.remove('correcto');
+                                    campo.setAttribute('aria-invalid', 'true');
+                                } else if (cfg.marcarExtra) {
+                                    cfg.marcarExtra(nombre);
+                                }
+                            });
+                            const mensajes = campos.map(nombre => error.errores[nombre]);
+                            aviso.textContent = mensajes.length ? mensajes.join(' ') : error.mensaje;
+                            aviso.hidden = false;
+                            const primero = campos.map(nombre => form.elements[nombre]).find(campo => campo && campo.focus);
+                            if (primero) primero.focus();
+                        })
+                        .finally(() => { botonEnviar.disabled = false; });
                 });
 
                 document.getElementById(cfg.volver).addEventListener('click', function() {
@@ -868,10 +922,24 @@
             const fechaViaje = document.getElementById('fechaViaje');
             if (fechaViaje) fechaViaje.min = hoyTexto;
 
+            // Datos que se mandan al servidor: el valor de cada campo, sin espacios sobrantes
+            const valoresDe = (formulario, nombres) => {
+                const datos = {};
+                nombres.forEach(nombre => {
+                    const valor = formulario.elements[nombre].value.trim();
+                    datos[nombre] = valor === '' ? null : valor;
+                });
+                return datos;
+            };
+
             prepararFormulario({
                 form: 'contactForm', aviso: 'contactoAviso', exito: 'contactoExito',
                 mailto: 'contactoMailto', titulo: 'contactoExitoTitulo', volver: 'contactoVolver',
                 textoTitulo: '¡Formulario completo', correo: 'info@svelsalvador.com', asunto: 'Solicitud de viaje',
+                ruta: '/api/contacto', textoEnviado: '¡Solicitud enviada',
+                textoRespuesta: r => r.mensaje,
+                datos: () => valoresDe(document.getElementById('contactForm'),
+                    ['nombre', 'email', 'telefono', 'pais', 'interes', 'presupuesto', 'fechaViaje', 'duracion', 'mensaje']),
                 reglas: {
                     nombre: v => v.length >= 2,
                     email: correoValido,
@@ -920,6 +988,13 @@
                 form: 'reservationForm', aviso: 'reservaAviso', exito: 'reservaExito',
                 mailto: 'reservaMailto', titulo: 'reservaExitoTitulo', volver: 'reservaVolver',
                 textoTitulo: '¡Reserva lista', correo: 'reservas@svelsalvador.com', asunto: 'Solicitud de reserva',
+                ruta: '/api/reservas', textoEnviado: '¡Reserva recibida',
+                textoRespuesta: r => 'Tu código de reserva es ' + r.codigo + '. Guárdalo para cualquier consulta. ' + r.mensaje,
+                datos: () => Object.assign({ paquete: paqueteElegido().value }, valoresDe(document.getElementById('reservationForm'),
+                    ['nombre', 'email', 'telefono', 'fechaInicio', 'fechaFin', 'personas', 'hospedaje', 'comentarios'])),
+                marcarExtra: nombre => {
+                    if (nombre === 'paquete') reservaPaqueteCampo.classList.add('invalido');
+                },
                 reglas: {
                     nombre: v => v.length >= 2,
                     email: correoValido,
@@ -985,6 +1060,10 @@
                 form: 'collaborationForm', aviso: 'colaboraAviso', exito: 'colaboraExito',
                 mailto: 'colaboraMailto', titulo: 'colaboraExitoTitulo', volver: 'colaboraVolver',
                 textoTitulo: '¡Propuesta lista', correo: 'info@svelsalvador.com', asunto: 'Propuesta de colaboración',
+                ruta: '/api/colaboraciones', textoEnviado: '¡Propuesta enviada',
+                textoRespuesta: r => r.mensaje,
+                datos: () => valoresDe(document.getElementById('collaborationForm'),
+                    ['nombre', 'email', 'tipo', 'web', 'redes', 'propuesta']),
                 reglas: {
                     nombre: v => v.length >= 2,
                     email: correoValido,
@@ -1006,6 +1085,27 @@
                     t('propuesta')
                 ]
             });
+
+            // Paquetes: con el servidor encendido, nombre, duración, descripción y precio salen de la base de datos.
+            // Si no hay servidor se quedan los que están escritos en esta página.
+            if (DestinosAPI.disponible && document.querySelector('.paquete-radio')) {
+                DestinosAPI.obtener('/api/paquetes').then(paquetes => {
+                    paquetes.forEach(p => {
+                        const radio = document.querySelector('.paquete-radio[value="' + p.codigo + '"]');
+                        if (!radio) return;
+                        const tarjeta = radio.closest('.paquete');
+                        tarjeta.querySelector('h4').textContent = p.nombre;
+                        tarjeta.querySelector('.paquete-descripcion').textContent = p.descripcion;
+                        tarjeta.querySelector('.paquete-precio').textContent = p.precioUsd === null ? 'Cotizar' : '$' + Number(p.precioUsd).toLocaleString('en-US');
+                        const duracion = tarjeta.querySelector('.paquete-duracion');
+                        const texto = Array.from(duracion.childNodes).reverse().find(n => n.nodeType === Node.TEXT_NODE);
+                        if (texto) {
+                            texto.textContent = p.dias ? ' ' + p.dias + (p.dias === 1 ? ' día' : ' días') + ' / ' +
+                                p.noches + (p.noches === 1 ? ' noche' : ' noches') : ' A tu medida';
+                        }
+                    });
+                }).catch(() => {});
+            }
 
             // Selección de paquete: marca la tarjeta elegida
             const paqueteRadios = document.querySelectorAll('.paquete-radio');
