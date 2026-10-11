@@ -5857,11 +5857,6 @@ body.dossier-open {
     outline-offset: 2px;
 }
 
-.cultura-explora {
-    min-height: 0;
-    padding-top: 4rem;
-}
-
 @media (min-width: 900px) {
     .museo-3d.con-seleccion .museo-carrusel {
         transform: translateX(-21%);
@@ -6940,4 +6935,38 @@ body.dossier-open {
     .nos-modal-datos {
         grid-template-columns: 1fr;
     }
+}
+
+/* Destinos: buscador y expedientes secretos */
+.dest-oculta {
+    display: none !important;
+}
+
+.dest-sin-resultados {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    padding: 1rem 1.25rem;
+    border-radius: var(--border-radius);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+}
+
+.page-section .search-input {
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.page-section .search-input::placeholder {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.page-section .search-input:focus {
+    outline: none;
+    border-color: var(--accent-orange) !important;
+    background: rgba(255, 255, 255, 0.16) !important;
+}
+
+.page-section > .container > .expedientes:last-child {
+    margin-top: 4rem;
+    margin-bottom: -4rem;
 }

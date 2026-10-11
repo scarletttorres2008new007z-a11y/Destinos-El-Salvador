@@ -913,54 +913,82 @@ function showNotification(message, type = 'info') {
     }, 3500);
 }
 
-// Filter functionality for destination pages
+// Destinos: buscador y filtros por categoría trabajan juntos.
+// Busca en nombre, lugar, descripción, actividades y etiquetas, sin
+// importar mayúsculas ni tildes ("volcan" encuentra "Volcán").
+const estadoDestinos = { filtro: 'all', texto: '' };
+
+function normalizarTexto(texto) {
+    return (texto || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim();
+}
+
+function aplicarFiltrosDestinos() {
+    const grid = document.querySelector('.destinations-grid');
+    if (!grid) return;
+    const palabras = normalizarTexto(estadoDestinos.texto).split(/\s+/).filter(Boolean);
+    let visibles = 0;
+
+    document.querySelectorAll('.destination-card, .gem-card').forEach(card => {
+        if (!card.dataset.busqueda) {
+            card.dataset.busqueda = normalizarTexto(card.textContent.replace(/\s+/g, ' '));
+        }
+        const esPrincipal = card.classList.contains('destination-card');
+        const pasaFiltro = !esPrincipal || estadoDestinos.filtro === 'all' || card.dataset.category === estadoDestinos.filtro;
+        const pasaTexto = palabras.every(p => card.dataset.busqueda.includes(p));
+        const mostrar = pasaFiltro && pasaTexto;
+        card.classList.toggle('dest-oculta', !mostrar);
+        if (mostrar) visibles++;
+    });
+
+    // Las joyas escondidas se ocultan como bloque si ninguna coincide
+    const joyas = document.querySelector('.hidden-gems');
+    if (joyas) {
+        joyas.classList.toggle('dest-oculta', !joyas.querySelector('.gem-card:not(.dest-oculta)'));
+    }
+
+    let aviso = document.querySelector('.dest-sin-resultados');
+    if (!aviso) {
+        aviso = document.createElement('p');
+        aviso.className = 'dest-sin-resultados';
+        aviso.setAttribute('role', 'status');
+        grid.parentNode.insertBefore(aviso, grid);
+    }
+    aviso.textContent = visibles ? '' : 'No encontramos destinos con "' + estadoDestinos.texto.trim() + '". Prueba con otra palabra, por ejemplo playa, volcán o Suchitoto.';
+    aviso.hidden = visibles > 0;
+}
+
 function initializeFilters() {
-    // La Galería tiene su propio filtrado en galeria.js
-    const filterBtns = document.querySelectorAll('.filter-btn:not(.gallery-filters .filter-btn)');
-    const cards = document.querySelectorAll('.destination-card');
+    // Solo los filtros del buscador de Destinos (la Galería y Contacto tienen los suyos)
+    const filterBtns = document.querySelectorAll('.search-section .filter-btn');
 
     filterBtns.forEach(btn => {
         btn.addEventListener('click', function() {
-            const filter = this.dataset.filter;
-            
-            // Update active button
             filterBtns.forEach(b => b.classList.remove('active'));
             this.classList.add('active');
-            
-            // Filter cards
-            cards.forEach(card => {
-                if (filter === 'all' || card.dataset.category === filter) {
-                    card.style.display = 'block';
-                    card.style.animation = 'fadeIn 0.5s ease';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
+            estadoDestinos.filtro = this.dataset.filter;
+            aplicarFiltrosDestinos();
         });
     });
 }
 
-// Search functionality
 function initializeSearch() {
     const searchInput = document.querySelector('.search-input');
-    const cards = document.querySelectorAll('.destination-card, .place-card');
+    if (!searchInput) return;
 
-    if (searchInput) {
-        searchInput.addEventListener('input', function() {
-            const searchTerm = this.value.toLowerCase();
-            
-            cards.forEach(card => {
-                const title = card.querySelector('h4').textContent.toLowerCase();
-                const description = card.querySelector('.description, p').textContent.toLowerCase();
-                
-                if (title.includes(searchTerm) || description.includes(searchTerm)) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        });
-    }
+    searchInput.setAttribute('aria-label', 'Buscar destinos');
+    searchInput.addEventListener('input', debounce(function() {
+        estadoDestinos.texto = searchInput.value;
+        aplicarFiltrosDestinos();
+    }, 150));
+
+    // Escape limpia la búsqueda
+    searchInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && this.value) {
+            this.value = '';
+            estadoDestinos.texto = '';
+            aplicarFiltrosDestinos();
+        }
+    });
 }
 
 // Image lazy loading
