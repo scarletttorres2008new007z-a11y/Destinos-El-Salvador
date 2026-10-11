@@ -2,23 +2,25 @@
 
 Java 21 + Spring Boot 3 + MySQL 8. Sirve las páginas del sitio (las de la raíz del repositorio, sin cambios) y una API REST en `/api`.
 
-## Arrancarlo en tu computadora
+## Arrancarlo en tu computadora (lo más fácil)
 
-Necesitas Java 21, Maven y Docker Desktop.
+Solo necesitas **Java 21** ([descargar](https://adoptium.net/es/temurin/releases/?version=21)). No hace falta instalar MySQL, Docker ni Maven.
 
-1. En la raíz del repositorio, levanta MySQL:
+1. Haz doble clic en `iniciar-servidor.bat` (en la raíz del proyecto).
+2. Espera a que aparezca «Started DestinosApplication». La primera vez tarda unos minutos.
+3. Abre http://localhost:8080 en el navegador.
 
-   ```
-   docker compose up -d
-   ```
+Así usa una base de datos compatible con MySQL guardada en `backend/datos/`. Para apagarlo, cierra la ventana negra.
 
-2. En la carpeta `backend/`, arranca el servidor:
+En Mac o Linux: `cd backend` y luego `./mvnw spring-boot:run -Dspring-boot.run.profiles=local`.
 
-   ```
-   mvn spring-boot:run
-   ```
+## Arrancarlo con MySQL de verdad (para publicarlo)
 
-3. Abre http://localhost:8080 en el navegador. Es el mismo sitio, ahora conectado a la base de datos.
+Necesitas Java 21 y Docker Desktop (o un MySQL 8 instalado).
+
+1. En la raíz del repositorio, levanta MySQL: `docker compose up -d`
+2. En la carpeta `backend/`: `mvnw.cmd spring-boot:run` (en Mac o Linux, `./mvnw spring-boot:run`)
+3. Abre http://localhost:8080
 
 La primera vez, Flyway crea las tablas y carga los 4 paquetes (`src/main/resources/db/migration`).
 
@@ -29,10 +31,10 @@ Si abres las páginas con doble clic (sin servidor), todo sigue funcionando como
 Cada solicitud, reserva, propuesta o foto nueva manda un aviso a la agencia. Para activarlo, crea una contraseña de aplicación en tu cuenta de Google (Seguridad > Contraseñas de aplicaciones) y arranca con:
 
 ```
-GMAIL_USUARIO=tu-cuenta@gmail.com GMAIL_CLAVE_APP=xxxxxxxxxxxxxxxx CORREO_AGENCIA=info@svelsalvador.com mvn spring-boot:run
+GMAIL_USUARIO=tu-cuenta@gmail.com GMAIL_CLAVE_APP=xxxxxxxxxxxxxxxx CORREO_AGENCIA=info@svelsalvador.com ./mvnw spring-boot:run
 ```
 
-En Windows (PowerShell): `$env:GMAIL_USUARIO="..."; $env:GMAIL_CLAVE_APP="..."; mvn spring-boot:run`
+En Windows (PowerShell): `$env:GMAIL_USUARIO="..."; $env:GMAIL_CLAVE_APP="..."; .\mvnw.cmd spring-boot:run`
 
 Sin esas variables, todo se guarda igual en MySQL y el aviso solo se anota en la consola.
 
@@ -71,7 +73,7 @@ UPDATE fotos_galeria SET estado = 'APROBADA', categoria = 'volcanoes' WHERE id =
 ## Pruebas
 
 ```
-mvn test
+./mvnw test
 ```
 
 Usan una base de datos H2 en memoria, así que no necesitan MySQL.
