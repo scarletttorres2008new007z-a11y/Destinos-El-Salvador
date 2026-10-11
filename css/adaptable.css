@@ -1,0 +1,146 @@
+/* Ajustes para tabletas y teléfonos, accesibilidad e impresión (se carga después de la hoja de cada página) */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+    
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    .mobile-menu.active {
+        display: block;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero p {
+        font-size: 1.1rem;
+    }
+    
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .quick-actions {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .places-grid,
+    .packages-grid,
+    .destinations-grid,
+    .gallery-grid,
+    .info-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .filter-tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .section-title {
+        font-size: 2.5rem;
+    }
+    
+    .page-section {
+        padding: 5rem 1rem 3rem;
+    }
+    
+    .nav-container {
+        padding: 1rem;
+    }
+
+    .logo-img {
+        height: 26px;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .testimonial-controls {
+        gap: 1rem;
+    }
+
+    .testimonials-container {
+        padding: 3rem 1.5rem 2rem;
+    }
+
+    .testimonial .testimonial-text {
+        font-size: 1.05rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .quick-actions {
+        grid-template-columns: 1fr;
+    }
+    
+    .btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    .package-card,
+    .place-card {
+        margin-bottom: 1rem;
+    }
+    
+    .floating-fab {
+        bottom: 1rem;
+        right: 1rem;
+    }
+    
+    .fab-btn {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+.btn:focus,
+.nav-link:focus,
+.filter-btn:focus {
+    outline: 3px solid var(--accent-orange);
+    outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+    .navbar,
+    .btn,
+    .filter-tabs,
+    .floating-fab {
+        display: none !important;
+    }
+    
+    .hero,
+    .page-section {
+        background: white !important;
+        color: black !important;
+    }
+}
