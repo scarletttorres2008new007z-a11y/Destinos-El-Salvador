@@ -14,7 +14,15 @@ Así usa una base de datos compatible con MySQL guardada en `backend/datos/`. Pa
 
 En Mac o Linux: `cd backend` y luego `./mvnw spring-boot:run -Dspring-boot.run.profiles=local`.
 
-### Ver los datos guardados
+### Con XAMPP (para ver los datos en phpMyAdmin)
+
+1. Abre el panel de XAMPP y pulsa **Start** en **Apache** y en **MySQL**.
+2. Haz doble clic en `iniciar-servidor.bat`. Si MySQL de XAMPP está encendido, lo usa solo (usuario `root` sin contraseña) y crea la base `destinos` la primera vez.
+3. Envía un formulario desde http://localhost:8080 y míralo en http://localhost/phpmyadmin, base `destinos`.
+
+Si tu MySQL de XAMPP tiene contraseña, ponla antes de arrancar: `set DB_CLAVE=tu-clave` en la misma ventana.
+
+### Ver los datos guardados sin XAMPP
 
 Con el servidor encendido, abre http://localhost:8080/h2-console y entra con:
 

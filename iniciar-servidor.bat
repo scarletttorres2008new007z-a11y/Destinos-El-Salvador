@@ -21,13 +21,22 @@ if not defined JDK goto :sinjava
 set "JAVA_HOME=%JDK%"
 set "PATH=%JDK%\bin;%PATH%"
 
+rem Si MySQL de XAMPP está encendido (puerto 3306) se usa ese; si no, la base de datos local en backend\datos
+set "PERFIL=local"
+netstat -an | findstr /c:"0.0.0.0:3306" /c:"127.0.0.1:3306" /c:"[::]:3306" >nul && set "PERFIL=xampp"
+
 echo.
 echo Usando Java !VERSION_JDK! en %JDK%
+if "%PERFIL%"=="xampp" (
+    echo Base de datos: MySQL de XAMPP. Mira los datos en http://localhost/phpmyadmin, base «destinos».
+) else (
+    echo Base de datos: archivo local en backend\datos. Para usar XAMPP, enciende MySQL en el panel de XAMPP y vuelve a abrir este archivo.
+)
 echo Iniciando Destinos El Salvador. La primera vez tarda unos minutos porque descarga lo necesario.
 echo Cuando aparezca "Started DestinosApplication", abre http://localhost:8080 en tu navegador.
 echo Para apagarlo, cierra esta ventana.
 echo.
-call mvnw.cmd -q spring-boot:run -Dspring-boot.run.profiles=local
+call mvnw.cmd -q spring-boot:run -Dspring-boot.run.profiles=%PERFIL%
 pause
 exit /b 0
 
