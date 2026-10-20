@@ -103,8 +103,12 @@ document.addEventListener('DOMContentLoaded', function() {
             enlace.rel = 'noopener';
             enlace.textContent = item.dataset.licencia + ', Wikimedia Commons';
             credito.append(enlace);
+        } else if (item.dataset.usuario === 'enviada') {
+            credito.textContent = 'Foto enviada por ti. Los demás visitantes la verán cuando la agencia la apruebe.';
         } else if (item.dataset.usuario) {
             credito.textContent = 'Foto agregada por ti en esta visita. Solo se ve en este navegador.';
+        } else if (item.dataset.visitante) {
+            credito.textContent = 'Foto compartida por un visitante.';
         }
 
         const varias = visibles.length > 1;
@@ -204,6 +208,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const EXTENSIONES = /\.(jpe?g|png|webp)$/i;
     const MAX_MB = 5;
     const MAX_FOTOS = 12;
+    const api = typeof DestinosAPI !== 'undefined' && DestinosAPI.disponible ? DestinosAPI : null;
     let seleccion = [];
     let contadorId = 0;
 
@@ -281,13 +286,14 @@ document.addEventListener('DOMContentLoaded', function() {
         mensaje('Selección cancelada.', 'ok');
     });
 
-    btnAgregar.addEventListener('click', () => {
+    // Pone en la galería las fotos elegidas; «enviada» indica que ya llegaron al servidor
+    function agregarAlGrid(enviada, textoFinal) {
         const nuevas = seleccion.slice();
         nuevas.reverse().forEach(foto => {
             const figura = document.createElement('figure');
             figura.className = 'gallery-item';
             figura.dataset.category = 'all';
-            figura.dataset.usuario = 'true';
+            figura.dataset.usuario = enviada ? 'enviada' : 'true';
             figura.tabIndex = 0;
             figura.setAttribute('role', 'button');
             figura.setAttribute('aria-label', 'Ampliar foto: ' + foto.archivo.name);
@@ -316,13 +322,75 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         mensajes.textContent = '';
-        mensaje((nuevas.length === 1 ? 'Se agregó 1 foto' : 'Se agregaron ' + nuevas.length + ' fotos') +
+        mensaje(textoFinal || (nuevas.length === 1 ? 'Se agregó 1 foto' : 'Se agregaron ' + nuevas.length + ' fotos') +
             ' a la galería en la categoría «Todas». Solo se ven en este navegador y se perderán al recargar la página.', 'ok');
 
         if (filtroActual !== 'all') aplicarFiltro('all');
         const filtros = document.querySelector('.gallery-filters') || grid;
         window.scrollTo({ top: filtros.getBoundingClientRect().top + window.scrollY - 90, behavior: 'smooth' });
+    }
+
+    btnAgregar.addEventListener('click', () => {
+        // Sin servidor: las fotos solo se agregan en este navegador, como antes
+        if (!api) {
+            agregarAlGrid(false);
+            return;
+        }
+        btnAgregar.disabled = true;
+        btnCancelar.disabled = true;
+        api.subirFotos(seleccion.map(f => f.archivo))
+            .then(respuesta => agregarAlGrid(true, respuesta.mensaje))
+            .catch(error => {
+                if (error.tipo === 'datos') {
+                    mensajes.textContent = '';
+                    const textos = Object.values(error.errores);
+                    mensaje(textos.length ? textos.join(' ') : error.mensaje);
+                } else {
+                    agregarAlGrid(false);
+                }
+            })
+            .finally(() => {
+                btnAgregar.disabled = false;
+                btnCancelar.disabled = false;
+            });
     });
+
+    // Con el servidor encendido: el aviso cambia y se muestran las fotos de visitantes ya aprobadas
+    if (api) {
+        const nota = document.querySelector('.subir-nota');
+        if (nota) {
+            nota.textContent = 'Las fotos se envían a la agencia. Mientras las revisa solo las ves tú; cuando las apruebe aparecerán en la galería para todos los visitantes.';
+        }
+        api.obtener('/api/galeria/fotos').then(fotos => {
+            fotos.slice().reverse().forEach(foto => {
+                const figura = document.createElement('figure');
+                figura.className = 'gallery-item';
+                figura.dataset.category = foto.categoria;
+                figura.dataset.visitante = 'true';
+                figura.dataset.full = foto.url;
+                figura.tabIndex = 0;
+                figura.setAttribute('role', 'button');
+                figura.setAttribute('aria-label', 'Ampliar foto: ' + foto.titulo);
+
+                const img = document.createElement('img');
+                img.src = foto.url;
+                img.alt = 'Foto compartida: ' + foto.titulo;
+                img.loading = 'lazy';
+
+                const pie = document.createElement('figcaption');
+                pie.className = 'gallery-overlay';
+                const h3 = document.createElement('h3');
+                h3.textContent = 'Foto de un visitante';
+                const p = document.createElement('p');
+                p.textContent = foto.titulo;
+                pie.append(h3, p);
+
+                figura.append(img, pie);
+                figura.hidden = !corresponde(figura, filtroActual);
+                grid.prepend(figura);
+            });
+        }).catch(() => {});
+    }
 });
 
 // Videos destacados: videos reales de YouTube.

@@ -1,0 +1,21 @@
+# MySQL 8 para el backend de Destinos El Salvador.
+# Uso: docker compose up -d   (luego, en backend/: mvn spring-boot:run)
+services:
+  mysql:
+    image: mysql:8.4
+    container_name: destinos-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: destinos
+      MYSQL_USER: destinos
+      MYSQL_PASSWORD: destinos
+      MYSQL_ROOT_PASSWORD: destinos-root
+      TZ: America/El_Salvador
+    command: ["--character-set-server=utf8mb4", "--collation-server=utf8mb4_unicode_ci"]
+    ports:
+      - "3306:3306"
+    volumes:
+      - destinos-datos:/var/lib/mysql
+
+volumes:
+  destinos-datos:
