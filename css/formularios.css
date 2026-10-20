@@ -1,6 +1,6 @@
 /* Filtros, formularios y cuadrículas comunes (se carga después de Inicio y Contacto, y antes de Destinos y Galería) */
 
-/* Filter Tabs */
+/* Pestañas de filtro */
 .filter-tabs {
     display: flex;
     flex-wrap: wrap;
@@ -15,16 +15,16 @@
     border-radius: 50px;
     font-weight: 600;
     cursor: pointer;
-    transition: var(--transition);
+    transition: var(--transicion);
     background: rgba(255, 255, 255, 0.1);
-    color: white;
+    color: var(--blanco);
     backdrop-filter: blur(10px);
 }
 
 .filter-btn.active {
-    background: var(--accent-orange);
+    background: var(--naranja);
     border-color: transparent;
-    box-shadow: var(--shadow-md);
+    box-shadow: var(--sombra-media);
 }
 
 .filter-btn:hover {
@@ -32,12 +32,12 @@
     background: rgba(255, 255, 255, 0.2);
 }
 
-/* Forms */
+/* Formularios */
 .contact-form {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: var(--border-radius-lg);
+    border-radius: var(--radio-grande);
     padding: 2rem;
     max-width: 800px;
     margin: 0 auto;
@@ -49,7 +49,7 @@
 
 .form-group label {
     display: block;
-    color: white;
+    color: var(--blanco);
     font-weight: 500;
     margin-bottom: 0.5rem;
 }
@@ -60,18 +60,18 @@
     width: 100%;
     padding: 1rem;
     border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: var(--border-radius);
+    border-radius: var(--radio);
     background: rgba(255, 255, 255, 0.1);
-    color: white;
+    color: var(--blanco);
     font-size: 1rem;
-    transition: var(--transition);
+    transition: var(--transicion);
 }
 
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--accent-orange);
+    border-color: var(--naranja);
     box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.2);
     transform: scale(1.02);
 }
@@ -82,26 +82,25 @@
 }
 
 .submit-btn {
-    background: var(--accent-orange);
-    color: white;
+    background: var(--naranja);
+    color: var(--blanco);
     padding: 1rem 2rem;
     border: none;
     border-radius: 50px;
     font-weight: 600;
     font-size: 1.1rem;
     cursor: pointer;
-    transition: var(--transition);
+    transition: var(--transicion);
 }
 
 .submit-btn:hover {
     transform: translateY(-2px);
-    box-shadow: var(--shadow-lg);
+    box-shadow: var(--sombra-fuerte);
 }
 
-/* Grid Layouts */
+/* Rejillas */
 .destinations-grid,
-.gallery-grid,
-.info-cards {
+.gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
@@ -114,9 +113,9 @@
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: var(--border-radius-lg);
+    border-radius: var(--radio-grande);
     overflow: hidden;
-    transition: var(--transition);
+    transition: var(--transicion);
 }
 
 .destination-card:hover,

@@ -4,19 +4,19 @@
    El Salvador oculto: expedientes secretos
    ===================================================================== */
 .expedientes {
-    --exp-ink: #10243d;
-    --exp-muted: #51647a;
-    --exp-paper: #ffffff;
-    --exp-line: #d5e0ec;
-    --exp-board: #eef3f8;
+    --exp-tinta: #10243d;
+    --exp-tenue: #51647a;
+    --exp-papel: #ffffff;
+    --exp-linea: #d5e0ec;
+    --exp-tablero: #eef3f8;
     --exp-mono: 'Courier New', Courier, ui-monospace, monospace;
     position: relative;
     width: 100vw;
     margin: 0 calc(50% - 50vw) 4rem;
     padding: 4.5rem 1.5rem 4rem;
-    background-color: var(--exp-board);
+    background-color: var(--exp-tablero);
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32'%3E%3Cpath d='M32 0H0v32' fill='none' stroke='%23dbe5f0' stroke-width='1'/%3E%3C/svg%3E");
-    color: var(--exp-ink);
+    color: var(--exp-tinta);
     text-align: left;
 }
 
@@ -43,20 +43,20 @@
     display: inline-block;
     margin-bottom: 1rem;
     padding: 0.3rem 0.8rem;
-    border: 1.5px solid #0057a6;
+    border: 1.5px solid var(--azul);
     border-radius: 4px;
     font-family: 'Courier New', Courier, ui-monospace, monospace;
     font-size: 0.78rem;
     font-weight: 700;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: #0057a6;
+    color: var(--azul);
 }
 
 .expedientes .expedientes-title {
     font-size: clamp(1.9rem, 4vw, 2.5rem);
     line-height: 1.2;
-    color: #0057a6;
+    color: var(--azul);
     margin-bottom: 1rem;
 }
 
@@ -67,19 +67,19 @@
     height: 3px;
     margin: 0.9rem auto 0;
     border-radius: 3px;
-    background: #f97316;
+    background: var(--naranja);
 }
 
 .expedientes .expedientes-intro {
     font-size: 1.1rem;
     line-height: 1.7;
-    color: var(--exp-muted);
+    color: var(--exp-tenue);
 }
 
 .expedientes .expedientes-footnote {
     margin-top: 2.5rem;
     font-size: 0.85rem;
-    color: var(--exp-muted);
+    color: var(--exp-tenue);
     text-align: center;
 }
 
@@ -101,8 +101,8 @@
     left: 0;
     padding: 0.35rem 1.1rem 0.6rem;
     border-radius: 10px 10px 0 0;
-    background: #0057a6;
-    color: #ffffff;
+    background: var(--azul);
+    color: var(--blanco);
     font-family: var(--exp-mono);
     font-size: 0.85rem;
     font-weight: 700;
@@ -113,7 +113,7 @@
     height: 100%;
     padding: 0.9rem 0.9rem 0;
     border-radius: 0 12px 12px 12px;
-    background: #0057a6;
+    background: var(--azul);
     box-shadow: 0 12px 28px rgba(0, 40, 85, 0.16);
 }
 
@@ -124,7 +124,7 @@
     height: 100%;
     padding: 0.9rem 1.1rem 1.3rem;
     border-radius: 8px 8px 0 0;
-    background: var(--exp-paper);
+    background: var(--exp-papel);
     transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
@@ -148,10 +148,10 @@
 .exp-folder-photo {
     position: relative;
     margin-bottom: 1rem;
-    border: 6px solid #ffffff;
+    border: 6px solid var(--blanco);
     box-shadow: 0 2px 8px rgba(0, 40, 85, 0.18);
     transform: rotate(-1.2deg);
-    background: #00a3da;
+    background: var(--celeste);
 }
 
 .exp-folder:nth-child(2n) .exp-folder-photo {
@@ -185,21 +185,21 @@
 .exp-tag {
     display: inline-block;
     padding: 0.15rem 0.55rem;
-    border: 1.5px solid #f97316;
+    border: 1.5px solid var(--naranja);
     border-radius: 3px;
     font-family: 'Courier New', Courier, ui-monospace, monospace;
     font-size: 0.72rem;
     font-weight: 700;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: #c2560c;
-    background: #ffffff;
+    color: var(--naranja-texto);
+    background: var(--blanco);
 }
 
 .expedientes .exp-folder-place {
     font-size: 0.85rem;
     font-weight: 600;
-    color: #00a3da;
+    color: var(--celeste);
     text-transform: uppercase;
     letter-spacing: 0.06em;
 }
@@ -208,14 +208,14 @@
     margin: 0.15rem 0 0.5rem;
     font-size: 1.25rem;
     line-height: 1.3;
-    color: #0057a6;
+    color: var(--azul);
 }
 
 .expedientes .exp-folder-intro {
     flex: 1;
     font-size: 0.92rem;
     line-height: 1.6;
-    color: var(--exp-muted);
+    color: var(--exp-tenue);
     margin-bottom: 1.2rem;
 }
 
@@ -225,12 +225,12 @@
     justify-content: space-between;
     gap: 0.75rem;
     padding-top: 1rem;
-    border-top: 1px dashed var(--exp-line);
+    border-top: 1px dashed var(--exp-linea);
 }
 
 .exp-open-btn {
-    background: #f97316;
-    color: #ffffff;
+    background: var(--naranja);
+    color: var(--blanco);
     border: none;
     padding: 0.6rem 1.3rem;
     border-radius: 2rem;
@@ -242,7 +242,7 @@
 }
 
 .exp-open-btn:hover {
-    background: #0057a6;
+    background: var(--azul);
     transform: translateY(-2px);
 }
 
@@ -252,24 +252,24 @@
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.06em;
-    color: var(--exp-muted);
+    color: var(--exp-tenue);
 }
 
 .exp-folder.is-solved .exp-folder-status {
-    color: #0057a6;
+    color: var(--azul);
 }
 
 /* Sellos */
 .exp-stamp {
     display: inline-block;
     padding: 0.25rem 0.7rem;
-    border: 2.5px solid #f97316;
+    border: 2.5px solid var(--naranja);
     border-radius: 6px;
     font-family: 'Courier New', Courier, ui-monospace, monospace;
     font-weight: 700;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: #f97316;
+    color: var(--naranja);
     transform: rotate(-8deg);
     pointer-events: none;
 }
@@ -283,8 +283,8 @@
 }
 
 .exp-folder.is-solved .exp-stamp-folder {
-    border-color: #0057a6;
-    color: #0057a6;
+    border-color: var(--azul);
+    color: var(--azul);
     animation: exp-stamp-in 0.45s ease-out both;
 }
 
@@ -309,15 +309,15 @@
 .location-link:focus-visible,
 .challenge-option:focus-visible,
 .challenge-retry:focus-visible {
-    outline: 3px solid #00a3da;
+    outline: 3px solid var(--celeste);
     outline-offset: 2px;
 }
 
 /* Expediente abierto */
 .dossier {
-    --exp-ink: #10243d;
-    --exp-muted: #51647a;
-    --exp-line: #d5e0ec;
+    --exp-tinta: #10243d;
+    --exp-tenue: #51647a;
+    --exp-linea: #d5e0ec;
     --exp-mono: 'Courier New', Courier, ui-monospace, monospace;
     position: fixed;
     inset: 0;
@@ -350,7 +350,7 @@ body.dossier-open {
     height: min(90vh, 860px);
     border-radius: 14px;
     background: #f4f7fb;
-    color: var(--exp-ink);
+    color: var(--exp-tinta);
     box-shadow: 0 24px 60px rgba(0, 0, 0, 0.3);
     overflow: hidden;
     opacity: 0;
@@ -376,9 +376,9 @@ body.dossier-open {
     align-items: flex-start;
     gap: 1rem;
     padding: 1.4rem 1.75rem 1.2rem;
-    background: #0057a6;
-    color: #ffffff;
-    border-bottom: 4px solid #f97316;
+    background: var(--azul);
+    color: var(--blanco);
+    border-bottom: 4px solid var(--naranja);
 }
 
 .dossier-header-main {
@@ -409,8 +409,8 @@ body.dossier-open {
 }
 
 .dossier-class .exp-tag {
-    border-color: #ffffff;
-    color: #ffffff;
+    border-color: var(--blanco);
+    color: var(--blanco);
     background: transparent;
 }
 
@@ -428,7 +428,7 @@ body.dossier-open {
 .dossier-status {
     align-self: center;
     padding: 0.3rem 0.75rem;
-    border: 2px solid #ffffff;
+    border: 2px solid var(--blanco);
     border-radius: 6px;
     font-family: var(--exp-mono);
     font-size: 0.78rem;
@@ -440,8 +440,8 @@ body.dossier-open {
 }
 
 .dossier.is-solved .dossier-status {
-    border-color: #f97316;
-    background: #f97316;
+    border-color: var(--naranja);
+    background: var(--naranja);
 }
 
 .dossier-close {
@@ -450,16 +450,16 @@ body.dossier-open {
     height: 40px;
     border: none;
     border-radius: 50%;
-    background: #ffffff;
-    color: #0057a6;
+    background: var(--blanco);
+    color: var(--azul);
     font-size: 1.1rem;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .dossier-close:hover {
-    background: #f97316;
-    color: #ffffff;
+    background: var(--naranja);
+    color: var(--blanco);
 }
 
 /* Pestañas unidas por una línea de conexión */
@@ -469,8 +469,8 @@ body.dossier-open {
     justify-content: space-between;
     gap: 0.25rem;
     padding: 1rem 1.75rem 0.85rem;
-    background: #ffffff;
-    border-bottom: 1px solid var(--exp-line);
+    background: var(--blanco);
+    border-bottom: 1px solid var(--exp-linea);
     overflow-x: auto;
     scrollbar-width: none;
 }
@@ -491,7 +491,7 @@ body.dossier-open {
     border: none;
     background: none;
     font-family: inherit;
-    color: var(--exp-muted);
+    color: var(--exp-tenue);
     cursor: pointer;
 }
 
@@ -502,7 +502,7 @@ body.dossier-open {
     left: calc(-50% + 18px);
     width: calc(100% - 36px);
     height: 2px;
-    background: var(--exp-line);
+    background: var(--exp-linea);
     transition: background-color 0.3s ease;
 }
 
@@ -512,7 +512,7 @@ body.dossier-open {
 
 .dossier-tab.is-visited::before,
 .dossier-tab.is-active::before {
-    background: #00a3da;
+    background: var(--celeste);
 }
 
 .dossier-tab-num {
@@ -521,9 +521,9 @@ body.dossier-open {
     justify-content: center;
     width: 32px;
     height: 32px;
-    border: 2px solid var(--exp-line);
+    border: 2px solid var(--exp-linea);
     border-radius: 50%;
-    background: #ffffff;
+    background: var(--blanco);
     font-family: var(--exp-mono);
     font-size: 0.9rem;
     font-weight: 700;
@@ -539,22 +539,22 @@ body.dossier-open {
 }
 
 .dossier-tab:hover .dossier-tab-num {
-    border-color: #00a3da;
+    border-color: var(--celeste);
 }
 
 .dossier-tab.is-visited .dossier-tab-num {
-    border-color: #00a3da;
-    color: #00a3da;
+    border-color: var(--celeste);
+    color: var(--celeste);
 }
 
 .dossier-tab.is-active .dossier-tab-num {
-    border-color: #0057a6;
-    background: #0057a6;
-    color: #ffffff;
+    border-color: var(--azul);
+    background: var(--azul);
+    color: var(--blanco);
 }
 
 .dossier-tab.is-active .dossier-tab-label {
-    color: #0057a6;
+    color: var(--azul);
     font-weight: 600;
 }
 
@@ -585,7 +585,7 @@ body.dossier-open {
     position: relative;
     padding: 1.75rem 1.75rem 1.75rem 2.75rem;
     border-radius: 8px;
-    background: #ffffff;
+    background: var(--blanco);
     box-shadow: 0 1px 3px rgba(0, 40, 85, 0.08), 6px 6px 0 #e3ebf4;
 }
 
@@ -606,12 +606,12 @@ body.dossier-open {
     font-weight: 700;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: #00a3da;
+    color: var(--celeste);
 }
 
 .dossier-doc h5 {
     font-size: 1rem;
-    color: #0057a6;
+    color: var(--azul);
     margin-bottom: 0.6rem;
 }
 
@@ -626,14 +626,14 @@ body.dossier-open {
 .dossier-context-text p {
     margin-bottom: 1rem;
     line-height: 1.75;
-    color: #24384f;
+    color: var(--azul-tinta);
 }
 
 .dossier-note {
     position: relative;
     margin-top: 1.5rem;
     padding: 1rem 1.2rem;
-    border-left: 4px solid #f97316;
+    border-left: 4px solid var(--naranja);
     background: #fff4ec;
     font-style: italic;
     line-height: 1.65;
@@ -650,11 +650,11 @@ body.dossier-open {
     font-weight: 700;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: #c2560c;
+    color: var(--naranja-texto);
 }
 
 .dossier-ficha {
-    border: 1.5px solid #0057a6;
+    border: 1.5px solid var(--azul);
     border-radius: 6px;
     overflow: hidden;
     transform: rotate(0.6deg);
@@ -663,8 +663,8 @@ body.dossier-open {
 
 .dossier-ficha-head {
     padding: 0.5rem 0.9rem;
-    background: #0057a6;
-    color: #ffffff;
+    background: var(--azul);
+    color: var(--blanco);
     font-family: var(--exp-mono);
     font-size: 0.8rem;
     font-weight: 700;
@@ -674,7 +674,7 @@ body.dossier-open {
 
 .dossier-ficha-row {
     padding: 0.6rem 0.9rem;
-    border-top: 1px dashed var(--exp-line);
+    border-top: 1px dashed var(--exp-linea);
 }
 
 .dossier-ficha-row:first-of-type {
@@ -687,13 +687,13 @@ body.dossier-open {
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--exp-muted);
+    color: var(--exp-tenue);
 }
 
 .dossier-ficha dd {
     font-size: 0.92rem;
     font-weight: 500;
-    color: var(--exp-ink);
+    color: var(--exp-tinta);
 }
 
 /* Evidencias */
@@ -713,8 +713,8 @@ body.dossier-open {
 
 .evidence-main-img {
     padding: 8px;
-    background: #ffffff;
-    border: 1px solid var(--exp-line);
+    background: var(--blanco);
+    border: 1px solid var(--exp-linea);
     box-shadow: 0 3px 10px rgba(0, 40, 85, 0.12);
 }
 
@@ -739,29 +739,29 @@ body.dossier-open {
     font-weight: 700;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: #f97316;
+    color: var(--naranja);
 }
 
 .evidence-title {
     font-size: 1.05rem;
-    color: #0057a6;
+    color: var(--azul);
 }
 
 .evidence-desc {
     line-height: 1.6;
-    color: #24384f;
+    color: var(--azul-tinta);
 }
 
 .evidence-credit {
     font-size: 0.8rem;
-    color: var(--exp-muted);
+    color: var(--exp-tenue);
 }
 
 .evidence-credit a,
 .dossier-sources a,
 .location-map figcaption a,
 .location-osm-link {
-    color: #0057a6;
+    color: var(--azul);
     text-decoration: underline;
     text-underline-offset: 2px;
 }
@@ -774,15 +774,15 @@ body.dossier-open {
 
 .evidence-thumb {
     padding: 6px 6px 4px;
-    border: 1px solid var(--exp-line);
-    background: #ffffff;
+    border: 1px solid var(--exp-linea);
+    background: var(--blanco);
     box-shadow: 0 2px 6px rgba(0, 40, 85, 0.1);
     font-family: var(--exp-mono);
     font-size: 0.72rem;
     font-weight: 700;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: var(--exp-muted);
+    color: var(--exp-tenue);
     cursor: pointer;
     transform: rotate(-1.5deg);
     transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
@@ -805,8 +805,8 @@ body.dossier-open {
 }
 
 .evidence-thumb.is-active {
-    border: 2px solid #f97316;
-    color: #c2560c;
+    border: 2px solid var(--naranja);
+    color: var(--naranja-texto);
     transform: rotate(0deg);
 }
 
@@ -818,11 +818,11 @@ body.dossier-open {
     gap: 0.75rem 1.25rem;
     margin-bottom: 1.25rem;
     font-size: 0.92rem;
-    color: var(--exp-muted);
+    color: var(--exp-tenue);
 }
 
 .clues-count strong {
-    color: #0057a6;
+    color: var(--azul);
 }
 
 .clues-bar {
@@ -834,12 +834,12 @@ body.dossier-open {
     width: 26px;
     height: 6px;
     border-radius: 3px;
-    background: var(--exp-line);
+    background: var(--exp-linea);
     transition: background-color 0.3s ease;
 }
 
 .clues-bar span.is-on {
-    background: #f97316;
+    background: var(--naranja);
 }
 
 .clues-list {
@@ -850,14 +850,14 @@ body.dossier-open {
 }
 
 .clue {
-    border: 1px solid var(--exp-line);
+    border: 1px solid var(--exp-linea);
     border-radius: 8px;
-    background: #ffffff;
+    background: var(--blanco);
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .clue.is-open {
-    border-color: #00a3da;
+    border-color: var(--celeste);
     box-shadow: 0 4px 14px rgba(0, 87, 166, 0.08);
 }
 
@@ -871,7 +871,7 @@ body.dossier-open {
     background: none;
     font-family: inherit;
     text-align: left;
-    color: var(--exp-ink);
+    color: var(--exp-tinta);
     cursor: pointer;
 }
 
@@ -890,8 +890,8 @@ body.dossier-open {
 }
 
 .clue.is-open .clue-num {
-    background: #00a3da;
-    color: #ffffff;
+    background: var(--celeste);
+    color: var(--blanco);
 }
 
 .clue-title {
@@ -915,7 +915,7 @@ body.dossier-open {
     width: 14px;
     height: 2px;
     border-radius: 2px;
-    background: #f97316;
+    background: var(--naranja);
     transition: transform 0.3s ease;
 }
 
@@ -944,9 +944,9 @@ body.dossier-open {
 .clue-panel p {
     margin: 0 1.1rem 1rem;
     padding: 0.85rem 0 0;
-    border-top: 1px dashed var(--exp-line);
+    border-top: 1px dashed var(--exp-linea);
     line-height: 1.7;
-    color: #24384f;
+    color: var(--azul-tinta);
     opacity: 0;
     transform: translateY(-4px);
     transition: opacity 0.35s ease, transform 0.35s ease;
@@ -967,10 +967,10 @@ body.dossier-open {
 .known-group {
     position: relative;
     padding: 1.25rem 1.25rem 1.1rem;
-    border: 1px solid var(--exp-line);
-    border-top: 4px solid #0057a6;
+    border: 1px solid var(--exp-linea);
+    border-top: 4px solid var(--azul);
     border-radius: 6px;
-    background: #ffffff;
+    background: var(--blanco);
 }
 
 .known-group ul {
@@ -980,7 +980,7 @@ body.dossier-open {
 .known-group li {
     margin-bottom: 0.5rem;
     line-height: 1.6;
-    color: #24384f;
+    color: var(--azul-tinta);
     font-size: 0.93rem;
 }
 
@@ -988,36 +988,36 @@ body.dossier-open {
     display: inline-block;
     margin-bottom: 0.6rem;
     padding: 0.1rem 0.5rem;
-    border: 2px solid #0057a6;
+    border: 2px solid var(--azul);
     border-radius: 4px;
     font-family: var(--exp-mono);
     font-size: 0.7rem;
     font-weight: 700;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: #0057a6;
+    color: var(--azul);
     transform: rotate(-3deg);
 }
 
 .known-debate {
-    border-top-color: #f97316;
+    border-top-color: var(--naranja);
 }
 
 .known-debate .known-stamp {
-    border-color: #f97316;
-    color: #c2560c;
+    border-color: var(--naranja);
+    color: var(--naranja-texto);
 }
 
 .known-debate h5 {
-    color: #c2560c;
+    color: var(--naranja-texto);
 }
 
 .known-interp {
-    border-top-color: #00a3da;
+    border-top-color: var(--celeste);
 }
 
 .known-interp .known-stamp {
-    border-color: #00a3da;
+    border-color: var(--celeste);
     color: #0077a3;
 }
 
@@ -1042,7 +1042,7 @@ body.dossier-open {
 .dossier-sources {
     margin-top: 1.75rem;
     padding-top: 1.25rem;
-    border-top: 1px dashed var(--exp-line);
+    border-top: 1px dashed var(--exp-linea);
 }
 
 .dossier-sources ol {
@@ -1053,7 +1053,7 @@ body.dossier-open {
     margin-bottom: 0.45rem;
     font-size: 0.88rem;
     line-height: 1.55;
-    color: var(--exp-muted);
+    color: var(--exp-tenue);
 }
 
 /* Ubicación */
@@ -1071,7 +1071,7 @@ body.dossier-open {
 .location-map-frame {
     position: relative;
     padding: 0;
-    border: 6px solid #ffffff;
+    border: 6px solid var(--blanco);
     box-shadow: 0 3px 10px rgba(0, 40, 85, 0.15);
 }
 
@@ -1089,7 +1089,7 @@ body.dossier-open {
 }
 
 .location-lines line {
-    stroke: #f97316;
+    stroke: var(--naranja);
     stroke-width: 2;
     stroke-dasharray: 6 5;
     vector-effect: non-scaling-stroke;
@@ -1101,9 +1101,9 @@ body.dossier-open {
     height: 16px;
     margin: -8px 0 0 -8px;
     padding: 0;
-    border: 3px solid #ffffff;
+    border: 3px solid var(--blanco);
     border-radius: 50%;
-    background: #0057a6;
+    background: var(--azul);
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
     cursor: pointer;
     transition: transform 0.3s ease;
@@ -1118,7 +1118,7 @@ body.dossier-open {
     width: 22px;
     height: 22px;
     margin: -11px 0 0 -11px;
-    background: #f97316;
+    background: var(--naranja);
     cursor: default;
     transform: none;
 }
@@ -1130,49 +1130,49 @@ body.dossier-open {
     transform: translateY(-50%);
     padding: 0.15rem 0.45rem;
     border-radius: 3px;
-    background: #ffffff;
+    background: var(--blanco);
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
     font-family: var(--exp-mono);
     font-size: 0.68rem;
     font-weight: 700;
     white-space: nowrap;
-    color: #0057a6;
+    color: var(--azul);
 }
 
 .map-pin.is-current .map-pin-label {
     left: 50%;
     top: calc(100% + 6px);
     transform: translateX(-50%);
-    background: #f97316;
-    color: #ffffff;
+    background: var(--naranja);
+    color: var(--blanco);
 }
 
 .location-map figcaption {
     margin-top: 0.6rem;
     font-size: 0.75rem;
-    color: var(--exp-muted);
+    color: var(--exp-tenue);
 }
 
 .location-coords {
     display: inline-block;
     margin-bottom: 0.6rem;
     padding: 0.25rem 0.6rem;
-    border: 1.5px dashed #0057a6;
+    border: 1.5px dashed var(--azul);
     border-radius: 4px;
     font-family: var(--exp-mono);
     font-size: 0.85rem;
     font-weight: 700;
-    color: #0057a6;
+    color: var(--azul);
 }
 
 .location-ref {
     margin-bottom: 1rem;
     line-height: 1.6;
-    color: #24384f;
+    color: var(--azul-tinta);
 }
 
 .location-osm {
-    border: 1px solid var(--exp-line);
+    border: 1px solid var(--exp-linea);
     background: #eef3f8;
 }
 
@@ -1200,7 +1200,7 @@ body.dossier-open {
     font-weight: 700;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: #c2560c;
+    color: var(--naranja-texto);
 }
 
 .location-link {
@@ -1208,15 +1208,15 @@ body.dossier-open {
     width: 100%;
     margin-bottom: 0.6rem;
     padding: 0.75rem 0.9rem;
-    border: 1px solid var(--exp-line);
-    border-left: 4px solid #f97316;
+    border: 1px solid var(--exp-linea);
+    border-left: 4px solid var(--naranja);
     border-radius: 4px;
-    background: #ffffff;
+    background: var(--blanco);
     font-family: inherit;
     font-size: 0.88rem;
     line-height: 1.5;
     text-align: left;
-    color: #24384f;
+    color: var(--azul-tinta);
     cursor: pointer;
     transition: border-color 0.3s ease, transform 0.3s ease;
 }
@@ -1228,11 +1228,11 @@ body.dossier-open {
     font-size: 0.75rem;
     font-weight: 700;
     letter-spacing: 0.06em;
-    color: #0057a6;
+    color: var(--azul);
 }
 
 .location-link:hover {
-    border-color: #00a3da;
+    border-color: var(--celeste);
     transform: translateX(3px);
 }
 
@@ -1242,7 +1242,7 @@ body.dossier-open {
     font-size: 1.15rem;
     font-weight: 600;
     line-height: 1.5;
-    color: #0057a6;
+    color: var(--azul);
 }
 
 .challenge-options {
@@ -1256,20 +1256,20 @@ body.dossier-open {
     align-items: center;
     gap: 0.85rem;
     padding: 0.9rem 1rem;
-    border: 1.5px solid var(--exp-line);
+    border: 1.5px solid var(--exp-linea);
     border-radius: 8px;
-    background: #ffffff;
+    background: var(--blanco);
     font-family: inherit;
     font-size: 0.93rem;
     line-height: 1.45;
     text-align: left;
-    color: var(--exp-ink);
+    color: var(--exp-tinta);
     cursor: pointer;
     transition: border-color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
 }
 
 .challenge-option:hover:not(:disabled) {
-    border-color: #00a3da;
+    border-color: var(--celeste);
     transform: translateY(-2px);
 }
 
@@ -1288,7 +1288,7 @@ body.dossier-open {
     background: #e6f6fc;
     font-family: var(--exp-mono);
     font-weight: 700;
-    color: #0057a6;
+    color: var(--azul);
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -1302,31 +1302,31 @@ body.dossier-open {
 }
 
 .challenge-option.is-correct {
-    border-color: #0057a6;
+    border-color: var(--azul);
     background: #eaf3fb;
 }
 
 .challenge-option.is-correct .challenge-letter {
-    background: #0057a6;
-    color: #ffffff;
+    background: var(--azul);
+    color: var(--blanco);
 }
 
 .challenge-option.is-correct .challenge-mark {
-    color: #0057a6;
+    color: var(--azul);
 }
 
 .challenge-option.is-wrong {
-    border-color: #f97316;
+    border-color: var(--naranja);
     background: #fff4ec;
 }
 
 .challenge-option.is-wrong .challenge-letter {
-    background: #f97316;
-    color: #ffffff;
+    background: var(--naranja);
+    color: var(--blanco);
 }
 
 .challenge-option.is-wrong .challenge-mark {
-    color: #c2560c;
+    color: var(--naranja-texto);
 }
 
 .challenge-option:disabled:not(.is-correct):not(.is-wrong) {
@@ -1347,12 +1347,12 @@ body.dossier-open {
 }
 
 .challenge-result.is-success {
-    border: 1.5px solid #0057a6;
+    border: 1.5px solid var(--azul);
     background: #eaf3fb;
 }
 
 .challenge-result.is-error {
-    border: 1.5px solid #f97316;
+    border: 1.5px solid var(--naranja);
     background: #fff4ec;
 }
 
@@ -1363,33 +1363,33 @@ body.dossier-open {
 }
 
 .challenge-result.is-success .exp-stamp-result {
-    border-color: #0057a6;
-    color: #0057a6;
+    border-color: var(--azul);
+    color: var(--azul);
 }
 
 .challenge-explanation {
     margin-bottom: 0.75rem;
     line-height: 1.65;
-    color: #24384f;
+    color: var(--azul-tinta);
 }
 
 .challenge-retry {
     margin-top: 0.25rem;
     padding: 0.5rem 1.2rem;
-    border: 2px solid #0057a6;
+    border: 2px solid var(--azul);
     border-radius: 2rem;
-    background: #ffffff;
+    background: var(--blanco);
     font-family: inherit;
     font-size: 0.88rem;
     font-weight: 600;
-    color: #0057a6;
+    color: var(--azul);
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .challenge-retry:hover {
-    background: #0057a6;
-    color: #ffffff;
+    background: var(--azul);
+    color: var(--blanco);
 }
 
 /* Navegación inferior */
@@ -1398,19 +1398,19 @@ body.dossier-open {
     justify-content: space-between;
     gap: 1rem;
     padding: 0.9rem 1.75rem;
-    background: #ffffff;
-    border-top: 1px solid var(--exp-line);
+    background: var(--blanco);
+    border-top: 1px solid var(--exp-linea);
 }
 
 .dossier-nav {
     padding: 0.55rem 1.2rem;
-    border: 2px solid #0057a6;
+    border: 2px solid var(--azul);
     border-radius: 2rem;
-    background: #ffffff;
+    background: var(--blanco);
     font-family: inherit;
     font-size: 0.9rem;
     font-weight: 600;
-    color: #0057a6;
+    color: var(--azul);
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
@@ -1424,19 +1424,19 @@ body.dossier-open {
 }
 
 .dossier-nav:hover {
-    background: #0057a6;
-    color: #ffffff;
+    background: var(--azul);
+    color: var(--blanco);
 }
 
 .dossier-next {
     margin-left: auto;
-    border-color: #f97316;
-    background: #f97316;
-    color: #ffffff;
+    border-color: var(--naranja);
+    background: var(--naranja);
+    color: var(--blanco);
 }
 
 .dossier-next:hover {
-    border-color: #0057a6;
+    border-color: var(--azul);
 }
 
 .dossier-nav[hidden] {
@@ -1593,4 +1593,9 @@ body.dossier-open {
 .page-section > .container > .expedientes:last-child {
     margin-top: 4rem;
     margin-bottom: -4rem;
+}
+
+/* Grosor de trazo propio de algunos iconos */
+.challenge-mark .icono {
+    stroke-width: 2.5;
 }

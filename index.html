@@ -4,12 +4,324 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SV El Salvador - Descubre la Magia</title>
-    <!-- Página de entrada para el hosting: lleva al inicio del sitio -->
-    <meta http-equiv="refresh" content="0; url=inicio%20el%20salvador.html">
-    <link rel="canonical" href="inicio%20el%20salvador.html">
-    <script>location.replace('inicio%20el%20salvador.html' + location.search + location.hash);</script>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/componentes.css">
+    <link rel="stylesheet" href="css/formularios.css">
+    <link rel="stylesheet" href="css/paginas/inicio.css">
+    <link rel="stylesheet" href="css/adaptable.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <p><a href="inicio%20el%20salvador.html">Ir a SV El Salvador</a></p>
+    <!-- Menú de navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><img src="img/logo-es.png" alt="El Salvador" class="logo-img"></a>
+
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Inicio</a></li>
+                <li><a href="destinos.html" class="nav-link">Destinos</a></li>
+                <li><a href="cultura.html" class="nav-link">Cultura</a></li>
+                <li><a href="galeria.html" class="nav-link">Galería</a></li>
+                <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+                <li><a href="nosotros.html" class="nav-link">Nosotros</a></li>
+            </ul>
+
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+
+        <div class="mobile-menu">
+            <a href="index.html">Inicio</a>
+            <a href="destinos.html">Destinos</a>
+            <a href="cultura.html">Cultura</a>
+            <a href="galeria.html">Galería</a>
+            <a href="contacto.html">Contacto</a>
+        </div>
+    </nav>
+
+    <!-- Encabezado y contenido de la página de inicio -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Descubre la magia de <span class="highlight">El Salvador</span></h1>
+
+            <p>
+                Explora un país lleno de maravillas naturales, rica cultura e historia fascinante.
+                Desde playas para surf hasta volcanes activos, El Salvador te espera.
+            </p>
+
+            <div class="main-cards">
+                <div class="stats-container">
+                    <div class="stat-item photo-card">
+                        <div class="photo-card-bg fondo-destinos"></div>
+                        <div class="photo-card-content">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">Destinos Únicos</div>
+                            <p class="photo-card-text">Playas, lagos, montañas y pueblos coloniales.</p>
+                        </div>
+                        <span class="photo-card-arrow" aria-hidden="true"></span>
+                    </div>
+
+                    <div class="stat-item photo-card">
+                        <div class="photo-card-bg fondo-volcanes"></div>
+                        <div class="photo-card-content">
+                            <div class="stat-number">25</div>
+                            <div class="stat-label">Volcanes</div>
+                            <p class="photo-card-text">Cráteres, lagunas y senderos con vistas únicas.</p>
+                        </div>
+                        <span class="photo-card-arrow" aria-hidden="true"></span>
+                    </div>
+
+                    <div class="stat-item photo-card">
+                        <div class="photo-card-bg fondo-dias-de-sol"></div>
+                        <div class="photo-card-content">
+                            <div class="stat-number">300+</div>
+                            <div class="stat-label">Días de Sol</div>
+                            <p class="photo-card-text">Clima cálido para disfrutar todo el año.</p>
+                        </div>
+                        <span class="photo-card-arrow" aria-hidden="true"></span>
+                    </div>
+
+                    <div class="stat-item photo-card">
+                        <div class="photo-card-bg fondo-unesco"></div>
+                        <div class="photo-card-content">
+                            <div class="stat-number">15</div>
+                            <div class="stat-label">Sitios UNESCO</div>
+                            <p class="photo-card-text">Patrimonio arqueológico y cultural.</p>
+                        </div>
+                        <span class="photo-card-arrow" aria-hidden="true"></span>
+                    </div>
+                </div>
+
+                <div class="quick-actions">
+                    <button class="action-btn surf-btn photo-card">
+                        <span class="photo-card-bg fondo-surf"></span>
+                        <span class="photo-card-content">
+                            <span class="action-label">Surf</span>
+                            <span class="photo-card-text">Olas de clase mundial en la costa del Pacífico.</span>
+                        </span>
+                        <span class="photo-card-arrow" aria-hidden="true"></span>
+                    </button>
+
+                    <button class="action-btn volcano-btn photo-card">
+                        <span class="photo-card-bg fondo-ascensos"></span>
+                        <span class="photo-card-content">
+                            <span class="action-label">Volcanes</span>
+                            <span class="photo-card-text">Ascensos y miradores sobre cráteres activos.</span>
+                        </span>
+                        <span class="photo-card-arrow" aria-hidden="true"></span>
+                    </button>
+
+                    <button class="action-btn history-btn photo-card">
+                        <span class="photo-card-bg fondo-historia"></span>
+                        <span class="photo-card-content">
+                            <span class="action-label">Historia</span>
+                            <span class="photo-card-text">Ruinas mayas y pueblos coloniales.</span>
+                        </span>
+                        <span class="photo-card-arrow" aria-hidden="true"></span>
+                    </button>
+
+                    <button class="action-btn food-btn photo-card">
+                        <span class="photo-card-bg fondo-gastronomia"></span>
+                        <span class="photo-card-content">
+                            <span class="action-label">Gastronomía</span>
+                            <span class="photo-card-text">Pupusas, café y sabores tradicionales.</span>
+                        </span>
+                        <span class="photo-card-arrow" aria-hidden="true"></span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="highlighted-places">
+                <h3>Experiencias Imperdibles</h3>
+
+                <div class="places-grid exp-grid">
+                    <article class="place-card exp-card">
+                        <div class="exp-img-wrap">
+                            <img class="exp-img" src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?q=80&w=600&auto=format&fit=crop" alt="Playa El Tunco" loading="lazy">
+                        </div>
+                        <div class="exp-body">
+                            <h4>Playa El Tunco</h4>
+                            <p class="exp-desc">Olas perfectas para surfear y atardeceres frente a la famosa roca.</p>
+                            <button type="button" class="exp-btn" data-exp="tunco">Detalles</button>
+                        </div>
+                    </article>
+
+                    <article class="place-card exp-card">
+                        <div class="exp-img-wrap">
+                            <img class="exp-img" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=600&auto=format&fit=crop" alt="Volcán de Santa Ana" loading="lazy">
+                        </div>
+                        <div class="exp-body">
+                            <h4>Volcán de Santa Ana</h4>
+                            <p class="exp-desc">Sube al volcán más alto del país y asómate a su laguna turquesa.</p>
+                            <button type="button" class="exp-btn" data-exp="santaana">Detalles</button>
+                        </div>
+                    </article>
+
+                    <article class="place-card exp-card">
+                        <div class="exp-img-wrap">
+                            <img class="exp-img" src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?q=80&w=600&auto=format&fit=crop" alt="Joya de Cerén" loading="lazy">
+                        </div>
+                        <div class="exp-body">
+                            <h4>Joya de Cerén</h4>
+                            <p class="exp-desc">La Pompeya de América, patrimonio mundial de la UNESCO.</p>
+                            <button type="button" class="exp-btn" data-exp="ceren">Detalles</button>
+                        </div>
+                    </article>
+
+                    <article class="place-card exp-card">
+                        <div class="exp-img-wrap">
+                            <img class="exp-img" src="https://images.unsplash.com/photo-1698615195164-61794e24fd84?auto=format&fit=crop&w=600&q=75" alt="Muelle en el Lago de Coatepeque" loading="lazy">
+                        </div>
+                        <div class="exp-body">
+                            <h4>Lago de Coatepeque</h4>
+                            <p class="exp-desc">Un lago azul intenso dentro de una caldera volcánica.</p>
+                            <button type="button" class="exp-btn" data-exp="coatepeque">Detalles</button>
+                        </div>
+                    </article>
+
+                    <article class="place-card exp-card">
+                        <div class="exp-img-wrap">
+                            <img class="exp-img" src="https://images.unsplash.com/photo-1680374635221-aca00abf60f5?auto=format&fit=crop&w=600&q=75" alt="Calle empedrada frente a la iglesia de Suchitoto" loading="lazy">
+                        </div>
+                        <div class="exp-body">
+                            <h4>Suchitoto</h4>
+                            <p class="exp-desc">Calles empedradas, arte y vistas al lago Suchitlán.</p>
+                            <button type="button" class="exp-btn" data-exp="suchitoto">Detalles</button>
+                        </div>
+                    </article>
+
+                    <article class="place-card exp-card">
+                        <div class="exp-img-wrap">
+                            <img class="exp-img" src="https://images.unsplash.com/photo-1694842492258-deb917102d57?auto=format&fit=crop&w=600&q=75" alt="Sombrillas de colores en Concepción de Ataco" loading="lazy">
+                        </div>
+                        <div class="exp-body">
+                            <h4>Ruta de las Flores</h4>
+                            <p class="exp-desc">Pueblos coloridos, café de altura y murales en la montaña.</p>
+                            <button type="button" class="exp-btn" data-exp="flores">Detalles</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Testimonios -->
+            <div class="testimonials-section">
+                <h3>Lo que dicen los viajeros</h3>
+
+                <div class="testimonials-container">
+                    <div class="testimonial active">
+                        <p class="testimonial-text">
+                            "El Tunco es increíble. Las olas son perfectas y el ambiente es único. Definitivamente volveré."
+                        </p>
+
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Ana Martínez">
+                            <div class="testimonial-info">
+                                <span class="testimonial-name">Ana Martínez</span>
+                                <span class="testimonial-origin">España</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial">
+                        <p class="testimonial-text">
+                            "Subir el volcán de Santa Ana fue una experiencia inolvidable. La vista del cráter es impresionante."
+                        </p>
+
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="David López">
+                            <div class="testimonial-info">
+                                <span class="testimonial-name">David López</span>
+                                <span class="testimonial-origin">México</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial">
+                        <p class="testimonial-text">
+                            "Joya de Cerén es como viajar en el tiempo. La historia de este lugar es fascinante."
+                        </p>
+
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Carla Rodríguez">
+                            <div class="testimonial-info">
+                                <span class="testimonial-name">Carla Rodríguez</span>
+                                <span class="testimonial-origin">Argentina</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-controls">
+                    <button class="prev-btn">←</button>
+
+                    <div class="dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+
+                    <button class="next-btn">→</button>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <a href="destinos.html" class="btn primary">
+                    Explorar Destinos
+                </a>
+
+                <a href="contacto.html" class="btn secondary">
+                    Planificar Viaje
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                sv <span class="highlight">El Salvador</span>
+            </div>
+
+            <p>Descubre la magia de El Salvador con nosotros</p>
+
+            <p class="copyright">
+                © 2025 SV El Salvador
+            </p>
+        </div>
+    </footer>
+
+    <!-- Botón flotante de contacto rápido -->
+    <div class="floating-fab">
+        <button class="fab-btn" aria-label="Comentarios"><svg class="icono" width="26" height="26" aria-hidden="true"><use href="#icono-mensaje"></use></svg></button>
+    </div>
+
+    <!-- Ventana de detalles de cada experiencia (la llena js/paginas/inicio.js) -->
+    <div class="exp-modal" id="exp-modal" aria-hidden="true">
+        <div class="exp-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="exp-modal-title">
+            <button type="button" class="exp-modal-close" aria-label="Cerrar">✕</button>
+            <img class="exp-modal-img" src="" alt="">
+            <div class="exp-modal-body">
+                <h3 id="exp-modal-title" class="exp-modal-title"></h3>
+                <p class="exp-modal-location"></p>
+                <p class="exp-modal-desc"></p>
+                <h4>Qué puedes hacer</h4>
+                <ul class="exp-modal-activities"></ul>
+                <h4>Información adicional</h4>
+                <ul class="exp-modal-info"></ul>
+                <button type="button" class="exp-modal-btn">Cerrar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts: primero los compartidos, luego los de esta página -->
+    <script src="js/nucleo/iconos.js"></script>
+    <script src="js/nucleo/utilidades.js"></script>
+    <script src="js/componentes/navegacion.js"></script>
+    <script src="js/componentes/contacto-rapido.js"></script>
+    <script src="js/componentes/boton-subir.js"></script>
+    <script src="js/componentes/ventana.js"></script>
+    <script src="js/datos/experiencias.js"></script>
+    <script src="js/paginas/inicio.js"></script>
 </body>
 </html>

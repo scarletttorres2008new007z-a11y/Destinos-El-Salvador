@@ -6,7 +6,7 @@
    Las interacciones están en nosotros.js
    ===================================================================== */
 .pagina-nosotros {
-    background: var(--primary-blue);
+    background: var(--azul);
 }
 
 .pagina-nosotros section[id] {
@@ -35,8 +35,8 @@
     padding: 0.35rem 1rem;
     margin-bottom: 1rem;
     border-radius: 50px;
-    background: var(--accent-orange);
-    color: var(--white);
+    background: var(--naranja);
+    color: var(--blanco);
     font-size: 0.8rem;
     font-weight: 600;
     letter-spacing: 0.08em;
@@ -47,7 +47,7 @@
     font-size: clamp(1.9rem, 4vw, 2.8rem);
     line-height: 1.2;
     margin-bottom: 1rem;
-    color: var(--white);
+    color: var(--blanco);
 }
 
 /* Botones */
@@ -78,43 +78,43 @@
 }
 
 .nos-btn-naranja {
-    background: var(--accent-orange);
-    border-color: var(--accent-orange);
-    color: var(--white);
+    background: var(--naranja);
+    border-color: var(--naranja);
+    color: var(--blanco);
 }
 
 .nos-btn-naranja:hover {
-    background: #ea580c;
-    border-color: #ea580c;
+    background: var(--naranja-oscuro);
+    border-color: var(--naranja-oscuro);
 }
 
 .nos-btn-borde {
-    border-color: var(--white);
-    color: var(--white);
+    border-color: var(--blanco);
+    color: var(--blanco);
 }
 
 .nos-btn-borde:hover {
-    background: var(--white);
-    color: var(--primary-blue);
+    background: var(--blanco);
+    color: var(--azul);
 }
 
 .nos-btn-blanco {
-    background: var(--white);
-    border-color: var(--white);
-    color: var(--primary-blue);
+    background: var(--blanco);
+    border-color: var(--blanco);
+    color: var(--azul);
 }
 
 .nos-btn-blanco:hover {
-    background: var(--secondary-blue);
-    border-color: var(--secondary-blue);
-    color: var(--white);
+    background: var(--azul-oscuro);
+    border-color: var(--azul-oscuro);
+    color: var(--blanco);
 }
 
 .nos-btn:focus-visible,
 .nos-pestana:focus-visible,
 .nos-miembro:focus-visible,
 .nos-modal button:focus-visible {
-    outline: 3px solid var(--accent-orange);
+    outline: 3px solid var(--naranja);
     outline-offset: 3px;
 }
 
@@ -127,8 +127,8 @@
     justify-content: center;
     padding: 8rem 2rem 5rem;
     overflow: hidden;
-    background: var(--secondary-blue);
-    color: var(--white);
+    background: var(--azul-oscuro);
+    color: var(--blanco);
     text-align: center;
 }
 
@@ -181,12 +181,12 @@
 /* Secciones */
 .nos-seccion {
     padding: 5.5rem 2rem;
-    background: var(--primary-blue);
-    color: var(--white);
+    background: var(--azul);
+    color: var(--blanco);
 }
 
 .nos-seccion-oscura {
-    background: var(--secondary-blue);
+    background: var(--azul-oscuro);
 }
 
 .nos-encabezado {
@@ -236,23 +236,23 @@
 }
 
 .nos-pestana:hover {
-    color: var(--white);
+    color: var(--blanco);
 }
 
 .nos-pestana.activa {
-    color: var(--white);
-    border-bottom-color: var(--accent-orange);
+    color: var(--blanco);
+    border-bottom-color: var(--naranja);
 }
 
 .nos-pestana.activa svg {
-    color: var(--accent-orange);
+    color: var(--naranja);
 }
 
 .nos-paneles {
     min-height: 130px;
     padding: 1.5rem;
     margin-top: 1.25rem;
-    border-radius: var(--border-radius);
+    border-radius: var(--radio);
     background: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.15);
 }
@@ -280,8 +280,8 @@
 .nos-lista-valores li {
     padding: 0.4rem 0.9rem;
     border-radius: 50px;
-    background: var(--white);
-    color: var(--primary-blue);
+    background: var(--blanco);
+    color: var(--azul);
     font-size: 0.9rem;
     font-weight: 600;
 }
@@ -294,9 +294,9 @@
 .nos-foto {
     position: relative;
     margin: 0;
-    border-radius: var(--border-radius-lg);
+    border-radius: var(--radio-grande);
     overflow: hidden;
-    box-shadow: var(--shadow-lg);
+    box-shadow: var(--sombra-fuerte);
 }
 
 .nos-foto img {
@@ -332,7 +332,7 @@
     bottom: 0;
     width: 45%;
     aspect-ratio: 4 / 3;
-    border: 5px solid var(--primary-blue);
+    border: 5px solid var(--azul);
 }
 
 .nos-sello {
@@ -346,10 +346,10 @@
     width: 120px;
     height: 120px;
     border-radius: 50%;
-    background: var(--accent-orange);
-    color: var(--white);
+    background: var(--naranja);
+    color: var(--blanco);
     text-align: center;
-    box-shadow: var(--shadow-md);
+    box-shadow: var(--sombra-media);
 }
 
 .nos-sello strong {
@@ -386,7 +386,7 @@
 .nos-linea-progreso span {
     display: block;
     height: 100%;
-    background: var(--accent-orange);
+    background: var(--naranja);
     border-radius: 3px;
     transform: scaleY(0);
     transform-origin: top;
@@ -414,7 +414,7 @@
     width: 18px;
     height: 18px;
     border-radius: 50%;
-    background: var(--secondary-blue);
+    background: var(--azul-oscuro);
     border: 3px solid rgba(255, 255, 255, 0.5);
     transition: background-color 0.4s ease, border-color 0.4s ease, transform 0.4s ease;
 }
@@ -425,8 +425,8 @@
 }
 
 .nos-hito.alcanzado .nos-hito-punto {
-    background: var(--accent-orange);
-    border-color: var(--white);
+    background: var(--naranja);
+    border-color: var(--blanco);
     transform: scale(1.15);
 }
 
@@ -435,7 +435,7 @@
     gap: 1rem;
     align-items: center;
     padding: 0.85rem;
-    border-radius: var(--border-radius);
+    border-radius: var(--radio);
     background: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.15);
     transition: background-color 0.4s ease, border-color 0.4s ease, transform 0.3s ease;
@@ -462,7 +462,7 @@
     display: inline-block;
     font-size: 0.85rem;
     font-weight: 700;
-    color: var(--accent-orange);
+    color: var(--naranja);
 }
 
 .nos-hito-texto h3 {
@@ -488,10 +488,10 @@
     flex-direction: column;
     align-items: center;
     padding: 2rem 1.25rem 1.5rem;
-    border-radius: var(--border-radius);
+    border-radius: var(--radio);
     background: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.15);
-    color: var(--white);
+    color: var(--blanco);
     font: inherit;
     text-align: center;
     cursor: pointer;
@@ -513,18 +513,18 @@
     height: 84px;
     margin-bottom: 1rem;
     border-radius: 50%;
-    border: 3px solid var(--white);
-    color: var(--white);
+    border: 3px solid var(--blanco);
+    color: var(--blanco);
     font-size: 1.6rem;
     font-weight: 700;
     letter-spacing: 0.02em;
     flex-shrink: 0;
 }
 
-.nos-avatar-azul { background: var(--primary-blue); }
+.nos-avatar-azul { background: var(--azul); }
 .nos-avatar-celeste { background: var(--celeste); }
-.nos-avatar-naranja { background: var(--accent-orange); }
-.nos-avatar-oscuro { background: var(--secondary-blue); }
+.nos-avatar-naranja { background: var(--naranja); }
+.nos-avatar-oscuro { background: var(--azul-oscuro); }
 
 .nos-miembro-nombre {
     font-size: 1.1rem;
@@ -533,7 +533,7 @@
 
 .nos-miembro-rol {
     margin: 0.15rem 0 0.75rem;
-    color: var(--accent-orange);
+    color: var(--naranja);
     font-size: 0.9rem;
     font-weight: 500;
 }
@@ -572,8 +572,8 @@
 .nos-valor {
     position: relative;
     padding: 1.75rem 1.5rem;
-    border-radius: var(--border-radius);
-    background: var(--white);
+    border-radius: var(--radio);
+    background: var(--blanco);
     color: #334155;
     overflow: hidden;
     transition: opacity 0.7s ease, translate 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.3s ease, box-shadow 0.3s ease;
@@ -586,7 +586,7 @@
     top: 0;
     width: 100%;
     height: 4px;
-    background: var(--accent-orange);
+    background: var(--naranja);
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.4s ease;
@@ -609,18 +609,18 @@
     height: 52px;
     margin-bottom: 1rem;
     border-radius: 0.85rem;
-    background: var(--primary-blue);
-    color: var(--white);
+    background: var(--azul);
+    color: var(--blanco);
     transition: background-color 0.3s ease;
 }
 
 .nos-valor:hover .nos-valor-icono {
-    background: var(--accent-orange);
+    background: var(--naranja);
 }
 
 .nos-valor h3 {
     font-size: 1.1rem;
-    color: var(--primary-blue);
+    color: var(--azul);
     margin-bottom: 0.5rem;
 }
 
@@ -640,7 +640,7 @@
     position: relative;
     padding: 2rem 1rem;
     text-align: center;
-    border-radius: var(--border-radius);
+    border-radius: var(--radio);
     background: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.15);
 }
@@ -650,7 +650,7 @@
     font-size: clamp(2.2rem, 4vw, 3rem);
     font-weight: 700;
     line-height: 1.1;
-    color: var(--white);
+    color: var(--blanco);
     font-variant-numeric: tabular-nums;
 }
 
@@ -667,7 +667,7 @@
     height: 3px;
     margin: 1rem auto 0;
     border-radius: 3px;
-    background: var(--accent-orange);
+    background: var(--naranja);
     transform: scaleX(0.3);
     transition: transform 0.6s ease;
 }
@@ -679,8 +679,8 @@
 /* Llamado final */
 .nos-cta {
     padding: 5rem 2rem;
-    background: var(--accent-orange);
-    color: var(--white);
+    background: var(--naranja);
+    color: var(--blanco);
     text-align: center;
 }
 
@@ -696,7 +696,7 @@
 }
 
 .nos-cta .nos-btn-borde:hover {
-    color: var(--accent-orange);
+    color: var(--naranja);
 }
 
 /* Ventana del perfil */
@@ -733,10 +733,10 @@
     max-height: calc(100vh - 2.5rem);
     overflow-y: auto;
     padding: 2rem;
-    border-radius: var(--border-radius-lg);
-    background: var(--white);
+    border-radius: var(--radio-grande);
+    background: var(--blanco);
     color: #334155;
-    box-shadow: var(--shadow-lg);
+    box-shadow: var(--sombra-fuerte);
     opacity: 0;
     transform: translateY(16px) scale(0.98);
     transition: opacity 0.25s ease, transform 0.25s ease;
@@ -763,14 +763,14 @@
     border: none;
     border-radius: 50%;
     background: #f1f5f9;
-    color: var(--secondary-blue);
+    color: var(--azul-oscuro);
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .nos-modal-cerrar:hover {
-    background: var(--accent-orange);
-    color: var(--white);
+    background: var(--naranja);
+    color: var(--blanco);
 }
 
 .nos-modal-cuerpo {
@@ -799,12 +799,12 @@
 
 .nos-modal-cabecera h3 {
     font-size: 1.35rem;
-    color: var(--primary-blue);
+    color: var(--azul);
     line-height: 1.2;
 }
 
 .nos-modal-rol {
-    color: var(--accent-orange);
+    color: var(--naranja);
     font-weight: 600;
     font-size: 0.95rem;
 }
@@ -834,7 +834,7 @@
     padding: 0.3rem 0.8rem;
     border-radius: 50px;
     background: #e6f0f9;
-    color: var(--primary-blue);
+    color: var(--azul);
     font-size: 0.85rem;
     font-weight: 500;
 }
@@ -854,7 +854,7 @@
 
 .nos-modal-datos dd {
     font-weight: 600;
-    color: var(--secondary-blue);
+    color: var(--azul-oscuro);
 }
 
 .nos-modal-nav {
@@ -870,17 +870,17 @@
     justify-content: center;
     width: 40px;
     height: 40px;
-    border: 2px solid var(--primary-blue);
+    border: 2px solid var(--azul);
     border-radius: 50%;
-    background: var(--white);
-    color: var(--primary-blue);
+    background: var(--blanco);
+    color: var(--azul);
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .nos-modal-flecha:hover {
-    background: var(--primary-blue);
-    color: var(--white);
+    background: var(--azul);
+    color: var(--blanco);
 }
 
 .nos-modal-contador {

@@ -8,44 +8,44 @@
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/componentes.css">
     <link rel="stylesheet" href="css/formularios.css">
-    <link rel="stylesheet" href="css/galeria.css">
+    <link rel="stylesheet" href="css/paginas/galeria.css">
     <link rel="stylesheet" href="css/adaptable.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation -->
+    <!-- Menú de navegación -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="inicio el salvador.html" class="logo"><img src="img/logo-es.png" alt="El Salvador" class="logo-img"></a>
+            <a href="index.html" class="logo"><img src="img/logo-es.png" alt="El Salvador" class="logo-img"></a>
             <ul class="nav-menu">
-                <li><a href="inicio el salvador.html" class="nav-link active">Inicio</a></li>
-                <li><a href="destino el salvador.html" class="nav-link">Destinos</a></li>
-                <li><a href="cultura el salvador.html" class="nav-link">Cultura</a></li>
-                <li><a href="galeria el salvador.html" class="nav-link">Galería</a></li>
-                <li><a href="contacto el salvador.html" class="nav-link">Contacto</a></li>
-                <li><a href="Sobre nosotros.html" class="nav-link">Nosotros</a></li>
+                <li><a href="index.html" class="nav-link active">Inicio</a></li>
+                <li><a href="destinos.html" class="nav-link">Destinos</a></li>
+                <li><a href="cultura.html" class="nav-link">Cultura</a></li>
+                <li><a href="galeria.html" class="nav-link">Galería</a></li>
+                <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+                <li><a href="nosotros.html" class="nav-link">Nosotros</a></li>
             </ul>
             <button class="mobile-menu-btn">☰</button>
         </div>
         <div class="mobile-menu">
-            <a href="inicio el salvador.html">Inicio</a>
-            <a href="destino el salvador.html">Destinos</a>
-            <a href="cultura el salvador.html">Cultura</a>
-            <a href="galeria el salvador.html">Galería</a>
-            <a href="contacto el salvador.html">Contacto</a>
-            <a href="Sobre nosotros.html">Nosotros</a>
+            <a href="index.html">Inicio</a>
+            <a href="destinos.html">Destinos</a>
+            <a href="cultura.html">Cultura</a>
+            <a href="galeria.html">Galería</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="nosotros.html">Nosotros</a>
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Encabezado de la página -->
     <section class="page-section">
         <div class="container">
             <h1 class="section-title">Galería Visual</h1>
-            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 3rem; opacity: 0.9;">
+            <p class="section-intro">
                 Imágenes que capturan la belleza natural, cultural e histórica de El Salvador
             </p>
 
-            <!-- Gallery Filters -->
+            <!-- Filtros por categoría -->
             <div class="filter-tabs gallery-filters" role="group" aria-label="Filtrar fotos por categoría">
                 <button type="button" class="filter-btn active" data-filter="all" aria-pressed="true">Todas</button>
                 <button type="button" class="filter-btn" data-filter="nature" aria-pressed="false">Naturaleza</button>
@@ -56,9 +56,9 @@
                 <button type="button" class="filter-btn" data-filter="food" aria-pressed="false">Gastronomía</button>
             </div>
 
-            <!-- Main Gallery Grid -->
+            <!-- Cuadrícula de fotos -->
             <div class="gallery-grid galeria-compacta">
-                <!-- Nature Photos -->
+                <!-- Naturaleza -->
                 <figure class="gallery-item" data-category="nature" tabindex="0" role="button" aria-label="Ampliar foto: Bosque Tropical" data-full="img/galeria/01.jpg" data-autor="Pipil El Salvador" data-licencia="CC BY 4.0" data-fuente="https://commons.wikimedia.org/wiki/File:Vista_del_Bosque_Nacional_El_Imposible_desde_Tacuba_El_Salvador.jpg">
                     <img src="img/galeria/mini/01.jpg" alt="Bosque del Parque Nacional El Imposible visto desde Tacuba" loading="lazy">
                     <figcaption class="gallery-overlay">
@@ -83,7 +83,7 @@
                     </figcaption>
                 </figure>
 
-                <!-- Beach Photos -->
+                <!-- Playas -->
                 <figure class="gallery-item" data-category="beaches" tabindex="0" role="button" aria-label="Ampliar foto: Playa El Tunco" data-full="img/galeria/04.jpg" data-autor="Rafael Colindres" data-licencia="CC BY-SA 3.0" data-fuente="https://commons.wikimedia.org/wiki/File:Tunco.jpg">
                     <img src="img/galeria/mini/04.jpg" alt="Playa El Tunco" loading="lazy">
                     <figcaption class="gallery-overlay">
@@ -108,7 +108,7 @@
                     </figcaption>
                 </figure>
 
-                <!-- Volcano Photos -->
+                <!-- Volcanes -->
                 <figure class="gallery-item" data-category="volcanoes" tabindex="0" role="button" aria-label="Ampliar foto: Volcán de Santa Ana" data-full="img/galeria/07.jpg" data-autor="Erneestoo" data-licencia="CC BY-SA 4.0" data-fuente="https://commons.wikimedia.org/wiki/File:Laguna_crat%C3%A9rica_del_Volc%C3%A1n_de_Santa_Ana_-_El_Salvador.jpg">
                     <img src="img/galeria/mini/07.jpg" alt="Laguna del cráter del volcán de Santa Ana" loading="lazy">
                     <figcaption class="gallery-overlay">
@@ -133,7 +133,7 @@
                     </figcaption>
                 </figure>
 
-                <!-- Culture Photos -->
+                <!-- Cultura -->
                 <figure class="gallery-item" data-category="culture" tabindex="0" role="button" aria-label="Ampliar foto: Danzas Folklóricas" data-full="img/galeria/10.jpg" data-autor="Jose Huwaidi" data-licencia="CC BY-SA 4.0" data-fuente="https://commons.wikimedia.org/wiki/File:Danza_folcl%C3%B3rica_en_Perqu%C3%ADn_-_2005.jpg">
                     <img src="img/galeria/mini/10.jpg" alt="Danza folclórica en Perquín" loading="lazy">
                     <figcaption class="gallery-overlay">
@@ -158,7 +158,7 @@
                     </figcaption>
                 </figure>
 
-                <!-- Cities Photos -->
+                <!-- Ciudades -->
                 <figure class="gallery-item" data-category="cities" tabindex="0" role="button" aria-label="Ampliar foto: Suchitoto Colonial" data-full="img/galeria/13.jpg" data-autor="ElmerGuevara" data-licencia="CC BY-SA 3.0" data-fuente="https://commons.wikimedia.org/wiki/File:Calles_de_Suchitoto.jpg">
                     <img src="img/galeria/mini/13.jpg" alt="Calles coloniales de Suchitoto" loading="lazy">
                     <figcaption class="gallery-overlay">
@@ -183,7 +183,7 @@
                     </figcaption>
                 </figure>
 
-                <!-- Food Photos -->
+                <!-- Gastronomía -->
                 <figure class="gallery-item" data-category="food" tabindex="0" role="button" aria-label="Ampliar foto: Pupusas Tradicionales" data-full="img/galeria/16.jpg" data-autor="Ll1324" data-licencia="CC0" data-fuente="https://commons.wikimedia.org/wiki/File:Typical_serving_of_Pupusas_in_El_Salvador.jpg">
                     <img src="img/galeria/mini/16.jpg" alt="Plato de pupusas salvadoreñas" loading="lazy">
                     <figcaption class="gallery-overlay">
@@ -209,28 +209,28 @@
                 </figure>
             </div>
 
-            <!-- Photo Sharing Section -->
+            <!-- Comparte tus fotos -->
             <section class="photo-sharing" aria-labelledby="comparteTitulo">
                 <h2 id="comparteTitulo" class="comparte-titulo">Comparte tus Fotos</h2>
                 <p class="comparte-intro">¿Visitaste El Salvador? ¡Comparte tus mejores momentos con nosotros!</p>
 
                 <div class="sharing-options">
                     <div class="sharing-option">
-                        <span class="sharing-icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg></span>
+                        <span class="sharing-icono" aria-hidden="true"><svg class="icono" width="22" height="22" aria-hidden="true"><use href="#icono-instagram"></use></svg></span>
                         <div>
                             <h4>Instagram</h4>
                             <p>#ElSalvadorTravel #VisitElSalvador</p>
                         </div>
                     </div>
                     <div class="sharing-option">
-                        <span class="sharing-icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></span>
+                        <span class="sharing-icono" aria-hidden="true"><svg class="icono" width="22" height="22" aria-hidden="true"><use href="#icono-facebook"></use></svg></span>
                         <div>
                             <h4>Facebook</h4>
                             <p>Etiquétanos en tus publicaciones</p>
                         </div>
                     </div>
                     <div class="sharing-option">
-                        <span class="sharing-icono" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
+                        <span class="sharing-icono" aria-hidden="true"><svg class="icono" width="22" height="22" aria-hidden="true"><use href="#icono-correo"></use></svg></span>
                         <div>
                             <h4>Email</h4>
                             <p>Envíanos tus mejores fotos</p>
@@ -243,7 +243,7 @@
                     <p class="subir-ayuda">Formatos JPG, JPEG, PNG o WEBP, hasta 5 MB por foto y 12 fotos a la vez.</p>
                     <input type="file" id="fotosUsuario" class="subir-input" accept=".jpg,.jpeg,.png,.webp,image/jpeg,image/png,image/webp" multiple>
                     <label for="fotosUsuario" class="btn primary subir-seleccionar">
-                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m17 8-5-5-5 5"/><path d="M12 3v12"/></svg>
+                        <svg class="icono" width="18" height="18" aria-hidden="true"><use href="#icono-subir"></use></svg>
                         Seleccionar fotos
                     </label>
                     <div class="subir-mensajes" role="status" aria-live="polite"></div>
@@ -264,73 +264,73 @@
                     <article class="video-tarjeta" data-video="YqIft_I27RI">
                         <button type="button" class="video-portada" aria-label="Reproducir: Descubre El Salvador">
                             <img src="img/galeria/videos/YqIft_I27RI.jpg" alt="" loading="lazy">
-                            <span class="video-play"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg></span>
+                            <span class="video-play"><svg class="icono" width="26" height="26" aria-hidden="true"><use href="#icono-reproducir"></use></svg></span>
                             <span class="video-duracion">1:08</span>
                         </button>
                         <div class="video-info">
                             <h4>Descubre El Salvador</h4>
                             <p>Playas, volcanes y pueblos en el video oficial de turismo del país.</p>
-                            <a class="video-fuente" href="https://www.youtube.com/watch?v=YqIft_I27RI" target="_blank" rel="noopener">El Salvador Marca País · YouTube <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg></a>
+                            <a class="video-fuente" href="https://www.youtube.com/watch?v=YqIft_I27RI" target="_blank" rel="noopener">El Salvador Marca País · YouTube <svg class="icono" width="14" height="14" aria-hidden="true"><use href="#icono-enlace-externo"></use></svg></a>
                         </div>
                     </article>
                     <article class="video-tarjeta" data-video="2dAN5pnZC6w">
                         <button type="button" class="video-portada" aria-label="Reproducir: Lago de Coatepeque desde el aire">
                             <img src="img/galeria/videos/2dAN5pnZC6w.jpg" alt="" loading="lazy">
-                            <span class="video-play"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg></span>
+                            <span class="video-play"><svg class="icono" width="26" height="26" aria-hidden="true"><use href="#icono-reproducir"></use></svg></span>
                             <span class="video-duracion">2:47</span>
                         </button>
                         <div class="video-info">
                             <h4>Lago de Coatepeque desde el aire</h4>
                             <p>Vuelo en dron sobre el lago de cráter que cambia de color una vez al año.</p>
-                            <a class="video-fuente" href="https://www.youtube.com/watch?v=2dAN5pnZC6w" target="_blank" rel="noopener">Alvaro Mayorga: Salvadorean Traveler · YouTube <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg></a>
+                            <a class="video-fuente" href="https://www.youtube.com/watch?v=2dAN5pnZC6w" target="_blank" rel="noopener">Alvaro Mayorga: Salvadorean Traveler · YouTube <svg class="icono" width="14" height="14" aria-hidden="true"><use href="#icono-enlace-externo"></use></svg></a>
                         </div>
                     </article>
                     <article class="video-tarjeta" data-video="7E97fRk45Ms">
                         <button type="button" class="video-portada" aria-label="Reproducir: Ruta de las Flores">
                             <img src="img/galeria/videos/7E97fRk45Ms.jpg" alt="" loading="lazy">
-                            <span class="video-play"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg></span>
+                            <span class="video-play"><svg class="icono" width="26" height="26" aria-hidden="true"><use href="#icono-reproducir"></use></svg></span>
                             <span class="video-duracion">3:36</span>
                         </button>
                         <div class="video-info">
                             <h4>Ruta de las Flores</h4>
                             <p>Los seis pueblos de la ruta: murales, café, artesanías y miradores.</p>
-                            <a class="video-fuente" href="https://www.youtube.com/watch?v=7E97fRk45Ms" target="_blank" rel="noopener">La Prensa Gráfica · YouTube <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg></a>
+                            <a class="video-fuente" href="https://www.youtube.com/watch?v=7E97fRk45Ms" target="_blank" rel="noopener">La Prensa Gráfica · YouTube <svg class="icono" width="14" height="14" aria-hidden="true"><use href="#icono-enlace-externo"></use></svg></a>
                         </div>
                     </article>
                     <article class="video-tarjeta" data-video="m8Yu0GxESeM">
                         <button type="button" class="video-portada" aria-label="Reproducir: Joya de Cerén">
                             <img src="img/galeria/videos/m8Yu0GxESeM.jpg" alt="" loading="lazy">
-                            <span class="video-play"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg></span>
+                            <span class="video-play"><svg class="icono" width="26" height="26" aria-hidden="true"><use href="#icono-reproducir"></use></svg></span>
                             <span class="video-duracion">3:16</span>
                         </button>
                         <div class="video-info">
                             <h4>Joya de Cerén</h4>
                             <p>Recorrido por la aldea maya sepultada por cenizas, Patrimonio de la Humanidad.</p>
-                            <a class="video-fuente" href="https://www.youtube.com/watch?v=m8Yu0GxESeM" target="_blank" rel="noopener">Telemadrid · YouTube <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg></a>
+                            <a class="video-fuente" href="https://www.youtube.com/watch?v=m8Yu0GxESeM" target="_blank" rel="noopener">Telemadrid · YouTube <svg class="icono" width="14" height="14" aria-hidden="true"><use href="#icono-enlace-externo"></use></svg></a>
                         </div>
                     </article>
                     <article class="video-tarjeta" data-video="va8-rUjCnYc">
                         <button type="button" class="video-portada" aria-label="Reproducir: Surf en Playa El Tunco">
                             <img src="img/galeria/videos/va8-rUjCnYc.jpg" alt="" loading="lazy">
-                            <span class="video-play"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg></span>
+                            <span class="video-play"><svg class="icono" width="26" height="26" aria-hidden="true"><use href="#icono-reproducir"></use></svg></span>
                             <span class="video-duracion">8:54</span>
                         </button>
                         <div class="video-info">
                             <h4>Surf en Playa El Tunco</h4>
                             <p>Olas, roca y comunidad surfista en la costa de La Libertad.</p>
-                            <a class="video-fuente" href="https://www.youtube.com/watch?v=va8-rUjCnYc" target="_blank" rel="noopener">Surfing Republica · YouTube <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg></a>
+                            <a class="video-fuente" href="https://www.youtube.com/watch?v=va8-rUjCnYc" target="_blank" rel="noopener">Surfing Republica · YouTube <svg class="icono" width="14" height="14" aria-hidden="true"><use href="#icono-enlace-externo"></use></svg></a>
                         </div>
                     </article>
                     <article class="video-tarjeta" data-video="3-4_4Y-dJTw">
                         <button type="button" class="video-portada" aria-label="Reproducir: El origen de las pupusas">
                             <img src="img/galeria/videos/3-4_4Y-dJTw.jpg" alt="" loading="lazy">
-                            <span class="video-play"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg></span>
+                            <span class="video-play"><svg class="icono" width="26" height="26" aria-hidden="true"><use href="#icono-reproducir"></use></svg></span>
                             <span class="video-duracion">2:44</span>
                         </button>
                         <div class="video-info">
                             <h4>El origen de las pupusas</h4>
                             <p>La historia del plato nacional, del comal a la mesa.</p>
-                            <a class="video-fuente" href="https://www.youtube.com/watch?v=3-4_4Y-dJTw" target="_blank" rel="noopener">Canal 12 El Salvador · YouTube <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14 21 3"/></svg></a>
+                            <a class="video-fuente" href="https://www.youtube.com/watch?v=3-4_4Y-dJTw" target="_blank" rel="noopener">Canal 12 El Salvador · YouTube <svg class="icono" width="14" height="14" aria-hidden="true"><use href="#icono-enlace-externo"></use></svg></a>
                         </div>
                     </article>
                 </div>
@@ -338,7 +338,7 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Pie de página -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-logo">sv <span class="highlight">El Salvador</span></div>
@@ -353,17 +353,17 @@
         </div>
     </footer>
 
-    <!-- Floating Action Button -->
+    <!-- Botón flotante de contacto rápido -->
     <div class="floating-fab">
-        <button class="fab-btn" aria-label="Comentarios"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></button>
+        <button class="fab-btn" aria-label="Comentarios"><svg class="icono" width="26" height="26" aria-hidden="true"><use href="#icono-mensaje"></use></svg></button>
     </div>
 
     <!-- Vista ampliada de la galería -->
     <div id="galeriaLightbox" class="galeria-lightbox" role="dialog" aria-modal="true" aria-label="Vista ampliada de la foto" hidden>
         <span class="lightbox-contador" aria-live="polite"></span>
-        <button type="button" class="lightbox-btn lightbox-cerrar" aria-label="Cerrar"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
-        <button type="button" class="lightbox-btn lightbox-anterior" aria-label="Foto anterior"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
-        <button type="button" class="lightbox-btn lightbox-siguiente" aria-label="Foto siguiente"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
+        <button type="button" class="lightbox-btn lightbox-cerrar" aria-label="Cerrar"><svg class="icono" width="22" height="22" aria-hidden="true"><use href="#icono-cerrar"></use></svg></button>
+        <button type="button" class="lightbox-btn lightbox-anterior" aria-label="Foto anterior"><svg class="icono" width="22" height="22" aria-hidden="true"><use href="#icono-anterior"></use></svg></button>
+        <button type="button" class="lightbox-btn lightbox-siguiente" aria-label="Foto siguiente"><svg class="icono" width="22" height="22" aria-hidden="true"><use href="#icono-siguiente"></use></svg></button>
         <div class="lightbox-escenario">
             <figure class="lightbox-figura">
                 <img class="lightbox-img" src="" alt="">
@@ -376,7 +376,13 @@
         </div>
     </div>
 
-    <script src="el salvador.js"></script>
-    <script src="galeria.js"></script>
+    <!-- Scripts: primero los compartidos, luego los de esta página -->
+    <script src="js/nucleo/iconos.js"></script>
+    <script src="js/nucleo/utilidades.js"></script>
+    <script src="js/componentes/navegacion.js"></script>
+    <script src="js/componentes/contacto-rapido.js"></script>
+    <script src="js/componentes/boton-subir.js"></script>
+    <script src="js/paginas/galeria.js"></script>
+    <script src="js/paginas/galeria-videos.js"></script>
 </body>
 </html>

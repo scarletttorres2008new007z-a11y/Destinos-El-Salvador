@@ -1,19 +1,45 @@
 /* Página Destinos: tarjetas, ventana de detalles y buscador */
 
+/* Joyas escondidas: bloque con destinos menos conocidos */
+.hidden-gems {
+    margin-top: 4rem;
+    padding: 3rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 2rem;
+}
+
+.hidden-gems > h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+.hidden-gems > p {
+    text-align: center;
+    margin-bottom: 3rem;
+    opacity: 0.9;
+}
+
+.gems-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
 /* Destinos: tarjetas con fotografía y modal de detalles */
 .destinations-grid .destination-card,
 .gems-grid .gem-card {
     position: relative;
     height: 340px;
     overflow: hidden;
-    background: var(--secondary-blue);
+    background: var(--azul-oscuro);
 }
 
 .gems-grid .gem-card {
     height: 300px;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: var(--border-radius-lg);
-    transition: var(--transition);
+    border-radius: var(--radio-grande);
+    transition: var(--transicion);
 }
 
 .gems-grid .gem-card:hover {
@@ -21,7 +47,7 @@
 }
 
 .destinations-grid .destination-card:hover {
-    background: var(--secondary-blue);
+    background: var(--azul-oscuro);
 }
 
 .destinations-grid .destination-card.dest-no-photo,
@@ -40,6 +66,19 @@
     transition: transform 0.5s ease;
 }
 
+/* Encuadre de las fotos que no se ven bien centradas */
+.dest-img.encuadre-60 {
+    object-position: center 60%;
+}
+
+.dest-img.encuadre-70 {
+    object-position: center 70%;
+}
+
+.dest-img.encuadre-80 {
+    object-position: center 80%;
+}
+
 .destination-card:hover .dest-img,
 .gem-card:hover .dest-img {
     transform: scale(1.05);
@@ -53,7 +92,7 @@
     bottom: 0;
     padding: 0.85rem 1.1rem 1rem;
     background: rgba(0, 38, 77, 0.82);
-    color: var(--white);
+    color: var(--blanco);
 }
 
 .destinations-grid .destination-card h3,
@@ -62,7 +101,7 @@
     font-weight: 600;
     line-height: 1.3;
     margin-bottom: 0.15rem;
-    color: var(--white);
+    color: var(--blanco);
 }
 
 .destinations-grid .destination-card .location,
@@ -76,6 +115,7 @@
 }
 
 .destinations-grid .destination-card .rating {
+    float: right;
     display: inline-flex;
     align-items: center;
     gap: 0.3rem;
@@ -126,18 +166,19 @@
 }
 
 .dest-modal-credit a {
-    color: var(--primary-blue);
+    color: var(--azul);
 }
 
 .dest-modal-content h3,
 .dest-modal-content h4:first-child {
     font-size: 1.6rem;
     line-height: 1.3;
-    color: var(--primary-blue);
+    color: var(--azul);
     margin-bottom: 0.25rem;
 }
 
 .dest-modal-content .rating {
+    float: right;
     display: inline-flex;
     align-items: center;
     gap: 0.3rem;
@@ -161,7 +202,7 @@
 
 .dest-modal-content .details-section h4 {
     font-size: 1rem;
-    color: var(--primary-blue);
+    color: var(--azul);
     margin-bottom: 0.5rem;
 }
 
@@ -175,16 +216,22 @@
 }
 
 .dest-modal-content .details-section li::marker {
-    color: var(--accent-orange);
+    color: var(--naranja);
 }
 
 .dest-modal-content .tags .tag {
-    background: var(--primary-blue);
-    color: var(--white);
+    background: var(--azul);
+    color: var(--blanco);
+}
+
+.dest-modal-content .tags {
+    margin: 1rem 0;
 }
 
 .dest-modal-content .price {
-    margin-bottom: 1.25rem;
+    font-size: 1.2rem;
+    color: var(--naranja);
+    margin-bottom: 1rem;
 }
 
 @media (max-width: 768px) {
@@ -217,13 +264,29 @@
     max-width: 600px;
     margin: 0 auto 2rem;
     padding: 1rem 1.25rem;
-    border-radius: var(--border-radius);
+    border-radius: var(--radio);
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
     text-align: center;
 }
 
+.search-section {
+    margin-bottom: 3rem;
+}
+
+.search-bar {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
 .page-section .search-input {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--blanco);
+    font-size: 1rem;
     transition: border-color 0.3s ease, background-color 0.3s ease;
 }
 
@@ -233,6 +296,6 @@
 
 .page-section .search-input:focus {
     outline: none;
-    border-color: var(--accent-orange) !important;
-    background: rgba(255, 255, 255, 0.16) !important;
+    border-color: var(--naranja);
+    background: rgba(255, 255, 255, 0.16);
 }

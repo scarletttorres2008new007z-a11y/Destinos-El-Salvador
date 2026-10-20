@@ -8,32 +8,32 @@
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/componentes.css">
     <link rel="stylesheet" href="css/formularios.css">
+    <link rel="stylesheet" href="css/paginas/cultura.css">
     <link rel="stylesheet" href="css/adaptable.css">
-    <link rel="stylesheet" href="css/cultura.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation -->
-   <nav class="navbar">
+    <!-- Menú de navegación -->
+    <nav class="navbar">
         <div class="nav-container">
-            <a href="inicio el salvador.html" class="logo"><img src="img/logo-es.png" alt="El Salvador" class="logo-img"></a>
+            <a href="index.html" class="logo"><img src="img/logo-es.png" alt="El Salvador" class="logo-img"></a>
             <ul class="nav-menu">
-                <li><a href="inicio el salvador.html" class="nav-link active">Inicio</a></li>
-                <li><a href="destino el salvador.html" class="nav-link">Destinos</a></li>
-                <li><a href="cultura el salvador.html" class="nav-link">Cultura</a></li>
-                <li><a href="galeria el salvador.html" class="nav-link">Galería</a></li>
-                <li><a href="contacto el salvador.html" class="nav-link">Contacto</a></li>
-                <li><a href="Sobre nosotros.html" class="nav-link">Nosotros</a></li>
+                <li><a href="index.html" class="nav-link active">Inicio</a></li>
+                <li><a href="destinos.html" class="nav-link">Destinos</a></li>
+                <li><a href="cultura.html" class="nav-link">Cultura</a></li>
+                <li><a href="galeria.html" class="nav-link">Galería</a></li>
+                <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+                <li><a href="nosotros.html" class="nav-link">Nosotros</a></li>
             </ul>
             <button class="mobile-menu-btn">☰</button>
         </div>
         <div class="mobile-menu">
-            <a href="inicio el salvador.html">Inicio</a>
-            <a href="destino el salvador.html">Destinos</a>
-            <a href="cultura el salvador.html">Cultura</a>
-            <a href="galeria el salvador.html">Galería</a>
-            <a href="contacto el salvador.html">Contacto</a>
-            <a href="Sobre nosotros.html">Nosotros</a>
+            <a href="index.html">Inicio</a>
+            <a href="destinos.html">Destinos</a>
+            <a href="cultura.html">Cultura</a>
+            <a href="galeria.html">Galería</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="nosotros.html">Nosotros</a>
         </div>
     </nav>
 
@@ -104,15 +104,15 @@
                             </button>
                         </div>
                         <div class="museo-controles">
-                            <button type="button" class="museo-control museo-girar" data-dir="-1" aria-label="Pieza anterior"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg></button>
+                            <button type="button" class="museo-control museo-girar" data-dir="-1" aria-label="Pieza anterior"><svg class="icono" width="20" height="20" aria-hidden="true"><use href="#icono-anterior"></use></svg></button>
                             <button type="button" class="museo-control museo-vista-general">Ver toda la sala</button>
-                            <button type="button" class="museo-control museo-girar" data-dir="1" aria-label="Pieza siguiente"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg></button>
+                            <button type="button" class="museo-control museo-girar" data-dir="1" aria-label="Pieza siguiente"><svg class="icono" width="20" height="20" aria-hidden="true"><use href="#icono-siguiente"></use></svg></button>
                         </div>
                         <p id="museo-ayuda" class="museo-ayuda">Arrastra para girar la sala y toca una pieza</p>
                     </div>
 
                     <aside id="museo-panel" class="museo-panel" aria-live="polite" hidden>
-                        <button type="button" class="museo-panel-cerrar" aria-label="Cerrar y volver a la sala"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+                        <button type="button" class="museo-panel-cerrar" aria-label="Cerrar y volver a la sala"><svg class="icono" width="20" height="20" aria-hidden="true"><use href="#icono-cerrar"></use></svg></button>
                         <p class="museo-panel-numero"></p>
                         <h3 class="museo-panel-nombre"></h3>
                         <p class="museo-panel-lugar"></p>
@@ -128,12 +128,11 @@
                         </div>
                     </aside>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Pie de página -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-logo">sv <span class="highlight">El Salvador</span></div>
@@ -148,12 +147,18 @@
         </div>
     </footer>
 
-    <!-- Floating Action Button -->
+    <!-- Botón flotante de contacto rápido -->
     <div class="floating-fab">
-        <button class="fab-btn" aria-label="Comentarios"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></button>
+        <button class="fab-btn" aria-label="Comentarios"><svg class="icono" width="26" height="26" aria-hidden="true"><use href="#icono-mensaje"></use></svg></button>
     </div>
 
-    <script src="el salvador.js"></script>
-    <script src="cultura-3d.js"></script>
+    <!-- Scripts: primero los compartidos, luego los de esta página -->
+    <script src="js/nucleo/iconos.js"></script>
+    <script src="js/nucleo/utilidades.js"></script>
+    <script src="js/componentes/navegacion.js"></script>
+    <script src="js/componentes/contacto-rapido.js"></script>
+    <script src="js/componentes/boton-subir.js"></script>
+    <script src="js/datos/museo.js"></script>
+    <script src="js/paginas/cultura.js"></script>
 </body>
 </html>

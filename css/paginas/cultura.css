@@ -7,8 +7,8 @@
     position: relative;
     min-height: 100vh;
     padding: 7rem 2rem 4rem;
-    background: var(--primary-blue);
-    color: var(--white);
+    background: var(--azul);
+    color: var(--blanco);
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -31,7 +31,7 @@
     font-weight: 600;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: var(--white);
+    color: var(--blanco);
     background: var(--celeste);
     padding: 0.35rem 0.9rem;
     border-radius: 50px;
@@ -49,7 +49,7 @@
 
 .cultura-hero h1 span {
     display: block;
-    color: var(--accent-orange);
+    color: var(--naranja);
 }
 
 .cultura-hero-intro {
@@ -92,7 +92,7 @@
 .forma-aro {
     inset: 3%;
     border-radius: 50%;
-    border: 3px solid var(--accent-orange);
+    border: 3px solid var(--naranja);
     clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
 }
 
@@ -101,7 +101,7 @@
     height: 18%;
     right: 2%;
     bottom: 12%;
-    background: var(--accent-orange);
+    background: var(--naranja);
     border-radius: 0.75rem;
     transform: rotate(12deg);
 }
@@ -111,7 +111,7 @@
     height: 4%;
     left: 0;
     bottom: 8%;
-    background: var(--white);
+    background: var(--blanco);
     border-radius: 50px;
 }
 
@@ -121,7 +121,7 @@
     left: 8%;
     top: 12%;
     border-radius: 50%;
-    background: var(--white);
+    background: var(--blanco);
 }
 
 .cultura-hero-escena {
@@ -138,11 +138,11 @@
     position: relative;
     width: 78%;
     aspect-ratio: 4 / 3;
-    border: 10px solid var(--white);
+    border: 10px solid var(--blanco);
     border-radius: 1.25rem;
     overflow: hidden;
-    background: var(--white);
-    box-shadow: var(--shadow-lg);
+    background: var(--blanco);
+    box-shadow: var(--sombra-fuerte);
     transform: rotateY(-8deg) rotateX(3deg);
     animation: float 8s ease-in-out infinite;
 }
@@ -171,14 +171,14 @@
     width: max-content;
     max-width: 100%;
     font-size: 0.85rem;
-    background: var(--secondary-blue);
+    background: var(--azul-oscuro);
     padding: 0.45rem 1rem;
     border-radius: 50px;
     text-align: center;
 }
 
 .cultura-hero-pie strong {
-    color: var(--accent-orange);
+    color: var(--naranja);
     font-weight: 600;
 }
 
@@ -195,8 +195,8 @@
    ========================================================== */
 .museo-3d {
     padding: 5rem 2rem;
-    background: var(--white);
-    color: #1f2937;
+    background: var(--blanco);
+    color: var(--texto-oscuro);
     scroll-margin-top: 60px;
 }
 
@@ -206,7 +206,7 @@
 
 .museo-titulo {
     font-size: clamp(2rem, 4vw, 3rem);
-    color: var(--primary-blue);
+    color: var(--azul);
     line-height: 1.2;
     margin-bottom: 0.75rem;
 }
@@ -226,17 +226,17 @@
     position: relative;
     height: min(72vh, 620px);
     min-height: 440px;
-    border-radius: var(--border-radius-lg);
+    border-radius: var(--radio-grande);
     overflow: hidden;
-    background: var(--secondary-blue);
-    box-shadow: var(--shadow-md);
+    background: var(--azul-oscuro);
+    box-shadow: var(--sombra-media);
 }
 
 .museo-lienzo {
     position: absolute;
     inset: 0;
     overflow: hidden;
-    background: var(--secondary-blue);
+    background: var(--azul-oscuro);
 }
 
 /* Muro con franjas sólidas y piso de la sala */
@@ -247,7 +247,7 @@
     right: 0;
     top: 16%;
     height: 4px;
-    background: var(--accent-orange);
+    background: var(--naranja);
     box-shadow: 0 10px 0 -1px var(--celeste);
 }
 
@@ -258,7 +258,7 @@
     right: 0;
     bottom: 0;
     height: 36%;
-    background: var(--primary-blue);
+    background: var(--azul);
     border-top: 3px solid var(--celeste);
 }
 
@@ -297,8 +297,8 @@
     display: block;
     padding: 8px;
     border-radius: 12px;
-    background: var(--white);
-    box-shadow: var(--shadow-md);
+    background: var(--blanco);
+    box-shadow: var(--sombra-media);
     transform: rotateX(var(--inclinar-x, 0deg)) rotateY(var(--inclinar-y, 0deg));
     transition: transform 0.4s ease, box-shadow 0.3s ease;
 }
@@ -319,7 +319,7 @@
     justify-content: center;
     gap: 0.5rem;
     margin-top: 0.7rem;
-    color: var(--white);
+    color: var(--blanco);
     font-size: 0.9rem;
     font-weight: 600;
     line-height: 1.3;
@@ -327,7 +327,7 @@
 }
 
 .museo-obra-num {
-    color: var(--accent-orange);
+    color: var(--naranja);
 }
 
 .museo-obra:not(.cerca) .museo-obra-placa {
@@ -352,11 +352,11 @@
 }
 
 .museo-obra.al-frente .museo-obra-marco {
-    box-shadow: var(--shadow-lg);
+    box-shadow: var(--sombra-fuerte);
 }
 
 .museo-obra.seleccionada .museo-obra-marco {
-    box-shadow: 0 0 0 4px var(--accent-orange), var(--shadow-lg);
+    box-shadow: 0 0 0 4px var(--naranja), var(--sombra-fuerte);
 }
 
 .museo-obra:focus-visible {
@@ -364,7 +364,7 @@
 }
 
 .museo-obra:focus-visible .museo-obra-marco {
-    box-shadow: 0 0 0 4px var(--accent-orange), var(--shadow-lg);
+    box-shadow: 0 0 0 4px var(--naranja), var(--sombra-fuerte);
 }
 
 .museo-controles {
@@ -374,7 +374,7 @@
     display: flex;
     gap: 0.5rem;
     z-index: 2;
-    transition: var(--transition);
+    transition: var(--transicion);
 }
 
 .museo-control {
@@ -386,15 +386,15 @@
     justify-content: center;
     border: none;
     border-radius: 50px;
-    background: var(--white);
-    color: var(--primary-blue);
+    background: var(--blanco);
+    color: var(--azul);
     font-family: inherit;
     font-size: 0.9rem;
     font-weight: 600;
     white-space: nowrap;
     cursor: pointer;
-    box-shadow: var(--shadow-sm);
-    transition: var(--transition);
+    box-shadow: var(--sombra-suave);
+    transition: var(--transicion);
 }
 
 .museo-control.museo-girar {
@@ -402,8 +402,8 @@
 }
 
 .museo-control:hover {
-    background: var(--accent-orange);
-    color: var(--white);
+    background: var(--naranja);
+    color: var(--blanco);
 }
 
 .museo-ayuda {
@@ -414,13 +414,13 @@
     max-width: calc(100% - 2rem);
     padding: 0.4rem 1rem;
     border-radius: 50px;
-    background: var(--primary-blue);
-    color: var(--white);
+    background: var(--azul);
+    color: var(--blanco);
     font-size: 0.85rem;
     text-align: center;
     pointer-events: none;
     z-index: 2;
-    transition: var(--transition);
+    transition: var(--transicion);
 }
 
 .museo-panel {
@@ -430,14 +430,14 @@
     bottom: 0;
     width: min(420px, 42%);
     padding: 2rem 1.75rem 1.5rem;
-    background: var(--white);
-    color: #1f2937;
+    background: var(--blanco);
+    color: var(--texto-oscuro);
     overflow-y: auto;
     z-index: 3;
     opacity: 0;
     transform: translateX(24px);
     transition: opacity 0.35s ease, transform 0.35s ease;
-    border-left: 4px solid var(--accent-orange);
+    border-left: 4px solid var(--naranja);
 }
 
 .museo-panel.abierto {
@@ -466,14 +466,14 @@
     border: none;
     border-radius: 50%;
     background: #eef4fb;
-    color: var(--primary-blue);
+    color: var(--azul);
     cursor: pointer;
-    transition: var(--transition);
+    transition: var(--transicion);
 }
 
 .museo-panel-cerrar:hover {
-    background: var(--primary-blue);
-    color: var(--white);
+    background: var(--azul);
+    color: var(--blanco);
 }
 
 .museo-panel-numero {
@@ -488,21 +488,21 @@
 .museo-panel-nombre {
     font-size: 1.5rem;
     line-height: 1.25;
-    color: var(--primary-blue);
+    color: var(--azul);
     margin-bottom: 0.35rem;
     padding-right: 2.5rem;
 }
 
 .museo-panel-lugar {
     font-size: 0.9rem;
-    color: var(--accent-orange);
+    color: var(--naranja);
     font-weight: 500;
     margin-bottom: 1.25rem;
 }
 
 .museo-panel h4 {
     font-size: 0.95rem;
-    color: var(--primary-blue);
+    color: var(--azul);
     margin: 1.1rem 0 0.35rem;
 }
 
@@ -533,7 +533,7 @@
     width: 7px;
     height: 7px;
     border-radius: 2px;
-    background: var(--accent-orange);
+    background: var(--naranja);
 }
 
 .museo-panel-nav {
@@ -546,29 +546,29 @@
     flex: 1;
     padding: 0.7rem 1rem;
     border-radius: 50px;
-    border: 2px solid var(--primary-blue);
-    background: var(--white);
-    color: var(--primary-blue);
+    border: 2px solid var(--azul);
+    background: var(--blanco);
+    color: var(--azul);
     font-family: inherit;
     font-weight: 600;
     cursor: pointer;
-    transition: var(--transition);
+    transition: var(--transicion);
 }
 
 .museo-panel-nav .museo-siguiente {
-    background: var(--primary-blue);
-    color: var(--white);
+    background: var(--azul);
+    color: var(--blanco);
 }
 
 .museo-panel-nav button:hover {
     background: var(--celeste);
     border-color: var(--celeste);
-    color: var(--white);
+    color: var(--blanco);
 }
 
 .museo-control:focus-visible,
 .museo-panel button:focus-visible {
-    outline: 3px solid var(--accent-orange);
+    outline: 3px solid var(--naranja);
     outline-offset: 2px;
 }
 
@@ -620,8 +620,8 @@
         height: 62vh;
         min-height: 380px;
         max-height: 560px;
-        border-radius: var(--border-radius);
-        box-shadow: var(--shadow-md);
+        border-radius: var(--radio);
+        box-shadow: var(--sombra-media);
     }
 
     .museo-obra {
@@ -650,9 +650,9 @@
         bottom: auto;
         margin-top: 1rem;
         border-left: none;
-        border-top: 4px solid var(--accent-orange);
-        border-radius: var(--border-radius);
-        box-shadow: var(--shadow-md);
+        border-top: 4px solid var(--naranja);
+        border-radius: var(--radio);
+        box-shadow: var(--sombra-media);
         transform: translateY(12px);
         overflow: visible;
     }
@@ -660,4 +660,10 @@
     .museo-panel.abierto {
         transform: translateY(0);
     }
+}
+
+/* Grosor de trazo propio de algunos iconos */
+.museo-control .icono,
+.museo-panel-cerrar .icono {
+    stroke-width: 2.2;
 }

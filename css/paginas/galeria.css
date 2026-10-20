@@ -17,11 +17,11 @@
 
 .galeria-compacta .gallery-item:hover {
     transform: translateY(-4px);
-    box-shadow: var(--shadow-md);
+    box-shadow: var(--sombra-media);
 }
 
 .galeria-compacta .gallery-item:focus-visible {
-    outline: 3px solid var(--accent-orange);
+    outline: 3px solid var(--naranja);
     outline-offset: 3px;
 }
 
@@ -44,7 +44,7 @@
     inset: auto 0 0 0;
     padding: 0.6rem 0.75rem;
     background: rgba(0, 20, 40, 0.55);
-    color: white;
+    color: var(--blanco);
     transition: background 0.3s ease, padding 0.3s ease;
 }
 
@@ -130,9 +130,9 @@
 }
 
 .gallery-filters .filter-btn.active {
-    background: var(--accent-orange);
-    border-color: var(--accent-orange);
-    color: white;
+    background: var(--naranja);
+    border-color: var(--naranja);
+    color: var(--blanco);
     font-weight: 600;
     box-shadow: none;
 }
@@ -175,8 +175,8 @@
     left: 0.5rem;
     padding: 0.15rem 0.55rem;
     border-radius: 50px;
-    background: var(--accent-orange);
-    color: white;
+    background: var(--naranja);
+    color: var(--blanco);
     font-size: 0.7rem;
     font-weight: 600;
 }
@@ -186,7 +186,7 @@
     margin-top: 4rem;
     padding: 2.5rem;
     border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: var(--border-radius-lg);
+    border-radius: var(--radio-grande);
     background: rgba(255, 255, 255, 0.05);
     text-align: center;
 }
@@ -215,7 +215,7 @@
     gap: 0.9rem;
     padding: 1rem 1.25rem;
     border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: var(--border-radius);
+    border-radius: var(--radio);
     background: rgba(255, 255, 255, 0.06);
     text-align: left;
 }
@@ -229,7 +229,7 @@
     height: 2.6rem;
     border-radius: 50%;
     background: var(--celeste);
-    color: white;
+    color: var(--blanco);
 }
 
 .sharing-option h4 {
@@ -246,7 +246,7 @@
 .subir-fotos {
     padding: 2rem 1.5rem;
     border: 2px dashed rgba(255, 255, 255, 0.3);
-    border-radius: var(--border-radius);
+    border-radius: var(--radio);
     background: rgba(0, 20, 40, 0.15);
 }
 
@@ -279,7 +279,7 @@
 }
 
 .subir-input:focus-visible + .subir-seleccionar {
-    outline: 3px solid white;
+    outline: 3px solid var(--blanco);
     outline-offset: 3px;
 }
 
@@ -296,7 +296,7 @@
 .subir-msg {
     margin: 0.4rem 0 0;
     padding: 0.55rem 0.85rem;
-    border-left: 4px solid var(--accent-orange);
+    border-left: 4px solid var(--naranja);
     border-radius: 0.4rem;
     background: rgba(255, 255, 255, 0.1);
     font-size: 0.88rem;
@@ -356,14 +356,14 @@
     border: none;
     border-radius: 50%;
     background: rgba(0, 20, 40, 0.75);
-    color: white;
+    color: var(--blanco);
     cursor: pointer;
     transition: background 0.3s ease;
 }
 
 .previa-quitar:hover,
 .previa-quitar:focus-visible {
-    background: var(--accent-orange);
+    background: var(--naranja);
 }
 
 .subir-acciones {
@@ -453,7 +453,7 @@
     margin: 0;
     max-width: 1100px;
     text-align: center;
-    color: white;
+    color: var(--blanco);
     transform: scale(0.97);
     transition: transform 0.25s ease;
 }
@@ -485,7 +485,7 @@
     margin: 0;
     font-size: 1.15rem;
     font-weight: 600;
-    color: var(--accent-orange);
+    color: var(--naranja);
 }
 
 .lightbox-descripcion {
@@ -509,7 +509,7 @@
     position: absolute;
     top: 1.4rem;
     left: 1.5rem;
-    color: white;
+    color: var(--blanco);
     font-size: 0.9rem;
     opacity: 0.8;
 }
@@ -525,18 +525,18 @@
     border: 1px solid rgba(255, 255, 255, 0.25);
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.1);
-    color: white;
+    color: var(--blanco);
     cursor: pointer;
     transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .lightbox-btn:hover {
-    background: var(--accent-orange);
-    border-color: var(--accent-orange);
+    background: var(--naranja);
+    border-color: var(--naranja);
 }
 
 .lightbox-btn:focus-visible {
-    outline: 3px solid var(--accent-orange);
+    outline: 3px solid var(--naranja);
     outline-offset: 2px;
 }
 
@@ -614,7 +614,7 @@
 .video-tarjeta {
     background: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: var(--border-radius);
+    border-radius: var(--radio);
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
@@ -631,7 +631,7 @@
     display: block;
     width: 100%;
     aspect-ratio: 16 / 9;
-    background: var(--secondary-blue);
+    background: var(--azul-oscuro);
 }
 
 .video-portada {
@@ -677,8 +677,8 @@
     height: 60px;
     padding-left: 4px;
     border-radius: 50%;
-    background: var(--accent-orange);
-    color: var(--white);
+    background: var(--naranja);
+    color: var(--blanco);
     transform: translate(-50%, -50%);
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, background-color 0.3s ease;
@@ -686,7 +686,7 @@
 
 .video-tarjeta:hover .video-play {
     transform: translate(-50%, -50%) scale(1.08);
-    background: #ea580c;
+    background: var(--naranja-oscuro);
 }
 
 .video-duracion {
@@ -697,13 +697,13 @@
     padding: 0.15rem 0.5rem;
     border-radius: 0.4rem;
     background: rgba(0, 0, 0, 0.75);
-    color: var(--white);
+    color: var(--blanco);
     font-size: 0.75rem;
     font-weight: 600;
 }
 
 .video-portada:focus-visible {
-    outline: 3px solid var(--accent-orange);
+    outline: 3px solid var(--naranja);
     outline-offset: -3px;
 }
 
@@ -736,7 +736,7 @@
     display: inline-flex;
     align-items: center;
     gap: 0.35rem;
-    color: var(--white);
+    color: var(--blanco);
     font-size: 0.82rem;
     font-weight: 600;
     text-decoration: none;
@@ -745,8 +745,8 @@
 }
 
 .video-fuente:hover {
-    color: var(--accent-orange);
-    border-bottom-color: var(--accent-orange);
+    color: var(--naranja);
+    border-bottom-color: var(--naranja);
 }
 
 @media (max-width: 960px) {
@@ -759,4 +759,9 @@
     .videos-grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* Grosor de trazo propio de algunos iconos */
+.previa-quitar .icono {
+    stroke-width: 2.5;
 }

@@ -8,32 +8,32 @@
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/componentes.css">
     <link rel="stylesheet" href="css/formularios.css">
+    <link rel="stylesheet" href="css/paginas/nosotros.css">
     <link rel="stylesheet" href="css/adaptable.css">
-    <link rel="stylesheet" href="css/nosotros.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body class="pagina-nosotros">
-    <!-- Navigation -->
+    <!-- Menú de navegación -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="inicio el salvador.html" class="logo"><img src="img/logo-es.png" alt="El Salvador" class="logo-img"></a>
+            <a href="index.html" class="logo"><img src="img/logo-es.png" alt="El Salvador" class="logo-img"></a>
             <ul class="nav-menu">
-                <li><a href="inicio el salvador.html" class="nav-link active">Inicio</a></li>
-                <li><a href="destino el salvador.html" class="nav-link">Destinos</a></li>
-                <li><a href="cultura el salvador.html" class="nav-link">Cultura</a></li>
-                <li><a href="galeria el salvador.html" class="nav-link">Galería</a></li>
-                <li><a href="contacto el salvador.html" class="nav-link">Contacto</a></li>
-                <li><a href="Sobre nosotros.html" class="nav-link">Nosotros</a></li>
+                <li><a href="index.html" class="nav-link active">Inicio</a></li>
+                <li><a href="destinos.html" class="nav-link">Destinos</a></li>
+                <li><a href="cultura.html" class="nav-link">Cultura</a></li>
+                <li><a href="galeria.html" class="nav-link">Galería</a></li>
+                <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+                <li><a href="nosotros.html" class="nav-link">Nosotros</a></li>
             </ul>
             <button class="mobile-menu-btn">☰</button>
         </div>
         <div class="mobile-menu">
-            <a href="inicio el salvador.html">Inicio</a>
-            <a href="destino el salvador.html">Destinos</a>
-            <a href="cultura el salvador.html">Cultura</a>
-            <a href="galeria el salvador.html">Galería</a>
-            <a href="contacto el salvador.html">Contacto</a>
-            <a href="Sobre nosotros.html">Nosotros</a>
+            <a href="index.html">Inicio</a>
+            <a href="destinos.html">Destinos</a>
+            <a href="cultura.html">Cultura</a>
+            <a href="galeria.html">Galería</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="nosotros.html">Nosotros</a>
         </div>
     </nav>
 
@@ -47,7 +47,7 @@
             <p>Somos una empresa salvadoreña dedicada a mostrar la belleza y la riqueza cultural de nuestro país. Con más de 10 años de experiencia, hemos ayudado a miles de viajeros a descubrir los secretos mejor guardados de El Salvador.</p>
             <div class="nos-hero-botones">
                 <a href="#historia" class="nos-btn nos-btn-naranja">Conoce nuestra historia</a>
-                <a href="contacto el salvador.html" class="nos-btn nos-btn-borde">Planifica tu viaje</a>
+                <a href="contacto.html" class="nos-btn nos-btn-borde">Planifica tu viaje</a>
             </div>
         </div>
         <p class="nos-credito">Foto: Pipil El Salvador, CC BY 4.0</p>
@@ -65,15 +65,15 @@
                 <!-- Misión, visión y valores en pestañas -->
                 <div class="nos-pestanas" role="tablist" aria-label="Misión, visión y valores">
                     <button class="nos-pestana activa" role="tab" id="tab-mision" aria-controls="panel-mision" aria-selected="true">
-                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+                        <svg class="icono" width="20" height="20" aria-hidden="true"><use href="#icono-diana"></use></svg>
                         Misión
                     </button>
                     <button class="nos-pestana" role="tab" id="tab-vision" aria-controls="panel-vision" aria-selected="false" tabindex="-1">
-                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                        <svg class="icono" width="20" height="20" aria-hidden="true"><use href="#icono-ojo"></use></svg>
                         Visión
                     </button>
                     <button class="nos-pestana" role="tab" id="tab-valores" aria-controls="panel-valores" aria-selected="false" tabindex="-1">
-                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                        <svg class="icono" width="20" height="20" aria-hidden="true"><use href="#icono-corazon"></use></svg>
                         Valores
                     </button>
                 </div>
@@ -210,7 +210,7 @@
                     <span class="nos-miembro-rol">Director General</span>
                     <span class="nos-miembro-texto">Con 15 años de experiencia en turismo, lidera el equipo con pasión y dedicación.</span>
                     <span class="nos-miembro-ver">Ver perfil
-                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        <svg class="icono" width="16" height="16" aria-hidden="true"><use href="#icono-flecha-derecha"></use></svg>
                     </span>
                 </button>
                 <button class="nos-miembro" data-miembro="ana" data-revelar>
@@ -219,7 +219,7 @@
                     <span class="nos-miembro-rol">Directora de Operaciones</span>
                     <span class="nos-miembro-texto">Coordina todos los tours y cuida que cada detalle del viaje sea perfecto.</span>
                     <span class="nos-miembro-ver">Ver perfil
-                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        <svg class="icono" width="16" height="16" aria-hidden="true"><use href="#icono-flecha-derecha"></use></svg>
                     </span>
                 </button>
                 <button class="nos-miembro" data-miembro="roberto" data-revelar>
@@ -228,7 +228,7 @@
                     <span class="nos-miembro-rol">Guía Especializado</span>
                     <span class="nos-miembro-texto">Historiador y guía certificado que conoce cada rincón de El Salvador.</span>
                     <span class="nos-miembro-ver">Ver perfil
-                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        <svg class="icono" width="16" height="16" aria-hidden="true"><use href="#icono-flecha-derecha"></use></svg>
                     </span>
                 </button>
                 <button class="nos-miembro" data-miembro="maria" data-revelar>
@@ -237,7 +237,7 @@
                     <span class="nos-miembro-rol">Coordinadora de Marketing</span>
                     <span class="nos-miembro-texto">Promociona las maravillas del país y mantiene informados a nuestros viajeros.</span>
                     <span class="nos-miembro-ver">Ver perfil
-                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        <svg class="icono" width="16" height="16" aria-hidden="true"><use href="#icono-flecha-derecha"></use></svg>
                     </span>
                 </button>
             </div>
@@ -254,22 +254,22 @@
 
             <div class="nos-valores" data-revelar-grupo>
                 <article class="nos-valor" data-revelar>
-                    <div class="nos-valor-icono"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></div>
+                    <div class="nos-valor-icono"><svg class="icono" width="26" height="26" aria-hidden="true"><use href="#icono-hoja"></use></svg></div>
                     <h3>Turismo sostenible</h3>
                     <p>Prácticas responsables que protegen la naturaleza y benefician a las comunidades locales.</p>
                 </article>
                 <article class="nos-valor" data-revelar>
-                    <div class="nos-valor-icono"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16.24 7.76-2.12 6.36-6.36 2.12 2.12-6.36 6.36-2.12z"/></svg></div>
+                    <div class="nos-valor-icono"><svg class="icono" width="26" height="26" aria-hidden="true"><use href="#icono-brujula"></use></svg></div>
                     <h3>Experiencias auténticas</h3>
                     <p>Tours que muestran la verdadera esencia de El Salvador, lejos del turismo masivo.</p>
                 </article>
                 <article class="nos-valor" data-revelar>
-                    <div class="nos-valor-icono"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+                    <div class="nos-valor-icono"><svg class="icono" width="26" height="26" aria-hidden="true"><use href="#icono-personas"></use></svg></div>
                     <h3>Atención personalizada</h3>
                     <p>Adaptamos cada viaje a las necesidades y preferencias de cada viajero.</p>
                 </article>
                 <article class="nos-valor" data-revelar>
-                    <div class="nos-valor-icono"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="7"/><path d="M8.21 13.89 7 23l5-3 5 3-1.21-9.12"/></svg></div>
+                    <div class="nos-valor-icono"><svg class="icono" width="26" height="26" aria-hidden="true"><use href="#icono-medalla"></use></svg></div>
                     <h3>Calidad garantizada</h3>
                     <p>Trabajamos con los mejores proveedores locales para asegurar un servicio excelente.</p>
                 </article>
@@ -312,33 +312,33 @@
             <h2>¿Listo para descubrir El Salvador con nosotros?</h2>
             <p>Cuéntanos qué te gustaría vivir y armamos un viaje a tu medida.</p>
             <div class="nos-hero-botones">
-                <a href="contacto el salvador.html" class="nos-btn nos-btn-blanco">Contáctanos</a>
-                <a href="destino el salvador.html" class="nos-btn nos-btn-borde">Ver destinos</a>
+                <a href="contacto.html" class="nos-btn nos-btn-blanco">Contáctanos</a>
+                <a href="destinos.html" class="nos-btn nos-btn-borde">Ver destinos</a>
             </div>
         </div>
     </section>
 
-    <!-- Ventana con el perfil de cada integrante (la llena nosotros.js) -->
+    <!-- Ventana con el perfil de cada integrante (la llena js/paginas/nosotros.js) -->
     <div class="nos-modal" id="nos-modal" hidden>
         <div class="nos-modal-fondo" data-cerrar></div>
         <div class="nos-modal-caja" role="dialog" aria-modal="true" aria-labelledby="nos-modal-nombre">
             <button class="nos-modal-cerrar" data-cerrar aria-label="Cerrar">
-                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+                <svg class="icono" width="22" height="22" aria-hidden="true"><use href="#icono-cerrar"></use></svg>
             </button>
             <div class="nos-modal-cuerpo"></div>
             <div class="nos-modal-nav">
                 <button class="nos-modal-flecha" data-paso="-1" aria-label="Integrante anterior">
-                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+                    <svg class="icono" width="20" height="20" aria-hidden="true"><use href="#icono-anterior"></use></svg>
                 </button>
                 <span class="nos-modal-contador"></span>
                 <button class="nos-modal-flecha" data-paso="1" aria-label="Integrante siguiente">
-                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18l6-6-6-6"/></svg>
+                    <svg class="icono" width="20" height="20" aria-hidden="true"><use href="#icono-siguiente"></use></svg>
                 </button>
             </div>
         </div>
     </div>
 
-    <!-- Footer -->
+    <!-- Pie de página -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-logo">sv <span class="highlight">El Salvador</span></div>
@@ -353,12 +353,18 @@
         </div>
     </footer>
 
-    <!-- Floating Action Button -->
+    <!-- Botón flotante de contacto rápido -->
     <div class="floating-fab">
-        <button class="fab-btn" aria-label="Comentarios"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></button>
+        <button class="fab-btn" aria-label="Comentarios"><svg class="icono" width="26" height="26" aria-hidden="true"><use href="#icono-mensaje"></use></svg></button>
     </div>
 
-    <script src="el salvador.js"></script>
-    <script src="nosotros.js"></script>
+    <!-- Scripts: primero los compartidos, luego los de esta página -->
+    <script src="js/nucleo/iconos.js"></script>
+    <script src="js/nucleo/utilidades.js"></script>
+    <script src="js/componentes/navegacion.js"></script>
+    <script src="js/componentes/contacto-rapido.js"></script>
+    <script src="js/componentes/boton-subir.js"></script>
+    <script src="js/datos/equipo.js"></script>
+    <script src="js/paginas/nosotros.js"></script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 /* Componentes compartidos: tarjetas de lugares (Inicio y Destinos), ventana de Experiencias (también la usa Destinos), ventana de contacto y paquetes */
 
-/* Places Grid */
+/* Rejilla de lugares */
 .highlighted-places {
     margin-bottom: 4rem;
 }
@@ -21,9 +21,9 @@
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: var(--border-radius-lg);
+    border-radius: var(--radio-grande);
     overflow: hidden;
-    transition: var(--transition);
+    transition: var(--transicion);
 }
 
 .place-card:hover {
@@ -36,25 +36,9 @@
     object-fit: cover;
 }
 
-.place-info {
-    padding: 1.5rem;
-}
-
-.place-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 0.5rem;
-}
-
-.place-header h4 {
-    font-size: 1.3rem;
-    font-weight: 600;
-}
-
 .rating {
-    background: var(--accent-orange);
-    color: white;
+    background: var(--naranja);
+    color: var(--blanco);
     padding: 0.25rem 0.75rem;
     border-radius: 20px;
     font-size: 0.875rem;
@@ -90,38 +74,38 @@
     font-weight: 500;
 }
 
-.tag.surf { background: var(--celeste); color: var(--white); }
-.tag.beach { background: var(--celeste); color: var(--white); }
-.tag.nightlife { background: var(--accent-orange); color: var(--white); }
-.tag.volcano { background: var(--accent-orange); color: var(--white); }
-.tag.hiking { background: var(--celeste); color: var(--white); }
-.tag.adventure { background: var(--accent-orange); color: var(--white); }
-.tag.history { background: var(--white); color: var(--primary-blue); }
-.tag.unesco { background: var(--white); color: var(--primary-blue); }
-.tag.archaeology { background: var(--white); color: var(--primary-blue); }
+.tag.surf { background: var(--celeste); color: var(--blanco); }
+.tag.beach { background: var(--celeste); color: var(--blanco); }
+.tag.nightlife { background: var(--naranja); color: var(--blanco); }
+.tag.volcano { background: var(--naranja); color: var(--blanco); }
+.tag.hiking { background: var(--celeste); color: var(--blanco); }
+.tag.adventure { background: var(--naranja); color: var(--blanco); }
+.tag.history { background: var(--blanco); color: var(--azul); }
+.tag.unesco { background: var(--blanco); color: var(--azul); }
+.tag.archaeology { background: var(--blanco); color: var(--azul); }
 
 .price {
     font-size: 1.1rem;
     font-weight: 600;
-    color: var(--accent-orange);
+    color: var(--naranja);
     margin-bottom: 1rem;
 }
 
 .details-btn {
     width: 100%;
-    background: var(--accent-orange);
-    color: white;
+    background: var(--naranja);
+    color: var(--blanco);
     border: none;
     padding: 0.75rem;
-    border-radius: var(--border-radius);
+    border-radius: var(--radio);
     font-weight: 600;
     cursor: pointer;
-    transition: var(--transition);
+    transition: var(--transicion);
 }
 
 .details-btn:hover {
     transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
+    box-shadow: var(--sombra-media);
 }
 
 /* Experiencias Imperdibles: tarjetas compactas y modal de detalles */
@@ -135,23 +119,23 @@
 .highlighted-places .exp-card {
     display: flex;
     flex-direction: column;
-    background: #ffffff;
+    background: var(--blanco);
     backdrop-filter: none;
     border: none;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow-sm);
+    border-radius: var(--radio);
+    box-shadow: var(--sombra-suave);
     text-align: left;
     transition: opacity 0.6s ease, transform 0.6s ease, translate 0.3s ease, box-shadow 0.3s ease !important;
 }
 
 .highlighted-places .exp-card:hover {
     translate: 0 -6px;
-    box-shadow: var(--shadow-md);
+    box-shadow: var(--sombra-media);
 }
 
 .exp-img-wrap {
     overflow: hidden;
-    background: #00a3da;
+    background: var(--celeste);
 }
 
 .highlighted-places .exp-card .exp-img {
@@ -176,7 +160,7 @@
 .exp-body h4 {
     font-size: 1.1rem;
     font-weight: 600;
-    color: #0057a6;
+    color: var(--azul);
     margin-bottom: 0.35rem;
 }
 
@@ -193,8 +177,8 @@
 
 .exp-btn {
     align-self: flex-start;
-    background: #f97316;
-    color: #ffffff;
+    background: var(--naranja);
+    color: var(--blanco);
     border: none;
     padding: 0.5rem 1.25rem;
     border-radius: 2rem;
@@ -206,18 +190,18 @@
 }
 
 .exp-btn:hover {
-    background: #0057a6;
+    background: var(--azul);
     transform: translateY(-2px);
 }
 
 .exp-btn:focus-visible,
 .exp-modal-close:focus-visible,
 .exp-modal-btn:focus-visible {
-    outline: 3px solid #00a3da;
+    outline: 3px solid var(--celeste);
     outline-offset: 2px;
 }
 
-/* Modal */
+/* Ventana emergente */
 .exp-modal {
     position: fixed;
     inset: 0;
@@ -243,10 +227,10 @@
     max-width: 620px;
     max-height: 90vh;
     overflow-y: auto;
-    background: #ffffff;
+    background: var(--blanco);
     color: #333333;
-    border-radius: var(--border-radius-lg);
-    box-shadow: var(--shadow-lg);
+    border-radius: var(--radio-grande);
+    box-shadow: var(--sombra-fuerte);
     text-align: left;
     transform: translateY(24px) scale(0.97);
     transition: transform 0.3s ease;
@@ -261,7 +245,7 @@
     width: 100%;
     height: 280px;
     object-fit: cover;
-    background: #00a3da;
+    background: var(--celeste);
 }
 
 .exp-modal-close {
@@ -272,17 +256,17 @@
     height: 40px;
     border: none;
     border-radius: 50%;
-    background: #ffffff;
-    color: #0057a6;
+    background: var(--blanco);
+    color: var(--azul);
     font-size: 1.1rem;
     cursor: pointer;
-    box-shadow: var(--shadow-sm);
+    box-shadow: var(--sombra-suave);
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .exp-modal-close:hover {
-    background: #f97316;
-    color: #ffffff;
+    background: var(--naranja);
+    color: var(--blanco);
 }
 
 .exp-modal-body {
@@ -291,12 +275,12 @@
 
 .exp-modal-title {
     font-size: 1.6rem;
-    color: #0057a6;
+    color: var(--azul);
     margin-bottom: 0.25rem;
 }
 
 .exp-modal-location {
-    color: #00a3da;
+    color: var(--celeste);
     font-weight: 600;
     margin-bottom: 1rem;
 }
@@ -308,7 +292,7 @@
 
 .exp-modal-body h4 {
     font-size: 1rem;
-    color: #0057a6;
+    color: var(--azul);
     margin-bottom: 0.5rem;
 }
 
@@ -322,12 +306,12 @@
 }
 
 .exp-modal-body li::marker {
-    color: #f97316;
+    color: var(--naranja);
 }
 
 .exp-modal-btn {
-    background: #0057a6;
-    color: #ffffff;
+    background: var(--azul);
+    color: var(--blanco);
     border: none;
     padding: 0.7rem 1.75rem;
     border-radius: 2rem;
@@ -338,7 +322,7 @@
 }
 
 .exp-modal-btn:hover {
-    background: #f97316;
+    background: var(--naranja);
 }
 
 body.exp-modal-open {
@@ -386,102 +370,164 @@ body.exp-modal-open {
     }
 }
 
-/* Travel Packages */
-.travel-packages {
-    margin-bottom: 4rem;
-}
-
-.travel-packages h3 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
-.packages-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.package-card {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: var(--border-radius-lg);
-    padding: 2rem;
-    transition: var(--transition);
-    position: relative;
-    overflow: hidden;
-}
-
-.package-card::before {
-    content: '';
-    position: absolute;
+/* Ventana de contacto rápido (la crea js/componentes/contacto-rapido.js) */
+.modal-overlay {
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    height: 4px;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    z-index: 2000;
+    animation: contacto-rapido-aparecer 0.3s ease;
 }
 
-.package-card.adventure::before {
-    background: var(--accent-orange);
+.modal-overlay.closing {
+    animation: contacto-rapido-desaparecer 0.25s ease forwards;
 }
 
-.package-card.culture::before {
-    background: var(--white);
+.modal-overlay .modal-content {
+    background: var(--blanco);
+    border-radius: 1rem;
+    max-width: 420px;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    animation: contacto-rapido-crecer 0.3s ease;
 }
 
-.package-card.surf::before {
-    background: var(--celeste);
+.modal-overlay.closing .modal-content {
+    animation: contacto-rapido-encoger 0.25s ease forwards;
 }
 
-.package-card:hover {
-    transform: translateY(-6px);
-    background: rgba(255, 255, 255, 0.15);
-}
-
-.package-header {
+.modal-overlay .modal-header {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: var(--azul);
+    color: var(--blanco);
+}
+
+.modal-overlay .modal-header h3 {
+    color: var(--blanco);
+    font-size: 1.4rem;
+    margin: 0 0 0.25rem;
+}
+
+.modal-overlay .modal-subtitle {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.modal-overlay .modal-close {
+    flex-shrink: 0;
+    display: flex;
     align-items: center;
-    margin-bottom: 1.5rem;
-}
-
-.package-header h4 {
-    font-size: 1.5rem;
-    font-weight: 600;
-}
-
-.package-price {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--accent-orange);
-}
-
-.package-features {
-    margin-bottom: 2rem;
-}
-
-.feature {
-    color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 0.75rem;
-    font-weight: 500;
-}
-
-.reserve-btn {
-    width: 100%;
-    background: var(--accent-orange);
-    color: white;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.15);
     border: none;
-    padding: 1rem;
-    border-radius: var(--border-radius);
-    font-size: 1.1rem;
-    font-weight: 600;
+    color: var(--blanco);
     cursor: pointer;
-    transition: var(--transition);
+    border-radius: 50%;
+    transition: background 0.3s ease, transform 0.3s ease;
 }
 
-.reserve-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-lg);
+.modal-overlay .modal-close:hover,
+.modal-overlay .modal-close:focus-visible {
+    background: rgba(255, 255, 255, 0.3);
+    transform: rotate(90deg);
+    outline: none;
+}
+
+.modal-overlay .modal-close .icono {
+    stroke-width: 2.5;
+}
+
+.modal-overlay .modal-body {
+    padding: 1.5rem;
+}
+
+.contact-option {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    padding: 1rem;
+    background: var(--blanco);
+    border: 1px solid var(--gris-borde);
+    border-radius: 0.75rem;
+    color: var(--texto-oscuro);
+    font-size: 1rem;
+    text-align: left;
+    cursor: pointer;
+    transition: border-color 0.3s ease, background 0.3s ease, transform 0.3s ease;
+    margin-bottom: 0.75rem;
+}
+
+.contact-option:last-child {
+    margin-bottom: 0;
+}
+
+.contact-option:hover,
+.contact-option:focus-visible {
+    border-color: var(--celeste);
+    background: var(--celeste-claro);
+    transform: translateY(-2px);
+    outline: none;
+}
+
+.option-icon {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--celeste);
+    color: var(--blanco);
+}
+
+.option-label {
+    display: flex;
+    flex-direction: column;
+}
+
+.option-text {
+    font-weight: 600;
+    color: var(--azul);
+}
+
+.option-detail {
+    font-size: 0.875rem;
+    color: var(--texto-suave);
+}
+
+@keyframes contacto-rapido-aparecer {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes contacto-rapido-desaparecer {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes contacto-rapido-crecer {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes contacto-rapido-encoger {
+    from { transform: scale(1); opacity: 1; }
+    to { transform: scale(0.9); opacity: 0; }
 }

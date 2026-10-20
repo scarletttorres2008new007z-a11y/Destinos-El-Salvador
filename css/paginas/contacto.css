@@ -9,8 +9,8 @@
     justify-content: center;
     padding: 8rem 2rem 5rem;
     overflow: hidden;
-    background: var(--secondary-blue);
-    color: var(--white);
+    background: var(--azul-oscuro);
+    color: var(--blanco);
     text-align: center;
 }
 
@@ -41,8 +41,8 @@
     padding: 0.35rem 1rem;
     margin-bottom: 1.25rem;
     border-radius: 50px;
-    background: var(--accent-orange);
-    color: var(--white);
+    background: var(--naranja);
+    color: var(--blanco);
     font-size: 0.85rem;
     font-weight: 600;
     letter-spacing: 0.08em;
@@ -53,7 +53,7 @@
     font-size: clamp(2.2rem, 5.5vw, 3.8rem);
     line-height: 1.15;
     margin-bottom: 1.25rem;
-    color: var(--white);
+    color: var(--blanco);
 }
 
 .contacto-hero-contenido p {
@@ -111,8 +111,6 @@
     align-items: flex-start;
     gap: 1rem;
     padding: 1.75rem 1.5rem;
-    border-radius: var(--border-radius);
-    border: 1px solid rgba(255, 255, 255, 0.25);
     text-align: left;
 }
 
@@ -124,14 +122,14 @@
     width: 52px;
     height: 52px;
     border-radius: 14px;
-    background: var(--white);
-    color: var(--primary-blue);
-    transition: var(--transition);
+    background: var(--blanco);
+    color: var(--azul);
+    transition: var(--transicion);
 }
 
 .contacto-tarjeta:hover .contacto-tarjeta-icono {
-    background: var(--accent-orange);
-    color: var(--white);
+    background: var(--naranja);
+    color: var(--blanco);
 }
 
 .contacto-tarjeta-texto {
@@ -142,7 +140,7 @@
     font-size: 1.1rem;
     font-weight: 600;
     margin-bottom: 0.6rem;
-    color: var(--white);
+    color: var(--blanco);
 }
 
 .contacto-tarjeta p {
@@ -154,13 +152,13 @@
 }
 
 .contacto-tarjeta a {
-    color: var(--white);
+    color: var(--blanco);
     text-decoration: none;
-    transition: var(--transition);
+    transition: var(--transicion);
 }
 
 .contacto-tarjeta a:hover {
-    color: var(--accent-orange);
+    color: var(--naranja);
 }
 
 .contacto-tarjeta-nota {
@@ -209,12 +207,6 @@
 }
 
 /* Formulario de Contacto: dos columnas, etiquetas claras y mensajes visuales */
-.contacto-form {
-    max-width: 880px;
-    padding: 2.5rem;
-    border-radius: var(--border-radius-lg);
-}
-
 .contacto-form-encabezado {
     text-align: center;
     margin-bottom: 2rem;
@@ -223,7 +215,7 @@
 .contacto-form-encabezado h3 {
     font-size: 1.6rem;
     margin-bottom: 0.5rem;
-    color: var(--white);
+    color: var(--blanco);
 }
 
 .contacto-form-encabezado p {
@@ -234,7 +226,7 @@
 }
 
 .campo-obligatorio {
-    color: var(--accent-orange);
+    color: var(--naranja);
     font-weight: 700;
 }
 
@@ -260,7 +252,7 @@
     font-weight: 600;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: var(--white);
+    color: var(--blanco);
     opacity: 0.85;
 }
 
@@ -313,8 +305,8 @@
 }
 
 .contacto-form .campo select option {
-    color: var(--secondary-blue);
-    background: var(--white);
+    color: var(--azul-oscuro);
+    background: var(--blanco);
 }
 
 .contacto-form .campo input[type="date"]::-webkit-calendar-picker-indicator {
@@ -335,7 +327,7 @@
     padding-left: 1.4rem;
     font-size: 0.82rem;
     font-weight: 500;
-    color: #ffffff;
+    color: var(--blanco);
     position: relative;
 }
 
@@ -348,7 +340,7 @@
     height: 1rem;
     border-radius: 50%;
     background: #ef4444;
-    color: var(--white);
+    color: var(--blanco);
     font-size: 0.7rem;
     font-weight: 700;
     line-height: 1rem;
@@ -414,11 +406,11 @@
 }
 
 .contacto-form .contacto-enviar:hover {
-    background: #ea580c;
+    background: var(--naranja-oscuro);
 }
 
 .contacto-form .contacto-enviar:focus-visible {
-    outline: 3px solid var(--white);
+    outline: 3px solid var(--blanco);
     outline-offset: 3px;
 }
 
@@ -442,13 +434,13 @@
     margin-bottom: 1.25rem;
     border-radius: 50%;
     background: #22c55e;
-    color: var(--white);
+    color: var(--blanco);
 }
 
 .contacto-form-exito h3 {
     font-size: 1.6rem;
     margin-bottom: 0.75rem;
-    color: var(--white);
+    color: var(--blanco);
 }
 
 .contacto-form-exito p {
@@ -470,24 +462,20 @@
     border: 1.5px solid rgba(255, 255, 255, 0.6);
     border-radius: 50px;
     background: transparent;
-    color: var(--white);
+    color: var(--blanco);
     font-family: inherit;
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
-    transition: var(--transition);
+    transition: var(--transicion);
 }
 
 .contacto-exito-volver:hover {
-    background: var(--white);
-    color: var(--primary-blue);
+    background: var(--blanco);
+    color: var(--azul);
 }
 
 @media (max-width: 640px) {
-    .contacto-form {
-        padding: 1.75rem 1.25rem;
-    }
-
     .contacto-form-grid {
         grid-template-columns: 1fr;
     }
@@ -507,7 +495,7 @@
 .paquetes-titulo {
     margin-bottom: 1.5rem;
     font-size: 1.25rem;
-    color: var(--white);
+    color: var(--blanco);
     text-align: center;
 }
 
@@ -522,20 +510,20 @@
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    border-radius: var(--border-radius);
+    border-radius: var(--radio);
     border: 2px solid rgba(255, 255, 255, 0.18);
     background: rgba(255, 255, 255, 0.08);
-    transition: var(--transition);
+    transition: var(--transicion);
 }
 
 .paquete:hover {
     transform: translateY(-4px);
     border-color: rgba(255, 255, 255, 0.4);
-    box-shadow: var(--shadow-md);
+    box-shadow: var(--sombra-media);
 }
 
 .paquete.seleccionado {
-    border-color: var(--accent-orange);
+    border-color: var(--naranja);
     background: rgba(249, 115, 22, 0.12);
 }
 
@@ -550,7 +538,7 @@
     position: relative;
     aspect-ratio: 4 / 3;
     overflow: hidden;
-    background: var(--secondary-blue);
+    background: var(--azul-oscuro);
 }
 
 .paquete-foto img {
@@ -571,8 +559,8 @@
     left: 0.75rem;
     padding: 0.3rem 0.75rem;
     border-radius: 50px;
-    background: var(--white);
-    color: var(--secondary-blue);
+    background: var(--blanco);
+    color: var(--azul-oscuro);
     font-size: 0.75rem;
     font-weight: 600;
     letter-spacing: 0.03em;
@@ -587,13 +575,13 @@
     margin-right: 0.4rem;
     border-radius: 50%;
     vertical-align: 0.05rem;
-    background: var(--primary-blue);
+    background: var(--azul);
 }
 
 .paquete-aventura .paquete-etiqueta::before { background: #16a34a; }
-.paquete-cultura .paquete-etiqueta::before { background: var(--accent-orange); }
+.paquete-cultura .paquete-etiqueta::before { background: var(--naranja); }
 .paquete-surf .paquete-etiqueta::before { background: var(--celeste); }
-.paquete-personalizado .paquete-etiqueta::before { background: var(--primary-blue); }
+.paquete-personalizado .paquete-etiqueta::before { background: var(--azul); }
 
 .paquete-marca {
     position: absolute;
@@ -604,13 +592,13 @@
     gap: 0.3rem;
     padding: 0.3rem 0.7rem;
     border-radius: 50px;
-    background: var(--accent-orange);
-    color: var(--white);
+    background: var(--naranja);
+    color: var(--blanco);
     font-size: 0.75rem;
     font-weight: 600;
     opacity: 0;
     transform: scale(0.9);
-    transition: var(--transition);
+    transition: var(--transicion);
 }
 
 .paquete.seleccionado .paquete-marca {
@@ -623,7 +611,7 @@
     right: 0.5rem;
     bottom: 0.35rem;
     font-size: 0.62rem;
-    color: var(--white);
+    color: var(--blanco);
     opacity: 0.85;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
 }
@@ -639,7 +627,7 @@
 .paquete-cuerpo h4 {
     font-size: 1.15rem;
     margin-bottom: 0.4rem;
-    color: var(--white);
+    color: var(--blanco);
 }
 
 .paquete-duracion {
@@ -671,34 +659,34 @@
 .paquete-precio {
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--white);
+    color: var(--blanco);
 }
 
 .paquete-boton {
     padding: 0.55rem 1.1rem;
     border-radius: 50px;
-    border: 1.5px solid var(--white);
-    color: var(--white);
+    border: 1.5px solid var(--blanco);
+    color: var(--blanco);
     font-size: 0.88rem;
     font-weight: 600;
     cursor: pointer;
-    transition: var(--transition);
+    transition: var(--transicion);
     white-space: nowrap;
 }
 
 .paquete-boton:hover {
-    background: var(--white);
-    color: var(--primary-blue);
+    background: var(--blanco);
+    color: var(--azul);
 }
 
 .paquete.seleccionado .paquete-boton {
-    background: var(--accent-orange);
-    border-color: var(--accent-orange);
-    color: var(--white);
+    background: var(--naranja);
+    border-color: var(--naranja);
+    color: var(--blanco);
 }
 
 .paquete-radio:focus-visible ~ .paquete-cuerpo .paquete-boton {
-    outline: 3px solid var(--accent-orange);
+    outline: 3px solid var(--naranja);
     outline-offset: 3px;
 }
 
@@ -720,7 +708,7 @@
     border-radius: 12px;
     border: 1.5px dashed rgba(255, 255, 255, 0.35);
     background: rgba(0, 58, 112, 0.35);
-    transition: var(--transition);
+    transition: var(--transicion);
 }
 
 .reserva-paquete-etiqueta {
@@ -736,13 +724,13 @@
 }
 
 .reserva-paquete-valor a {
-    color: var(--white);
+    color: var(--blanco);
     font-weight: 600;
     text-underline-offset: 3px;
 }
 
 .reserva-paquete-valor a:hover {
-    color: var(--accent-orange);
+    color: var(--naranja);
 }
 
 .reserva-paquete.correcto {
@@ -775,7 +763,7 @@
 .colabora-intro h3 {
     font-size: clamp(1.6rem, 3.5vw, 2.2rem);
     margin-bottom: 0.6rem;
-    color: var(--white);
+    color: var(--blanco);
 }
 
 .colabora-intro p {
@@ -797,14 +785,14 @@
     align-items: flex-start;
     gap: 0.5rem;
     padding: 1.6rem 1.5rem;
-    border-radius: var(--border-radius);
+    border-radius: var(--radio);
     border: 1.5px solid rgba(255, 255, 255, 0.22);
     background: rgba(255, 255, 255, 0.08);
-    color: var(--white);
+    color: var(--blanco);
     font-family: inherit;
     text-align: left;
     cursor: pointer;
-    transition: var(--transition);
+    transition: var(--transicion);
 }
 
 .colabora-tarjeta:hover {
@@ -814,12 +802,12 @@
 }
 
 .colabora-tarjeta:focus-visible {
-    outline: 3px solid var(--accent-orange);
+    outline: 3px solid var(--naranja);
     outline-offset: 3px;
 }
 
 .colabora-tarjeta.activa {
-    border-color: var(--accent-orange);
+    border-color: var(--naranja);
     background: rgba(249, 115, 22, 0.12);
 }
 
@@ -831,15 +819,15 @@
     height: 52px;
     margin-bottom: 0.5rem;
     border-radius: 14px;
-    background: var(--white);
-    color: var(--primary-blue);
-    transition: var(--transition);
+    background: var(--blanco);
+    color: var(--azul);
+    transition: var(--transicion);
 }
 
 .colabora-tarjeta:hover .colabora-icono,
 .colabora-tarjeta.activa .colabora-icono {
-    background: var(--accent-orange);
-    color: var(--white);
+    background: var(--naranja);
+    color: var(--blanco);
 }
 
 .colabora-nombre {
@@ -861,9 +849,9 @@
     padding-top: 0.9rem;
     font-size: 0.85rem;
     font-weight: 600;
-    color: var(--white);
+    color: var(--blanco);
     opacity: 0.85;
-    transition: var(--transition);
+    transition: var(--transicion);
 }
 
 .colabora-tarjeta:hover .colabora-accion {
@@ -885,11 +873,11 @@
 }
 
 .faq-acordeon .faq-item {
-    border-radius: var(--border-radius);
+    border-radius: var(--radio);
     border: 1.5px solid rgba(255, 255, 255, 0.2);
     background: rgba(255, 255, 255, 0.08);
     overflow: hidden;
-    transition: var(--transition);
+    transition: var(--transicion);
 }
 
 .faq-acordeon .faq-item:hover {
@@ -897,7 +885,7 @@
 }
 
 .faq-acordeon .faq-item.abierto {
-    border-color: var(--accent-orange);
+    border-color: var(--naranja);
     background: rgba(0, 58, 112, 0.45);
 }
 
@@ -914,7 +902,7 @@
     padding: 1.15rem 1.35rem;
     border: none;
     background: transparent;
-    color: var(--white);
+    color: var(--blanco);
     font-family: inherit;
     font-size: 1.02rem;
     font-weight: 600;
@@ -923,16 +911,16 @@
 }
 
 .faq-acordeon .faq-question:focus-visible {
-    outline: 3px solid var(--accent-orange);
+    outline: 3px solid var(--naranja);
     outline-offset: -3px;
-    border-radius: var(--border-radius);
+    border-radius: var(--radio);
 }
 
 .faq-numero {
     flex-shrink: 0;
     font-size: 0.8rem;
     font-weight: 700;
-    color: var(--accent-orange);
+    color: var(--naranja);
     letter-spacing: 0.05em;
 }
 
@@ -955,7 +943,7 @@
 
 .faq-acordeon .faq-item.abierto .faq-toggle {
     transform: rotate(180deg);
-    background: var(--accent-orange);
+    background: var(--naranja);
 }
 
 /* Altura animada con grid: 0fr cerrado, 1fr abierto */
@@ -1041,7 +1029,7 @@
     grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
     margin-top: 3.5rem;
     overflow: hidden;
-    border-radius: var(--border-radius-lg);
+    border-radius: var(--radio-grande);
     border: 1.5px solid rgba(255, 255, 255, 0.2);
     background: rgba(255, 255, 255, 0.08);
 }
@@ -1056,7 +1044,7 @@
 .mapa-info h3 {
     font-size: 1.6rem;
     margin-bottom: 0.5rem;
-    color: var(--white);
+    color: var(--blanco);
 }
 
 .mapa-info > p {
@@ -1091,8 +1079,8 @@
     width: 40px;
     height: 40px;
     border-radius: 12px;
-    background: var(--white);
-    color: var(--primary-blue);
+    background: var(--blanco);
+    color: var(--azul);
 }
 
 .mapa-boton {
@@ -1107,7 +1095,7 @@
 .mapa-marco {
     position: relative;
     min-height: 340px;
-    background: var(--secondary-blue);
+    background: var(--azul-oscuro);
 }
 
 .mapa-marco iframe {
@@ -1128,7 +1116,7 @@
 .redes h3 {
     font-size: 1.4rem;
     margin-bottom: 1.5rem;
-    color: var(--white);
+    color: var(--blanco);
 }
 
 .redes-lista {
@@ -1143,7 +1131,7 @@
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
-    color: var(--white);
+    color: var(--blanco);
     text-decoration: none;
 }
 
@@ -1156,15 +1144,15 @@
     border-radius: 50%;
     border: 1.5px solid rgba(255, 255, 255, 0.5);
     background: rgba(255, 255, 255, 0.08);
-    color: var(--white);
-    transition: var(--transition);
+    color: var(--blanco);
+    transition: var(--transicion);
 }
 
 .red:hover .red-icono,
 .red:focus-visible .red-icono {
-    background: var(--white);
-    border-color: var(--white);
-    color: var(--primary-blue);
+    background: var(--blanco);
+    border-color: var(--blanco);
+    color: var(--azul);
     transform: translateY(-3px);
 }
 
@@ -1173,7 +1161,7 @@
 }
 
 .red:focus-visible .red-icono {
-    outline: 3px solid var(--accent-orange);
+    outline: 3px solid var(--naranja);
     outline-offset: 3px;
 }
 
@@ -1191,8 +1179,8 @@
 .pagina-contacto .fab-btn {
     width: 50px;
     height: 50px;
-    background: var(--white);
-    color: var(--primary-blue);
+    background: var(--blanco);
+    color: var(--azul);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
@@ -1203,8 +1191,8 @@
 
 .pagina-contacto .fab-btn:hover {
     transform: translateY(-3px);
-    background: var(--accent-orange);
-    color: var(--white);
+    background: var(--naranja);
+    color: var(--blanco);
 }
 
 .pagina-contacto .floating-fab {
@@ -1230,15 +1218,15 @@
     }
 
     .pagina-contacto .scroll-to-top {
-        right: 1rem !important;
-        bottom: 76px !important;
+        right: 1rem;
+        bottom: 76px;
     }
 
     /* Mientras se escribe en un formulario, los botones flotantes no tapan los campos */
     .pagina-contacto.escribiendo .floating-fab,
     .pagina-contacto.escribiendo .scroll-to-top {
-        opacity: 0 !important;
-        visibility: hidden !important;
+        opacity: 0;
+        visibility: hidden;
         pointer-events: none;
     }
 
@@ -1260,4 +1248,19 @@
 
 .contact-tab svg {
     flex-shrink: 0;
+}
+
+/* Título del formulario de reservas */
+.reservas-titulo {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Grosor de trazo propio de algunos iconos */
+.contacto-exito-icono .icono {
+    stroke-width: 2.5;
+}
+
+.paquete-marca .icono {
+    stroke-width: 3;
 }
