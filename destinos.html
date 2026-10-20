@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinos - SV El Salvador</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/componentes.css">
+    <link rel="stylesheet" href="css/formularios.css">
+    <link rel="stylesheet" href="css/paginas/destinos.css">
+    <link rel="stylesheet" href="css/paginas/expedientes.css">
+    <link rel="stylesheet" href="css/adaptable.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Menú de navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><img src="img/logo-es.png" alt="El Salvador" class="logo-img"></a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Inicio</a></li>
+                <li><a href="destinos.html" class="nav-link">Destinos</a></li>
+                <li><a href="cultura.html" class="nav-link">Cultura</a></li>
+                <li><a href="galeria.html" class="nav-link">Galería</a></li>
+                <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+                <li><a href="nosotros.html" class="nav-link">Nosotros</a></li>
+            </ul>
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+        <div class="mobile-menu">
+            <a href="index.html">Inicio</a>
+            <a href="destinos.html">Destinos</a>
+            <a href="cultura.html">Cultura</a>
+            <a href="galeria.html">Galería</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="nosotros.html">Nosotros</a>
+        </div>
+    </nav>
+
+    <!-- Encabezado de la página -->
+    <section class="page-section">
+        <div class="container">
+            <h1 class="section-title">Destinos Increíbles</h1>
+            <p class="section-intro">
+                Descubre los lugares más espectaculares de El Salvador, desde playas paradisíacas hasta volcanes majestuosos
+            </p>
+
+            <!-- Buscador y filtros -->
+            <div class="search-section">
+                <div class="search-bar">
+                    <input type="text" class="search-input" placeholder="Buscar destinos..." aria-label="Buscar destinos">
+                </div>
+
+                <div class="filter-tabs">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="beach">Playas</button>
+                    <button class="filter-btn" data-filter="volcano">Volcanes</button>
+                    <button class="filter-btn" data-filter="history">Historia</button>
+                    <button class="filter-btn" data-filter="nature">Naturaleza</button>
+                    <button class="filter-btn" data-filter="adventure">Aventura</button>
+                </div>
+            </div>
+
+            <!-- Tarjetas de destinos -->
+            <div class="destinations-grid">
+                <!-- Playas -->
+                <div class="destination-card" data-category="beach">
+                    <img class="dest-img" src="img/destinos/playa-el-tunco-card.jpg" data-full="img/destinos/playa-el-tunco.jpg" alt="Formación rocosa de El Tunco en la orilla de la playa, La Libertad" loading="lazy" data-author="William Adach" data-license="CC BY-SA 2.0" data-license-url="https://creativecommons.org/licenses/by-sa/2.0/deed.es" data-source="https://commons.wikimedia.org/wiki/File:Playa_el_tuco_rocoso.jpg">
+                    <div class="card-content">
+                        <div class="rating"><svg class="icono dest-icon" aria-hidden="true"><use href="#icono-estrella"></use></svg>4.8</div>
+                        <h3>Playa El Tunco</h3>
+                        <p class="location"><svg class="icono dest-icon" aria-hidden="true"><use href="#icono-pin"></use></svg>La Libertad</p>
+                        <p class="description">El epicentro del surf en El Salvador. Olas consistentes, ambiente relajado y una vibrante vida nocturna hacen de El Tunco el destino perfecto para surfistas y viajeros que buscan aventura.</p>
+
+                        <div class="details-section">
+                            <h4>Actividades</h4>
+                            <ul>
+                                <li>Surf para todos los niveles</li>
+                                <li>Clases de surf con instructores certificados</li>
+                                <li>Vida nocturna y restaurantes</li>
+                                <li>Caminatas por la costa rocosa</li>
+                            </ul>
+
+                            <h4>Hospedaje</h4>
+                            <ul>
+                                <li>Hostels desde $15/noche</li>
+                                <li>Hoteles boutique $50-80/noche</li>
+                                <li>Casas de huéspedes familiares</li>
+                            </ul>
+                        </div>
+
+                        <div class="tags">
+                            <span class="tag surf">Surf</span>
+                            <span class="tag beach">Playa</span>
+                            <span class="tag nightlife">Vida Nocturna</span>
+                        </div>
+
+                        <div class="price">$25-40/día</div>
+                        <button class="details-btn">Ver Más Detalles</button>
+                    </div>
+                </div>
+
+                <div class="destination-card dest-no-photo" data-category="beach">
+                    <div class="card-content">
+                        <div class="rating"><svg class="icono dest-icon" aria-hidden="true"><use href="#icono-estrella"></use></svg>4.7</div>
+                        <h3>Playa Las Flores</h3>
+                        <p class="location"><svg class="icono dest-icon" aria-hidden="true"><use href="#icono-pin"></use></svg>San Miguel</p>
+                        <p class="description">Una joya escondida conocida por sus olas de clase mundial y ambiente más tranquilo. Perfecta para surfistas experimentados y aquellos que buscan escapar de las multitudes.</p>
+
+                        <div class="details-section">
+                            <h4>Características</h4>
+                            <ul>
+                                <li>Olas de derecha e izquierda</li>
+                                <li>Surf break de calidad internacional</li>
+                                <li>Ambiente más relajado y natural</li>
+                                <li>Excelente para fotografía</li>
+                            </ul>
+                        </div>
+
+                        <div class="tags">
+                            <span class="tag surf">Surf Avanzado</span>
+                            <span class="tag beach">Playa Virgen</span>
+                            <span class="tag nature">Naturaleza</span>
+                        </div>
+
+                        <div class="price">$20-35/día</div>
+                        <button class="details-btn">Ver Más Detalles</button>
+                    </div>
+                </div>
+
+                <!-- Volcanes -->
+                <div class="destination-card" data-category="volcano">
+                    <img class="dest-img encuadre-60" src="img/destinos/volcan-santa-ana-card.jpg" data-full="img/destinos/volcan-santa-ana.jpg" alt="Laguna turquesa dentro del cráter del Volcán de Santa Ana" loading="lazy" data-author="Erneestoo" data-license="CC BY-SA 4.0" data-license-url="https://creativecommons.org/licenses/by-sa/4.0/deed.es" data-source="https://commons.wikimedia.org/wiki/File:Laguna_crat%C3%A9rica_del_Volc%C3%A1n_de_Santa_Ana_-_El_Salvador.jpg">
+                    <div class="card-content">
+                        <div class="rating"><svg class="icono dest-icon" aria-hidden="true"><use href="#icono-estrella"></use></svg>4.9</div>
+                        <h3>Volcán de Santa Ana (Ilamatepec)</h3>
+                        <p class="location"><svg class="icono dest-icon" aria-hidden="true"><use href="#icono-pin"></use></svg>Santa Ana</p>
+                        <p class="description">El volcán más alto de El Salvador con 2,381 metros. Su cráter alberga una impresionante laguna de azufre de color turquesa que cambia de tonalidad según las condiciones atmosféricas.</p>
+
+                        <div class="details-section">
+                            <h4>Información de Senderismo</h4>
+                            <ul>
+                                <li>Duración: 4-6 horas (ida y vuelta)</li>
+                                <li>Dificultad: Moderada a difícil</li>
+                                <li>Mejor época: Noviembre a Abril</li>
+                                <li>Guía obligatorio por seguridad</li>
+                            </ul>
+
+                            <h4>Qué llevar</h4>
+                            <ul>
+                                <li>Zapatos de senderismo</li>
+                                <li>Agua abundante (3+ litros)</li>
+                                <li>Protector solar y sombrero</li>
+                                <li>Cámara para la laguna del cráter</li>
+                            </ul>
+                        </div>
+
+                        <div class="tags">
+                            <span class="tag volcano">Volcán Activo</span>
+                            <span class="tag hiking">Senderismo</span>
+                            <span class="tag adventure">Aventura</span>
+                        </div>
+
+                        <div class="price">$15-25/día</div>
+                        <button class="details-btn">Ver Más Detalles</button>
+                    </div>
+                </div>
+
+                <div class="destination-card" data-category="volcano">
+                    <img class="dest-img encuadre-70" src="img/destinos/volcan-izalco-card.jpg" data-full="img/destinos/volcan-izalco.jpg" alt="Cono del Volcán de Izalco, Sonsonate" loading="lazy" data-author="Rafael Montes E" data-license="CC BY-SA 4.0" data-license-url="https://creativecommons.org/licenses/by-sa/4.0/deed.es" data-source="https://commons.wikimedia.org/wiki/File:Volc%C3%A1n_de_Izalco,_Departamento_de_Sonsonate,_El_Salvador.jpg">
+                    <div class="card-content">
+                        <div class="rating"><svg class="icono dest-icon" aria-hidden="true"><use href="#icono-estrella"></use></svg>4.6</div>
+                        <h3>Volcán de Izalco</h3>
+                        <p class="location"><svg class="icono dest-icon" aria-hidden="true"><use href="#icono-pin"></use></svg>Sonsonate</p>
+                        <p class="description">Conocido como el "Faro del Pacífico" por su actividad pasada. Su forma cónica perfecta y el desafío de su ascenso lo convierten en una experiencia única para aventureros.</p>
+
+                        <div class="details-section">
+                            <h4>Datos Importantes</h4>
+                            <ul>
+                                <li>Altura: 1,950 metros</li>
+                                <li>Última erupción: 1966</li>
+                                <li>Superficie de ceniza volcánica</li>
+                                <li>Vistas panorámicas espectaculares</li>
+                            </ul>
+                        </div>
+
+                        <div class="tags">
+                            <span class="tag volcano">Volcán Joven</span>
+                            <span class="tag hiking">Senderismo Extremo</span>
+                            <span class="tag adventure">Desafío</span>
+                        </div>
+
+                        <div class="price">$12-20/día</div>
+                        <button class="details-btn">Ver Más Detalles</button>
+                    </div>
+                </div>
+
+                <!-- Historia -->
+                <div class="destination-card" data-category="history">
+                    <img class="dest-img" src="img/destinos/joya-de-ceren-card.jpg" data-full="img/destinos/joya-de-ceren.jpg" alt="Estructuras de la aldea maya de Joya de Cerén bajo su techo protector" loading="lazy" data-author="Mario Roberto Durán Ortiz (Mariordo)" data-license="CC BY-SA 3.0" data-license-url="https://creativecommons.org/licenses/by-sa/3.0/deed.es" data-source="https://commons.wikimedia.org/wiki/File:ES_Estructura_12_y_10_Area_1_Joya_Ceren_05_2012_1516.jpg">
+                    <div class="card-content">
+                        <div class="rating unesco">UNESCO</div>
+                        <h3>Joya de Cerén</h3>
+                        <p class="location"><svg class="icono dest-icon" aria-hidden="true"><use href="#icono-pin"></use></svg>San Juan Opico</p>
+                        <p class="description">Conocida como la "Pompeya de América", este sitio arqueológico preserva una aldea maya precolombina sepultada por ceniza volcánica hace 1,400 años.</p>
+
+                        <div class="details-section">
+                            <h4>Lo que verás</h4>
+                            <ul>
+                                <li>Estructuras domésticas preservadas</li>
+                                <li>Artefactos de uso diario</li>
+                                <li>Sistemas agrícolas antiguos</li>
+                                <li>Museo con exhibiciones interactivas</li>
+                            </ul>
+
+                            <h4>Información práctica</h4>
+                            <ul>
+                                <li>Tours guiados en español e inglés</li>
+                                <li>Duración: 2-3 horas</li>
+                                <li>Abierto martes a domingo</li>
+                                <li>Centro de visitantes con café</li>
+                            </ul>
+                        </div>
+
+                        <div class="tags">
+                            <span class="tag history">Patrimonio UNESCO</span>
+                            <span class="tag archaeology">Arqueología</span>
+                            <span class="tag culture">Cultura Maya</span>
+                        </div>
+
+                        <div class="price">$5-15/día</div>
+                        <button class="details-btn">Ver Más Detalles</button>
+                    </div>
+                </div>
+
+                <div class="destination-card" data-category="history">
+                    <img class="dest-img" src="img/destinos/suchitoto-card.jpg" data-full="img/destinos/suchitoto.jpg" alt="Iglesia Santa Lucía en el centro histórico de Suchitoto" loading="lazy" data-author="Koky2013" data-license="CC BY-SA 3.0" data-license-url="https://creativecommons.org/licenses/by-sa/3.0/deed.es" data-source="https://commons.wikimedia.org/wiki/File:Belleza_hist%C3%B3rica_Iglesia_Santa_Luc%C3%ADa_de_Suchitoto.JPG">
+                    <div class="card-content">
+                        <div class="rating"><svg class="icono dest-icon" aria-hidden="true"><use href="#icono-estrella"></use></svg>4.8</div>
+                        <h3>Suchitoto</h3>
+                        <p class="location"><svg class="icono dest-icon" aria-hidden="true"><use href="#icono-pin"></use></svg>Cuscatlán</p>
+                        <p class="description">Pueblo colonial de adoquines y casas coloridas, considerado la capital cultural de El Salvador. Rica en arte, historia y tradiciones culinarias.</p>
+
+                        <div class="details-section">
+                            <h4>Atracciones culturales</h4>
+                            <ul>
+                                <li>Centro histórico colonial</li>
+                                <li>Iglesia Santa Lucía (siglo XVIII)</li>
+                                <li>Galerías de arte local</li>
+                                <li>Festival de Arte y Cultura (febrero)</li>
+                            </ul>
+
+                            <h4>Gastronomía típica</h4>
+                            <ul>
+                                <li>Pupusas de arroz únicas</li>
+                                <li>Yuca frita con chicharrón</li>
+                                <li>Quesadilla salvadoreña</li>
+                                <li>Café de altura local</li>
+                            </ul>
+                        </div>
+
+                        <div class="tags">
+                            <span class="tag history">Colonial</span>
+                            <span class="tag culture">Arte</span>
+                            <span class="tag food">Gastronomía</span>
+                        </div>
+
+                        <div class="price">$25-45/día</div>
+                        <button class="details-btn">Ver Más Detalles</button>
+                    </div>
+                </div>
+
+                <!-- Naturaleza -->
+                <div class="destination-card" data-category="nature">
+                    <img class="dest-img" src="img/destinos/el-imposible-card.jpg" data-full="img/destinos/el-imposible.jpg" alt="Vista desde un mirador sobre los bosques de El Imposible" loading="lazy" data-author="ElmerGuevara" data-license="CC BY-SA 3.0" data-license-url="https://creativecommons.org/licenses/by-sa/3.0/deed.es" data-source="https://commons.wikimedia.org/wiki/File:Mirador_Reserva_Natural_El_Imposible.JPG">
+                    <div class="card-content">
+                        <div class="rating"><svg class="icono dest-icon" aria-hidden="true"><use href="#icono-estrella"></use></svg>4.7</div>
+                        <h3>Parque Nacional El Imposible</h3>
+                        <p class="location"><svg class="icono dest-icon" aria-hidden="true"><use href="#icono-pin"></use></svg>Ahuachapán</p>
+                        <p class="description">El parque nacional más grande de El Salvador, hogar de la mayor diversidad biológica del país con bosques tropicales y especies endémicas.</p>
+
+                        <div class="details-section">
+                            <h4>Biodiversidad</h4>
+                            <ul>
+                                <li>Más de 400 especies de aves</li>
+                                <li>Jaguares, pumas y ocelotes</li>
+                                <li>Orquídeas y plantas medicinales</li>
+                                <li>Bosque seco tropical único</li>
+                            </ul>
+
+                            <h4>Senderos principales</h4>
+                            <ul>
+                                <li>Sendero El Imposible (8 km)</li>
+                                <li>Sendero Cerro León (4 km)</li>
+                                <li>Sendero Los Enganches (6 km)</li>
+                                <li>Tours nocturnos para ver fauna</li>
+                            </ul>
+                        </div>
+
+                        <div class="tags">
+                            <span class="tag nature">Bosque Tropical</span>
+                            <span class="tag wildlife">Vida Silvestre</span>
+                            <span class="tag hiking">Ecoturismo</span>
+                        </div>
+
+                        <div class="price">$20-35/día</div>
+                        <button class="details-btn">Ver Más Detalles</button>
+                    </div>
+                </div>
+
+                <!-- Aventura -->
+                <div class="destination-card" data-category="adventure">
+                    <img class="dest-img" src="img/destinos/ruta-de-las-flores-card.jpg" data-full="img/destinos/ruta-de-las-flores.jpg" alt="Mural colorido en una calle de Concepción de Ataco, Ruta de las Flores" loading="lazy" data-author="Erickssonr" data-license="CC BY-SA 3.0" data-license-url="https://creativecommons.org/licenses/by-sa/3.0/deed.es" data-source="https://commons.wikimedia.org/wiki/File:Pintura_en_un_mural_en_Concepci%C3%B3n_de_Ataco.jpg">
+                    <div class="card-content">
+                        <div class="rating"><svg class="icono dest-icon" aria-hidden="true"><use href="#icono-estrella"></use></svg>4.8</div>
+                        <h3>Ruta de Las Flores</h3>
+                        <p class="location"><svg class="icono dest-icon" aria-hidden="true"><use href="#icono-pin"></use></svg>Sonsonate - Ahuachapán</p>
+                        <p class="description">Una ruta escénica de 36 km que conecta pueblos pintorescos conocidos por su cultura cafetera, artesanías y arquitectura colonial.</p>
+
+                        <div class="details-section">
+                            <h4>Pueblos destacados</h4>
+                            <ul>
+                                <li>Nahuizalco - Artesanías de tule</li>
+                                <li>Salcoatitán - Gastronomía típica</li>
+                                <li>Juayúa - Festival gastronómico</li>
+                                <li>Apaneca - Café de altura</li>
+                                <li>Ataco (Concepción) - Arte urbano</li>
+                            </ul>
+
+                            <h4>Modalidades de viaje</h4>
+                            <ul>
+                                <li>Auto rentado (recomendado)</li>
+                                <li>Tours en bus organizados</li>
+                                <li>Ciclismo de montaña</li>
+                                <li>Caminatas entre pueblos</li>
+                            </ul>
+                        </div>
+
+                        <div class="tags">
+                            <span class="tag adventure">Ruta Escénica</span>
+                            <span class="tag culture">Pueblos Coloniales</span>
+                            <span class="tag food">Café Premium</span>
+                        </div>
+
+                        <div class="price">$35-60/día</div>
+                        <button class="details-btn">Ver Más Detalles</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Joyas escondidas -->
+            <div class="hidden-gems">
+                <h2>Joyas Escondidas</h2>
+                <p>Destinos menos conocidos pero igualmente espectaculares</p>
+
+                <div class="gems-grid">
+                    <div class="gem-card" data-category="nature">
+                        <img class="dest-img encuadre-80" src="img/destinos/laguna-verde-card.jpg" data-full="img/destinos/laguna-verde.jpg" alt="Laguna Verde de Apaneca rodeada de bosque" loading="lazy" data-author="ElmerGuevara" data-license="CC BY-SA 4.0" data-license-url="https://creativecommons.org/licenses/by-sa/4.0/deed.es" data-source="https://commons.wikimedia.org/wiki/File:Laguna_Verde_de_Apaneca.JPG">
+                        <div class="card-content">
+                            <h4>Laguna Verde</h4>
+                            <p class="location"><svg class="icono dest-icon" aria-hidden="true"><use href="#icono-pin"></use></svg>Apaneca, Ahuachapán</p>
+                            <p class="description">Lago cratérico de aguas termales rodeado de vegetación exuberante</p>
+                            <button class="details-btn">Ver Más Detalles</button>
+                        </div>
+                    </div>
+
+                    <div class="gem-card" data-category="adventure">
+                        <img class="dest-img encuadre-70" src="img/destinos/puentes-colgantes-card.jpg" data-full="img/destinos/puentes-colgantes.jpg" alt="Puente colgante sobre el río Torola rodeado de vegetación" loading="lazy" data-author="Enrique Canelo" data-license="CC BY-SA 3.0" data-license-url="https://creativecommons.org/licenses/by-sa/3.0/deed.es" data-source="https://commons.wikimedia.org/wiki/File:Puente_colgante_-_panoramio_(1).jpg">
+                        <div class="card-content">
+                            <h4>Puentes Colgantes</h4>
+                            <p class="location"><svg class="icono dest-icon" aria-hidden="true"><use href="#icono-pin"></use></svg>Río Torola, zona oriental</p>
+                            <p class="description">Aventura entre las copas de los árboles con vistas panorámicas</p>
+                            <button class="details-btn">Ver Más Detalles</button>
+                        </div>
+                    </div>
+
+                    <div class="gem-card" data-category="nature">
+                        <img class="dest-img" src="img/destinos/cascadas-card.jpg" data-full="img/destinos/cascadas.jpg" alt="Cascadas de Malacatiupán en Atiquizaya, Ahuachapán" loading="lazy" data-author="JMRAFFi" data-license="CC BY-SA 4.0" data-license-url="https://creativecommons.org/licenses/by-sa/4.0/deed.es" data-source="https://commons.wikimedia.org/wiki/File:Cascada_1_y_2.jpg">
+                        <div class="card-content">
+                            <h4>Cascadas Escondidas</h4>
+                            <p class="location"><svg class="icono dest-icon" aria-hidden="true"><use href="#icono-pin"></use></svg>Malacatiupán, Atiquizaya</p>
+                            <p class="description">Piscinas naturales perfectas para un refrescante chapuzón</p>
+                            <button class="details-btn">Ver Más Detalles</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Expedientes secretos (las carpetas las dibuja js/paginas/expedientes.js) -->
+            <div class="expedientes" id="expedientes">
+                <div class="expedientes-inner">
+                    <header class="expedientes-header">
+                        <span class="expedientes-kicker">Archivo de investigación · Patrimonio de El Salvador</span>
+                        <h3 class="expedientes-title">El Salvador oculto: expedientes secretos</h3>
+                        <p class="expedientes-intro">Hay historias que todavía merecen ser investigadas. Abre un expediente, examina las pistas y descubre lo que el pasado de El Salvador tiene por contar.</p>
+                    </header>
+
+                    <div class="expedientes-grid" id="expedientes-grid"></div>
+
+                    <p class="expedientes-footnote">Información basada en fuentes históricas, arqueológicas y geológicas identificables. Las fotografías tienen licencia libre y su autoría se indica en cada evidencia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">sv <span class="highlight">El Salvador</span></div>
+            <p>Descubre la magia de El Salvador con nosotros</p>
+            <div class="social-links">
+                <a href="#" class="social-link">Facebook</a>
+                <a href="#" class="social-link">Instagram</a>
+                <a href="#" class="social-link">Twitter</a>
+                <a href="#" class="social-link">YouTube</a>
+            </div>
+            <p class="copyright">© 2024 SV El Salvador. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Botón flotante de contacto rápido -->
+    <div class="floating-fab">
+        <button class="fab-btn" aria-label="Comentarios"><svg class="icono" width="26" height="26" aria-hidden="true"><use href="#icono-mensaje"></use></svg></button>
+    </div>
+
+    <!-- Ventana de detalles de cada destino (la llena js/paginas/destinos.js) -->
+    <div class="exp-modal dest-modal" id="dest-modal" aria-hidden="true">
+        <div class="exp-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="dest-modal-title">
+            <button type="button" class="exp-modal-close" aria-label="Cerrar">✕</button>
+            <figure class="dest-modal-figure">
+                <img class="exp-modal-img dest-modal-img" src="" alt="">
+                <figcaption class="dest-modal-credit"></figcaption>
+            </figure>
+            <div class="exp-modal-body">
+                <div class="dest-modal-content"></div>
+                <button type="button" class="exp-modal-btn">Cerrar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Ventana del expediente abierto (la llena js/paginas/expedientes.js) -->
+    <div class="dossier" id="dossier" aria-hidden="true">
+        <div class="dossier-dialog" role="dialog" aria-modal="true" aria-labelledby="dossier-title" tabindex="-1">
+            <header class="dossier-header">
+                <div class="dossier-header-main">
+                    <p class="dossier-meta"><span class="dossier-number"></span><span class="dossier-class"></span></p>
+                    <h3 class="dossier-title" id="dossier-title"></h3>
+                    <p class="dossier-place"></p>
+                </div>
+                <span class="dossier-status"></span>
+                <button type="button" class="dossier-close" aria-label="Cerrar expediente">✕</button>
+            </header>
+            <nav class="dossier-tabs" role="tablist" aria-label="Partes del expediente"></nav>
+            <div class="dossier-content" id="dossier-content" role="tabpanel"></div>
+            <footer class="dossier-footer">
+                <button type="button" class="dossier-nav dossier-prev"><span class="dossier-nav-dir">Anterior</span><span class="dossier-nav-name"></span></button>
+                <button type="button" class="dossier-nav dossier-next"><span class="dossier-nav-dir">Siguiente</span><span class="dossier-nav-name"></span></button>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Scripts: primero los compartidos, luego los de esta página -->
+    <script src="js/nucleo/iconos.js"></script>
+    <script src="js/nucleo/utilidades.js"></script>
+    <script src="js/componentes/navegacion.js"></script>
+    <script src="js/componentes/contacto-rapido.js"></script>
+    <script src="js/componentes/boton-subir.js"></script>
+    <script src="js/componentes/ventana.js"></script>
+    <script src="js/datos/expedientes.js"></script>
+    <script src="js/paginas/destinos.js"></script>
+    <script src="js/paginas/expedientes.js"></script>
+</body>
+</html>

@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - SV El Salvador</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/componentes.css">
+    <link rel="stylesheet" href="css/formularios.css">
+    <link rel="stylesheet" href="css/paginas/contacto.css">
+    <link rel="stylesheet" href="css/adaptable.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="pagina-contacto">
+    <!-- Menú de navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><img src="img/logo-es.png" alt="El Salvador" class="logo-img"></a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Inicio</a></li>
+                <li><a href="destinos.html" class="nav-link">Destinos</a></li>
+                <li><a href="cultura.html" class="nav-link">Cultura</a></li>
+                <li><a href="galeria.html" class="nav-link">Galería</a></li>
+                <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+                <li><a href="nosotros.html" class="nav-link">Nosotros</a></li>
+            </ul>
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+        <div class="mobile-menu">
+            <a href="index.html">Inicio</a>
+            <a href="destinos.html">Destinos</a>
+            <a href="cultura.html">Cultura</a>
+            <a href="galeria.html">Galería</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="nosotros.html">Nosotros</a>
+        </div>
+    </nav>
+
+    <!-- Encabezado de Contacto: foto de El Salvador con capa sólida -->
+    <header class="contacto-hero">
+        <img src="img/contacto/encabezado.jpg" alt="Atardecer en Playa El Tunco, La Libertad, El Salvador" class="contacto-hero-img">
+        <div class="contacto-hero-capa"></div>
+        <div class="contacto-hero-contenido">
+            <span class="contacto-hero-etiqueta">Contacto</span>
+            <h1>Conectemos con tu próxima aventura</h1>
+            <p>Cuéntanos qué te gustaría vivir en El Salvador y te ayudamos a planificar un viaje a tu medida, desde playas y volcanes hasta pueblos coloniales.</p>
+            <a href="#formulario" class="btn primary contacto-hero-btn">Ir al formulario</a>
+        </div>
+        <p class="contacto-hero-credito">Foto: William Adach, CC BY-SA 2.0</p>
+    </header>
+
+    <section class="page-section contacto-seccion">
+        <div class="container">
+            <!-- Pestañas de contacto -->
+            <div class="filter-tabs contact-tabs">
+                <button class="filter-btn contact-tab active" data-tab="informacion"><svg class="icono" width="18" height="18" aria-hidden="true"><use href="#icono-telefono"></use></svg>Información</button>
+                <button class="filter-btn contact-tab" data-tab="reservas"><svg class="icono" width="18" height="18" aria-hidden="true"><use href="#icono-calendario"></use></svg>Reservas</button>
+                <button class="filter-btn contact-tab" data-tab="colaboracion"><svg class="icono" width="18" height="18" aria-hidden="true"><use href="#icono-personas"></use></svg>Colaboración</button>
+                <button class="filter-btn contact-tab" data-tab="faq"><svg class="icono" width="18" height="18" aria-hidden="true"><use href="#icono-pregunta"></use></svg>FAQ</button>
+            </div>
+
+            <!-- Pestaña: Información -->
+            <div id="informacion" class="contact-content active">
+                <!-- Tarjetas de información: una por dato de contacto -->
+                <div class="contacto-tarjetas">
+                    <article class="info-card contacto-tarjeta">
+                        <div class="contacto-tarjeta-icono"><svg class="icono" width="26" height="26" aria-hidden="true"><use href="#icono-telefono"></use></svg></div>
+                        <div class="contacto-tarjeta-texto">
+                            <h4>Teléfono</h4>
+                            <p><a href="tel:+50322223333">+503 2222-3333</a></p>
+                            <p><a href="tel:+50377778888">+503 7777-8888</a></p>
+                            <span class="contacto-tarjeta-nota">Atención personalizada</span>
+                        </div>
+                    </article>
+                    <article class="info-card contacto-tarjeta">
+                        <div class="contacto-tarjeta-icono"><svg class="icono" width="26" height="26" aria-hidden="true"><use href="#icono-whatsapp"></use></svg></div>
+                        <div class="contacto-tarjeta-texto">
+                            <h4>WhatsApp</h4>
+                            <p><a href="https://wa.me/50366667777" target="_blank" rel="noopener">+503 6666-7777</a></p>
+                            <p>Chat disponible 24/7</p>
+                            <span class="contacto-tarjeta-nota">Respuesta inmediata</span>
+                        </div>
+                    </article>
+                    <article class="info-card contacto-tarjeta">
+                        <div class="contacto-tarjeta-icono"><svg class="icono" width="26" height="26" aria-hidden="true"><use href="#icono-correo"></use></svg></div>
+                        <div class="contacto-tarjeta-texto">
+                            <h4>Correo</h4>
+                            <p><a href="mailto:info@svelsalvador.com">info<wbr>@svelsalvador.com</a></p>
+                            <p><a href="mailto:reservas@svelsalvador.com">reservas<wbr>@svelsalvador.com</a></p>
+                            <span class="contacto-tarjeta-nota">Respuesta en 24 horas</span>
+                        </div>
+                    </article>
+                    <article class="info-card contacto-tarjeta">
+                        <div class="contacto-tarjeta-icono"><svg class="icono" width="26" height="26" aria-hidden="true"><use href="#icono-ubicacion"></use></svg></div>
+                        <div class="contacto-tarjeta-texto">
+                            <h4>Ubicación</h4>
+                            <p>Centro Histórico</p>
+                            <p>San Salvador, El Salvador</p>
+                            <span class="contacto-tarjeta-nota">Visítanos en nuestra oficina</span>
+                        </div>
+                    </article>
+                    <article class="info-card contacto-tarjeta">
+                        <div class="contacto-tarjeta-icono"><svg class="icono" width="26" height="26" aria-hidden="true"><use href="#icono-reloj"></use></svg></div>
+                        <div class="contacto-tarjeta-texto">
+                            <h4>Horario</h4>
+                            <p><strong>Llamadas:</strong> lunes a viernes, 8:00 a. m. a 6:00 p. m.</p>
+                            <p><strong>Oficina:</strong> lunes a sábado, 9:00 a. m. a 5:00 p. m.</p>
+                            <span class="contacto-tarjeta-nota">Hora de El Salvador (GMT-6)</span>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Formulario de contacto: dos columnas en escritorio, una en móvil -->
+                <div class="contact-form contacto-form" id="formulario">
+                    <div class="contacto-form-encabezado">
+                        <h3>Contáctanos</h3>
+                        <p>Completa los datos y prepararemos una propuesta para tu viaje. Los campos con <span class="campo-obligatorio">*</span> son obligatorios.</p>
+                    </div>
+                    <div class="contacto-form-aviso" id="contactoAviso" role="alert" hidden></div>
+                    <form id="contactForm" data-validacion-propia novalidate>
+                        <fieldset class="contacto-form-grupo">
+                            <legend>Tus datos</legend>
+                            <div class="contacto-form-grid">
+                                <div class="form-group campo">
+                                    <label for="nombre">Nombre completo <span class="campo-obligatorio" aria-hidden="true">*</span></label>
+                                    <input type="text" id="nombre" name="nombre" required autocomplete="name" aria-describedby="nombre-error" placeholder="Tu nombre completo">
+                                    <small class="campo-error" id="nombre-error">Escribe tu nombre.</small>
+                                </div>
+                                <div class="form-group campo">
+                                    <label for="email">Correo electrónico <span class="campo-obligatorio" aria-hidden="true">*</span></label>
+                                    <input type="email" id="email" name="email" required autocomplete="email" aria-describedby="email-error" placeholder="tu@email.com">
+                                    <small class="campo-error" id="email-error">Escribe un correo válido, por ejemplo nombre@correo.com.</small>
+                                </div>
+                                <div class="form-group campo">
+                                    <label for="telefono">Teléfono <span class="campo-opcional">(opcional)</span></label>
+                                    <input type="tel" id="telefono" name="telefono" autocomplete="tel" aria-describedby="telefono-error" placeholder="+503 0000-0000">
+                                    <small class="campo-error" id="telefono-error">Revisa el número: usa solo dígitos, espacios, guiones o +.</small>
+                                </div>
+                                <div class="form-group campo">
+                                    <label for="pais">País de origen <span class="campo-opcional">(opcional)</span></label>
+                                    <select id="pais" name="pais">
+                                        <option value="">Selecciona tu país</option>
+                                        <option value="ES">España</option>
+                                        <option value="US">Estados Unidos</option>
+                                        <option value="CA">Canadá</option>
+                                        <option value="MX">México</option>
+                                        <option value="GT">Guatemala</option>
+                                        <option value="HN">Honduras</option>
+                                        <option value="NI">Nicaragua</option>
+                                        <option value="CR">Costa Rica</option>
+                                        <option value="PA">Panamá</option>
+                                        <option value="CO">Colombia</option>
+                                        <option value="AR">Argentina</option>
+                                        <option value="BR">Brasil</option>
+                                        <option value="FR">Francia</option>
+                                        <option value="DE">Alemania</option>
+                                        <option value="IT">Italia</option>
+                                        <option value="UK">Reino Unido</option>
+                                        <option value="AU">Australia</option>
+                                        <option value="JP">Japón</option>
+                                        <option value="OTHER">Otro</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <fieldset class="contacto-form-grupo">
+                            <legend>Tu viaje</legend>
+                            <div class="contacto-form-grid">
+                                <div class="form-group campo">
+                                    <label for="interes">¿Qué te interesa? <span class="campo-obligatorio" aria-hidden="true">*</span></label>
+                                    <select id="interes" name="interes" required aria-describedby="interes-error">
+                                        <option value="">Selecciona tu interés principal</option>
+                                        <option value="surf">Surf y deportes acuáticos</option>
+                                        <option value="volcanismo">Turismo volcánico</option>
+                                        <option value="historia">Historia y arqueología</option>
+                                        <option value="cultura">Cultura y tradiciones</option>
+                                        <option value="gastronomia">Gastronomía local</option>
+                                        <option value="naturaleza">Naturaleza y ecoturismo</option>
+                                        <option value="aventura">Deportes extremos</option>
+                                        <option value="relax">Descanso y relajación</option>
+                                        <option value="todo">Un poco de todo</option>
+                                    </select>
+                                    <small class="campo-error" id="interes-error">Elige lo que más te interesa.</small>
+                                </div>
+                                <div class="form-group campo">
+                                    <label for="presupuesto">Presupuesto aproximado <span class="campo-opcional">(opcional)</span></label>
+                                    <select id="presupuesto" name="presupuesto">
+                                        <option value="">Selecciona tu presupuesto</option>
+                                        <option value="economico">Económico ($20-50/día por persona)</option>
+                                        <option value="moderado">Moderado ($50-100/día por persona)</option>
+                                        <option value="premium">Premium ($100-200/día por persona)</option>
+                                        <option value="lujo">Lujo ($200+/día por persona)</option>
+                                    </select>
+                                </div>
+                                <div class="form-group campo">
+                                    <label for="fechaViaje">Fecha tentativa de viaje <span class="campo-opcional">(opcional)</span></label>
+                                    <input type="date" id="fechaViaje" name="fechaViaje" aria-describedby="fechaViaje-error">
+                                    <small class="campo-error" id="fechaViaje-error">Elige una fecha a partir de hoy.</small>
+                                </div>
+                                <div class="form-group campo">
+                                    <label for="duracion">Duración del viaje <span class="campo-opcional">(opcional)</span></label>
+                                    <select id="duracion" name="duracion">
+                                        <option value="">Selecciona duración</option>
+                                        <option value="1-3">1-3 días (Fin de semana)</option>
+                                        <option value="4-7">4-7 días (Una semana)</option>
+                                        <option value="8-14">8-14 días (Dos semanas)</option>
+                                        <option value="15+">15+ días (Viaje largo)</option>
+                                    </select>
+                                </div>
+                                <div class="form-group campo campo-ancho">
+                                    <label for="mensaje">Cuéntanos sobre tu viaje ideal <span class="campo-obligatorio" aria-hidden="true">*</span></label>
+                                    <textarea id="mensaje" name="mensaje" rows="5" required aria-describedby="mensaje-error" placeholder="Describe qué tipo de experiencias buscas, si viajas solo, en pareja, familia, etc. Cualquier información que nos ayude a personalizar tu viaje..."></textarea>
+                                    <small class="campo-error" id="mensaje-error">Cuéntanos un poco sobre tu viaje (mínimo 10 caracteres).</small>
+                                </div>
+                            </div>
+                        </fieldset>
+
+                        <div class="contacto-form-acciones">
+                            <button type="submit" class="submit-btn contacto-enviar">
+                                <svg class="icono" width="20" height="20" aria-hidden="true"><use href="#icono-enviar"></use></svg>
+                                <span>Enviar solicitud</span>
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Mensaje al completar el formulario -->
+                    <div class="contacto-form-exito" id="contactoExito" role="status" tabindex="-1" hidden>
+                        <div class="contacto-exito-icono"><svg class="icono" width="34" height="34" aria-hidden="true"><use href="#icono-confirmar"></use></svg></div>
+                        <h3 id="contactoExitoTitulo">¡Formulario completo!</h3>
+                        <p>Todos tus datos están listos. Pulsa «Enviar por correo» para mandarnos la solicitud desde tu correo; ya va escrita con lo que completaste.</p>
+                        <div class="contacto-exito-acciones">
+                            <a href="mailto:info@svelsalvador.com" class="btn primary" id="contactoMailto">Enviar por correo</a>
+                            <button type="button" class="contacto-exito-volver" id="contactoVolver">Editar mis datos</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mapa: integrado con el resto de la sección -->
+                <div class="map-section mapa-seccion">
+                    <div class="mapa-info">
+                        <span class="contacto-hero-etiqueta">Ubicación</span>
+                        <h3>Encuéntranos</h3>
+                        <p>Visítanos en nuestra oficina para planificar tu viaje en persona.</p>
+                        <ul class="mapa-datos">
+                            <li><span class="mapa-dato-icono"><svg class="icono" width="20" height="20" aria-hidden="true"><use href="#icono-ubicacion"></use></svg></span><span><strong>Centro Histórico</strong><br>San Salvador, El Salvador</span></li>
+                            <li><span class="mapa-dato-icono"><svg class="icono" width="20" height="20" aria-hidden="true"><use href="#icono-reloj"></use></svg></span><span><strong>Oficina</strong><br>Lunes a sábado, 9:00 a. m. a 5:00 p. m.</span></li>
+                        </ul>
+                        <a href="https://www.google.com/maps/search/?api=1&amp;query=Centro+Hist%C3%B3rico+de+San+Salvador,+El+Salvador" class="btn primary mapa-boton" target="_blank" rel="noopener">Ver en Google Maps <svg class="icono" width="18" height="18" aria-hidden="true"><use href="#icono-enlace-externo"></use></svg></a>
+                    </div>
+                    <div class="mapa-marco">
+                        <iframe class="map-placeholder" title="Mapa del Centro Histórico de San Salvador" src="https://www.google.com/maps?q=Centro+Hist%C3%B3rico+de+San+Salvador,+El+Salvador&amp;z=15&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pestaña: Reservas -->
+            <div id="reservas" class="contact-content">
+                <div class="reservations-section">
+                    <h3 class="reservas-titulo">Reserva tu Experiencia</h3>
+
+                    <!-- Selección de paquete: una tarjeta con foto por paquete -->
+                    <div class="package-selection paquetes" id="reservas-paquetes">
+                        <h4 class="paquetes-titulo">Selecciona tu Paquete</h4>
+                        <div class="paquetes-grid" role="radiogroup" aria-label="Paquetes turísticos">
+                            <div class="package-option paquete paquete-aventura">
+                                <input type="radio" name="package" value="aventura" id="pkg-aventura" class="paquete-radio">
+                                <div class="paquete-foto">
+                                    <img src="img/contacto/paquetes/volcan-santa-ana.jpg" alt="Laguna del volcán de Santa Ana" loading="lazy">
+                                    <span class="paquete-etiqueta">Naturaleza</span>
+                                    <span class="paquete-marca"><svg class="icono" width="16" height="16" aria-hidden="true"><use href="#icono-confirmar"></use></svg> Elegido</span>
+                                    <small class="paquete-credito">Foto: Erneestoo, CC BY-SA 4.0</small>
+                                </div>
+                                <div class="paquete-cuerpo">
+                                    <h4>Aventura Completa</h4>
+                                    <p class="paquete-duracion"><svg class="icono" width="16" height="16" aria-hidden="true"><use href="#icono-reloj"></use></svg> 5 días / 4 noches</p>
+                                    <p class="paquete-descripcion">Volcanes, senderos y miradores para quienes buscan acción al aire libre.</p>
+                                    <div class="paquete-pie">
+                                        <span class="paquete-precio">$299</span>
+                                        <label for="pkg-aventura" class="paquete-boton">Seleccionar</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="package-option paquete paquete-cultura">
+                                <input type="radio" name="package" value="cultura" id="pkg-cultura" class="paquete-radio">
+                                <div class="paquete-foto">
+                                    <img src="img/contacto/paquetes/suchitoto.jpg" alt="Iglesia Santa Lucía de Suchitoto" loading="lazy">
+                                    <span class="paquete-etiqueta">Cultura</span>
+                                    <span class="paquete-marca"><svg class="icono" width="16" height="16" aria-hidden="true"><use href="#icono-confirmar"></use></svg> Elegido</span>
+                                    <small class="paquete-credito">Foto: Koky2013, CC BY-SA 3.0</small>
+                                </div>
+                                <div class="paquete-cuerpo">
+                                    <h4>Cultura &amp; Historia</h4>
+                                    <p class="paquete-duracion"><svg class="icono" width="16" height="16" aria-hidden="true"><use href="#icono-reloj"></use></svg> 3 días / 2 noches</p>
+                                    <p class="paquete-descripcion">Pueblos coloniales, sitios arqueológicos y tradiciones salvadoreñas.</p>
+                                    <div class="paquete-pie">
+                                        <span class="paquete-precio">$199</span>
+                                        <label for="pkg-cultura" class="paquete-boton">Seleccionar</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="package-option paquete paquete-surf">
+                                <input type="radio" name="package" value="surf" id="pkg-surf" class="paquete-radio">
+                                <div class="paquete-foto">
+                                    <img src="img/contacto/paquetes/playa-el-tunco.jpg" alt="Playa El Tunco al atardecer" loading="lazy">
+                                    <span class="paquete-etiqueta">Playa</span>
+                                    <span class="paquete-marca"><svg class="icono" width="16" height="16" aria-hidden="true"><use href="#icono-confirmar"></use></svg> Elegido</span>
+                                    <small class="paquete-credito">Foto: William Adach, CC BY-SA 2.0</small>
+                                </div>
+                                <div class="paquete-cuerpo">
+                                    <h4>Surf Paradise</h4>
+                                    <p class="paquete-duracion"><svg class="icono" width="16" height="16" aria-hidden="true"><use href="#icono-reloj"></use></svg> 7 días / 6 noches</p>
+                                    <p class="paquete-descripcion">Una semana entre las mejores olas del Pacífico y atardeceres en la costa.</p>
+                                    <div class="paquete-pie">
+                                        <span class="paquete-precio">$399</span>
+                                        <label for="pkg-surf" class="paquete-boton">Seleccionar</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="package-option paquete paquete-personalizado">
+                                <input type="radio" name="package" value="personalizado" id="pkg-personalizado" class="paquete-radio">
+                                <div class="paquete-foto">
+                                    <img src="img/contacto/paquetes/laguna-verde.jpg" alt="Laguna Verde de Apaneca" loading="lazy">
+                                    <span class="paquete-etiqueta">A tu medida</span>
+                                    <span class="paquete-marca"><svg class="icono" width="16" height="16" aria-hidden="true"><use href="#icono-confirmar"></use></svg> Elegido</span>
+                                    <small class="paquete-credito">Foto: ElmerGuevara, CC BY-SA 4.0</small>
+                                </div>
+                                <div class="paquete-cuerpo">
+                                    <h4>Personalizado</h4>
+                                    <p class="paquete-duracion"><svg class="icono" width="16" height="16" aria-hidden="true"><use href="#icono-reloj"></use></svg> A tu medida</p>
+                                    <p class="paquete-descripcion">Armamos el recorrido según tus fechas, intereses y presupuesto.</p>
+                                    <div class="paquete-pie">
+                                        <span class="paquete-precio">Cotizar</span>
+                                        <label for="pkg-personalizado" class="paquete-boton">Seleccionar</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Formulario de reserva: mismo estilo que el formulario de contacto -->
+                    <div class="contact-form contacto-form" id="formularioReserva">
+                        <div class="contacto-form-encabezado">
+                            <h3>Datos de tu reserva</h3>
+                            <p>Elige un paquete arriba y completa tus datos. Los campos con <span class="campo-obligatorio">*</span> son obligatorios.</p>
+                        </div>
+                        <div class="contacto-form-aviso" id="reservaAviso" role="alert" hidden></div>
+                        <form id="reservationForm" data-validacion-propia novalidate>
+                            <fieldset class="contacto-form-grupo">
+                                <legend>Datos personales</legend>
+                                <div class="contacto-form-grid">
+                                    <div class="form-group campo campo-ancho">
+                                        <label for="res-nombre">Nombre completo <span class="campo-obligatorio" aria-hidden="true">*</span></label>
+                                        <input type="text" id="res-nombre" name="nombre" required aria-describedby="res-nombre-error" autocomplete="name" placeholder="Tu nombre completo">
+                                        <small class="campo-error" id="res-nombre-error">Escribe tu nombre.</small>
+                                    </div>
+                                    <div class="form-group campo">
+                                        <label for="res-email">Correo electrónico <span class="campo-obligatorio" aria-hidden="true">*</span></label>
+                                        <input type="email" id="res-email" name="email" required aria-describedby="res-email-error" autocomplete="email" placeholder="tu@email.com">
+                                        <small class="campo-error" id="res-email-error">Escribe un correo válido, por ejemplo nombre@correo.com.</small>
+                                    </div>
+                                    <div class="form-group campo">
+                                        <label for="res-telefono">Teléfono <span class="campo-obligatorio" aria-hidden="true">*</span></label>
+                                        <input type="tel" id="res-telefono" name="telefono" required aria-describedby="res-telefono-error" autocomplete="tel" placeholder="+503 0000-0000">
+                                        <small class="campo-error" id="res-telefono-error">Escribe un teléfono válido (al menos 8 dígitos).</small>
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                            <fieldset class="contacto-form-grupo">
+                                <legend>Fechas del viaje</legend>
+                                <div class="contacto-form-grid">
+                                    <div class="form-group campo">
+                                        <label for="res-fecha-inicio">Fecha de inicio <span class="campo-obligatorio" aria-hidden="true">*</span></label>
+                                        <input type="date" id="res-fecha-inicio" name="fechaInicio" required aria-describedby="res-fecha-inicio-error">
+                                        <small class="campo-error" id="res-fecha-inicio-error">Elige una fecha a partir de hoy.</small>
+                                    </div>
+                                    <div class="form-group campo">
+                                        <label for="res-fecha-fin">Fecha de fin <span class="campo-obligatorio" aria-hidden="true">*</span></label>
+                                        <input type="date" id="res-fecha-fin" name="fechaFin" required aria-describedby="res-fecha-fin-error">
+                                        <small class="campo-error" id="res-fecha-fin-error">Elige una fecha igual o posterior al inicio.</small>
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                            <fieldset class="contacto-form-grupo">
+                                <legend>Detalles del viaje</legend>
+                                <div class="contacto-form-grid">
+                                    <div class="campo campo-ancho reserva-paquete" id="reservaPaqueteCampo">
+                                        <span class="reserva-paquete-etiqueta">Paquete elegido <span class="campo-obligatorio" aria-hidden="true">*</span></span>
+                                        <p class="reserva-paquete-valor" id="reservaPaquete">Ninguno todavía. <a href="#reservas-paquetes">Elegir paquete</a></p>
+                                        <small class="campo-error" id="reservaPaquete-error">Elige uno de los paquetes de arriba.</small>
+                                    </div>
+                                    <div class="form-group campo">
+                                        <label for="res-personas">Número de viajeros <span class="campo-opcional">(opcional)</span></label>
+                                        <select id="res-personas" name="personas">
+                                            <option value="1">1 persona</option>
+                                            <option value="2">2 personas</option>
+                                            <option value="3">3 personas</option>
+                                            <option value="4">4 personas</option>
+                                            <option value="5">5 personas</option>
+                                            <option value="6+">6+ personas</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group campo">
+                                        <label for="res-hospedaje">Preferencia de hospedaje <span class="campo-opcional">(opcional)</span></label>
+                                        <select id="res-hospedaje" name="hospedaje">
+                                            <option value="">Selecciona tu preferencia</option>
+                                            <option value="economico">Hostels y alojamientos económicos</option>
+                                            <option value="estandar">Hoteles 3 estrellas</option>
+                                            <option value="superior">Hoteles 4 estrellas</option>
+                                            <option value="lujo">Hoteles 5 estrellas y resorts</option>
+                                            <option value="boutique">Hoteles boutique únicos</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group campo campo-ancho">
+                                        <label for="res-comentarios">Comentarios especiales <span class="campo-opcional">(opcional)</span></label>
+                                        <textarea id="res-comentarios" name="comentarios" rows="4" placeholder="Menciona cualquier requerimiento especial, alergias alimentarias, necesidades de accesibilidad, etc."></textarea>
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                            <div class="contacto-form-acciones">
+                                <button type="submit" class="submit-btn contacto-enviar">
+                                    <span>Continuar con la reserva</span>
+                                    <svg class="icono" width="20" height="20" aria-hidden="true"><use href="#icono-flecha-derecha"></use></svg>
+                                </button>
+                            </div>
+                        </form>
+
+                        <!-- Mensaje al completar la reserva -->
+                        <div class="contacto-form-exito" id="reservaExito" role="status" tabindex="-1" hidden>
+                            <div class="contacto-exito-icono"><svg class="icono" width="34" height="34" aria-hidden="true"><use href="#icono-confirmar"></use></svg></div>
+                            <h3 id="reservaExitoTitulo">¡Reserva lista!</h3>
+                            <p>Todos los datos están completos. Pulsa «Enviar por correo» para mandarnos la solicitud de reserva desde tu correo; ya va escrita con el paquete y los datos que elegiste.</p>
+                            <div class="contacto-exito-acciones">
+                                <a href="mailto:reservas@svelsalvador.com" class="btn primary" id="reservaMailto">Enviar por correo</a>
+                                <button type="button" class="contacto-exito-volver" id="reservaVolver">Editar mis datos</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Colaboración: tipos en tarjetas y formulario propio -->
+            <div id="colaboracion" class="contact-content">
+                <div class="collaboration-section colabora">
+                    <div class="colabora-intro">
+                        <span class="contacto-hero-etiqueta">Colaboraciones</span>
+                        <h3>Colabora con Nosotros</h3>
+                        <p>¿Eres un profesional del turismo, fotógrafo, blogger o tienes un negocio relacionado? ¡Trabajemos juntos!</p>
+                    </div>
+
+                    <!-- Tipos de colaboración -->
+                    <div class="collaboration-types colabora-tipos">
+                        <button type="button" class="collab-card colabora-tarjeta" data-tipo="fotografia">
+                            <span class="colabora-icono"><svg class="icono" width="26" height="26" aria-hidden="true"><use href="#icono-camara"></use></svg></span>
+                            <span class="colabora-nombre">Fotógrafos</span>
+                            <span class="colabora-texto">Colabora con contenido visual de alta calidad</span>
+                            <span class="colabora-accion">Proponer colaboración <svg class="icono" width="16" height="16" aria-hidden="true"><use href="#icono-flecha-derecha"></use></svg></span>
+                        </button>
+                        <button type="button" class="collab-card colabora-tarjeta" data-tipo="blog">
+                            <span class="colabora-icono"><svg class="icono" width="26" height="26" aria-hidden="true"><use href="#icono-lapiz"></use></svg></span>
+                            <span class="colabora-nombre">Bloggers de Viaje</span>
+                            <span class="colabora-texto">Comparte experiencias auténticas</span>
+                            <span class="colabora-accion">Proponer colaboración <svg class="icono" width="16" height="16" aria-hidden="true"><use href="#icono-flecha-derecha"></use></svg></span>
+                        </button>
+                        <button type="button" class="collab-card colabora-tarjeta" data-tipo="hospedaje">
+                            <span class="colabora-icono"><svg class="icono" width="26" height="26" aria-hidden="true"><use href="#icono-cama"></use></svg></span>
+                            <span class="colabora-nombre">Hoteleros</span>
+                            <span class="colabora-texto">Forma parte de nuestra red de hospedaje</span>
+                            <span class="colabora-accion">Proponer colaboración <svg class="icono" width="16" height="16" aria-hidden="true"><use href="#icono-flecha-derecha"></use></svg></span>
+                        </button>
+                        <button type="button" class="collab-card colabora-tarjeta" data-tipo="tours">
+                            <span class="colabora-icono"><svg class="icono" width="26" height="26" aria-hidden="true"><use href="#icono-bus"></use></svg></span>
+                            <span class="colabora-nombre">Operadores Turísticos</span>
+                            <span class="colabora-texto">Amplía tu alcance y clientela</span>
+                            <span class="colabora-accion">Proponer colaboración <svg class="icono" width="16" height="16" aria-hidden="true"><use href="#icono-flecha-derecha"></use></svg></span>
+                        </button>
+                        <button type="button" class="collab-card colabora-tarjeta" data-tipo="gastronomia">
+                            <span class="colabora-icono"><svg class="icono" width="26" height="26" aria-hidden="true"><use href="#icono-cubiertos"></use></svg></span>
+                            <span class="colabora-nombre">Restaurantes</span>
+                            <span class="colabora-texto">Promociona tu gastronomía local</span>
+                            <span class="colabora-accion">Proponer colaboración <svg class="icono" width="16" height="16" aria-hidden="true"><use href="#icono-flecha-derecha"></use></svg></span>
+                        </button>
+                        <button type="button" class="collab-card colabora-tarjeta" data-tipo="influencer">
+                            <span class="colabora-icono"><svg class="icono" width="26" height="26" aria-hidden="true"><use href="#icono-diana"></use></svg></span>
+                            <span class="colabora-nombre">Influencers</span>
+                            <span class="colabora-texto">Colaboraciones de marketing digital</span>
+                            <span class="colabora-accion">Proponer colaboración <svg class="icono" width="16" height="16" aria-hidden="true"><use href="#icono-flecha-derecha"></use></svg></span>
+                        </button>
+                    </div>
+
+                    <!-- Formulario de propuesta, separado del formulario general -->
+                    <div class="contact-form contacto-form colabora-form" id="formularioColabora">
+                        <div class="contacto-form-encabezado">
+                            <h3>Envía tu propuesta</h3>
+                            <p>Elige un tipo de colaboración arriba o en la lista. Los campos con <span class="campo-obligatorio">*</span> son obligatorios.</p>
+                        </div>
+                        <div class="contacto-form-aviso" id="colaboraAviso" role="alert" hidden></div>
+                        <form id="collaborationForm" data-validacion-propia novalidate>
+                            <fieldset class="contacto-form-grupo">
+                                <legend>Sobre ti</legend>
+                                <div class="contacto-form-grid">
+                                    <div class="form-group campo">
+                                        <label for="collab-nombre">Nombre o empresa <span class="campo-obligatorio" aria-hidden="true">*</span></label>
+                                        <input type="text" id="collab-nombre" name="nombre" required autocomplete="organization" aria-describedby="collab-nombre-error" placeholder="Tu nombre o el de tu negocio">
+                                        <small class="campo-error" id="collab-nombre-error">Escribe tu nombre o el de tu empresa.</small>
+                                    </div>
+                                    <div class="form-group campo">
+                                        <label for="collab-email">Correo electrónico <span class="campo-obligatorio" aria-hidden="true">*</span></label>
+                                        <input type="email" id="collab-email" name="email" required autocomplete="email" aria-describedby="collab-email-error" placeholder="tu@email.com">
+                                        <small class="campo-error" id="collab-email-error">Escribe un correo válido, por ejemplo nombre@correo.com.</small>
+                                    </div>
+                                    <div class="form-group campo campo-ancho">
+                                        <label for="collab-tipo">Tipo de colaboración <span class="campo-obligatorio" aria-hidden="true">*</span></label>
+                                        <select id="collab-tipo" name="tipo" required aria-describedby="collab-tipo-error">
+                                            <option value="">Selecciona el tipo</option>
+                                            <option value="fotografia">Fotografía y contenido visual</option>
+                                            <option value="blog">Blog y artículos de viaje</option>
+                                            <option value="hospedaje">Servicios de hospedaje</option>
+                                            <option value="tours">Operador turístico</option>
+                                            <option value="gastronomia">Restaurante/Gastronomía</option>
+                                            <option value="influencer">Marketing de influencers</option>
+                                            <option value="transporte">Servicios de transporte</option>
+                                            <option value="otros">Otros servicios</option>
+                                        </select>
+                                        <small class="campo-error" id="collab-tipo-error">Elige un tipo de colaboración.</small>
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                            <fieldset class="contacto-form-grupo">
+                                <legend>Dónde encontrarte</legend>
+                                <div class="contacto-form-grid">
+                                    <div class="form-group campo">
+                                        <label for="collab-web">Sitio web o portafolio <span class="campo-opcional">(opcional)</span></label>
+                                        <input type="url" id="collab-web" name="web" aria-describedby="collab-web-error" placeholder="https://">
+                                        <small class="campo-error" id="collab-web-error">Escribe una dirección completa, que empiece por https://</small>
+                                    </div>
+                                    <div class="form-group campo">
+                                        <label for="collab-redes">Redes sociales <span class="campo-opcional">(opcional)</span></label>
+                                        <input type="text" id="collab-redes" name="redes" placeholder="@usuario o enlaces">
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                            <fieldset class="contacto-form-grupo">
+                                <legend>Tu propuesta</legend>
+                                <div class="contacto-form-grid">
+                                    <div class="form-group campo campo-ancho">
+                                        <label for="collab-propuesta">Propuesta de colaboración <span class="campo-obligatorio" aria-hidden="true">*</span></label>
+                                        <textarea id="collab-propuesta" name="propuesta" rows="5" required aria-describedby="collab-propuesta-error" placeholder="Describe tu propuesta de colaboración, servicios que ofreces, experiencia previa, etc."></textarea>
+                                        <small class="campo-error" id="collab-propuesta-error">Cuéntanos tu propuesta (mínimo 20 caracteres).</small>
+                                    </div>
+                                </div>
+                            </fieldset>
+
+                            <div class="contacto-form-acciones">
+                                <button type="submit" class="submit-btn contacto-enviar">
+                                    <svg class="icono" width="20" height="20" aria-hidden="true"><use href="#icono-enviar"></use></svg>
+                                    <span>Enviar propuesta</span>
+                                </button>
+                            </div>
+                        </form>
+
+                        <div class="contacto-form-exito" id="colaboraExito" role="status" tabindex="-1" hidden>
+                            <div class="contacto-exito-icono"><svg class="icono" width="34" height="34" aria-hidden="true"><use href="#icono-confirmar"></use></svg></div>
+                            <h3 id="colaboraExitoTitulo">¡Propuesta lista!</h3>
+                            <p>Todos los datos están completos. Pulsa «Enviar por correo» para mandarnos tu propuesta desde tu correo; ya va escrita con lo que completaste.</p>
+                            <div class="contacto-exito-acciones">
+                                <a href="mailto:info@svelsalvador.com" class="btn primary" id="colaboraMailto">Enviar por correo</a>
+                                <button type="button" class="contacto-exito-volver" id="colaboraVolver">Editar mis datos</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Preguntas frecuentes: acordeón -->
+            <div id="faq" class="contact-content">
+                <div class="faq-section">
+                    <div class="colabora-intro">
+                        <span class="contacto-hero-etiqueta">Ayuda</span>
+                        <h3>Preguntas Frecuentes</h3>
+                        <p>Respuestas rápidas a las dudas más comunes antes de viajar.</p>
+                    </div>
+
+                    <div class="faq-container faq-acordeon">
+                        <div class="faq-item">
+                            <h4 class="faq-pregunta-titulo">
+                                <button type="button" class="faq-question" id="faq-q1" aria-expanded="false" aria-controls="faq-r1">
+                                    <span class="faq-numero">01</span>
+                                    <span class="faq-texto">¿Cuál es la mejor época para visitar El Salvador?</span>
+                                    <span class="faq-toggle"><svg class="icono" width="20" height="20" aria-hidden="true"><use href="#icono-desplegar"></use></svg></span>
+                                </button>
+                            </h4>
+                            <div class="faq-answer" id="faq-r1" role="region" aria-labelledby="faq-q1">
+                                <div class="faq-answer-interior">
+                                    <p>La mejor época es durante la temporada seca (noviembre a abril) para actividades al aire libre. Sin embargo, El Salvador es un destino de clima tropical que se puede visitar todo el año. La temporada de lluvias (mayo a octubre) ofrece paisajes más verdes y menos turistas.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <h4 class="faq-pregunta-titulo">
+                                <button type="button" class="faq-question" id="faq-q2" aria-expanded="false" aria-controls="faq-r2">
+                                    <span class="faq-numero">02</span>
+                                    <span class="faq-texto">¿Es seguro viajar a El Salvador?</span>
+                                    <span class="faq-toggle"><svg class="icono" width="20" height="20" aria-hidden="true"><use href="#icono-desplegar"></use></svg></span>
+                                </button>
+                            </h4>
+                            <div class="faq-answer" id="faq-r2" role="region" aria-labelledby="faq-q2">
+                                <div class="faq-answer-interior">
+                                    <p>Sí, las zonas turísticas de El Salvador son seguras. Trabajamos con guías locales certificados y seguimos todas las medidas de seguridad. Recomendamos seguir las indicaciones de nuestros guías y mantenerse en las rutas turísticas establecidas.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <h4 class="faq-pregunta-titulo">
+                                <button type="button" class="faq-question" id="faq-q3" aria-expanded="false" aria-controls="faq-r3">
+                                    <span class="faq-numero">03</span>
+                                    <span class="faq-texto">¿Qué documentos necesito para ingresar al país?</span>
+                                    <span class="faq-toggle"><svg class="icono" width="20" height="20" aria-hidden="true"><use href="#icono-desplegar"></use></svg></span>
+                                </button>
+                            </h4>
+                            <div class="faq-answer" id="faq-r3" role="region" aria-labelledby="faq-q3">
+                                <div class="faq-answer-interior">
+                                    <p>Para ciudadanos de la mayoría de países de América y Europa, solo necesitas pasaporte vigente con al menos 6 meses de validez. Algunos países requieren visa, consulta con tu embajada. Se recomienda tener certificado de vacuna contra fiebre amarilla si vienes de áreas endémicas.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <h4 class="faq-pregunta-titulo">
+                                <button type="button" class="faq-question" id="faq-q4" aria-expanded="false" aria-controls="faq-r4">
+                                    <span class="faq-numero">04</span>
+                                    <span class="faq-texto">¿Qué moneda se usa y dónde puedo cambiar dinero?</span>
+                                    <span class="faq-toggle"><svg class="icono" width="20" height="20" aria-hidden="true"><use href="#icono-desplegar"></use></svg></span>
+                                </button>
+                            </h4>
+                            <div class="faq-answer" id="faq-r4" role="region" aria-labelledby="faq-q4">
+                                <div class="faq-answer-interior">
+                                    <p>El Salvador usa el dólar estadounidense como moneda oficial desde 2001. Puedes cambiar dinero en bancos, casas de cambio o usar cajeros automáticos. También se acepta Bitcoin como moneda legal desde 2021.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <h4 class="faq-pregunta-titulo">
+                                <button type="button" class="faq-question" id="faq-q5" aria-expanded="false" aria-controls="faq-r5">
+                                    <span class="faq-numero">05</span>
+                                    <span class="faq-texto">¿Incluyen los tours transporte y alimentación?</span>
+                                    <span class="faq-toggle"><svg class="icono" width="20" height="20" aria-hidden="true"><use href="#icono-desplegar"></use></svg></span>
+                                </button>
+                            </h4>
+                            <div class="faq-answer" id="faq-r5" role="region" aria-labelledby="faq-q5">
+                                <div class="faq-answer-interior">
+                                    <p>Depende del paquete seleccionado. Nuestros paquetes "todo incluido" cubren transporte, hospedaje, algunas comidas y actividades. Los paquetes básicos incluyen guía y transporte, pero hospedaje y comidas son por separado. Todo está detallado en cada paquete.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <h4 class="faq-pregunta-titulo">
+                                <button type="button" class="faq-question" id="faq-q6" aria-expanded="false" aria-controls="faq-r6">
+                                    <span class="faq-numero">06</span>
+                                    <span class="faq-texto">¿Puedo personalizar mi itinerario?</span>
+                                    <span class="faq-toggle"><svg class="icono" width="20" height="20" aria-hidden="true"><use href="#icono-desplegar"></use></svg></span>
+                                </button>
+                            </h4>
+                            <div class="faq-answer" id="faq-r6" role="region" aria-labelledby="faq-q6">
+                                <div class="faq-answer-interior">
+                                    <p>¡Absolutamente! Ofrecemos tours personalizados según tus intereses, presupuesto y tiempo disponible. Contacta con nosotros para diseñar el viaje perfecto adaptado a tus preferencias específicas.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <h4 class="faq-pregunta-titulo">
+                                <button type="button" class="faq-question" id="faq-q7" aria-expanded="false" aria-controls="faq-r7">
+                                    <span class="faq-numero">07</span>
+                                    <span class="faq-texto">¿Qué nivel de condición física se requiere?</span>
+                                    <span class="faq-toggle"><svg class="icono" width="20" height="20" aria-hidden="true"><use href="#icono-desplegar"></use></svg></span>
+                                </button>
+                            </h4>
+                            <div class="faq-answer" id="faq-r7" role="region" aria-labelledby="faq-q7">
+                                <div class="faq-answer-interior">
+                                    <p>Varía según la actividad. Las visitas culturales y de playa son accesibles para todos. Los tours volcánicos requieren condición física moderada a buena. Siempre indicamos el nivel de dificultad y ofrecemos alternativas para diferentes capacidades.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <h4 class="faq-pregunta-titulo">
+                                <button type="button" class="faq-question" id="faq-q8" aria-expanded="false" aria-controls="faq-r8">
+                                    <span class="faq-numero">08</span>
+                                    <span class="faq-texto">¿Ofrecen seguro de viaje?</span>
+                                    <span class="faq-toggle"><svg class="icono" width="20" height="20" aria-hidden="true"><use href="#icono-desplegar"></use></svg></span>
+                                </button>
+                            </h4>
+                            <div class="faq-answer" id="faq-r8" role="region" aria-labelledby="faq-q8">
+                                <div class="faq-answer-interior">
+                                    <p>Recomendamos encarecidamente contratar seguro de viaje por tu cuenta. Podemos asesorarte sobre las mejores opciones según tu país de origen. Algunos de nuestros paquetes premium incluyen seguro básico de actividades.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Redes sociales: iconos uniformes -->
+                <div class="social-media redes">
+                    <h3>Síguenos en Redes Sociales</h3>
+                    <div class="social-icons redes-lista">
+                        <a href="#" class="social-icon red" aria-label="Facebook">
+                            <span class="red-icono"><svg class="icono" width="24" height="24" aria-hidden="true"><use href="#icono-facebook"></use></svg></span>
+                            <span class="red-nombre">Facebook</span>
+                        </a>
+                        <a href="#" class="social-icon red" aria-label="Instagram">
+                            <span class="red-icono"><svg class="icono" width="24" height="24" aria-hidden="true"><use href="#icono-instagram"></use></svg></span>
+                            <span class="red-nombre">Instagram</span>
+                        </a>
+                        <a href="#" class="social-icon red" aria-label="Twitter">
+                            <span class="red-icono"><svg class="icono" width="24" height="24" aria-hidden="true"><use href="#icono-twitter"></use></svg></span>
+                            <span class="red-nombre">Twitter</span>
+                        </a>
+                        <a href="#" class="social-icon red" aria-label="YouTube">
+                            <span class="red-icono"><svg class="icono" width="24" height="24" aria-hidden="true"><use href="#icono-youtube"></use></svg></span>
+                            <span class="red-nombre">YouTube</span>
+                        </a>
+                        <a href="https://wa.me/50366667777" target="_blank" rel="noopener" class="social-icon red" aria-label="WhatsApp">
+                            <span class="red-icono"><svg class="icono" width="24" height="24" aria-hidden="true"><use href="#icono-whatsapp"></use></svg></span>
+                            <span class="red-nombre">WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">sv <span class="highlight">El Salvador</span></div>
+            <p>Descubre la magia de El Salvador con nosotros</p>
+            <div class="social-links">
+                <a href="#" class="social-link">Facebook</a>
+                <a href="#" class="social-link">Instagram</a>
+                <a href="#" class="social-link">Twitter</a>
+                <a href="#" class="social-link">YouTube</a>
+            </div>
+            <p class="copyright">© 2024 SV El Salvador. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Botón flotante de contacto rápido -->
+    <div class="floating-fab">
+        <button class="fab-btn" aria-label="Comentarios"><svg class="icono" width="26" height="26" aria-hidden="true"><use href="#icono-mensaje"></use></svg></button>
+    </div>
+
+    <!-- Scripts: primero los compartidos, luego los de esta página -->
+    <script src="js/nucleo/iconos.js"></script>
+    <script src="js/nucleo/utilidades.js"></script>
+    <script src="js/componentes/navegacion.js"></script>
+    <script src="js/componentes/contacto-rapido.js"></script>
+    <script src="js/componentes/boton-subir.js"></script>
+    <script src="js/componentes/formulario.js"></script>
+    <script src="js/paginas/contacto.js"></script>
+</body>
+</html>

@@ -1,0 +1,302 @@
+/* Estructura común a todas las páginas: menú, botones, pie de página, botón flotante y secciones */
+
+/* Menú de navegación */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: var(--azul-oscuro);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: var(--transicion);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.logo-img {
+    display: block;
+    height: 30px;
+    width: auto;
+}
+
+.highlight {
+    color: var(--naranja);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-link {
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radio);
+    position: relative;
+    transition: var(--transicion);
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--naranja);
+    transition: var(--transicion);
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::before,
+.nav-link.active::before {
+    width: 80%;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--naranja);
+    transform: translateY(-2px);
+}
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--blanco);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.mobile-menu {
+    display: none;
+    background: var(--azul-oscuro);
+    backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-menu a {
+    display: block;
+    color: var(--blanco);
+    text-decoration: none;
+    padding: 1rem 2rem;
+    transition: var(--transicion);
+}
+
+.mobile-menu a:hover {
+    background: rgba(249, 115, 22, 0.2);
+}
+
+/* Botones de acción */
+.action-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transicion);
+    position: relative;
+    overflow: hidden;
+    font-size: 1.1rem;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: left 0.5s;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--sombra-fuerte);
+}
+
+.btn.primary {
+    background: var(--naranja);
+    color: var(--blanco);
+}
+
+.btn.secondary {
+    background: var(--blanco);
+    color: var(--azul);
+}
+
+/* Pie de página */
+.footer {
+    background: var(--azul-oscuro);
+    backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 3rem 0;
+    text-align: center;
+    color: var(--blanco);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.footer-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.footer p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 1.5rem;
+}
+
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.social-link {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: var(--transicion);
+}
+
+.social-link:hover {
+    color: var(--naranja);
+    transform: translateY(-2px);
+}
+
+.copyright {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+}
+
+/* Botón flotante de contacto */
+.floating-fab {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 1000;
+}
+
+.fab-btn {
+    background: var(--azul);
+    border: none;
+    color: var(--blanco);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: var(--sombra-fuerte);
+    transition: var(--transicion);
+}
+
+.fab-btn:hover {
+    transform: scale(1.1);
+    background: var(--celeste);
+}
+
+/* Botón para volver arriba (lo crea js/componentes/boton-subir.js) */
+.scroll-to-top {
+    position: fixed;
+    bottom: 100px;
+    right: 2rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--naranja);
+    color: var(--blanco);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.scroll-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-to-top:hover {
+    background: var(--naranja-oscuro);
+    transform: translateY(-3px);
+}
+
+.scroll-to-top .icono {
+    stroke-width: 2.5;
+}
+/* Secciones de página */
+.page-section {
+    min-height: 100vh;
+    padding: 6rem 2rem 4rem;
+    background: var(--azul);
+    color: var(--blanco);
+}
+
+.section-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--blanco);
+}
+
+/* Párrafo de presentación debajo del título de una página */
+.section-intro {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    opacity: 0.9;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}

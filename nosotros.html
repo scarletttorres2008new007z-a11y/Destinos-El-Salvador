@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros - SV El Salvador</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/componentes.css">
+    <link rel="stylesheet" href="css/formularios.css">
+    <link rel="stylesheet" href="css/paginas/nosotros.css">
+    <link rel="stylesheet" href="css/adaptable.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="pagina-nosotros">
+    <!-- Menú de navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><img src="img/logo-es.png" alt="El Salvador" class="logo-img"></a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Inicio</a></li>
+                <li><a href="destinos.html" class="nav-link">Destinos</a></li>
+                <li><a href="cultura.html" class="nav-link">Cultura</a></li>
+                <li><a href="galeria.html" class="nav-link">Galería</a></li>
+                <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+                <li><a href="nosotros.html" class="nav-link">Nosotros</a></li>
+            </ul>
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+        <div class="mobile-menu">
+            <a href="index.html">Inicio</a>
+            <a href="destinos.html">Destinos</a>
+            <a href="cultura.html">Cultura</a>
+            <a href="galeria.html">Galería</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="nosotros.html">Nosotros</a>
+        </div>
+    </nav>
+
+    <!-- Encabezado: foto de El Salvador con capa sólida semitransparente -->
+    <header class="nos-hero">
+        <img src="img/galeria/01.jpg" alt="Volcanes y bosque tropical vistos desde Tacuba, Ahuachapán" class="nos-hero-img">
+        <div class="nos-hero-capa"></div>
+        <div class="nos-hero-contenido">
+            <span class="nos-etiqueta">Sobre nosotros</span>
+            <h1>Salvadoreños mostrando <span class="highlight">El Salvador</span> al mundo</h1>
+            <p>Somos una empresa salvadoreña dedicada a mostrar la belleza y la riqueza cultural de nuestro país. Con más de 10 años de experiencia, hemos ayudado a miles de viajeros a descubrir los secretos mejor guardados de El Salvador.</p>
+            <div class="nos-hero-botones">
+                <a href="#historia" class="nos-btn nos-btn-naranja">Conoce nuestra historia</a>
+                <a href="contacto.html" class="nos-btn nos-btn-borde">Planifica tu viaje</a>
+            </div>
+        </div>
+        <p class="nos-credito">Foto: Pipil El Salvador, CC BY 4.0</p>
+    </header>
+
+    <!-- Quiénes somos -->
+    <section id="historia" class="nos-seccion">
+        <div class="nos-contenedor nos-historia">
+            <div class="nos-historia-texto" data-revelar>
+                <span class="nos-etiqueta">Quiénes somos</span>
+                <h2 class="nos-titulo">Viajes con raíces salvadoreñas</h2>
+                <p>Empezamos como un pequeño grupo de guías que querían enseñar su país con orgullo. Hoy diseñamos recorridos por playas, volcanes, pueblos coloniales y sitios arqueológicos, siempre de la mano de las comunidades que los cuidan.</p>
+                <p>Creemos que viajar es conocer a la gente: por eso cada ruta incluye cocina local, artesanos, productores de café y la historia que no aparece en los mapas.</p>
+
+                <!-- Misión, visión y valores en pestañas -->
+                <div class="nos-pestanas" role="tablist" aria-label="Misión, visión y valores">
+                    <button class="nos-pestana activa" role="tab" id="tab-mision" aria-controls="panel-mision" aria-selected="true">
+                        <svg class="icono" width="20" height="20" aria-hidden="true"><use href="#icono-diana"></use></svg>
+                        Misión
+                    </button>
+                    <button class="nos-pestana" role="tab" id="tab-vision" aria-controls="panel-vision" aria-selected="false" tabindex="-1">
+                        <svg class="icono" width="20" height="20" aria-hidden="true"><use href="#icono-ojo"></use></svg>
+                        Visión
+                    </button>
+                    <button class="nos-pestana" role="tab" id="tab-valores" aria-controls="panel-valores" aria-selected="false" tabindex="-1">
+                        <svg class="icono" width="20" height="20" aria-hidden="true"><use href="#icono-corazon"></use></svg>
+                        Valores
+                    </button>
+                </div>
+                <div class="nos-paneles">
+                    <div class="nos-panel activo" role="tabpanel" id="panel-mision" aria-labelledby="tab-mision" tabindex="0">
+                        <p>Promover el turismo sostenible en El Salvador, destacando nuestras bellezas naturales, patrimonio cultural y la calidez de nuestra gente, creando experiencias únicas e inolvidables para cada visitante.</p>
+                    </div>
+                    <div class="nos-panel" role="tabpanel" id="panel-vision" aria-labelledby="tab-vision" tabindex="0" hidden>
+                        <p>Ser la empresa líder en turismo de El Salvador, reconocida por la calidad de nuestros servicios y nuestro compromiso con el desarrollo sostenible del sector turístico nacional.</p>
+                    </div>
+                    <div class="nos-panel" role="tabpanel" id="panel-valores" aria-labelledby="tab-valores" tabindex="0" hidden>
+                        <ul class="nos-lista-valores">
+                            <li>Compromiso</li>
+                            <li>Respeto por el medio ambiente</li>
+                            <li>Autenticidad</li>
+                            <li>Excelencia en el servicio</li>
+                            <li>Pasión por El Salvador</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="nos-historia-fotos" data-revelar>
+                <figure class="nos-foto nos-foto-principal">
+                    <img src="img/galeria/18.jpg" alt="Productoras seleccionando granos de café en Ahuachapán" loading="lazy">
+                    <figcaption>Foto: The Cockroach, CC BY 2.0</figcaption>
+                </figure>
+                <figure class="nos-foto nos-foto-secundaria">
+                    <img src="img/galeria/mini/13.jpg" alt="Calle empedrada de Suchitoto" loading="lazy">
+                    <figcaption>Foto: ElmerGuevara, CC BY-SA 3.0</figcaption>
+                </figure>
+                <div class="nos-sello">
+                    <strong>2014</strong>
+                    <span>recorriendo El Salvador</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trayectoria: línea de tiempo que se completa al bajar -->
+    <section id="trayectoria" class="nos-seccion nos-seccion-oscura">
+        <div class="nos-contenedor">
+            <div class="nos-encabezado" data-revelar>
+                <span class="nos-etiqueta">Nuestra trayectoria</span>
+                <h2 class="nos-titulo">Diez años de caminos recorridos</h2>
+                <p>Cada etapa nos acercó a un rincón distinto del país.</p>
+            </div>
+
+            <ol class="nos-linea">
+                <li class="nos-linea-progreso" aria-hidden="true"><span></span></li>
+                <li class="nos-hito" data-revelar>
+                    <span class="nos-hito-punto" aria-hidden="true"></span>
+                    <article class="nos-hito-tarjeta">
+                        <img src="img/galeria/mini/14.jpg" alt="Vista aérea de San Salvador" loading="lazy">
+                        <div class="nos-hito-texto">
+                            <span class="nos-hito-anio">2014</span>
+                            <h3>Nace el proyecto</h3>
+                            <p>Primeros recorridos a pie por el centro de San Salvador y el volcán de San Salvador.</p>
+                        </div>
+                    </article>
+                </li>
+                <li class="nos-hito" data-revelar>
+                    <span class="nos-hito-punto" aria-hidden="true"></span>
+                    <article class="nos-hito-tarjeta">
+                        <img src="img/destinos/ruta-de-las-flores-card.jpg" alt="Mural en Concepción de Ataco" loading="lazy">
+                        <div class="nos-hito-texto">
+                            <span class="nos-hito-anio">2016</span>
+                            <h3>Ruta de las Flores</h3>
+                            <p>Sumamos tours por Juayúa, Apaneca y Ataco con artesanos y cafetaleros locales.</p>
+                        </div>
+                    </article>
+                </li>
+                <li class="nos-hito" data-revelar>
+                    <span class="nos-hito-punto" aria-hidden="true"></span>
+                    <article class="nos-hito-tarjeta">
+                        <img src="img/destinos/volcan-santa-ana-card.jpg" alt="Laguna del cráter del volcán de Santa Ana" loading="lazy">
+                        <div class="nos-hito-texto">
+                            <span class="nos-hito-anio">2018</span>
+                            <h3>Volcanes y aventura</h3>
+                            <p>Ascensos guiados al volcán de Santa Ana y al Izalco con guías certificados.</p>
+                        </div>
+                    </article>
+                </li>
+                <li class="nos-hito" data-revelar>
+                    <span class="nos-hito-punto" aria-hidden="true"></span>
+                    <article class="nos-hito-tarjeta">
+                        <img src="img/destinos/el-imposible-card.jpg" alt="Mirador del Parque Nacional El Imposible" loading="lazy">
+                        <div class="nos-hito-texto">
+                            <span class="nos-hito-anio">2020</span>
+                            <h3>Turismo sostenible</h3>
+                            <p>Alianzas con comunidades y guías locales para proteger El Imposible y sus alrededores.</p>
+                        </div>
+                    </article>
+                </li>
+                <li class="nos-hito" data-revelar>
+                    <span class="nos-hito-punto" aria-hidden="true"></span>
+                    <article class="nos-hito-tarjeta">
+                        <img src="img/destinos/suchitoto-card.jpg" alt="Iglesia Santa Lucía de Suchitoto" loading="lazy">
+                        <div class="nos-hito-texto">
+                            <span class="nos-hito-anio">2022</span>
+                            <h3>Patrimonio vivo</h3>
+                            <p>Rutas culturales por Suchitoto, Joya de Cerén y Tazumal junto a historiadores.</p>
+                        </div>
+                    </article>
+                </li>
+                <li class="nos-hito" data-revelar>
+                    <span class="nos-hito-punto" aria-hidden="true"></span>
+                    <article class="nos-hito-tarjeta">
+                        <img src="img/galeria/mini/04.jpg" alt="Atardecer en Playa El Tunco" loading="lazy">
+                        <div class="nos-hito-texto">
+                            <span class="nos-hito-anio">2024</span>
+                            <h3>Más de 5000 viajeros</h3>
+                            <p>Viajeros de todo el mundo han descubierto El Salvador con nosotros.</p>
+                        </div>
+                    </article>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- Equipo -->
+    <section id="equipo" class="nos-seccion">
+        <div class="nos-contenedor">
+            <div class="nos-encabezado" data-revelar>
+                <span class="nos-etiqueta">Nuestro equipo</span>
+                <h2 class="nos-titulo">Las personas detrás de cada viaje</h2>
+                <p>Toca una tarjeta para conocer mejor a cada integrante.</p>
+            </div>
+
+            <div class="nos-equipo" data-revelar-grupo>
+                <button class="nos-miembro" data-miembro="carlos" data-revelar>
+                    <span class="nos-avatar nos-avatar-azul" aria-hidden="true">CM</span>
+                    <span class="nos-miembro-nombre">Carlos Mendoza</span>
+                    <span class="nos-miembro-rol">Director General</span>
+                    <span class="nos-miembro-texto">Con 15 años de experiencia en turismo, lidera el equipo con pasión y dedicación.</span>
+                    <span class="nos-miembro-ver">Ver perfil
+                        <svg class="icono" width="16" height="16" aria-hidden="true"><use href="#icono-flecha-derecha"></use></svg>
+                    </span>
+                </button>
+                <button class="nos-miembro" data-miembro="ana" data-revelar>
+                    <span class="nos-avatar nos-avatar-celeste" aria-hidden="true">AG</span>
+                    <span class="nos-miembro-nombre">Ana García</span>
+                    <span class="nos-miembro-rol">Directora de Operaciones</span>
+                    <span class="nos-miembro-texto">Coordina todos los tours y cuida que cada detalle del viaje sea perfecto.</span>
+                    <span class="nos-miembro-ver">Ver perfil
+                        <svg class="icono" width="16" height="16" aria-hidden="true"><use href="#icono-flecha-derecha"></use></svg>
+                    </span>
+                </button>
+                <button class="nos-miembro" data-miembro="roberto" data-revelar>
+                    <span class="nos-avatar nos-avatar-naranja" aria-hidden="true">RS</span>
+                    <span class="nos-miembro-nombre">Roberto Silva</span>
+                    <span class="nos-miembro-rol">Guía Especializado</span>
+                    <span class="nos-miembro-texto">Historiador y guía certificado que conoce cada rincón de El Salvador.</span>
+                    <span class="nos-miembro-ver">Ver perfil
+                        <svg class="icono" width="16" height="16" aria-hidden="true"><use href="#icono-flecha-derecha"></use></svg>
+                    </span>
+                </button>
+                <button class="nos-miembro" data-miembro="maria" data-revelar>
+                    <span class="nos-avatar nos-avatar-oscuro" aria-hidden="true">ML</span>
+                    <span class="nos-miembro-nombre">María López</span>
+                    <span class="nos-miembro-rol">Coordinadora de Marketing</span>
+                    <span class="nos-miembro-texto">Promociona las maravillas del país y mantiene informados a nuestros viajeros.</span>
+                    <span class="nos-miembro-ver">Ver perfil
+                        <svg class="icono" width="16" height="16" aria-hidden="true"><use href="#icono-flecha-derecha"></use></svg>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lo que nos hace únicos -->
+    <section id="unicos" class="nos-seccion nos-seccion-oscura">
+        <div class="nos-contenedor">
+            <div class="nos-encabezado" data-revelar>
+                <span class="nos-etiqueta">Nuestra forma de viajar</span>
+                <h2 class="nos-titulo">Lo que nos hace únicos</h2>
+            </div>
+
+            <div class="nos-valores" data-revelar-grupo>
+                <article class="nos-valor" data-revelar>
+                    <div class="nos-valor-icono"><svg class="icono" width="26" height="26" aria-hidden="true"><use href="#icono-hoja"></use></svg></div>
+                    <h3>Turismo sostenible</h3>
+                    <p>Prácticas responsables que protegen la naturaleza y benefician a las comunidades locales.</p>
+                </article>
+                <article class="nos-valor" data-revelar>
+                    <div class="nos-valor-icono"><svg class="icono" width="26" height="26" aria-hidden="true"><use href="#icono-brujula"></use></svg></div>
+                    <h3>Experiencias auténticas</h3>
+                    <p>Tours que muestran la verdadera esencia de El Salvador, lejos del turismo masivo.</p>
+                </article>
+                <article class="nos-valor" data-revelar>
+                    <div class="nos-valor-icono"><svg class="icono" width="26" height="26" aria-hidden="true"><use href="#icono-personas"></use></svg></div>
+                    <h3>Atención personalizada</h3>
+                    <p>Adaptamos cada viaje a las necesidades y preferencias de cada viajero.</p>
+                </article>
+                <article class="nos-valor" data-revelar>
+                    <div class="nos-valor-icono"><svg class="icono" width="26" height="26" aria-hidden="true"><use href="#icono-medalla"></use></svg></div>
+                    <h3>Calidad garantizada</h3>
+                    <p>Trabajamos con los mejores proveedores locales para asegurar un servicio excelente.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Logros con contadores animados -->
+    <section id="logros" class="nos-seccion">
+        <div class="nos-contenedor">
+            <div class="nos-encabezado" data-revelar>
+                <span class="nos-etiqueta">Nuestros logros</span>
+                <h2 class="nos-titulo">Cifras que nos llenan de orgullo</h2>
+            </div>
+
+            <div class="nos-logros" data-revelar-grupo>
+                <div class="nos-logro" data-revelar>
+                    <span class="nos-logro-numero" data-contador="5000" data-sufijo="+">5000+</span>
+                    <span class="nos-logro-texto">Viajeros satisfechos</span>
+                </div>
+                <div class="nos-logro" data-revelar>
+                    <span class="nos-logro-numero" data-contador="50" data-sufijo="+">50+</span>
+                    <span class="nos-logro-texto">Destinos explorados</span>
+                </div>
+                <div class="nos-logro" data-revelar>
+                    <span class="nos-logro-numero" data-contador="10">10</span>
+                    <span class="nos-logro-texto">Años de experiencia</span>
+                </div>
+                <div class="nos-logro" data-revelar>
+                    <span class="nos-logro-numero" data-contador="98" data-sufijo="%">98%</span>
+                    <span class="nos-logro-texto">Satisfacción del cliente</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Llamado final -->
+    <section class="nos-cta">
+        <div class="nos-contenedor nos-cta-contenido" data-revelar>
+            <h2>¿Listo para descubrir El Salvador con nosotros?</h2>
+            <p>Cuéntanos qué te gustaría vivir y armamos un viaje a tu medida.</p>
+            <div class="nos-hero-botones">
+                <a href="contacto.html" class="nos-btn nos-btn-blanco">Contáctanos</a>
+                <a href="destinos.html" class="nos-btn nos-btn-borde">Ver destinos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ventana con el perfil de cada integrante (la llena js/paginas/nosotros.js) -->
+    <div class="nos-modal" id="nos-modal" hidden>
+        <div class="nos-modal-fondo" data-cerrar></div>
+        <div class="nos-modal-caja" role="dialog" aria-modal="true" aria-labelledby="nos-modal-nombre">
+            <button class="nos-modal-cerrar" data-cerrar aria-label="Cerrar">
+                <svg class="icono" width="22" height="22" aria-hidden="true"><use href="#icono-cerrar"></use></svg>
+            </button>
+            <div class="nos-modal-cuerpo"></div>
+            <div class="nos-modal-nav">
+                <button class="nos-modal-flecha" data-paso="-1" aria-label="Integrante anterior">
+                    <svg class="icono" width="20" height="20" aria-hidden="true"><use href="#icono-anterior"></use></svg>
+                </button>
+                <span class="nos-modal-contador"></span>
+                <button class="nos-modal-flecha" data-paso="1" aria-label="Integrante siguiente">
+                    <svg class="icono" width="20" height="20" aria-hidden="true"><use href="#icono-siguiente"></use></svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">sv <span class="highlight">El Salvador</span></div>
+            <p>Descubre la magia de El Salvador con nosotros</p>
+            <div class="social-links">
+                <a href="#" class="social-link">Facebook</a>
+                <a href="#" class="social-link">Instagram</a>
+                <a href="#" class="social-link">Twitter</a>
+                <a href="#" class="social-link">YouTube</a>
+            </div>
+            <p class="copyright">© 2024 SV El Salvador. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Botón flotante de contacto rápido -->
+    <div class="floating-fab">
+        <button class="fab-btn" aria-label="Comentarios"><svg class="icono" width="26" height="26" aria-hidden="true"><use href="#icono-mensaje"></use></svg></button>
+    </div>
+
+    <!-- Scripts: primero los compartidos, luego los de esta página -->
+    <script src="js/nucleo/iconos.js"></script>
+    <script src="js/nucleo/utilidades.js"></script>
+    <script src="js/componentes/navegacion.js"></script>
+    <script src="js/componentes/contacto-rapido.js"></script>
+    <script src="js/componentes/boton-subir.js"></script>
+    <script src="js/datos/equipo.js"></script>
+    <script src="js/paginas/nosotros.js"></script>
+</body>
+</html>

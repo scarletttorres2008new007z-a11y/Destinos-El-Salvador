@@ -1,0 +1,533 @@
+/* Componentes compartidos: tarjetas de lugares (Inicio y Destinos), ventana de Experiencias (también la usa Destinos), ventana de contacto y paquetes */
+
+/* Rejilla de lugares */
+.highlighted-places {
+    margin-bottom: 4rem;
+}
+
+.highlighted-places h3 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.places-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.place-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--radio-grande);
+    overflow: hidden;
+    transition: var(--transicion);
+}
+
+.place-card:hover {
+    transform: translateY(-6px);
+}
+
+.place-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.rating {
+    background: var(--naranja);
+    color: var(--blanco);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.rating.unesco {
+    background: var(--celeste);
+}
+
+.location {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 1rem;
+}
+
+.description {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.tag {
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.tag.surf { background: var(--celeste); color: var(--blanco); }
+.tag.beach { background: var(--celeste); color: var(--blanco); }
+.tag.nightlife { background: var(--naranja); color: var(--blanco); }
+.tag.volcano { background: var(--naranja); color: var(--blanco); }
+.tag.hiking { background: var(--celeste); color: var(--blanco); }
+.tag.adventure { background: var(--naranja); color: var(--blanco); }
+.tag.history { background: var(--blanco); color: var(--azul); }
+.tag.unesco { background: var(--blanco); color: var(--azul); }
+.tag.archaeology { background: var(--blanco); color: var(--azul); }
+
+.price {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--naranja);
+    margin-bottom: 1rem;
+}
+
+.details-btn {
+    width: 100%;
+    background: var(--naranja);
+    color: var(--blanco);
+    border: none;
+    padding: 0.75rem;
+    border-radius: var(--radio);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transicion);
+}
+
+.details-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--sombra-media);
+}
+
+/* Experiencias Imperdibles: tarjetas compactas y modal de detalles */
+.highlighted-places .exp-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.highlighted-places .exp-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--blanco);
+    backdrop-filter: none;
+    border: none;
+    border-radius: var(--radio);
+    box-shadow: var(--sombra-suave);
+    text-align: left;
+    transition: opacity 0.6s ease, transform 0.6s ease, translate 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.highlighted-places .exp-card:hover {
+    translate: 0 -6px;
+    box-shadow: var(--sombra-media);
+}
+
+.exp-img-wrap {
+    overflow: hidden;
+    background: var(--celeste);
+}
+
+.highlighted-places .exp-card .exp-img {
+    display: block;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.highlighted-places .exp-card:hover .exp-img {
+    transform: scale(1.06);
+}
+
+.exp-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 1rem;
+}
+
+.exp-body h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--azul);
+    margin-bottom: 0.35rem;
+}
+
+.highlighted-places .exp-desc {
+    flex: 1;
+    max-width: none;
+    opacity: 1;
+    animation: none;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #444444;
+    margin-bottom: 0.9rem;
+}
+
+.exp-btn {
+    align-self: flex-start;
+    background: var(--naranja);
+    color: var(--blanco);
+    border: none;
+    padding: 0.5rem 1.25rem;
+    border-radius: 2rem;
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.exp-btn:hover {
+    background: var(--azul);
+    transform: translateY(-2px);
+}
+
+.exp-btn:focus-visible,
+.exp-modal-close:focus-visible,
+.exp-modal-btn:focus-visible {
+    outline: 3px solid var(--celeste);
+    outline-offset: 2px;
+}
+
+/* Ventana emergente */
+.exp-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.exp-modal.is-open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.exp-modal-dialog {
+    position: relative;
+    width: 100%;
+    max-width: 620px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: var(--blanco);
+    color: #333333;
+    border-radius: var(--radio-grande);
+    box-shadow: var(--sombra-fuerte);
+    text-align: left;
+    transform: translateY(24px) scale(0.97);
+    transition: transform 0.3s ease;
+}
+
+.exp-modal.is-open .exp-modal-dialog {
+    transform: translateY(0) scale(1);
+}
+
+.exp-modal-img {
+    display: block;
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    background: var(--celeste);
+}
+
+.exp-modal-close {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background: var(--blanco);
+    color: var(--azul);
+    font-size: 1.1rem;
+    cursor: pointer;
+    box-shadow: var(--sombra-suave);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.exp-modal-close:hover {
+    background: var(--naranja);
+    color: var(--blanco);
+}
+
+.exp-modal-body {
+    padding: 1.5rem;
+}
+
+.exp-modal-title {
+    font-size: 1.6rem;
+    color: var(--azul);
+    margin-bottom: 0.25rem;
+}
+
+.exp-modal-location {
+    color: var(--celeste);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.exp-modal-desc {
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+}
+
+.exp-modal-body h4 {
+    font-size: 1rem;
+    color: var(--azul);
+    margin-bottom: 0.5rem;
+}
+
+.exp-modal-body ul {
+    padding-left: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.exp-modal-body li {
+    margin-bottom: 0.35rem;
+}
+
+.exp-modal-body li::marker {
+    color: var(--naranja);
+}
+
+.exp-modal-btn {
+    background: var(--azul);
+    color: var(--blanco);
+    border: none;
+    padding: 0.7rem 1.75rem;
+    border-radius: 2rem;
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.exp-modal-btn:hover {
+    background: var(--naranja);
+}
+
+body.exp-modal-open {
+    overflow: hidden;
+}
+
+@media (max-width: 900px) {
+    .highlighted-places .exp-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .highlighted-places .exp-grid {
+        gap: 0.75rem;
+    }
+
+    .highlighted-places .exp-card {
+        margin-bottom: 0;
+    }
+
+    .highlighted-places .exp-card .exp-img {
+        height: 110px;
+    }
+
+    .exp-body {
+        padding: 0.75rem;
+    }
+
+    .exp-body h4 {
+        font-size: 0.95rem;
+    }
+
+    .highlighted-places .exp-desc {
+        font-size: 0.8rem;
+    }
+
+    .exp-btn {
+        padding: 0.4rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    .exp-modal-img {
+        height: 200px;
+    }
+}
+
+/* Ventana de contacto rápido (la crea js/componentes/contacto-rapido.js) */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    z-index: 2000;
+    animation: contacto-rapido-aparecer 0.3s ease;
+}
+
+.modal-overlay.closing {
+    animation: contacto-rapido-desaparecer 0.25s ease forwards;
+}
+
+.modal-overlay .modal-content {
+    background: var(--blanco);
+    border-radius: 1rem;
+    max-width: 420px;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    animation: contacto-rapido-crecer 0.3s ease;
+}
+
+.modal-overlay.closing .modal-content {
+    animation: contacto-rapido-encoger 0.25s ease forwards;
+}
+
+.modal-overlay .modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem;
+    background: var(--azul);
+    color: var(--blanco);
+}
+
+.modal-overlay .modal-header h3 {
+    color: var(--blanco);
+    font-size: 1.4rem;
+    margin: 0 0 0.25rem;
+}
+
+.modal-overlay .modal-subtitle {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.modal-overlay .modal-close {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.15);
+    border: none;
+    color: var(--blanco);
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.modal-overlay .modal-close:hover,
+.modal-overlay .modal-close:focus-visible {
+    background: rgba(255, 255, 255, 0.3);
+    transform: rotate(90deg);
+    outline: none;
+}
+
+.modal-overlay .modal-close .icono {
+    stroke-width: 2.5;
+}
+
+.modal-overlay .modal-body {
+    padding: 1.5rem;
+}
+
+.contact-option {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    padding: 1rem;
+    background: var(--blanco);
+    border: 1px solid var(--gris-borde);
+    border-radius: 0.75rem;
+    color: var(--texto-oscuro);
+    font-size: 1rem;
+    text-align: left;
+    cursor: pointer;
+    transition: border-color 0.3s ease, background 0.3s ease, transform 0.3s ease;
+    margin-bottom: 0.75rem;
+}
+
+.contact-option:last-child {
+    margin-bottom: 0;
+}
+
+.contact-option:hover,
+.contact-option:focus-visible {
+    border-color: var(--celeste);
+    background: var(--celeste-claro);
+    transform: translateY(-2px);
+    outline: none;
+}
+
+.option-icon {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--celeste);
+    color: var(--blanco);
+}
+
+.option-label {
+    display: flex;
+    flex-direction: column;
+}
+
+.option-text {
+    font-weight: 600;
+    color: var(--azul);
+}
+
+.option-detail {
+    font-size: 0.875rem;
+    color: var(--texto-suave);
+}
+
+@keyframes contacto-rapido-aparecer {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes contacto-rapido-desaparecer {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes contacto-rapido-crecer {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes contacto-rapido-encoger {
+    from { transform: scale(1); opacity: 1; }
+    to { transform: scale(0.9); opacity: 0; }
+}

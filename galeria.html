@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería - SV El Salvador</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/componentes.css">
+    <link rel="stylesheet" href="css/formularios.css">
+    <link rel="stylesheet" href="css/paginas/galeria.css">
+    <link rel="stylesheet" href="css/adaptable.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Menú de navegación -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo"><img src="img/logo-es.png" alt="El Salvador" class="logo-img"></a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link active">Inicio</a></li>
+                <li><a href="destinos.html" class="nav-link">Destinos</a></li>
+                <li><a href="cultura.html" class="nav-link">Cultura</a></li>
+                <li><a href="galeria.html" class="nav-link">Galería</a></li>
+                <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+                <li><a href="nosotros.html" class="nav-link">Nosotros</a></li>
+            </ul>
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+        <div class="mobile-menu">
+            <a href="index.html">Inicio</a>
+            <a href="destinos.html">Destinos</a>
+            <a href="cultura.html">Cultura</a>
+            <a href="galeria.html">Galería</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="nosotros.html">Nosotros</a>
+        </div>
+    </nav>
+
+    <!-- Encabezado de la página -->
+    <section class="page-section">
+        <div class="container">
+            <h1 class="section-title">Galería Visual</h1>
+            <p class="section-intro">
+                Imágenes que capturan la belleza natural, cultural e histórica de El Salvador
+            </p>
+
+            <!-- Filtros por categoría -->
+            <div class="filter-tabs gallery-filters" role="group" aria-label="Filtrar fotos por categoría">
+                <button type="button" class="filter-btn active" data-filter="all" aria-pressed="true">Todas</button>
+                <button type="button" class="filter-btn" data-filter="nature" aria-pressed="false">Naturaleza</button>
+                <button type="button" class="filter-btn" data-filter="beaches" aria-pressed="false">Playas</button>
+                <button type="button" class="filter-btn" data-filter="volcanoes" aria-pressed="false">Volcanes</button>
+                <button type="button" class="filter-btn" data-filter="culture" aria-pressed="false">Cultura</button>
+                <button type="button" class="filter-btn" data-filter="cities" aria-pressed="false">Ciudades</button>
+                <button type="button" class="filter-btn" data-filter="food" aria-pressed="false">Gastronomía</button>
+            </div>
+
+            <!-- Cuadrícula de fotos -->
+            <div class="gallery-grid galeria-compacta">
+                <!-- Naturaleza -->
+                <figure class="gallery-item" data-category="nature" tabindex="0" role="button" aria-label="Ampliar foto: Bosque Tropical" data-full="img/galeria/01.jpg" data-autor="Pipil El Salvador" data-licencia="CC BY 4.0" data-fuente="https://commons.wikimedia.org/wiki/File:Vista_del_Bosque_Nacional_El_Imposible_desde_Tacuba_El_Salvador.jpg">
+                    <img src="img/galeria/mini/01.jpg" alt="Bosque del Parque Nacional El Imposible visto desde Tacuba" loading="lazy">
+                    <figcaption class="gallery-overlay">
+                        <h3>Bosque Tropical</h3>
+                        <p>Parque Nacional El Imposible</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="gallery-item" data-category="nature" tabindex="0" role="button" aria-label="Ampliar foto: Cascadas Escondidas" data-full="img/galeria/02.jpg" data-autor="ElmerGuevara" data-licencia="CC BY-SA 3.0" data-fuente="https://commons.wikimedia.org/wiki/File:Cascada_los_Tercios_en_el_mes_de_Agosto.JPG">
+                    <img src="img/galeria/mini/02.jpg" alt="Cascada Los Tercios en Suchitoto" loading="lazy">
+                    <figcaption class="gallery-overlay">
+                        <h3>Cascadas Escondidas</h3>
+                        <p>Cascada Los Tercios, Suchitoto</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="gallery-item" data-category="nature" tabindex="0" role="button" aria-label="Ampliar foto: Flora Tropical" data-full="img/galeria/03.jpg" data-autor="ElmerGuevara" data-licencia="CC BY-SA 3.0" data-fuente="https://commons.wikimedia.org/wiki/File:Flor_de_la_Reserva_Ecologica_El_Imposible..JPG">
+                    <img src="img/galeria/mini/03.jpg" alt="Flor de la Reserva Ecológica El Imposible" loading="lazy">
+                    <figcaption class="gallery-overlay">
+                        <h3>Flora Tropical</h3>
+                        <p>Flora de El Imposible</p>
+                    </figcaption>
+                </figure>
+
+                <!-- Playas -->
+                <figure class="gallery-item" data-category="beaches" tabindex="0" role="button" aria-label="Ampliar foto: Playa El Tunco" data-full="img/galeria/04.jpg" data-autor="Rafael Colindres" data-licencia="CC BY-SA 3.0" data-fuente="https://commons.wikimedia.org/wiki/File:Tunco.jpg">
+                    <img src="img/galeria/mini/04.jpg" alt="Playa El Tunco" loading="lazy">
+                    <figcaption class="gallery-overlay">
+                        <h3>Playa El Tunco</h3>
+                        <p>Paraíso del surf con olas perfectas</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="gallery-item" data-category="beaches" tabindex="0" role="button" aria-label="Ampliar foto: Costa del Pacífico" data-full="img/galeria/05.jpg" data-autor="Presidencia El Salvador" data-licencia="CC0" data-fuente="https://commons.wikimedia.org/wiki/File:Inauguraci%C3%B3n_estadio_F%C3%BAtbol_Playa_Costa_del_Sol_(6)_(14608233049).jpg">
+                    <img src="img/galeria/mini/05.jpg" alt="Playa de la Costa del Sol" loading="lazy">
+                    <figcaption class="gallery-overlay">
+                        <h3>Costa del Pacífico</h3>
+                        <p>Costa del Sol</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="gallery-item" data-category="beaches" tabindex="0" role="button" aria-label="Ampliar foto: Atardeceres Mágicos" data-full="img/galeria/06.jpg" data-autor="Silvia Villalta, Esmeralda Manzur, Natalia Valenzuela" data-licencia="CC BY-SA 4.0" data-fuente="https://commons.wikimedia.org/wiki/File:ATARDECER_EN_EL_TUNCO.jpg">
+                    <img src="img/galeria/mini/06.jpg" alt="Atardecer en la playa El Tunco" loading="lazy">
+                    <figcaption class="gallery-overlay">
+                        <h3>Atardeceres Mágicos</h3>
+                        <p>El Tunco</p>
+                    </figcaption>
+                </figure>
+
+                <!-- Volcanes -->
+                <figure class="gallery-item" data-category="volcanoes" tabindex="0" role="button" aria-label="Ampliar foto: Volcán de Santa Ana" data-full="img/galeria/07.jpg" data-autor="Erneestoo" data-licencia="CC BY-SA 4.0" data-fuente="https://commons.wikimedia.org/wiki/File:Laguna_crat%C3%A9rica_del_Volc%C3%A1n_de_Santa_Ana_-_El_Salvador.jpg">
+                    <img src="img/galeria/mini/07.jpg" alt="Laguna del cráter del volcán de Santa Ana" loading="lazy">
+                    <figcaption class="gallery-overlay">
+                        <h3>Volcán de Santa Ana</h3>
+                        <p>Laguna del cráter</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="gallery-item" data-category="volcanoes" tabindex="0" role="button" aria-label="Ampliar foto: Volcán de Izalco" data-full="img/galeria/08.jpg" data-autor="Rafael Montes E" data-licencia="CC BY-SA 4.0" data-fuente="https://commons.wikimedia.org/wiki/File:Volc%C3%A1n_de_Izalco,_Departamento_de_Sonsonate,_El_Salvador.jpg">
+                    <img src="img/galeria/mini/08.jpg" alt="Volcán de Izalco" loading="lazy">
+                    <figcaption class="gallery-overlay">
+                        <h3>Volcán de Izalco</h3>
+                        <p>El joven gigante de forma perfecta</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="gallery-item" data-category="volcanoes" tabindex="0" role="button" aria-label="Ampliar foto: Paisajes Volcánicos" data-full="img/galeria/09.jpg" data-autor="Jpyle490" data-licencia="CC BY-SA 3.0" data-fuente="https://commons.wikimedia.org/wiki/File:Boquer%C3%B3n_crater.jpg">
+                    <img src="img/galeria/mini/09.jpg" alt="Cráter de El Boquerón" loading="lazy">
+                    <figcaption class="gallery-overlay">
+                        <h3>Paisajes Volcánicos</h3>
+                        <p>El Boquerón</p>
+                    </figcaption>
+                </figure>
+
+                <!-- Cultura -->
+                <figure class="gallery-item" data-category="culture" tabindex="0" role="button" aria-label="Ampliar foto: Danzas Folklóricas" data-full="img/galeria/10.jpg" data-autor="Jose Huwaidi" data-licencia="CC BY-SA 4.0" data-fuente="https://commons.wikimedia.org/wiki/File:Danza_folcl%C3%B3rica_en_Perqu%C3%ADn_-_2005.jpg">
+                    <img src="img/galeria/mini/10.jpg" alt="Danza folclórica en Perquín" loading="lazy">
+                    <figcaption class="gallery-overlay">
+                        <h3>Danzas Folklóricas</h3>
+                        <p>Tradiciones que perduran en el tiempo</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="gallery-item" data-category="culture" tabindex="0" role="button" aria-label="Ampliar foto: Arte Tradicional" data-full="img/galeria/11.jpg" data-autor="Netito777" data-licencia="Dominio público" data-fuente="https://commons.wikimedia.org/wiki/File:Artesaniaslapalma2.JPG">
+                    <img src="img/galeria/mini/11.jpg" alt="Artesanías de La Palma" loading="lazy">
+                    <figcaption class="gallery-overlay">
+                        <h3>Arte Tradicional</h3>
+                        <p>La Palma, Chalatenango</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="gallery-item" data-category="culture" tabindex="0" role="button" aria-label="Ampliar foto: Música Folklórica" data-full="img/galeria/12.jpg" data-autor="Presidencia El Salvador" data-licencia="CC0" data-fuente="https://commons.wikimedia.org/wiki/File:Festival_Para_el_Buen_Vivir_(24489077811).jpg">
+                    <img src="img/galeria/mini/12.jpg" alt="Música tradicional salvadoreña" loading="lazy">
+                    <figcaption class="gallery-overlay">
+                        <h3>Música Folklórica</h3>
+                        <p>Ritmos que conmueven el alma</p>
+                    </figcaption>
+                </figure>
+
+                <!-- Ciudades -->
+                <figure class="gallery-item" data-category="cities" tabindex="0" role="button" aria-label="Ampliar foto: Suchitoto Colonial" data-full="img/galeria/13.jpg" data-autor="ElmerGuevara" data-licencia="CC BY-SA 3.0" data-fuente="https://commons.wikimedia.org/wiki/File:Calles_de_Suchitoto.jpg">
+                    <img src="img/galeria/mini/13.jpg" alt="Calles coloniales de Suchitoto" loading="lazy">
+                    <figcaption class="gallery-overlay">
+                        <h3>Suchitoto Colonial</h3>
+                        <p>Arquitectura preservada del siglo XVIII</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="gallery-item" data-category="cities" tabindex="0" role="button" aria-label="Ampliar foto: San Salvador Moderno" data-full="img/galeria/14.jpg" data-autor="Arne Müseler" data-licencia="CC BY-SA 3.0 de" data-fuente="https://commons.wikimedia.org/wiki/File:El-salvador_san-salvador_aerial-view_1.JPG">
+                    <img src="img/galeria/mini/14.jpg" alt="Vista aérea de San Salvador" loading="lazy">
+                    <figcaption class="gallery-overlay">
+                        <h3>San Salvador Moderno</h3>
+                        <p>Capital vibrante y cosmopolita</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="gallery-item" data-category="cities" tabindex="0" role="button" aria-label="Ampliar foto: Herencia Colonial" data-full="img/galeria/15.jpg" data-autor="Sergio.solar" data-licencia="Dominio público" data-fuente="https://commons.wikimedia.org/wiki/File:Iglesia_suchitoto.jpeg">
+                    <img src="img/galeria/mini/15.jpg" alt="Iglesia de Santa Lucía en Suchitoto" loading="lazy">
+                    <figcaption class="gallery-overlay">
+                        <h3>Herencia Colonial</h3>
+                        <p>Catedral de Suchitoto</p>
+                    </figcaption>
+                </figure>
+
+                <!-- Gastronomía -->
+                <figure class="gallery-item" data-category="food" tabindex="0" role="button" aria-label="Ampliar foto: Pupusas Tradicionales" data-full="img/galeria/16.jpg" data-autor="Ll1324" data-licencia="CC0" data-fuente="https://commons.wikimedia.org/wiki/File:Typical_serving_of_Pupusas_in_El_Salvador.jpg">
+                    <img src="img/galeria/mini/16.jpg" alt="Plato de pupusas salvadoreñas" loading="lazy">
+                    <figcaption class="gallery-overlay">
+                        <h3>Pupusas Tradicionales</h3>
+                        <p>El plato nacional por excelencia</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="gallery-item" data-category="food" tabindex="0" role="button" aria-label="Ampliar foto: Cocina Criolla" data-full="img/galeria/17.jpg" data-autor="Ll1324" data-licencia="CC0" data-fuente="https://commons.wikimedia.org/wiki/File:Typical_Pupuseria_setup_in_El_Salvador.jpg">
+                    <img src="img/galeria/mini/17.jpg" alt="Pupusería tradicional salvadoreña" loading="lazy">
+                    <figcaption class="gallery-overlay">
+                        <h3>Cocina Criolla</h3>
+                        <p>Sabores auténticos salvadoreños</p>
+                    </figcaption>
+                </figure>
+
+                <figure class="gallery-item" data-category="food" tabindex="0" role="button" aria-label="Ampliar foto: Café de Altura" data-full="img/galeria/18.jpg" data-autor="The Cockroach" data-licencia="CC BY 2.0" data-fuente="https://commons.wikimedia.org/wiki/File:Coffee_Processing_in_Ahuachapan,_El_Salvador.jpg">
+                    <img src="img/galeria/mini/18.jpg" alt="Procesamiento de café en Ahuachapán" loading="lazy">
+                    <figcaption class="gallery-overlay">
+                        <h3>Café de Altura</h3>
+                        <p>Granos de calidad mundial</p>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <!-- Comparte tus fotos -->
+            <section class="photo-sharing" aria-labelledby="comparteTitulo">
+                <h2 id="comparteTitulo" class="comparte-titulo">Comparte tus Fotos</h2>
+                <p class="comparte-intro">¿Visitaste El Salvador? ¡Comparte tus mejores momentos con nosotros!</p>
+
+                <div class="sharing-options">
+                    <div class="sharing-option">
+                        <span class="sharing-icono" aria-hidden="true"><svg class="icono" width="22" height="22" aria-hidden="true"><use href="#icono-instagram"></use></svg></span>
+                        <div>
+                            <h4>Instagram</h4>
+                            <p>#ElSalvadorTravel #VisitElSalvador</p>
+                        </div>
+                    </div>
+                    <div class="sharing-option">
+                        <span class="sharing-icono" aria-hidden="true"><svg class="icono" width="22" height="22" aria-hidden="true"><use href="#icono-facebook"></use></svg></span>
+                        <div>
+                            <h4>Facebook</h4>
+                            <p>Etiquétanos en tus publicaciones</p>
+                        </div>
+                    </div>
+                    <div class="sharing-option">
+                        <span class="sharing-icono" aria-hidden="true"><svg class="icono" width="22" height="22" aria-hidden="true"><use href="#icono-correo"></use></svg></span>
+                        <div>
+                            <h4>Email</h4>
+                            <p>Envíanos tus mejores fotos</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subir-fotos">
+                    <h3 class="subir-titulo">Agrega tus fotos a esta galería</h3>
+                    <p class="subir-ayuda">Formatos JPG, JPEG, PNG o WEBP, hasta 5 MB por foto y 12 fotos a la vez.</p>
+                    <input type="file" id="fotosUsuario" class="subir-input" accept=".jpg,.jpeg,.png,.webp,image/jpeg,image/png,image/webp" multiple>
+                    <label for="fotosUsuario" class="btn primary subir-seleccionar">
+                        <svg class="icono" width="18" height="18" aria-hidden="true"><use href="#icono-subir"></use></svg>
+                        Seleccionar fotos
+                    </label>
+                    <div class="subir-mensajes" role="status" aria-live="polite"></div>
+                    <ul class="subir-previa" aria-label="Fotos seleccionadas"></ul>
+                    <div class="subir-acciones" hidden>
+                        <button type="button" class="btn primary subir-agregar">Agregar a la galería</button>
+                        <button type="button" class="btn secondary subir-cancelar">Cancelar</button>
+                    </div>
+                    <p class="subir-nota">Las fotos se agregan solo en tu navegador durante esta visita: no se suben a ningún servidor, no las ven otros visitantes y desaparecen al recargar o cerrar la página.</p>
+                </div>
+            </section>
+
+            <!-- Videos destacados: videos reales de El Salvador publicados en YouTube por sus autores -->
+            <div class="videos-destacados">
+                <h2>Videos Destacados</h2>
+                <p class="videos-intro">Videos reales de El Salvador, tal como los publicaron sus autores. Toca uno para verlo.</p>
+                <div class="videos-grid">
+                    <article class="video-tarjeta" data-video="YqIft_I27RI">
+                        <button type="button" class="video-portada" aria-label="Reproducir: Descubre El Salvador">
+                            <img src="img/galeria/videos/YqIft_I27RI.jpg" alt="" loading="lazy">
+                            <span class="video-play"><svg class="icono" width="26" height="26" aria-hidden="true"><use href="#icono-reproducir"></use></svg></span>
+                            <span class="video-duracion">1:08</span>
+                        </button>
+                        <div class="video-info">
+                            <h4>Descubre El Salvador</h4>
+                            <p>Playas, volcanes y pueblos en el video oficial de turismo del país.</p>
+                            <a class="video-fuente" href="https://www.youtube.com/watch?v=YqIft_I27RI" target="_blank" rel="noopener">El Salvador Marca País · YouTube <svg class="icono" width="14" height="14" aria-hidden="true"><use href="#icono-enlace-externo"></use></svg></a>
+                        </div>
+                    </article>
+                    <article class="video-tarjeta" data-video="2dAN5pnZC6w">
+                        <button type="button" class="video-portada" aria-label="Reproducir: Lago de Coatepeque desde el aire">
+                            <img src="img/galeria/videos/2dAN5pnZC6w.jpg" alt="" loading="lazy">
+                            <span class="video-play"><svg class="icono" width="26" height="26" aria-hidden="true"><use href="#icono-reproducir"></use></svg></span>
+                            <span class="video-duracion">2:47</span>
+                        </button>
+                        <div class="video-info">
+                            <h4>Lago de Coatepeque desde el aire</h4>
+                            <p>Vuelo en dron sobre el lago de cráter que cambia de color una vez al año.</p>
+                            <a class="video-fuente" href="https://www.youtube.com/watch?v=2dAN5pnZC6w" target="_blank" rel="noopener">Alvaro Mayorga: Salvadorean Traveler · YouTube <svg class="icono" width="14" height="14" aria-hidden="true"><use href="#icono-enlace-externo"></use></svg></a>
+                        </div>
+                    </article>
+                    <article class="video-tarjeta" data-video="7E97fRk45Ms">
+                        <button type="button" class="video-portada" aria-label="Reproducir: Ruta de las Flores">
+                            <img src="img/galeria/videos/7E97fRk45Ms.jpg" alt="" loading="lazy">
+                            <span class="video-play"><svg class="icono" width="26" height="26" aria-hidden="true"><use href="#icono-reproducir"></use></svg></span>
+                            <span class="video-duracion">3:36</span>
+                        </button>
+                        <div class="video-info">
+                            <h4>Ruta de las Flores</h4>
+                            <p>Los seis pueblos de la ruta: murales, café, artesanías y miradores.</p>
+                            <a class="video-fuente" href="https://www.youtube.com/watch?v=7E97fRk45Ms" target="_blank" rel="noopener">La Prensa Gráfica · YouTube <svg class="icono" width="14" height="14" aria-hidden="true"><use href="#icono-enlace-externo"></use></svg></a>
+                        </div>
+                    </article>
+                    <article class="video-tarjeta" data-video="m8Yu0GxESeM">
+                        <button type="button" class="video-portada" aria-label="Reproducir: Joya de Cerén">
+                            <img src="img/galeria/videos/m8Yu0GxESeM.jpg" alt="" loading="lazy">
+                            <span class="video-play"><svg class="icono" width="26" height="26" aria-hidden="true"><use href="#icono-reproducir"></use></svg></span>
+                            <span class="video-duracion">3:16</span>
+                        </button>
+                        <div class="video-info">
+                            <h4>Joya de Cerén</h4>
+                            <p>Recorrido por la aldea maya sepultada por cenizas, Patrimonio de la Humanidad.</p>
+                            <a class="video-fuente" href="https://www.youtube.com/watch?v=m8Yu0GxESeM" target="_blank" rel="noopener">Telemadrid · YouTube <svg class="icono" width="14" height="14" aria-hidden="true"><use href="#icono-enlace-externo"></use></svg></a>
+                        </div>
+                    </article>
+                    <article class="video-tarjeta" data-video="va8-rUjCnYc">
+                        <button type="button" class="video-portada" aria-label="Reproducir: Surf en Playa El Tunco">
+                            <img src="img/galeria/videos/va8-rUjCnYc.jpg" alt="" loading="lazy">
+                            <span class="video-play"><svg class="icono" width="26" height="26" aria-hidden="true"><use href="#icono-reproducir"></use></svg></span>
+                            <span class="video-duracion">8:54</span>
+                        </button>
+                        <div class="video-info">
+                            <h4>Surf en Playa El Tunco</h4>
+                            <p>Olas, roca y comunidad surfista en la costa de La Libertad.</p>
+                            <a class="video-fuente" href="https://www.youtube.com/watch?v=va8-rUjCnYc" target="_blank" rel="noopener">Surfing Republica · YouTube <svg class="icono" width="14" height="14" aria-hidden="true"><use href="#icono-enlace-externo"></use></svg></a>
+                        </div>
+                    </article>
+                    <article class="video-tarjeta" data-video="3-4_4Y-dJTw">
+                        <button type="button" class="video-portada" aria-label="Reproducir: El origen de las pupusas">
+                            <img src="img/galeria/videos/3-4_4Y-dJTw.jpg" alt="" loading="lazy">
+                            <span class="video-play"><svg class="icono" width="26" height="26" aria-hidden="true"><use href="#icono-reproducir"></use></svg></span>
+                            <span class="video-duracion">2:44</span>
+                        </button>
+                        <div class="video-info">
+                            <h4>El origen de las pupusas</h4>
+                            <p>La historia del plato nacional, del comal a la mesa.</p>
+                            <a class="video-fuente" href="https://www.youtube.com/watch?v=3-4_4Y-dJTw" target="_blank" rel="noopener">Canal 12 El Salvador · YouTube <svg class="icono" width="14" height="14" aria-hidden="true"><use href="#icono-enlace-externo"></use></svg></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">sv <span class="highlight">El Salvador</span></div>
+            <p>Descubre la magia de El Salvador con nosotros</p>
+            <div class="social-links">
+                <a href="#" class="social-link">Facebook</a>
+                <a href="#" class="social-link">Instagram</a>
+                <a href="#" class="social-link">Twitter</a>
+                <a href="#" class="social-link">YouTube</a>
+            </div>
+            <p class="copyright">© 2024 SV El Salvador. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Botón flotante de contacto rápido -->
+    <div class="floating-fab">
+        <button class="fab-btn" aria-label="Comentarios"><svg class="icono" width="26" height="26" aria-hidden="true"><use href="#icono-mensaje"></use></svg></button>
+    </div>
+
+    <!-- Vista ampliada de la galería -->
+    <div id="galeriaLightbox" class="galeria-lightbox" role="dialog" aria-modal="true" aria-label="Vista ampliada de la foto" hidden>
+        <span class="lightbox-contador" aria-live="polite"></span>
+        <button type="button" class="lightbox-btn lightbox-cerrar" aria-label="Cerrar"><svg class="icono" width="22" height="22" aria-hidden="true"><use href="#icono-cerrar"></use></svg></button>
+        <button type="button" class="lightbox-btn lightbox-anterior" aria-label="Foto anterior"><svg class="icono" width="22" height="22" aria-hidden="true"><use href="#icono-anterior"></use></svg></button>
+        <button type="button" class="lightbox-btn lightbox-siguiente" aria-label="Foto siguiente"><svg class="icono" width="22" height="22" aria-hidden="true"><use href="#icono-siguiente"></use></svg></button>
+        <div class="lightbox-escenario">
+            <figure class="lightbox-figura">
+                <img class="lightbox-img" src="" alt="">
+                <figcaption class="lightbox-pie">
+                    <h3 class="lightbox-titulo"></h3>
+                    <p class="lightbox-descripcion"></p>
+                    <p class="lightbox-credito"></p>
+                </figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <!-- Scripts: primero los compartidos, luego los de esta página -->
+    <script src="js/nucleo/iconos.js"></script>
+    <script src="js/nucleo/utilidades.js"></script>
+    <script src="js/componentes/navegacion.js"></script>
+    <script src="js/componentes/contacto-rapido.js"></script>
+    <script src="js/componentes/boton-subir.js"></script>
+    <script src="js/paginas/galeria.js"></script>
+    <script src="js/paginas/galeria-videos.js"></script>
+</body>
+</html>
